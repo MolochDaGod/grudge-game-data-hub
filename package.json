@@ -1,0 +1,33 @@
+{
+  "name": "grudge-game-data-hub",
+  "version": "1.0.0",
+  "description": "Unified game data hub for Grudge Warlords — standardized items, crafting, stats, attributes with GRUDGE UUIDs and ObjectStore integration",
+  "type": "module",
+  "main": "lib/data-loader.js",
+  "scripts": {
+    "generate": "node scripts/generate-master-database.mjs",
+    "dev": "npx serve public -l 3300",
+    "start": "npx serve public -l 3300",
+    "build": "node scripts/generate-master-database.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MolochDaGod/grudge-game-data-hub.git"
+  },
+  "keywords": [
+    "grudge-warlords",
+    "game-data",
+    "object-store",
+    "uuid",
+    "crafting",
+    "rpg"
+  ],
+  "author": {
+    "name": "Grudge Studio",
+    "email": "contact@grudgewarlords.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

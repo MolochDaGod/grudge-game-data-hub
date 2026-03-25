@@ -1,0 +1,74 @@
+/* Grudge Game Data Hub — Shared Theme */
+:root {
+  --bg: #0a0a0f; --card: #1a1a2e; --panel: #141a2b;
+  --gold: #ffd700; --gold-dim: rgba(255,215,0,0.3);
+  --text: #e0e0e0; --muted: #888; --dim: #555;
+  --red: #ff4444; --green: #44ff44; --blue: #4488ff;
+  --purple: #aa44ff; --orange: #ff8844; --cyan: #44ddff;
+  --border: #2a3150;
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, monospace;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text); min-height: 100vh; }
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Tier border system */
+.tier-1 { border-color: #8b7355 !important; }
+.tier-2 { border-color: #a8a8a8 !important; }
+.tier-3 { border-color: #4a9eff !important; }
+.tier-4 { border-color: #9d4dff !important; }
+.tier-5 { border-color: #ff4d4d !important; }
+.tier-6 { border-color: #ffaa00 !important; }
+.tier-7 { border-color: #d4a84b !important; }
+.tier-8 { border-color: #f0d890 !important; animation: shimmer 2s infinite; }
+@keyframes shimmer {
+  0%,100% { box-shadow: 0 0 8px rgba(240,216,144,0.3); }
+  50% { box-shadow: 0 0 20px rgba(240,216,144,0.6); }
+}
+
+.tier-badge {
+  display: inline-block; padding: 2px 8px; border-radius: 4px;
+  font-size: 0.75em; font-weight: bold; text-transform: uppercase;
+}
+.tier-badge.t1 { background: rgba(139,115,85,0.3); color: #8b7355; }
+.tier-badge.t2 { background: rgba(168,168,168,0.3); color: #a8a8a8; }
+.tier-badge.t3 { background: rgba(74,158,255,0.3); color: #4a9eff; }
+.tier-badge.t4 { background: rgba(157,77,255,0.3); color: #9d4dff; }
+.tier-badge.t5 { background: rgba(255,77,77,0.3); color: #ff4d4d; }
+.tier-badge.t6 { background: rgba(255,170,0,0.3); color: #ffaa00; }
+.tier-badge.t7 { background: rgba(212,168,75,0.3); color: #d4a84b; }
+.tier-badge.t8 { background: rgba(240,216,144,0.3); color: #f0d890; }
+
+/* UUID display */
+.uuid { font-family: var(--font-mono); font-size: 0.7em; color: var(--muted); cursor: pointer; }
+.uuid:hover { color: var(--gold); }
+
+/* Item cards */
+.item-card {
+  background: var(--card); border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 10px; padding: 15px; text-align: center;
+  transition: all 0.2s; cursor: pointer; position: relative;
+}
+.item-card:hover {
+  border-color: var(--gold); transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(255,215,0,0.2);
+}
+.item-card img {
+  width: 64px; height: 64px; object-fit: contain;
+  image-rendering: pixelated; filter: drop-shadow(0 0 5px rgba(255,215,0,0.3));
+}
+.item-name { font-weight: bold; font-size: 0.95em; margin-top: 8px; }
+.item-type { color: var(--muted); font-size: 0.8em; margin-top: 4px; }
+
+/* Buttons */
+.btn {
+  padding: 10px 20px; border: none; border-radius: 6px; font-weight: 600;
+  cursor: pointer; transition: all 0.2s; font-size: 0.9em;
+}
+.btn-gold { background: linear-gradient(135deg, var(--gold), #d4a400); color: #0a0a0f; }
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(255,215,0,0.3); }
+.btn-secondary { background: var(--card); color: var(--text); border: 1px solid var(--border); }
+.btn-secondary:hover { border-color: var(--gold); }

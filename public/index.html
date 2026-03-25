@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grudge Warlords — Game Data Hub</title>
+  <link rel="stylesheet" href="css/grudge-theme.css">
+  <link rel="stylesheet" href="https://molochdagod.github.io/ObjectStore/css/tier-system.css">
+  <style>
+    .hub { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+    .hero { text-align: center; padding: 60px 0 40px; border-bottom: 2px solid var(--gold-dim); margin-bottom: 40px; }
+    .hero h1 { color: var(--gold); font-size: 3em; text-shadow: 0 0 30px rgba(255,215,0,0.4); }
+    .hero p { color: var(--muted); margin-top: 12px; font-size: 1.1em; }
+    .stats-row { display: flex; justify-content: center; gap: 40px; margin-top: 24px; flex-wrap: wrap; }
+    .stat-box { text-align: center; }
+    .stat-num { color: var(--gold); font-size: 2.2em; font-weight: bold; }
+    .stat-lbl { color: var(--muted); font-size: 0.9em; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .hub-card {
+      background: linear-gradient(135deg, #1a1a2e, #141428);
+      border: 2px solid rgba(255,215,0,0.15); border-radius: 14px;
+      padding: 30px; transition: all 0.3s; cursor: pointer; text-decoration: none;
+    }
+    .hub-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 8px 30px rgba(255,215,0,0.15); text-decoration: none; }
+    .hub-card h3 { color: var(--gold); font-size: 1.3em; margin-bottom: 8px; }
+    .hub-card p { color: var(--muted); font-size: 0.95em; line-height: 1.5; }
+    .hub-card .icon { font-size: 2.5em; margin-bottom: 12px; }
+    .footer { text-align: center; padding: 30px 0; border-top: 1px solid var(--gold-dim); color: var(--dim); font-size: 0.85em; }
+    .api-section { margin-bottom: 40px; }
+    .api-section h2 { color: var(--gold); font-size: 1.5em; margin-bottom: 16px; }
+    .endpoint { display: flex; gap: 12px; padding: 10px 16px; background: var(--card); border-radius: 8px; margin-bottom: 8px; align-items: center; }
+    .endpoint .method { background: var(--green); color: #000; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; font-weight: bold; }
+    .endpoint .path { font-family: var(--font-mono); font-size: 0.9em; color: var(--text); }
+    .endpoint .desc { color: var(--muted); font-size: 0.85em; margin-left: auto; }
+  </style>
+</head>
+<body>
+  <div class="hub">
+    <header class="hero">
+      <h1>⚔️ Grudge Warlords</h1>
+      <h2 style="color:var(--text);font-size:1.4em;margin-top:8px;">Game Data Hub</h2>
+      <p>Unified item database, crafting recipes, stats, and character tools — all with GRUDGE UUIDs</p>
+      <div class="stats-row" id="statsRow"></div>
+    </header>
+
+    <div class="cards">
+      <a class="hub-card" href="sprite-database.html">
+        <div class="icon">🗃️</div>
+        <h3>Sprite Database</h3>
+        <p>Browse all 920+ items with real ObjectStore icons, GRUDGE UUIDs, tier system, and crafting recipes.</p>
+      </a>
+      <a class="hub-card" href="character-builder.html">
+        <div class="icon">🧙</div>
+        <h3>Character Builder</h3>
+        <p>Build characters with 8 attributes, 4 classes, 6 races. Save builds to Grudge backend.</p>
+      </a>
+      <a class="hub-card" href="main-panel.html">
+        <div class="icon">🎮</div>
+        <h3>Main Panel</h3>
+        <p>Full game UI with equipment slots, inventory, skill trees, crafting, quests, and guild.</p>
+      </a>
+      <a class="hub-card" href="stats-guide.html">
+        <div class="icon">📊</div>
+        <h3>Stats & Attributes Guide</h3>
+        <p>Complete reference for all 8 attributes, stat formulas, class bonuses, and combat math.</p>
+      </a>
+    </div>
+
+    <div class="api-section">
+      <h2>📦 Data API Endpoints</h2>
+      <div class="endpoint">
+        <span class="method">GET</span>
+        <span class="path">/data/master-items.json</span>
+        <span class="desc">920 items with UUIDs, icons, stats, recipes</span>
+      </div>
+      <div class="endpoint">
+        <span class="method">GET</span>
+        <span class="path">/data/master-recipes.json</span>
+        <span class="desc">220 crafting recipes with material UUIDs</span>
+      </div>
+      <div class="endpoint">
+        <span class="method">GET</span>
+        <span class="path">/data/master-materials.json</span>
+        <span class="desc">254 unique crafting materials</span>
+      </div>
+      <div class="endpoint">
+        <span class="method">GET</span>
+        <span class="path">/data/master-attributes.json</span>
+        <span class="desc">8 attributes with stat formulas</span>
+      </div>
+    </div>
+
+    <footer class="footer">
+      Grudge Warlords Game Data Hub v1.0.0 — Created by Racalvin The Pirate King<br>
+      <a href="https://grudgewarlords.com">grudgewarlords.com</a> ·
+      <a href="https://molochdagod.github.io/ObjectStore">ObjectStore</a> ·
+      <a href="https://github.com/MolochDaGod/grudge-game-data-hub">GitHub</a>
+    </footer>
+  </div>
+
+  <script>
+    fetch('/data/master-items.json').then(r=>r.json()).then(d=>{
+      const stats = [
+        { n: d.totalItems, l: 'Items' },
+        { n: d.totalRecipes, l: 'Recipes' },
+        { n: d.totalMaterials, l: 'Materials' },
+        { n: '8', l: 'Attributes' },
+      ];
+      document.getElementById('statsRow').innerHTML = stats.map(s =>
+        `<div class="stat-box"><div class="stat-num">${s.n}</div><div class="stat-lbl">${s.l}</div></div>`
+      ).join('');
+    }).catch(()=>{
+      document.getElementById('statsRow').innerHTML =
+        '<div class="stat-box"><div class="stat-num">920+</div><div class="stat-lbl">Items</div></div>' +
+        '<div class="stat-box"><div class="stat-num">220</div><div class="stat-lbl">Recipes</div></div>' +
+        '<div class="stat-box"><div class="stat-num">254</div><div class="stat-lbl">Materials</div></div>' +
+        '<div class="stat-box"><div class="stat-num">8</div><div class="stat-lbl">Attributes</div></div>';
+    });
+  </script>
+</body>
+</html>

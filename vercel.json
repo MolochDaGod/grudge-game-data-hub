@@ -1,0 +1,16 @@
+{
+  "buildCommand": "node scripts/generate-master-database.mjs",
+  "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/data/:path*", "destination": "/data/:path*" }
+  ],
+  "headers": [
+    {
+      "source": "/data/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    }
+  ]
+}

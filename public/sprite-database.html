@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grudge Warlords — Sprite Database</title>
+  <link rel="stylesheet" href="css/grudge-theme.css">
+  <style>
+    .container { max-width: 1600px; margin: 0 auto; padding: 20px; }
+    .header { text-align: center; padding: 30px 0; border-bottom: 2px solid var(--gold-dim); margin-bottom: 20px; }
+    .header h1 { color: var(--gold); font-size: 2.5em; }
+    .stats-bar { display: flex; justify-content: center; gap: 40px; margin-top: 20px; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-value { color: var(--gold); font-size: 2em; font-weight: bold; }
+    .stat-label { color: var(--muted); font-size: 0.9em; }
+    .controls { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; padding: 16px; background: var(--card); border-radius: 12px; align-items: center; }
+    .search-box { flex: 1; min-width: 200px; padding: 10px 16px; background: #111; border: 2px solid var(--border); border-radius: 8px; color: var(--text); font-size: 1em; }
+    .search-box:focus { outline: none; border-color: var(--gold); }
+    select { padding: 10px 14px; background: #111; border: 2px solid var(--border); border-radius: 8px; color: var(--text); font-size: 0.9em; cursor: pointer; }
+    select:focus { border-color: var(--gold); outline: none; }
+    .items-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+    .item-card .tier-tag { position: absolute; top: 6px; right: 6px; font-size: 0.7em; font-weight: bold; padding: 2px 6px; border-radius: 4px; }
+    .item-card .uuid { display: block; margin-top: 6px; word-break: break-all; }
+    .tooltip { position: fixed; background: #111; border: 2px solid var(--gold); padding: 16px; border-radius: 10px; max-width: 380px; z-index: 1000; display: none; box-shadow: 0 0 30px rgba(0,0,0,0.8); pointer-events: none; }
+    .tooltip .tt-name { color: var(--gold); font-size: 1.1em; font-weight: bold; }
+    .tooltip .tt-uuid { font-family: monospace; font-size: 0.7em; color: var(--muted); margin: 4px 0; }
+    .tooltip .tt-desc { color: var(--muted); font-size: 0.9em; margin: 8px 0; }
+    .tooltip .tt-stats { font-size: 0.85em; }
+    .tooltip .tt-stats div { display: flex; justify-content: space-between; padding: 2px 0; }
+    .tooltip .tt-stats .k { color: var(--muted); }
+    .tooltip .tt-stats .v { color: var(--green); font-family: monospace; }
+    .tooltip .tt-recipe { border-top: 1px solid var(--gold-dim); padding-top: 8px; margin-top: 8px; }
+    .tooltip .tt-recipe h4 { color: var(--text); font-size: 0.85em; margin-bottom: 4px; }
+    .tooltip .tt-recipe .mat { color: var(--muted); font-size: 0.8em; }
+    .count-bar { padding: 10px; color: var(--muted); font-size: 0.9em; }
+    .back-link { display: inline-block; margin-bottom: 16px; color: var(--gold); font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="index.html">← Back to Hub</a>
+    <header class="header">
+      <h1>⚔️ Grudge Warlords Sprite Database</h1>
+      <p style="color:var(--muted);margin-top:8px;">Complete item database with real icons, GRUDGE UUIDs & crafting recipes</p>
+      <div class="stats-bar" id="statsBar"></div>
+    </header>
+
+    <div class="controls">
+      <input type="text" class="search-box" id="search" placeholder="Search items by name, description, UUID...">
+      <select id="typeFilter"><option value="">All Types</option><option value="weapon">Weapons</option><option value="food">Foods</option><option value="potion">Potions</option></select>
+      <select id="categoryFilter"><option value="">All Categories</option></select>
+      <select id="tierFilter"><option value="">All Tiers</option><option value="1">T1 Common</option><option value="2">T2 Uncommon</option><option value="3">T3 Rare</option><option value="4">T4 Epic</option><option value="5">T5 Legendary</option><option value="6">T6 Mythic</option><option value="7">T7 Ancient</option><option value="8">T8 Artifact</option></select>
+      <select id="profFilter"><option value="">All Professions</option><option value="Miner">Miner</option><option value="Forester">Forester</option><option value="Mystic">Mystic</option><option value="Chef">Chef</option><option value="Engineer">Engineer</option></select>
+    </div>
+
+    <div class="count-bar" id="countBar"></div>
+    <div class="items-grid" id="grid"></div>
+    <div class="tooltip" id="tooltip"></div>
+  </div>
+
+  <script>
+    let ALL_ITEMS = [], ALL_RECIPES = [];
+    const recipeMap = new Map();
+
+    async function init() {
+      const [itemsData, recipesData] = await Promise.all([
+        fetch('/data/master-items.json').then(r => r.json()),
+        fetch('/data/master-recipes.json').then(r => r.json()),
+      ]);
+      ALL_ITEMS = itemsData.items;
+      ALL_RECIPES = recipesData.recipes;
+      ALL_RECIPES.forEach(r => recipeMap.set(r.uuid, r));
+
+      // Stats bar
+      document.getElementById('statsBar').innerHTML = [
+        { v: itemsData.totalItems, l: 'Total Items' },
+        { v: itemsData.totalRecipes, l: 'Recipes' },
+        { v: itemsData.totalMaterials, l: 'Materials' },
+      ].map(s => `<div class="stat"><div class="stat-value">${s.v}</div><div class="stat-label">${s.l}</div></div>`).join('');
+
+      // Populate category filter
+      const cats = [...new Set(ALL_ITEMS.map(i => i.category))].sort();
+      document.getElementById('categoryFilter').innerHTML = '<option value="">All Categories</option>' +
+        cats.map(c => `<option value="${c}">${c}</option>`).join('');
+
+      render();
+    }
+
+    function render() {
+      const q = document.getElementById('search').value.toLowerCase();
+      const type = document.getElementById('typeFilter').value;
+      const cat = document.getElementById('categoryFilter').value;
+      const tier = document.getElementById('tierFilter').value;
+      const prof = document.getElementById('profFilter').value;
+
+      let items = ALL_ITEMS;
+      if (q) items = items.filter(i => i.name.toLowerCase().includes(q) || (i.description||'').toLowerCase().includes(q) || (i.uuid||'').toLowerCase().includes(q));
+      if (type) items = items.filter(i => i.type === type);
+      if (cat) items = items.filter(i => i.category === cat);
+      if (tier) items = items.filter(i => i.tier === parseInt(tier));
+      if (prof) items = items.filter(i => i.craftedBy === prof);
+
+      document.getElementById('countBar').textContent = `Showing ${items.length} of ${ALL_ITEMS.length} items`;
+
+      const grid = document.getElementById('grid');
+      grid.innerHTML = items.slice(0, 500).map(item => {
+        const tierColor = item.tierColor || '#8b7355';
+        return `<div class="item-card tier-${item.tier||1}" data-uuid="${item.uuid}"
+                     onmouseenter="showTip(event,'${item.uuid}')" onmouseleave="hideTip()">
+          ${item.tier ? `<span class="tier-tag" style="background:${tierColor}33;color:${tierColor}">T${item.tier}</span>` : ''}
+          <div style="height:64px;display:flex;align-items:center;justify-content:center;">
+            <img src="${item.iconUrl}" alt="${item.name}" onerror="this.style.display='none';this.parentElement.textContent='⚔️';">
+          </div>
+          <div class="item-name">${item.name}</div>
+          <div class="item-type">${item.category} · ${item.craftedBy||''}</div>
+          <span class="uuid" title="Click to copy" onclick="navigator.clipboard.writeText('${item.uuid}')">${item.uuid.slice(0,20)}…</span>
+        </div>`;
+      }).join('');
+    }
+
+    function showTip(e, uuid) {
+      const item = ALL_ITEMS.find(i => i.uuid === uuid);
+      if (!item) return;
+      const recipe = recipeMap.get(item.recipeUuid);
+      const tip = document.getElementById('tooltip');
+
+      let statsHtml = '';
+      if (item.stats && Object.keys(item.stats).length) {
+        statsHtml = '<div class="tt-stats">' + Object.entries(item.stats).map(([k,v]) =>
+          `<div><span class="k">${k}</span><span class="v">${v}</span></div>`).join('') + '</div>';
+      }
+
+      let recipeHtml = '';
+      if (recipe) {
+        recipeHtml = `<div class="tt-recipe"><h4>🔨 ${recipe.name} (${recipe.profession})</h4>` +
+          recipe.materials.map(m => `<div class="mat">• ${m.name} ×${m.quantity}</div>`).join('') +
+          `<div class="mat" style="margin-top:4px;color:var(--dim)">Recipe: ${recipe.uuid.slice(0,24)}…</div></div>`;
+      }
+
+      tip.innerHTML = `
+        <div class="tt-name" style="color:${item.tierColor||'var(--gold)'}">${item.name}</div>
+        <div class="tt-uuid">${item.uuid}</div>
+        ${item.tierLabel ? `<span class="tier-badge t${item.tier}">${item.tierLabel}</span>` : ''}
+        <div class="tt-desc">${item.description||''}</div>
+        ${statsHtml}${recipeHtml}
+      `;
+      tip.style.display = 'block';
+      tip.style.left = Math.min(e.clientX + 16, window.innerWidth - 400) + 'px';
+      tip.style.top = Math.min(e.clientY + 16, window.innerHeight - 300) + 'px';
+    }
+    function hideTip() { document.getElementById('tooltip').style.display = 'none'; }
+
+    document.getElementById('search').addEventListener('input', render);
+    document.getElementById('typeFilter').addEventListener('change', render);
+    document.getElementById('categoryFilter').addEventListener('change', render);
+    document.getElementById('tierFilter').addEventListener('change', render);
+    document.getElementById('profFilter').addEventListener('change', render);
+
+    init();
+  </script>
+</body>
+</html>

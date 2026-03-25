@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grudge Warlords — Character Builder</title>
+  <link rel="stylesheet" href="css/grudge-theme.css">
+  <style>
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .header { text-align: center; padding: 24px 0; border-bottom: 2px solid var(--gold-dim); margin-bottom: 24px; }
+    .header h1 { color: var(--gold); font-size: 2em; }
+    .layout { display: grid; grid-template-columns: 340px 1fr 340px; gap: 20px; }
+    .panel { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .panel h2 { color: var(--gold); font-size: 1.1em; margin-bottom: 16px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+    .attr-row { margin-bottom: 14px; }
+    .attr-header { display: flex; justify-content: space-between; margin-bottom: 6px; }
+    .attr-label { font-weight: 600; font-size: 0.95em; }
+    .attr-value { font-family: monospace; color: var(--gold); font-weight: 700; }
+    .attr-controls { display: flex; gap: 8px; align-items: center; }
+    input[type="range"] { flex: 1; height: 6px; border-radius: 3px; background: var(--border); outline: none; -webkit-appearance: none; }
+    input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--purple); cursor: pointer; border: 2px solid white; }
+    .points { text-align: center; padding: 14px; background: #111; border: 2px solid var(--border); border-radius: 8px; margin: 14px 0; }
+    .points.done { border-color: var(--green); }
+    .points .val { font-size: 2em; font-weight: 700; }
+    .points .lbl { color: var(--muted); font-size: 0.9em; }
+    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .stat-item { display: flex; justify-content: space-between; padding: 6px 10px; background: #0a0a12; border-radius: 6px; font-size: 0.9em; }
+    .stat-item .k { color: var(--muted); }
+    .stat-item .v { color: var(--green); font-family: monospace; }
+    .class-grid, .race-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+    .class-btn, .race-btn { padding: 10px; background: #111; border: 2px solid var(--border); border-radius: 8px; cursor: pointer; text-align: center; transition: 0.2s; font-size: 0.9em; color: var(--text); }
+    .class-btn:hover, .race-btn:hover { border-color: var(--gold-dim); }
+    .class-btn.active, .race-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(255,215,0,0.08); }
+    .btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
+    .back-link { display: inline-block; margin-bottom: 16px; color: var(--gold); font-size: 0.9em; }
+    @media(max-width:1000px) { .layout { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="index.html">← Back to Hub</a>
+    <header class="header">
+      <h1>🧙 Grudge Warlords — Character Builder</h1>
+      <p style="color:var(--muted);margin-top:6px;">Build and save characters using shared game data</p>
+    </header>
+    <div class="layout">
+      <div class="panel" id="leftPanel"></div>
+      <div class="panel" id="centerPanel"></div>
+      <div class="panel" id="rightPanel"></div>
+    </div>
+  </div>
+
+  <script>
+    const CDN = 'https://molochdagod.github.io/ObjectStore';
+    let ATTRIBUTES = [], CLASSES = {}, RACES = {};
+    let attrs = {}, selectedClass = 'Warrior', selectedRace = 'Human';
+    const TOTAL_POINTS = 30;
+    const CLASS_DATA = {
+      Warrior: { color: '#ff7d87', bonuses: { strength: 3, endurance: 2, vitality: 1 }, desc: 'Melee powerhouse' },
+      Mage:    { color: '#bb95ff', bonuses: { intellect: 3, wisdom: 2, tactics: 1 }, desc: 'Arcane spellcaster' },
+      Ranger:  { color: '#49de95', bonuses: { dexterity: 3, agility: 2, wisdom: 1 }, desc: 'Ranged precision' },
+      Worge:   { color: '#ffb16d', bonuses: { vitality: 2, strength: 2, agility: 2 }, desc: 'Shapeshifter' },
+    };
+    const RACE_DATA = {
+      Human:  { bonuses: { tactics: 2, wisdom: 1 }, desc: '+10% EXP' },
+      Elf:    { bonuses: { intellect: 2, agility: 1 }, desc: '+Mana regen' },
+      Dwarf:  { bonuses: { endurance: 2, vitality: 1 }, desc: '+Mining' },
+      Orc:    { bonuses: { strength: 2, vitality: 1 }, desc: '+Melee dmg' },
+      Troll:  { bonuses: { agility: 2, dexterity: 1 }, desc: '+HP regen' },
+      Undead: { bonuses: { intellect: 1, endurance: 1, tactics: 1 }, desc: '+Shadow resist' },
+    };
+
+    async function init() {
+      const data = await fetch('/data/master-attributes.json').then(r => r.json());
+      ATTRIBUTES = data.attributes;
+      ATTRIBUTES.forEach(a => attrs[a.id] = 1);
+      renderAll();
+    }
+
+    function usedPoints() { return Object.values(attrs).reduce((s,v) => s + v, 0) - ATTRIBUTES.length; }
+    function remaining() { return TOTAL_POINTS - usedPoints(); }
+
+    function renderAll() {
+      // Left: Attributes
+      const left = document.getElementById('leftPanel');
+      left.innerHTML = `<h2>Attributes</h2>` +
+        ATTRIBUTES.map(a => `
+          <div class="attr-row">
+            <div class="attr-header">
+              <span class="attr-label">${a.emoji} ${a.name}</span>
+              <span class="attr-value">${getTotal(a.id)}</span>
+            </div>
+            <div class="attr-controls">
+              <input type="range" min="1" max="20" value="${attrs[a.id]}" oninput="setAttr('${a.id}',this.value)">
+            </div>
+          </div>
+        `).join('') +
+        `<div class="points ${remaining()===0?'done':''}">
+          <div class="val">${remaining()}</div><div class="lbl">Points Remaining</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-secondary" onclick="resetAttrs()">Reset</button>
+          <button class="btn btn-gold" onclick="exportBuild()">Export Build</button>
+        </div>`;
+
+      // Center: Stats
+      const center = document.getElementById('centerPanel');
+      const s = calcStats();
+      center.innerHTML = `<h2>Calculated Stats</h2>
+        <div class="class-grid">${Object.entries(CLASS_DATA).map(([name,d]) =>
+          `<div class="class-btn ${selectedClass===name?'active':''}" style="${selectedClass===name?'border-color:'+d.color:''}" onclick="selectClass('${name}')">${name}<br><small style="color:var(--muted)">${d.desc}</small></div>`
+        ).join('')}</div>
+        <div class="race-grid">${Object.entries(RACE_DATA).map(([name,d]) =>
+          `<div class="race-btn ${selectedRace===name?'active':''}" onclick="selectRace('${name}')">${name}<br><small style="color:var(--muted)">${d.desc}</small></div>`
+        ).join('')}</div>
+        <div class="stat-grid">
+          <div class="stat-item"><span class="k">Health</span><span class="v">${s.hp}</span></div>
+          <div class="stat-item"><span class="k">Mana</span><span class="v">${s.mana}</span></div>
+          <div class="stat-item"><span class="k">Phys Damage</span><span class="v">${s.physDmg}%</span></div>
+          <div class="stat-item"><span class="k">Magic Damage</span><span class="v">${s.magDmg}%</span></div>
+          <div class="stat-item"><span class="k">Crit Chance</span><span class="v">${s.crit}%</span></div>
+          <div class="stat-item"><span class="k">Defense</span><span class="v">${s.defense}</span></div>
+          <div class="stat-item"><span class="k">Evasion</span><span class="v">${s.evasion}%</span></div>
+          <div class="stat-item"><span class="k">Heal Power</span><span class="v">${s.healPower}%</span></div>
+          <div class="stat-item"><span class="k">Speed</span><span class="v">${s.speed}</span></div>
+          <div class="stat-item"><span class="k">Ability Bonus</span><span class="v">${s.abilBonus}%</span></div>
+        </div>`;
+
+      // Right: Attribute details
+      const right = document.getElementById('rightPanel');
+      right.innerHTML = `<h2>Attribute Details</h2>` +
+        ATTRIBUTES.map(a => `
+          <div style="margin-bottom:14px;padding:10px;background:#0a0a12;border-radius:8px;border-left:3px solid ${a.color}">
+            <div style="font-weight:700;color:${a.color}">${a.emoji} ${a.name} — ${getTotal(a.id)}</div>
+            <div style="font-size:0.85em;color:var(--muted);margin-top:4px">${a.description}</div>
+            <div style="font-size:0.8em;color:var(--dim);margin-top:4px;font-family:monospace">${a.formula}</div>
+          </div>
+        `).join('');
+    }
+
+    function getTotal(id) {
+      let total = attrs[id] || 1;
+      const cb = CLASS_DATA[selectedClass]?.bonuses || {};
+      const rb = RACE_DATA[selectedRace]?.bonuses || {};
+      total += (cb[id] || 0) + (rb[id] || 0);
+      return total;
+    }
+
+    function calcStats() {
+      const g = id => getTotal(id);
+      return {
+        hp: 100 + g('vitality') * 12,
+        mana: 50 + g('intellect') * 8,
+        physDmg: Math.round(100 * (1 + g('strength') * 0.05)),
+        magDmg: Math.round(100 * (1 + g('intellect') * 0.05)),
+        crit: (5 + g('dexterity') * 1.5).toFixed(1),
+        defense: 2 + g('endurance') * 2,
+        evasion: (g('agility') * 1.2).toFixed(1),
+        healPower: Math.round(100 * (1 + g('wisdom') * 0.04)),
+        speed: 50 + g('agility') * 2,
+        abilBonus: g('tactics') * 2,
+      };
+    }
+
+    function setAttr(id, val) {
+      const v = parseInt(val);
+      const old = attrs[id];
+      attrs[id] = v;
+      if (usedPoints() > TOTAL_POINTS) attrs[id] = old;
+      renderAll();
+    }
+    function resetAttrs() { ATTRIBUTES.forEach(a => attrs[a.id] = 1); renderAll(); }
+    function selectClass(c) { selectedClass = c; renderAll(); }
+    function selectRace(r) { selectedRace = r; renderAll(); }
+    function exportBuild() {
+      const build = { class: selectedClass, race: selectedRace, attributes: {...attrs}, stats: calcStats() };
+      navigator.clipboard.writeText(JSON.stringify(build, null, 2));
+      alert('Build copied to clipboard!');
+    }
+
+    init();
+  </script>
+</body>
+</html>

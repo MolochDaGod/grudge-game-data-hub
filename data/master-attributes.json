@@ -1,0 +1,79 @@
+{
+  "version": "1.0.0",
+  "generated": "2026-03-25T06:06:42.160Z",
+  "total": 8,
+  "attributes": [
+    {
+      "id": "strength",
+      "name": "Strength",
+      "emoji": "💪",
+      "color": "#ef4444",
+      "description": "Increases physical attack damage. Warriors and Barbarians benefit most.",
+      "formula": "Physical Damage = Base × (1 + STR × 0.05)",
+      "uuid": "ATTR-20260325010642-000573-4284E4EE"
+    },
+    {
+      "id": "intellect",
+      "name": "Intellect",
+      "emoji": "🧠",
+      "color": "#8b5cf6",
+      "description": "Increases magical damage and max mana pool. Essential for Mage Priests.",
+      "formula": "Magic Damage = Base × (1 + INT × 0.05)",
+      "uuid": "ATTR-20260325010642-000574-5F6C209C"
+    },
+    {
+      "id": "vitality",
+      "name": "Vitality",
+      "emoji": "❤️",
+      "color": "#22c55e",
+      "description": "Increases maximum HP. Important for all frontline fighters.",
+      "formula": "Max HP = 100 + (VIT × 12)",
+      "uuid": "ATTR-20260325010642-000575-470FF7D8"
+    },
+    {
+      "id": "dexterity",
+      "name": "Dexterity",
+      "emoji": "🎯",
+      "color": "#f59e0b",
+      "description": "Increases critical hit chance and ranged damage. Key stat for Rangers.",
+      "formula": "Crit Chance = 5% + (DEX × 1.5%)",
+      "uuid": "ATTR-20260325010642-000576-C4C3BE5C"
+    },
+    {
+      "id": "endurance",
+      "name": "Endurance",
+      "emoji": "🛡️",
+      "color": "#6366f1",
+      "description": "Increases physical defense and max stamina. Dwarves excel here.",
+      "formula": "Defense = 2 + (END × 2)",
+      "uuid": "ATTR-20260325010642-000577-8CDAAC08"
+    },
+    {
+      "id": "wisdom",
+      "name": "Wisdom",
+      "emoji": "✨",
+      "color": "#06b6d4",
+      "description": "Increases magical defense, heal power, and mana regeneration.",
+      "formula": "Heal Power = Base × (1 + WIS × 0.04)",
+      "uuid": "ATTR-20260325010642-000578-CD9E3E56"
+    },
+    {
+      "id": "agility",
+      "name": "Agility",
+      "emoji": "⚡",
+      "color": "#10b981",
+      "description": "Increases evasion chance and turn speed. Determines action order.",
+      "formula": "Evasion = AGI × 1.2%, Speed = 50 + AGI × 2",
+      "uuid": "ATTR-20260325010642-000579-4CE3A583"
+    },
+    {
+      "id": "tactics",
+      "name": "Tactics",
+      "emoji": "📜",
+      "color": "#f97316",
+      "description": "Increases buff/debuff effectiveness and ability damage modifiers.",
+      "formula": "Ability Bonus = TAC × 2%",
+      "uuid": "ATTR-20260325010642-00057A-42263F61"
+    }
+  ]
+}
