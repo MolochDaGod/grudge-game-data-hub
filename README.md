@@ -2,7 +2,7 @@
 
 Unified game data API and UI for Grudge Warlords. Consolidates all items, crafting recipes, stats, attributes, skill trees, and character data into a single standardized system with GRUDGE UUIDs and real ObjectStore icons.
 
-**Live:** [grudge-game-data-hub.vercel.app](https://grudge-game-data-hub.vercel.app)
+**Live:** [info.grudge-studio.com](https://info.grudge-studio.com)
 **ObjectStore:** [molochdagod.github.io/ObjectStore](https://molochdagod.github.io/ObjectStore)
 
 ## Features
