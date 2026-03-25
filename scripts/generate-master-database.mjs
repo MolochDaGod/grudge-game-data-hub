@@ -17,7 +17,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT = join(__dirname, '..');
 const DATA_DIR = join(ROOT, 'data');
-const PUBLIC_DATA_DIR = join(ROOT, 'public', 'data');
+const PUBLIC_DATA_DIR = join(ROOT, 'docs', 'data');
 
 // Ensure output dirs exist
 [DATA_DIR, PUBLIC_DATA_DIR].forEach(d => { if (!existsSync(d)) mkdirSync(d, { recursive: true }); });
