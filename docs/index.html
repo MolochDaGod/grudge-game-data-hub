@@ -17,11 +17,12 @@
     .stat-lbl { color: var(--muted); font-size: 0.9em; }
     .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px; }
     .hub-card {
-      background: linear-gradient(135deg, #1a1a2e, #141428);
-      border: 2px solid rgba(255,215,0,0.15); border-radius: 14px;
+      background: linear-gradient(180deg, hsl(225 25% 14%) 0%, hsl(225 28% 10%) 50%, hsl(225 25% 8%) 100%);
+      border: 2px solid hsl(43 60% 35%); border-radius: 4px;
       padding: 30px; transition: all 0.3s; cursor: pointer; text-decoration: none;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 4px 12px rgba(0,0,0,0.5);
     }
-    .hub-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 8px 30px rgba(255,215,0,0.15); text-decoration: none; }
+    .hub-card:hover { border-color: var(--gold-light); transform: translateY(-4px); box-shadow: 0 0 12px rgba(212,175,55,0.3), 0 8px 30px rgba(0,0,0,0.5); text-decoration: none; }
     .hub-card h3 { color: var(--gold); font-size: 1.3em; margin-bottom: 8px; }
     .hub-card p { color: var(--muted); font-size: 0.95em; line-height: 1.5; }
     .hub-card .icon { font-size: 2.5em; margin-bottom: 12px; }
@@ -37,7 +38,7 @@
 <body>
   <div class="hub">
     <header class="hero">
-      <h1>⚔️ Grudge Warlords</h1>
+      <h1 class="gold-text" style="font-family:var(--font-display)">Grudge Warlords</h1>
       <h2 style="color:var(--text);font-size:1.4em;margin-top:8px;">Game Data Hub</h2>
       <p>Unified item database, crafting recipes, stats, and character tools — all with GRUDGE UUIDs</p>
       <div class="stats-row" id="statsRow"></div>
@@ -45,29 +46,29 @@
 
     <div class="cards">
       <a class="hub-card" href="sprite-database.html">
-        <div class="icon">🗃️</div>
+        <div class="icon"><img src="https://molochdagod.github.io/ObjectStore/icons/wcs/weapons/Sword_01.png" alt="Sprite Database" class="attr-icon lg"></div>
         <h3>Sprite Database</h3>
         <p>Browse all 920+ items with real ObjectStore icons, GRUDGE UUIDs, tier system, and crafting recipes.</p>
       </a>
       <a class="hub-card" href="character-builder.html">
-        <div class="icon">🧙</div>
+        <div class="icon"><img src="https://molochdagod.github.io/ObjectStore/icons/wcs/misc/Human Warrior.png" alt="Character Builder" class="attr-icon lg"></div>
         <h3>Character Builder</h3>
         <p>Build characters with 8 attributes, 4 classes, 6 races. Save builds to Grudge backend.</p>
       </a>
       <a class="hub-card" href="main-panel.html">
-        <div class="icon">🎮</div>
+        <div class="icon"><img src="https://molochdagod.github.io/ObjectStore/icons/wcs/misc/Armory Icon.png" alt="Main Panel" class="attr-icon lg"></div>
         <h3>Main Panel</h3>
         <p>Full game UI with equipment slots, inventory, skill trees, crafting, quests, and guild.</p>
       </a>
       <a class="hub-card" href="stats-guide.html">
-        <div class="icon">📊</div>
+        <div class="icon"><img src="https://molochdagod.github.io/ObjectStore/icons/wcs/misc/runic_tablet_02.png" alt="Stats Guide" class="attr-icon lg"></div>
         <h3>Stats & Attributes Guide</h3>
         <p>Complete reference for all 8 attributes, stat formulas, class bonuses, and combat math.</p>
       </a>
     </div>
 
     <div class="api-section">
-      <h2>📦 Data API Endpoints</h2>
+      <h2>Data API Endpoints</h2>
       <div class="endpoint">
         <span class="method">GET</span>
         <span class="path">/data/master-items.json</span>

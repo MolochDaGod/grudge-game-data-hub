@@ -40,7 +40,7 @@
   <div class="container">
     <a class="back-link" href="index.html">← Back to Hub</a>
     <header class="header">
-      <h1>⚔️ Grudge Warlords Sprite Database</h1>
+      <h1 class="gold-text" style="font-family:var(--font-display)">Grudge Warlords Sprite Database</h1>
       <p style="color:var(--muted);margin-top:8px;">Complete item database with real icons, GRUDGE UUIDs & crafting recipes</p>
       <div class="stats-bar" id="statsBar"></div>
     </header>
@@ -109,7 +109,7 @@
                      onmouseenter="showTip(event,'${item.uuid}')" onmouseleave="hideTip()">
           ${item.tier ? `<span class="tier-tag" style="background:${tierColor}33;color:${tierColor}">T${item.tier}</span>` : ''}
           <div style="height:64px;display:flex;align-items:center;justify-content:center;">
-            <img src="${item.iconUrl}" alt="${item.name}" onerror="this.style.display='none';this.parentElement.textContent='⚔️';">
+            <img src="${item.iconUrl}" alt="${item.name}" onerror="this.src='https://molochdagod.github.io/ObjectStore/icons/wcs/weapons/Sword_01.png';this.onerror=null;">
           </div>
           <div class="item-name">${item.name}</div>
           <div class="item-type">${item.category} · ${item.craftedBy||''}</div>
