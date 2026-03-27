@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grudge Warlords — Character Builder</title>
   <link rel="stylesheet" href="css/grudge-theme.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     .container { max-width: 1600px; margin: 0 auto; padding: 20px; }
     .header { text-align: center; padding: 24px 0; border-bottom: 3px solid transparent; border-image: linear-gradient(90deg, transparent, var(--gold), transparent) 1; margin-bottom: 24px; }
@@ -24,7 +25,7 @@
     .points.done { border-color: var(--green) !important; }
     .points .val { font-size: 2em; font-weight: 700; font-family: var(--font-mono); }
     .points .lbl { color: var(--muted); font-size: 0.85em; }
-    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; max-height: 70vh; overflow-y: auto; }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; max-height: 50vh; overflow-y: auto; }
     .stat-row { display: flex; justify-content: space-between; padding: 5px 10px; border-radius: 4px; font-size: 0.82em; }
     .stat-row .k { color: var(--muted); }
     .stat-row .v { color: var(--green); font-family: var(--font-mono); }
@@ -38,6 +39,14 @@
     .detail-card .dd { color: var(--muted); font-size: 0.8em; line-height: 1.4; }
     .detail-card .dg { font-size: 0.75em; color: var(--dim); margin-top: 4px; font-family: var(--font-mono); }
     .back-link { display: inline-block; margin-bottom: 16px; color: var(--gold); font-size: 0.9em; }
+    .radar-wrap { margin: 20px 0; height: 280px; position: relative; }
+    .review-box { padding: 14px; border-radius: 6px; margin: 16px 0; }
+    .review-box h3 { margin: 0 0 10px; color: var(--gold); font-size: 1em; }
+    .review-row { display: flex; justify-content: space-between; align-items: center; }
+    .review-label { color: var(--muted); font-size: 0.85em; }
+    .review-value { font-size: 1.6em; font-weight: 700; font-family: var(--font-mono); }
+    .review-advice { margin-top: 10px; font-size: 0.82em; color: var(--muted); font-style: italic; }
+    .attr-icon { width: 20px; height: 20px; image-rendering: pixelated; vertical-align: middle; }
     @media(max-width:1100px) { .layout { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -61,6 +70,18 @@
     let ATTR_DATA = [];
     let attrs = {};
     let selectedClass = 'Warrior', selectedRace = 'Human';
+    let buildChart = null;
+
+    const ATTR_ICONS = {
+      strength:  'icons/wcs/weapons/Hammer_01.png',
+      intellect: 'icons/wcs/weapons/Book_1.png',
+      vitality:  'icons/wcs/misc/Core.png',
+      dexterity: 'icons/wcs/weapons/Dagger_01.png',
+      endurance: 'icons/wcs/weapons/shield_01.png',
+      wisdom:    'icons/wcs/weapons/staff_1.png',
+      agility:   'icons/wcs/misc/Slash_07.png',
+      tactics:   'icons/wcs/misc/runic_tablet_01.png',
+    };
 
     const CLASS_DATA = {
       Warrior: { color:'#ff7d87', bonuses:{strength:3,endurance:2,vitality:1}, desc:'Melee powerhouse' },
@@ -69,12 +90,12 @@
       Worge:   { color:'#ffb16d', bonuses:{vitality:2,strength:2,agility:2}, desc:'Shapeshifter' },
     };
     const RACE_DATA = {
-      Human:  { bonuses:{tactics:2,wisdom:1}, desc:'+10% EXP' },
-      Elf:    { bonuses:{intellect:2,agility:1}, desc:'+Mana regen' },
-      Dwarf:  { bonuses:{endurance:2,vitality:1}, desc:'+Mining' },
-      Orc:    { bonuses:{strength:2,vitality:1}, desc:'+Melee dmg' },
-      Troll:  { bonuses:{agility:2,dexterity:1}, desc:'+HP regen' },
-      Undead: { bonuses:{intellect:1,endurance:1,tactics:1}, desc:'+Shadow resist' },
+      Human:     { bonuses:{tactics:2,wisdom:1}, desc:'+10% EXP' },
+      Elf:       { bonuses:{intellect:2,agility:1}, desc:'+Mana regen' },
+      Dwarf:     { bonuses:{endurance:2,vitality:1}, desc:'+Mining' },
+      Orc:       { bonuses:{strength:2,vitality:1}, desc:'+Melee dmg' },
+      Barbarian: { bonuses:{agility:2,dexterity:1}, desc:'+HP regen' },
+      Undead:    { bonuses:{intellect:1,endurance:1,tactics:1}, desc:'+Shadow resist' },
     };
 
     const BASE_STATS = { health:250, mana:100, stamina:100, damage:0, defense:0,
@@ -120,7 +141,6 @@
           });
         }
       });
-      // Tactics global scaling: 0.5% per point to non-resource stats
       if (tacticsPoints > 0) {
         const bonus = tacticsPoints * 0.5;
         Object.keys(stats).forEach(k => {
@@ -132,33 +152,131 @@
       return stats;
     }
 
+    function calculateCombatPower(stats) {
+      const ehp = stats.health * (1 + (stats.defense / 100)) * (1 + (stats.resistance / 100));
+      const dps = (stats.damage + 10) * (1 + (stats.criticalChance / 100) * (stats.criticalDamage / 100)) * (1 + (stats.attackSpeed / 100));
+      const utility = (stats.cooldownReduction * 2) + (stats.manaRegen * 10) + (stats.movementSpeed * 2);
+      return Math.floor((ehp * 0.4) + (dps * 2.5) + (utility * 5));
+    }
+
+    function getBuildRating(stats) {
+      const cp = calculateCombatPower(stats);
+      if (cp > 5000) return { rating: 'S+', color: '#fbbf24' };
+      if (cp > 4500) return { rating: 'S', color: '#fbbf24' };
+      if (cp > 3800) return { rating: 'A', color: '#a855f7' };
+      if (cp > 3000) return { rating: 'B', color: '#e8eaf6' };
+      if (cp > 2000) return { rating: 'C', color: '#e8eaf6' };
+      return { rating: 'D', color: '#9ca3af' };
+    }
+
+    function getIconUrl(attrId) {
+      const a = ATTR_DATA.find(x => x.id === attrId);
+      if (a && a.icon) return CDN + '/' + a.icon;
+      if (ATTR_ICONS[attrId]) return CDN + '/' + ATTR_ICONS[attrId];
+      return '';
+    }
+
+    function renderRadarChart(stats) {
+      const maxHP = 3000, maxDmg = 500, maxDef = 500;
+      const data = {
+        labels: ['Survivability', 'Damage', 'Utility', 'Mobility', 'Control', 'Magic'],
+        datasets: [{
+          label: 'Current Build',
+          data: [
+            Math.min(100, (stats.health / maxHP) * 100 + (stats.defense / maxDef) * 50),
+            Math.min(100, (stats.damage / maxDmg) * 100 + stats.criticalChance),
+            Math.min(100, stats.cooldownReduction * 2 + stats.manaRegen * 5),
+            Math.min(100, stats.movementSpeed * 5 + stats.evasion),
+            Math.min(100, stats.block + stats.stagger * 2),
+            Math.min(100, stats.resistance + stats.mana / 20)
+          ],
+          fill: true,
+          backgroundColor: 'rgba(212, 175, 55, 0.15)',
+          borderColor: '#d4af37',
+          pointBackgroundColor: '#d4af37',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: '#d4af37'
+        }, {
+          label: 'Balanced Reference',
+          data: [60, 60, 50, 50, 40, 40],
+          fill: true,
+          backgroundColor: 'rgba(165, 180, 208, 0.08)',
+          borderColor: '#a5b4d0',
+          pointBackgroundColor: '#a5b4d0',
+          pointBorderColor: '#fff',
+          borderDash: [5, 5]
+        }]
+      };
+
+      const ctx = document.getElementById('buildChart');
+      if (!ctx) return;
+
+      if (buildChart) {
+        buildChart.data = data;
+        buildChart.update();
+      } else {
+        buildChart = new Chart(ctx.getContext('2d'), {
+          type: 'radar',
+          data: data,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            elements: { line: { borderWidth: 2 } },
+            scales: {
+              r: {
+                angleLines: { color: 'rgba(255,255,255,0.1)' },
+                grid: { color: 'rgba(255,255,255,0.1)' },
+                pointLabels: { color: '#e8eaf6', font: { size: 11 } },
+                ticks: { display: false, backdropColor: 'transparent' },
+                suggestedMin: 0,
+                suggestedMax: 100
+              }
+            },
+            plugins: {
+              legend: { labels: { color: '#a5b4d0', font: { size: 11 } } }
+            }
+          }
+        });
+      }
+    }
+
     function renderAll() {
-      // LEFT PANEL — Attributes
+      const stats = calculateStats();
+      const cp = calculateCombatPower(stats);
+      const br = getBuildRating(stats);
+
+      // LEFT PANEL
       const left = document.getElementById('leftPanel');
       left.innerHTML = '<h2>Attributes</h2>' +
-        ATTR_DATA.map(a => `
-          <div class="attr-row">
-            <div class="attr-header">
-              <span class="attr-label"><img src="${CDN}/${a.icon}" class="attr-icon" style="width:20px;height:20px"> ${a.name}</span>
-              <span class="attr-value">${getTotal(a.id)}</span>
-            </div>
-            <div class="attr-controls">
-              <input type="range" min="0" max="${TOTAL_POINTS}" value="${attrs[a.id]}" oninput="setAttr('${a.id}',this.value)">
-              <input type="number" min="0" max="${TOTAL_POINTS}" value="${attrs[a.id]}" onchange="setAttr('${a.id}',this.value)">
-            </div>
-          </div>
-        `).join('') +
+        ATTR_DATA.map(a => {
+          const iconUrl = getIconUrl(a.id);
+          const iconTag = iconUrl ? `<img src="${iconUrl}" class="attr-icon" onerror="this.style.display='none'">` : '';
+          return `
+            <div class="attr-row">
+              <div class="attr-header">
+                <span class="attr-label">${iconTag} ${a.name}</span>
+                <span class="attr-value">${getTotal(a.id)}</span>
+              </div>
+              <div class="attr-controls">
+                <input type="range" min="0" max="${TOTAL_POINTS}" value="${attrs[a.id]}" oninput="setAttr('${a.id}',this.value)">
+                <input type="number" min="0" max="${TOTAL_POINTS}" value="${attrs[a.id]}" onchange="setAttr('${a.id}',this.value)">
+              </div>
+            </div>`;
+        }).join('') +
         `<div class="points inset-panel ${remaining()===0?'done':''}">
           <div class="val" style="color:${remaining()===0?'var(--green)':'var(--text)'}">${usedPoints()} / ${TOTAL_POINTS}</div>
           <div class="lbl">Points Allocated</div>
         </div>
         <div class="btn-row">
           <button class="dark-button" onclick="resetAttrs()">Reset</button>
-          <button class="gilded-button" onclick="exportBuild()">Export Build</button>
+          <button class="gilded-button" onclick="randomize()">Randomize</button>
+        </div>
+        <div class="btn-row" style="margin-top:8px">
+          <button class="gilded-button" style="grid-column:1/-1" onclick="exportBuild()">Export Build</button>
         </div>`;
 
-      // CENTER PANEL — Class/Race + Stats
-      const stats = calculateStats();
+      // CENTER PANEL
       const center = document.getElementById('centerPanel');
       center.innerHTML = '<h2>Class & Race</h2>' +
         `<div class="class-grid">${Object.entries(CLASS_DATA).map(([n,d]) =>
@@ -167,6 +285,15 @@
         `<div class="race-grid">${Object.entries(RACE_DATA).map(([n,d]) =>
           `<div class="race-btn ${selectedRace===n?'active':''}" onclick="selectRace('${n}')">${n}<br><small style="color:var(--muted)">${d.desc}</small></div>`
         ).join('')}</div>` +
+        `<div class="radar-wrap"><canvas id="buildChart"></canvas></div>` +
+        `<div class="review-box inset-panel">
+          <h3>Statistical Review</h3>
+          <div class="review-row">
+            <div><div class="review-label">Combat Power</div><div class="review-value" style="color:#fbbf24">${remaining()===0 ? cp.toLocaleString() : '\u2014'}</div></div>
+            <div style="text-align:right"><div class="review-label">Build Rating</div><div class="review-value" style="color:${br.color}">${remaining()===0 ? br.rating : '?'}</div></div>
+          </div>
+          <div class="review-advice">${remaining()===0 ? (cp < 3000 ? 'Low combat effectiveness. Try focusing on synergy stats.' : cp > 5000 ? 'Excellent build efficiency!' : 'Solid build. Consider specializing further for higher tiers.') : 'Allocate all 160 points to see your build rating.'}</div>
+        </div>` +
         '<h2 style="margin-top:20px">Derived Stats (37)</h2>' +
         '<div class="stats-grid">' +
           Object.entries(stats).map(([k,v]) => {
@@ -176,11 +303,13 @@
           }).join('') +
         '</div>';
 
-      // RIGHT PANEL — Attribute details
+      // RIGHT PANEL
       const right = document.getElementById('rightPanel');
       right.innerHTML = '<h2>Attribute Guide</h2>' +
         ATTR_DATA.map(a => {
           const pts = getTotal(a.id);
+          const iconUrl = getIconUrl(a.id);
+          const iconTag = iconUrl ? `<img src="${iconUrl}" class="attr-icon" style="width:18px;height:18px" onerror="this.style.display='none'">` : '';
           const gainsText = a.gains ? Object.entries(a.gains).map(([k,g]) => {
             const unit = PERCENT_STATS.has(k) ? '%' : '';
             const total = (g.value * pts).toFixed(2);
@@ -188,11 +317,13 @@
           }).join(' | ') : '';
           return `
             <div class="detail-card inset-panel" style="border-color:${a.color}">
-              <h4 style="color:${a.color}"><img src="${CDN}/${a.icon}" class="attr-icon" style="width:18px;height:18px"> ${a.name} — ${pts}</h4>
+              <h4 style="color:${a.color}">${iconTag} ${a.name} \u2014 ${pts}</h4>
               <div class="dd">${a.description}</div>
               <div class="dg">${gainsText}</div>
             </div>`;
         }).join('');
+
+      setTimeout(() => renderRadarChart(stats), 0);
     }
 
     function setAttr(id, val) {
@@ -203,6 +334,17 @@
       renderAll();
     }
     function resetAttrs() { ATTR_DATA.forEach(a => attrs[a.id] = 0); renderAll(); }
+    function randomize() {
+      ATTR_DATA.forEach(a => attrs[a.id] = 0);
+      let rem = TOTAL_POINTS;
+      while (rem > 0) {
+        const keys = ATTR_DATA.map(a => a.id);
+        const key = keys[Math.floor(Math.random() * keys.length)];
+        attrs[key]++;
+        rem--;
+      }
+      renderAll();
+    }
     function selectClass(c) { selectedClass = c; renderAll(); }
     function selectRace(r) { selectedRace = r; renderAll(); }
     function exportBuild() {
