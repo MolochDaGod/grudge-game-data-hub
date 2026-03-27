@@ -1,4413 +1,4413 @@
 {
   "version": "1.0.0",
-  "generated": "2026-03-25T06:06:42.160Z",
+  "generated": "2026-03-27T10:47:38.625Z",
   "totalRecipes": 220,
   "recipes": [
     {
-      "uuid": "RECP-20260325010642-000002-6CD8864B",
+      "uuid": "RECP-20260327054738-000002-FA757EC4",
       "name": "Craft Bloodfeud Blade",
-      "resultItemId": "ITEM-20260325010642-000001-13AC16AD",
+      "resultItemId": "ITEM-20260327054738-000001-2DDE53B9",
       "resultName": "Bloodfeud Blade",
       "profession": "Miner",
       "category": "swords",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000003-204D1D51",
+          "uuid": "MATL-20260327054738-000003-8217A9BB",
           "name": "Iron Ingot",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000004-7D9D775C",
+          "uuid": "MATL-20260327054738-000004-309E6E09",
           "name": "Leather",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00000D-8E448335",
+      "uuid": "RECP-20260327054738-00000D-68AEDA02",
       "name": "Craft Wraithfang",
-      "resultItemId": "ITEM-20260325010642-00000C-871894DC",
+      "resultItemId": "ITEM-20260327054738-00000C-4150727C",
       "resultName": "Wraithfang",
       "profession": "Miner",
       "category": "swords",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00000E-EE811551",
+          "uuid": "MATL-20260327054738-00000E-E8001523",
           "name": "Steel Ingot",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00000F-BADF5FAC",
+          "uuid": "MATL-20260327054738-00000F-8FE9BBEC",
           "name": "Void Dust",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000018-0F29F151",
+      "uuid": "RECP-20260327054738-000018-2F3C0D87",
       "name": "Craft Oathbreaker",
-      "resultItemId": "ITEM-20260325010642-000017-29EEFF83",
+      "resultItemId": "ITEM-20260327054738-000017-57291565",
       "resultName": "Oathbreaker",
       "profession": "Miner",
       "category": "swords",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000019-722F08F3",
+          "uuid": "MATL-20260327054738-000019-841D4C7E",
           "name": "Dark Iron Ingot",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00001A-4C72AB6F",
+          "uuid": "MATL-20260327054738-00001A-3FD09D8B",
           "name": "Obsidian",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000023-E8E1E4B9",
+      "uuid": "RECP-20260327054738-000023-2498B99A",
       "name": "Craft Kinrend",
-      "resultItemId": "ITEM-20260325010642-000022-AB3188E3",
+      "resultItemId": "ITEM-20260327054738-000022-E6EC7C40",
       "resultName": "Kinrend",
       "profession": "Miner",
       "category": "swords",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000024-7D1B29C9",
+          "uuid": "MATL-20260327054738-000024-4DC8C857",
           "name": "Blood Stone",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000025-8C3F904A",
+          "uuid": "MATL-20260327054738-000025-37712E18",
           "name": "Bone",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00002E-29FAC0B4",
+      "uuid": "RECP-20260327054738-00002E-13AF7F8A",
       "name": "Craft Dusksinger",
-      "resultItemId": "ITEM-20260325010642-00002D-D677FDFC",
+      "resultItemId": "ITEM-20260327054738-00002D-7EA03F68",
       "resultName": "Dusksinger",
       "profession": "Miner",
       "category": "swords",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00002F-DB88F384",
+          "uuid": "MATL-20260327054738-00002F-FBE27F9F",
           "name": "Shadow Ingot",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000030-C163AB2C",
+          "uuid": "MATL-20260327054738-000030-6CDCB121",
           "name": "Gem",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000039-8F349C29",
+      "uuid": "RECP-20260327054738-000039-B7DB3D92",
       "name": "Craft Emberclad",
-      "resultItemId": "ITEM-20260325010642-000038-32321BC5",
+      "resultItemId": "ITEM-20260327054738-000038-B9A9E627",
       "resultName": "Emberclad",
       "profession": "Miner",
       "category": "swords",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00003A-9F4F73FA",
+          "uuid": "MATL-20260327054738-00003A-18F70D8C",
           "name": "Fire Essence",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00000E-EE811551",
+          "uuid": "MATL-20260327054738-00000E-E8001523",
           "name": "Steel Ingot",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000043-35F8A5DD",
+      "uuid": "RECP-20260327054738-000043-8319D6FA",
       "name": "Craft Gorehowl",
-      "resultItemId": "ITEM-20260325010642-000042-73541323",
+      "resultItemId": "ITEM-20260327054738-000042-734D7313",
       "resultName": "Gorehowl",
       "profession": "Miner",
       "category": "axes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000003-204D1D51",
+          "uuid": "MATL-20260327054738-000003-8217A9BB",
           "name": "Iron Ingot",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000044-8226EBB2",
+          "uuid": "MATL-20260327054738-000044-9B58CBB3",
           "name": "Wood",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00004D-D1E01CA5",
+      "uuid": "RECP-20260327054738-00004D-065F0FCA",
       "name": "Craft Skullsplitter",
-      "resultItemId": "ITEM-20260325010642-00004C-269414CE",
+      "resultItemId": "ITEM-20260327054738-00004C-EAF782E1",
       "resultName": "Skullsplitter",
       "profession": "Miner",
       "category": "axes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00000E-EE811551",
+          "uuid": "MATL-20260327054738-00000E-E8001523",
           "name": "Steel Ingot",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000025-8C3F904A",
+          "uuid": "MATL-20260327054738-000025-37712E18",
           "name": "Bone",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000056-2AA2B574",
+      "uuid": "RECP-20260327054738-000056-9F49D9C4",
       "name": "Craft Veinreaver",
-      "resultItemId": "ITEM-20260325010642-000055-5E0C9A27",
+      "resultItemId": "ITEM-20260327054738-000055-B3B98353",
       "resultName": "Veinreaver",
       "profession": "Miner",
       "category": "axes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000019-722F08F3",
+          "uuid": "MATL-20260327054738-000019-841D4C7E",
           "name": "Dark Iron Ingot",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000057-AB03F55B",
+          "uuid": "MATL-20260327054738-000057-4AEF7FF1",
           "name": "Blood",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000060-6C80A91A",
+      "uuid": "RECP-20260327054738-000060-1A12BFF4",
       "name": "Craft Ironmaw",
-      "resultItemId": "ITEM-20260325010642-00005F-94CF4B2F",
+      "resultItemId": "ITEM-20260327054738-00005F-7BA32A22",
       "resultName": "Ironmaw",
       "profession": "Miner",
       "category": "axes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000003-204D1D51",
+          "uuid": "MATL-20260327054738-000003-8217A9BB",
           "name": "Iron Ingot",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-00001A-4C72AB6F",
+          "uuid": "MATL-20260327054738-00001A-3FD09D8B",
           "name": "Obsidian",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000069-F943F921",
+      "uuid": "RECP-20260327054738-000069-396556E0",
       "name": "Craft Dreadcleaver",
-      "resultItemId": "ITEM-20260325010642-000068-85C0C9E6",
+      "resultItemId": "ITEM-20260327054738-000068-8D761F9B",
       "resultName": "Dreadcleaver",
       "profession": "Miner",
       "category": "axes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00002F-DB88F384",
+          "uuid": "MATL-20260327054738-00002F-FBE27F9F",
           "name": "Shadow Ingot",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00000F-BADF5FAC",
+          "uuid": "MATL-20260327054738-00000F-8FE9BBEC",
           "name": "Void Dust",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000072-829AFB57",
+      "uuid": "RECP-20260327054738-000072-9C409E09",
       "name": "Craft Bonehew",
-      "resultItemId": "ITEM-20260325010642-000071-F057342E",
+      "resultItemId": "ITEM-20260327054738-000071-87DAD1D9",
       "resultName": "Bonehew",
       "profession": "Miner",
       "category": "axes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000025-8C3F904A",
+          "uuid": "MATL-20260327054738-000025-37712E18",
           "name": "Bone",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-00000E-EE811551",
+          "uuid": "MATL-20260327054738-00000E-E8001523",
           "name": "Steel Ingot",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00007B-F70F4642",
+      "uuid": "RECP-20260327054738-00007B-936C105B",
       "name": "Craft Nightfang",
-      "resultItemId": "ITEM-20260325010642-00007A-B71EB5B6",
+      "resultItemId": "ITEM-20260327054738-00007A-2E8019FA",
       "resultName": "Nightfang",
       "profession": "Miner",
       "category": "daggers",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000003-204D1D51",
+          "uuid": "MATL-20260327054738-000003-8217A9BB",
           "name": "Iron Ingot",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-000004-7D9D775C",
+          "uuid": "MATL-20260327054738-000004-309E6E09",
           "name": "Leather",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000084-5A51C646",
+      "uuid": "RECP-20260327054738-000084-D7D98C08",
       "name": "Craft Bloodshiv",
-      "resultItemId": "ITEM-20260325010642-000083-9635A58D",
+      "resultItemId": "ITEM-20260327054738-000083-F2B8EDEE",
       "resultName": "Bloodshiv",
       "profession": "Miner",
       "category": "daggers",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00000E-EE811551",
+          "uuid": "MATL-20260327054738-00000E-E8001523",
           "name": "Steel Ingot",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-000057-AB03F55B",
+          "uuid": "MATL-20260327054738-000057-4AEF7FF1",
           "name": "Blood",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00008D-940E0B5F",
+      "uuid": "RECP-20260327054738-00008D-1B29DCCC",
       "name": "Craft Wraithclaw",
-      "resultItemId": "ITEM-20260325010642-00008C-EA90D690",
+      "resultItemId": "ITEM-20260327054738-00008C-0ED4A981",
       "resultName": "Wraithclaw",
       "profession": "Miner",
       "category": "daggers",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000019-722F08F3",
+          "uuid": "MATL-20260327054738-000019-841D4C7E",
           "name": "Dark Iron Ingot",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-00000F-BADF5FAC",
+          "uuid": "MATL-20260327054738-00000F-8FE9BBEC",
           "name": "Void Dust",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000096-30B07F41",
+      "uuid": "RECP-20260327054738-000096-B5FCDAD5",
       "name": "Craft Emberfang",
-      "resultItemId": "ITEM-20260325010642-000095-B4CA186B",
+      "resultItemId": "ITEM-20260327054738-000095-9069227E",
       "resultName": "Emberfang",
       "profession": "Miner",
       "category": "daggers",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00003A-9F4F73FA",
+          "uuid": "MATL-20260327054738-00003A-18F70D8C",
           "name": "Fire Essence",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-00000E-EE811551",
+          "uuid": "MATL-20260327054738-00000E-E8001523",
           "name": "Steel Ingot",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00009F-871B23E2",
+      "uuid": "RECP-20260327054738-00009F-A486480C",
       "name": "Craft Ironspike",
-      "resultItemId": "ITEM-20260325010642-00009E-F5F752F9",
+      "resultItemId": "ITEM-20260327054738-00009E-52F5DC1D",
       "resultName": "Ironspike",
       "profession": "Miner",
       "category": "daggers",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000003-204D1D51",
+          "uuid": "MATL-20260327054738-000003-8217A9BB",
           "name": "Iron Ingot",
           "quantity": 4
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0000A8-B86E61A5",
+      "uuid": "RECP-20260327054738-0000A8-D4A676F1",
       "name": "Craft Duskblade",
-      "resultItemId": "ITEM-20260325010642-0000A7-4A73ABAE",
+      "resultItemId": "ITEM-20260327054738-0000A7-55F60CDE",
       "resultName": "Duskblade",
       "profession": "Miner",
       "category": "daggers",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00002F-DB88F384",
+          "uuid": "MATL-20260327054738-00002F-FBE27F9F",
           "name": "Shadow Ingot",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-000030-C163AB2C",
+          "uuid": "MATL-20260327054738-000030-6CDCB121",
           "name": "Gem",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0000B1-67C22671",
+      "uuid": "RECP-20260327054738-0000B1-835DE612",
       "name": "Craft Titanmaul",
-      "resultItemId": "ITEM-20260325010642-0000B0-C9A2762D",
+      "resultItemId": "ITEM-20260327054738-0000B0-B85E6915",
       "resultName": "Titanmaul",
       "profession": "Miner",
       "category": "hammers",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000003-204D1D51",
+          "uuid": "MATL-20260327054738-000003-8217A9BB",
           "name": "Iron Ingot",
           "quantity": 6
         },
         {
-          "uuid": "MATL-20260325010642-0000B2-6C907EB6",
+          "uuid": "MATL-20260327054738-0000B2-9102B6F5",
           "name": "Stone",
           "quantity": 4
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0000BB-FCC08EB7",
+      "uuid": "RECP-20260327054738-0000BB-0D20B16A",
       "name": "Craft Bloodcrusher",
-      "resultItemId": "ITEM-20260325010642-0000BA-B49B8267",
+      "resultItemId": "ITEM-20260327054738-0000BA-96246C55",
       "resultName": "Bloodcrusher",
       "profession": "Miner",
       "category": "hammers",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00000E-EE811551",
+          "uuid": "MATL-20260327054738-00000E-E8001523",
           "name": "Steel Ingot",
           "quantity": 6
         },
         {
-          "uuid": "MATL-20260325010642-000057-AB03F55B",
+          "uuid": "MATL-20260327054738-000057-4AEF7FF1",
           "name": "Blood",
           "quantity": 4
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0000C4-7C58A075",
+      "uuid": "RECP-20260327054738-0000C4-D6E5E999",
       "name": "Craft Stonebreaker",
-      "resultItemId": "ITEM-20260325010642-0000C3-F8D0A0E3",
+      "resultItemId": "ITEM-20260327054738-0000C3-566371EE",
       "resultName": "Stonebreaker",
       "profession": "Miner",
       "category": "hammers",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0000C5-11BF3B7C",
+          "uuid": "MATL-20260327054738-0000C5-0AAF2C2A",
           "name": "Mithril Ingot",
           "quantity": 6
         },
         {
-          "uuid": "MATL-20260325010642-00001A-4C72AB6F",
+          "uuid": "MATL-20260327054738-00001A-3FD09D8B",
           "name": "Obsidian",
           "quantity": 4
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0000CE-5723BA01",
+      "uuid": "RECP-20260327054738-0000CE-446D3F6F",
       "name": "Craft Oathcrusher",
-      "resultItemId": "ITEM-20260325010642-0000CD-740C3126",
+      "resultItemId": "ITEM-20260327054738-0000CD-1D14EBFF",
       "resultName": "Oathcrusher",
       "profession": "Miner",
       "category": "hammers",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000019-722F08F3",
+          "uuid": "MATL-20260327054738-000019-841D4C7E",
           "name": "Dark Iron Ingot",
           "quantity": 6
         },
         {
-          "uuid": "MATL-20260325010642-00000F-BADF5FAC",
+          "uuid": "MATL-20260327054738-00000F-8FE9BBEC",
           "name": "Void Dust",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0000D7-E51F233E",
+      "uuid": "RECP-20260327054738-0000D7-8B4207D9",
       "name": "Craft Doomhammer",
-      "resultItemId": "ITEM-20260325010642-0000D6-D0EFF6ED",
+      "resultItemId": "ITEM-20260327054738-0000D6-A1D6B777",
       "resultName": "Doomhammer",
       "profession": "Miner",
       "category": "hammers",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00002F-DB88F384",
+          "uuid": "MATL-20260327054738-00002F-FBE27F9F",
           "name": "Shadow Ingot",
           "quantity": 6
         },
         {
-          "uuid": "MATL-20260325010642-000025-8C3F904A",
+          "uuid": "MATL-20260327054738-000025-37712E18",
           "name": "Bone",
           "quantity": 4
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0000E0-FF718C6B",
+      "uuid": "RECP-20260327054738-0000E0-19294338",
       "name": "Craft Divine Maul",
-      "resultItemId": "ITEM-20260325010642-0000DF-7A0C377D",
+      "resultItemId": "ITEM-20260327054738-0000DF-CCE9ABEA",
       "resultName": "Divine Maul",
       "profession": "Miner",
       "category": "hammers",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0000E1-8B0CDD7C",
+          "uuid": "MATL-20260327054738-0000E1-132CD5FD",
           "name": "Divine Ingot",
           "quantity": 6
         },
         {
-          "uuid": "MATL-20260325010642-0000E2-6D2EAEBC",
+          "uuid": "MATL-20260327054738-0000E2-951101A0",
           "name": "Holy Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0000EB-A2DF1DB4",
+      "uuid": "RECP-20260327054738-0000EB-20A89B2C",
       "name": "Craft Vengeance Blade",
-      "resultItemId": "ITEM-20260325010642-0000EA-2997F47C",
+      "resultItemId": "ITEM-20260327054738-0000EA-369F2380",
       "resultName": "Vengeance Blade",
       "profession": "Miner",
       "category": "greatswords",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000003-204D1D51",
+          "uuid": "MATL-20260327054738-000003-8217A9BB",
           "name": "Iron Ingot",
           "quantity": 8
         },
         {
-          "uuid": "MATL-20260325010642-000004-7D9D775C",
+          "uuid": "MATL-20260327054738-000004-309E6E09",
           "name": "Leather",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0000F4-3F7A1B44",
+      "uuid": "RECP-20260327054738-0000F4-55BD10A5",
       "name": "Craft Bloodwrath",
-      "resultItemId": "ITEM-20260325010642-0000F3-F22C4B81",
+      "resultItemId": "ITEM-20260327054738-0000F3-AA448113",
       "resultName": "Bloodwrath",
       "profession": "Miner",
       "category": "greatswords",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00000E-EE811551",
+          "uuid": "MATL-20260327054738-00000E-E8001523",
           "name": "Steel Ingot",
           "quantity": 8
         },
         {
-          "uuid": "MATL-20260325010642-000057-AB03F55B",
+          "uuid": "MATL-20260327054738-000057-4AEF7FF1",
           "name": "Blood",
           "quantity": 4
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0000FD-A5859C91",
+      "uuid": "RECP-20260327054738-0000FD-B3783E57",
       "name": "Craft Shadowcleave",
-      "resultItemId": "ITEM-20260325010642-0000FC-53FE0659",
+      "resultItemId": "ITEM-20260327054738-0000FC-94DE5123",
       "resultName": "Shadowcleave",
       "profession": "Miner",
       "category": "greatswords",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000019-722F08F3",
+          "uuid": "MATL-20260327054738-000019-841D4C7E",
           "name": "Dark Iron Ingot",
           "quantity": 8
         },
         {
-          "uuid": "MATL-20260325010642-00000F-BADF5FAC",
+          "uuid": "MATL-20260327054738-00000F-8FE9BBEC",
           "name": "Void Dust",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000106-74CA943E",
+      "uuid": "RECP-20260327054738-000106-4D21F787",
       "name": "Craft Kinslayer",
-      "resultItemId": "ITEM-20260325010642-000105-39CC55FD",
+      "resultItemId": "ITEM-20260327054738-000105-C87B3F3E",
       "resultName": "Kinslayer",
       "profession": "Miner",
       "category": "greatswords",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000024-7D1B29C9",
+          "uuid": "MATL-20260327054738-000024-4DC8C857",
           "name": "Blood Stone",
           "quantity": 6
         },
         {
-          "uuid": "MATL-20260325010642-000025-8C3F904A",
+          "uuid": "MATL-20260327054738-000025-37712E18",
           "name": "Bone",
           "quantity": 4
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00010F-D0F1D23F",
+      "uuid": "RECP-20260327054738-00010F-E50ECBA7",
       "name": "Craft Duskbringer",
-      "resultItemId": "ITEM-20260325010642-00010E-4BA569A2",
+      "resultItemId": "ITEM-20260327054738-00010E-95128062",
       "resultName": "Duskbringer",
       "profession": "Miner",
       "category": "greatswords",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00002F-DB88F384",
+          "uuid": "MATL-20260327054738-00002F-FBE27F9F",
           "name": "Shadow Ingot",
           "quantity": 8
         },
         {
-          "uuid": "MATL-20260325010642-000030-C163AB2C",
+          "uuid": "MATL-20260327054738-000030-6CDCB121",
           "name": "Gem",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000118-B74C8E3C",
+      "uuid": "RECP-20260327054738-000118-EB88023C",
       "name": "Craft Divine Judgment",
-      "resultItemId": "ITEM-20260325010642-000117-AAB712FE",
+      "resultItemId": "ITEM-20260327054738-000117-E9E6DA8D",
       "resultName": "Divine Judgment",
       "profession": "Miner",
       "category": "greatswords",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0000E1-8B0CDD7C",
+          "uuid": "MATL-20260327054738-0000E1-132CD5FD",
           "name": "Divine Ingot",
           "quantity": 10
         },
         {
-          "uuid": "MATL-20260325010642-0000E2-6D2EAEBC",
+          "uuid": "MATL-20260327054738-0000E2-951101A0",
           "name": "Holy Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000121-2A7FAE1A",
+      "uuid": "RECP-20260327054738-000121-6D95DF4E",
       "name": "Craft Skullsunder",
-      "resultItemId": "ITEM-20260325010642-000120-1979CC0F",
+      "resultItemId": "ITEM-20260327054738-000120-AEEE86EB",
       "resultName": "Skullsunder",
       "profession": "Miner",
       "category": "greataxes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000003-204D1D51",
+          "uuid": "MATL-20260327054738-000003-8217A9BB",
           "name": "Iron Ingot",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000044-8226EBB2",
+          "uuid": "MATL-20260327054738-000044-9B58CBB3",
           "name": "Wood",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00012A-71E58C70",
+      "uuid": "RECP-20260327054738-00012A-BEE48DA5",
       "name": "Craft Bloodreaver",
-      "resultItemId": "ITEM-20260325010642-000129-D8F8060D",
+      "resultItemId": "ITEM-20260327054738-000129-5459BC55",
       "resultName": "Bloodreaver",
       "profession": "Miner",
       "category": "greataxes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00000E-EE811551",
+          "uuid": "MATL-20260327054738-00000E-E8001523",
           "name": "Steel Ingot",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000057-AB03F55B",
+          "uuid": "MATL-20260327054738-000057-4AEF7FF1",
           "name": "Blood",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000133-14E5F5DE",
+      "uuid": "RECP-20260327054738-000133-8EB7706C",
       "name": "Craft Worldsplitter",
-      "resultItemId": "ITEM-20260325010642-000132-513B0597",
+      "resultItemId": "ITEM-20260327054738-000132-6B6B5B12",
       "resultName": "Worldsplitter",
       "profession": "Miner",
       "category": "greataxes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0000C5-11BF3B7C",
+          "uuid": "MATL-20260327054738-0000C5-0AAF2C2A",
           "name": "Mithril Ingot",
           "quantity": 8
         },
         {
-          "uuid": "MATL-20260325010642-000134-BF5957C8",
+          "uuid": "MATL-20260327054738-000134-03FD32A7",
           "name": "Void Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00013D-2C784E1C",
+      "uuid": "RECP-20260327054738-00013D-6931C818",
       "name": "Craft Oathcleaver",
-      "resultItemId": "ITEM-20260325010642-00013C-53E136B7",
+      "resultItemId": "ITEM-20260327054738-00013C-B1C0195A",
       "resultName": "Oathcleaver",
       "profession": "Miner",
       "category": "greataxes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000019-722F08F3",
+          "uuid": "MATL-20260327054738-000019-841D4C7E",
           "name": "Dark Iron Ingot",
           "quantity": 6
         },
         {
-          "uuid": "MATL-20260325010642-00001A-4C72AB6F",
+          "uuid": "MATL-20260327054738-00001A-3FD09D8B",
           "name": "Obsidian",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000146-8E8C7B7D",
+      "uuid": "RECP-20260327054738-000146-311DAFAB",
       "name": "Craft Duskrend",
-      "resultItemId": "ITEM-20260325010642-000145-9B3B6C47",
+      "resultItemId": "ITEM-20260327054738-000145-6C34DF4F",
       "resultName": "Duskrend",
       "profession": "Miner",
       "category": "greataxes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00002F-DB88F384",
+          "uuid": "MATL-20260327054738-00002F-FBE27F9F",
           "name": "Shadow Ingot",
           "quantity": 6
         },
         {
-          "uuid": "MATL-20260325010642-000030-C163AB2C",
+          "uuid": "MATL-20260327054738-000030-6CDCB121",
           "name": "Gem",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00014F-685F2E21",
+      "uuid": "RECP-20260327054738-00014F-07B04A8E",
       "name": "Craft World Breaker",
-      "resultItemId": "ITEM-20260325010642-00014E-5DF6865A",
+      "resultItemId": "ITEM-20260327054738-00014E-C9945427",
       "resultName": "World Breaker",
       "profession": "Miner",
       "category": "greataxes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0000E1-8B0CDD7C",
+          "uuid": "MATL-20260327054738-0000E1-132CD5FD",
           "name": "Divine Ingot",
           "quantity": 8
         },
         {
-          "uuid": "MATL-20260325010642-000134-BF5957C8",
+          "uuid": "MATL-20260327054738-000134-03FD32A7",
           "name": "Void Essence",
           "quantity": 5
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000158-5C73F0B4",
+      "uuid": "RECP-20260327054738-000158-EACF69D8",
       "name": "Craft Iron Pike",
-      "resultItemId": "ITEM-20260325010642-000157-3318D99E",
+      "resultItemId": "ITEM-20260327054738-000157-512ED43A",
       "resultName": "Iron Pike",
       "profession": "Miner",
       "category": "spears",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000003-204D1D51",
+          "uuid": "MATL-20260327054738-000003-8217A9BB",
           "name": "Iron Ingot",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000044-8226EBB2",
+          "uuid": "MATL-20260327054738-000044-9B58CBB3",
           "name": "Wood",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000161-8CE6E213",
+      "uuid": "RECP-20260327054738-000161-3C42CE61",
       "name": "Craft Steel Lance",
-      "resultItemId": "ITEM-20260325010642-000160-7CCD6648",
+      "resultItemId": "ITEM-20260327054738-000160-E83AB180",
       "resultName": "Steel Lance",
       "profession": "Miner",
       "category": "spears",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00000E-EE811551",
+          "uuid": "MATL-20260327054738-00000E-E8001523",
           "name": "Steel Ingot",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000044-8226EBB2",
+          "uuid": "MATL-20260327054738-000044-9B58CBB3",
           "name": "Wood",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00016A-CF235EAF",
+      "uuid": "RECP-20260327054738-00016A-8E23799A",
       "name": "Craft Mithril Javelin",
-      "resultItemId": "ITEM-20260325010642-000169-52ECB6B5",
+      "resultItemId": "ITEM-20260327054738-000169-FCA69CB3",
       "resultName": "Mithril Javelin",
       "profession": "Miner",
       "category": "spears",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0000C5-11BF3B7C",
+          "uuid": "MATL-20260327054738-0000C5-0AAF2C2A",
           "name": "Mithril Ingot",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000004-7D9D775C",
+          "uuid": "MATL-20260327054738-000004-309E6E09",
           "name": "Leather",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000173-241B579B",
+      "uuid": "RECP-20260327054738-000173-9A966BE0",
       "name": "Craft Bloodspear",
-      "resultItemId": "ITEM-20260325010642-000172-6198D9D6",
+      "resultItemId": "ITEM-20260327054738-000172-B92B1D59",
       "resultName": "Bloodspear",
       "profession": "Miner",
       "category": "spears",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000019-722F08F3",
+          "uuid": "MATL-20260327054738-000019-841D4C7E",
           "name": "Dark Iron Ingot",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000057-AB03F55B",
+          "uuid": "MATL-20260327054738-000057-4AEF7FF1",
           "name": "Blood",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00017C-C6A67AC8",
+      "uuid": "RECP-20260327054738-00017C-514D4790",
       "name": "Craft Voidpiercer",
-      "resultItemId": "ITEM-20260325010642-00017B-DD7F8C7E",
+      "resultItemId": "ITEM-20260327054738-00017B-5B6C9780",
       "resultName": "Voidpiercer",
       "profession": "Miner",
       "category": "spears",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00002F-DB88F384",
+          "uuid": "MATL-20260327054738-00002F-FBE27F9F",
           "name": "Shadow Ingot",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000134-BF5957C8",
+          "uuid": "MATL-20260327054738-000134-03FD32A7",
           "name": "Void Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000185-6861ABE4",
+      "uuid": "RECP-20260327054738-000185-51A85145",
       "name": "Craft Divine Trident",
-      "resultItemId": "ITEM-20260325010642-000184-FB934F4F",
+      "resultItemId": "ITEM-20260327054738-000184-74B9CC28",
       "resultName": "Divine Trident",
       "profession": "Miner",
       "category": "spears",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0000E1-8B0CDD7C",
+          "uuid": "MATL-20260327054738-0000E1-132CD5FD",
           "name": "Divine Ingot",
           "quantity": 6
         },
         {
-          "uuid": "MATL-20260325010642-0000E2-6D2EAEBC",
+          "uuid": "MATL-20260327054738-0000E2-951101A0",
           "name": "Holy Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00018E-956A58CE",
+      "uuid": "RECP-20260327054738-00018E-6147ADCA",
       "name": "Craft Iron Cudgel",
-      "resultItemId": "ITEM-20260325010642-00018D-4CD41470",
+      "resultItemId": "ITEM-20260327054738-00018D-1FBB1BE3",
       "resultName": "Iron Cudgel",
       "profession": "Miner",
       "category": "maces",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000003-204D1D51",
+          "uuid": "MATL-20260327054738-000003-8217A9BB",
           "name": "Iron Ingot",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000044-8226EBB2",
+          "uuid": "MATL-20260327054738-000044-9B58CBB3",
           "name": "Wood",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000197-61B4725C",
+      "uuid": "RECP-20260327054738-000197-16C58D5F",
       "name": "Craft Steel Flail",
-      "resultItemId": "ITEM-20260325010642-000196-6976BE54",
+      "resultItemId": "ITEM-20260327054738-000196-FE2FC6DC",
       "resultName": "Steel Flail",
       "profession": "Miner",
       "category": "maces",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00000E-EE811551",
+          "uuid": "MATL-20260327054738-00000E-E8001523",
           "name": "Steel Ingot",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000198-9C173C95",
+          "uuid": "MATL-20260327054738-000198-E2C57109",
           "name": "Chain",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0001A1-EBD3BB84",
+      "uuid": "RECP-20260327054738-0001A1-C10866B0",
       "name": "Craft Spiked Morningstar",
-      "resultItemId": "ITEM-20260325010642-0001A0-D058EEF9",
+      "resultItemId": "ITEM-20260327054738-0001A0-5945BD67",
       "resultName": "Spiked Morningstar",
       "profession": "Miner",
       "category": "maces",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0000C5-11BF3B7C",
+          "uuid": "MATL-20260327054738-0000C5-0AAF2C2A",
           "name": "Mithril Ingot",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000003-204D1D51",
+          "uuid": "MATL-20260327054738-000003-8217A9BB",
           "name": "Iron Ingot",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0001AA-4064915A",
+      "uuid": "RECP-20260327054738-0001AA-12A7C066",
       "name": "Craft Bloodbludgeon",
-      "resultItemId": "ITEM-20260325010642-0001A9-EAEEDD22",
+      "resultItemId": "ITEM-20260327054738-0001A9-3611E0C0",
       "resultName": "Bloodbludgeon",
       "profession": "Miner",
       "category": "maces",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000019-722F08F3",
+          "uuid": "MATL-20260327054738-000019-841D4C7E",
           "name": "Dark Iron Ingot",
           "quantity": 6
         },
         {
-          "uuid": "MATL-20260325010642-000057-AB03F55B",
+          "uuid": "MATL-20260327054738-000057-4AEF7FF1",
           "name": "Blood",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0001B3-9C5B37B0",
+      "uuid": "RECP-20260327054738-0001B3-6B8FAC67",
       "name": "Craft Obsidian Crusher",
-      "resultItemId": "ITEM-20260325010642-0001B2-76F9C5C3",
+      "resultItemId": "ITEM-20260327054738-0001B2-AD6AD2AC",
       "resultName": "Obsidian Crusher",
       "profession": "Miner",
       "category": "maces",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00001A-4C72AB6F",
+          "uuid": "MATL-20260327054738-00001A-3FD09D8B",
           "name": "Obsidian",
           "quantity": 8
         },
         {
-          "uuid": "MATL-20260325010642-00002F-DB88F384",
+          "uuid": "MATL-20260327054738-00002F-FBE27F9F",
           "name": "Shadow Ingot",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0001BC-F3C16BF6",
+      "uuid": "RECP-20260327054738-0001BC-B0F1AF6F",
       "name": "Craft Divine Scepter",
-      "resultItemId": "ITEM-20260325010642-0001BB-2A2B158B",
+      "resultItemId": "ITEM-20260327054738-0001BB-C80CC0B0",
       "resultName": "Divine Scepter",
       "profession": "Miner",
       "category": "maces",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0000E1-8B0CDD7C",
+          "uuid": "MATL-20260327054738-0000E1-132CD5FD",
           "name": "Divine Ingot",
           "quantity": 6
         },
         {
-          "uuid": "MATL-20260325010642-0000E2-6D2EAEBC",
+          "uuid": "MATL-20260327054738-0000E2-951101A0",
           "name": "Holy Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0001C5-99FFE39E",
+      "uuid": "RECP-20260327054738-0001C5-BBD3D660",
       "name": "Craft Iron Buckler",
-      "resultItemId": "ITEM-20260325010642-0001C4-28A05B33",
+      "resultItemId": "ITEM-20260327054738-0001C4-49DA1C4D",
       "resultName": "Iron Buckler",
       "profession": "Miner",
       "category": "shields",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000003-204D1D51",
+          "uuid": "MATL-20260327054738-000003-8217A9BB",
           "name": "Iron Ingot",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0001CE-318C0476",
+      "uuid": "RECP-20260327054738-0001CE-A800FECD",
       "name": "Craft Steel Kite Shield",
-      "resultItemId": "ITEM-20260325010642-0001CD-765433FD",
+      "resultItemId": "ITEM-20260327054738-0001CD-20192C6A",
       "resultName": "Steel Kite Shield",
       "profession": "Miner",
       "category": "shields",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00000E-EE811551",
+          "uuid": "MATL-20260327054738-00000E-E8001523",
           "name": "Steel Ingot",
           "quantity": 5
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0001D7-71319D80",
+      "uuid": "RECP-20260327054738-0001D7-D37689A4",
       "name": "Craft Obsidian Shield",
-      "resultItemId": "ITEM-20260325010642-0001D6-97CCD3DF",
+      "resultItemId": "ITEM-20260327054738-0001D6-5B127CA8",
       "resultName": "Obsidian Shield",
       "profession": "Miner",
       "category": "shields",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00001A-4C72AB6F",
+          "uuid": "MATL-20260327054738-00001A-3FD09D8B",
           "name": "Obsidian",
           "quantity": 10
         },
         {
-          "uuid": "MATL-20260325010642-000003-204D1D51",
+          "uuid": "MATL-20260327054738-000003-8217A9BB",
           "name": "Iron Ingot",
           "quantity": 5
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0001E0-51CB2907",
+      "uuid": "RECP-20260327054738-0001E0-52164A1D",
       "name": "Craft Mithril Tower Shield",
-      "resultItemId": "ITEM-20260325010642-0001DF-8F08035A",
+      "resultItemId": "ITEM-20260327054738-0001DF-CA89C958",
       "resultName": "Mithril Tower Shield",
       "profession": "Miner",
       "category": "shields",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0000C5-11BF3B7C",
+          "uuid": "MATL-20260327054738-0000C5-0AAF2C2A",
           "name": "Mithril Ingot",
           "quantity": 8
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0001E9-A84587B7",
+      "uuid": "RECP-20260327054738-0001E9-EB460B56",
       "name": "Craft Void Aegis",
-      "resultItemId": "ITEM-20260325010642-0001E8-358E5DA1",
+      "resultItemId": "ITEM-20260327054738-0001E8-3DA47532",
       "resultName": "Void Aegis",
       "profession": "Miner",
       "category": "shields",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00002F-DB88F384",
+          "uuid": "MATL-20260327054738-00002F-FBE27F9F",
           "name": "Shadow Ingot",
           "quantity": 6
         },
         {
-          "uuid": "MATL-20260325010642-000134-BF5957C8",
+          "uuid": "MATL-20260327054738-000134-03FD32A7",
           "name": "Void Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0001F2-D1B5C258",
+      "uuid": "RECP-20260327054738-0001F2-1E16EA12",
       "name": "Craft Divine Bulwark",
-      "resultItemId": "ITEM-20260325010642-0001F1-0C2EFD84",
+      "resultItemId": "ITEM-20260327054738-0001F1-C7191DFA",
       "resultName": "Divine Bulwark",
       "profession": "Miner",
       "category": "shields",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0000E1-8B0CDD7C",
+          "uuid": "MATL-20260327054738-0000E1-132CD5FD",
           "name": "Divine Ingot",
           "quantity": 10
         },
         {
-          "uuid": "MATL-20260325010642-0000E2-6D2EAEBC",
+          "uuid": "MATL-20260327054738-0000E2-951101A0",
           "name": "Holy Essence",
           "quantity": 5
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0001FB-B747E5C2",
+      "uuid": "RECP-20260327054738-0001FB-09EA6AB9",
       "name": "Craft Wraithbone Bow",
-      "resultItemId": "ITEM-20260325010642-0001FA-49598CCC",
+      "resultItemId": "ITEM-20260327054738-0001FA-7348C466",
       "resultName": "Wraithbone Bow",
       "profession": "Forester",
       "category": "bows",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000044-8226EBB2",
+          "uuid": "MATL-20260327054738-000044-9B58CBB3",
           "name": "Wood",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000025-8C3F904A",
+          "uuid": "MATL-20260327054738-000025-37712E18",
           "name": "Bone",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-0001FC-0CA6D677",
+          "uuid": "MATL-20260327054738-0001FC-F98E2BD5",
           "name": "String",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000205-569A0E99",
+      "uuid": "RECP-20260327054738-000205-496CA020",
       "name": "Craft Bloodstring",
-      "resultItemId": "ITEM-20260325010642-000204-AC24D82D",
+      "resultItemId": "ITEM-20260327054738-000204-8CC1A9C6",
       "resultName": "Bloodstring",
       "profession": "Forester",
       "category": "bows",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000206-637E0222",
+          "uuid": "MATL-20260327054738-000206-B46C8112",
           "name": "Hardwood",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000057-AB03F55B",
+          "uuid": "MATL-20260327054738-000057-4AEF7FF1",
           "name": "Blood",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-000207-67F03963",
+          "uuid": "MATL-20260327054738-000207-D38DA125",
           "name": "Sinew",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000210-4FD47398",
+      "uuid": "RECP-20260327054738-000210-5A6E329F",
       "name": "Craft Shadowflight",
-      "resultItemId": "ITEM-20260325010642-00020F-3EF07945",
+      "resultItemId": "ITEM-20260327054738-00020F-CE67F487",
       "resultName": "Shadowflight",
       "profession": "Forester",
       "category": "bows",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000211-A7786BF9",
+          "uuid": "MATL-20260327054738-000211-6ACA15C0",
           "name": "Darkwood",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-00000F-BADF5FAC",
+          "uuid": "MATL-20260327054738-00000F-8FE9BBEC",
           "name": "Void Dust",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00021A-03F8E3C0",
+      "uuid": "RECP-20260327054738-00021A-8168DA13",
       "name": "Craft Emberthorn",
-      "resultItemId": "ITEM-20260325010642-000219-5CEDB8AE",
+      "resultItemId": "ITEM-20260327054738-000219-7B28EF23",
       "resultName": "Emberthorn",
       "profession": "Forester",
       "category": "bows",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00021B-555BDAA5",
+          "uuid": "MATL-20260327054738-00021B-B6376CB4",
           "name": "Ashwood",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-00003A-9F4F73FA",
+          "uuid": "MATL-20260327054738-00003A-18F70D8C",
           "name": "Fire Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000224-27BE21AD",
+      "uuid": "RECP-20260327054738-000224-3FB20675",
       "name": "Craft Ironvine",
-      "resultItemId": "ITEM-20260325010642-000223-7959C357",
+      "resultItemId": "ITEM-20260327054738-000223-91A8D634",
       "resultName": "Ironvine",
       "profession": "Forester",
       "category": "bows",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000225-FDD336A5",
+          "uuid": "MATL-20260327054738-000225-15820BE5",
           "name": "Ironwood",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000226-FB5EC40F",
+          "uuid": "MATL-20260327054738-000226-F56E1628",
           "name": "Vine",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00022F-BB4EB50E",
+      "uuid": "RECP-20260327054738-00022F-EE5C25F4",
       "name": "Craft Duskreaver",
-      "resultItemId": "ITEM-20260325010642-00022E-D76F594C",
+      "resultItemId": "ITEM-20260327054738-00022E-60BB1B68",
       "resultName": "Duskreaver",
       "profession": "Forester",
       "category": "bows",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000230-805D14F3",
+          "uuid": "MATL-20260327054738-000230-EA8DAE41",
           "name": "Worldtree Wood",
           "quantity": 6
         },
         {
-          "uuid": "MATL-20260325010642-000231-2E7DF016",
+          "uuid": "MATL-20260327054738-000231-34B35E5A",
           "name": "Shadow Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00023A-1B5A1CCF",
+      "uuid": "RECP-20260327054738-00023A-8AB35D99",
       "name": "Craft Ironveil Repeater",
-      "resultItemId": "ITEM-20260325010642-000239-C63FAB1D",
+      "resultItemId": "ITEM-20260327054738-000239-5629262A",
       "resultName": "Ironveil Repeater",
       "profession": "Engineer",
       "category": "crossbows",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00023B-B3677542",
+          "uuid": "MATL-20260327054738-00023B-2BBA464A",
           "name": "Iron",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000044-8226EBB2",
+          "uuid": "MATL-20260327054738-000044-9B58CBB3",
           "name": "Wood",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000244-CBA15246",
+      "uuid": "RECP-20260327054738-000244-3ED07497",
       "name": "Craft Skullpiercer",
-      "resultItemId": "ITEM-20260325010642-000243-DA860AB5",
+      "resultItemId": "ITEM-20260327054738-000243-45C8F648",
       "resultName": "Skullpiercer",
       "profession": "Engineer",
       "category": "crossbows",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000245-762AF54D",
+          "uuid": "MATL-20260327054738-000245-3A67DB49",
           "name": "Steel",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000025-8C3F904A",
+          "uuid": "MATL-20260327054738-000025-37712E18",
           "name": "Bone",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00024E-2F03861C",
+      "uuid": "RECP-20260327054738-00024E-7F048B30",
       "name": "Craft Bloodreaver XB",
-      "resultItemId": "ITEM-20260325010642-00024D-A41CA7A8",
+      "resultItemId": "ITEM-20260327054738-00024D-CA06CDF0",
       "resultName": "Bloodreaver XB",
       "profession": "Engineer",
       "category": "crossbows",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00024F-C5DC5CDE",
+          "uuid": "MATL-20260327054738-00024F-E36F36E3",
           "name": "Dark Iron",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000057-AB03F55B",
+          "uuid": "MATL-20260327054738-000057-4AEF7FF1",
           "name": "Blood",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000258-2876CADF",
+      "uuid": "RECP-20260327054738-000258-37B2F857",
       "name": "Craft Wraithspike",
-      "resultItemId": "ITEM-20260325010642-000257-1CCF2310",
+      "resultItemId": "ITEM-20260327054738-000257-BC7B9711",
       "resultName": "Wraithspike",
       "profession": "Engineer",
       "category": "crossbows",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00000F-BADF5FAC",
+          "uuid": "MATL-20260327054738-00000F-8FE9BBEC",
           "name": "Void Dust",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000044-8226EBB2",
+          "uuid": "MATL-20260327054738-000044-9B58CBB3",
           "name": "Wood",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000261-93A8683C",
+      "uuid": "RECP-20260327054738-000261-693037F2",
       "name": "Craft Emberbolt",
-      "resultItemId": "ITEM-20260325010642-000260-6584B3C7",
+      "resultItemId": "ITEM-20260327054738-000260-3E241160",
       "resultName": "Emberbolt",
       "profession": "Engineer",
       "category": "crossbows",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00003A-9F4F73FA",
+          "uuid": "MATL-20260327054738-00003A-18F70D8C",
           "name": "Fire Essence",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000245-762AF54D",
+          "uuid": "MATL-20260327054738-000245-3A67DB49",
           "name": "Steel",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00026A-270343DF",
+      "uuid": "RECP-20260327054738-00026A-F47D40B1",
       "name": "Craft Ironshard",
-      "resultItemId": "ITEM-20260325010642-000269-EA6133A6",
+      "resultItemId": "ITEM-20260327054738-000269-A1D87C0D",
       "resultName": "Ironshard",
       "profession": "Engineer",
       "category": "crossbows",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00023B-B3677542",
+          "uuid": "MATL-20260327054738-00023B-2BBA464A",
           "name": "Iron",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-00001A-4C72AB6F",
+          "uuid": "MATL-20260327054738-00001A-3FD09D8B",
           "name": "Obsidian",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000273-B65BA3FF",
+      "uuid": "RECP-20260327054738-000273-E9451B83",
       "name": "Craft Blackpowder Blaster",
-      "resultItemId": "ITEM-20260325010642-000272-F12CE599",
+      "resultItemId": "ITEM-20260327054738-000272-BBF18F53",
       "resultName": "Blackpowder Blaster",
       "profession": "Engineer",
       "category": "guns",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00023B-B3677542",
+          "uuid": "MATL-20260327054738-00023B-2BBA464A",
           "name": "Iron",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000274-4DA93BD8",
+          "uuid": "MATL-20260327054738-000274-87062ADC",
           "name": "Powder",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00027D-2AB22991",
+      "uuid": "RECP-20260327054738-00027D-39C649D7",
       "name": "Craft Ironstorm Gun",
-      "resultItemId": "ITEM-20260325010642-00027C-3D2E6885",
+      "resultItemId": "ITEM-20260327054738-00027C-0A387030",
       "resultName": "Ironstorm Gun",
       "profession": "Engineer",
       "category": "guns",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000245-762AF54D",
+          "uuid": "MATL-20260327054738-000245-3A67DB49",
           "name": "Steel",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00023B-B3677542",
+          "uuid": "MATL-20260327054738-00023B-2BBA464A",
           "name": "Iron",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000286-1DEB283D",
+      "uuid": "RECP-20260327054738-000286-1B1C74A3",
       "name": "Craft Bloodcannon",
-      "resultItemId": "ITEM-20260325010642-000285-A3E7BD0A",
+      "resultItemId": "ITEM-20260327054738-000285-65D360CA",
       "resultName": "Bloodcannon",
       "profession": "Engineer",
       "category": "guns",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00024F-C5DC5CDE",
+          "uuid": "MATL-20260327054738-00024F-E36F36E3",
           "name": "Dark Iron",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000057-AB03F55B",
+          "uuid": "MATL-20260327054738-000057-4AEF7FF1",
           "name": "Blood",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00028F-A76FA696",
+      "uuid": "RECP-20260327054738-00028F-79A23DEE",
       "name": "Craft Wraithbarrel",
-      "resultItemId": "ITEM-20260325010642-00028E-6E1C220B",
+      "resultItemId": "ITEM-20260327054738-00028E-90C2F4EA",
       "resultName": "Wraithbarrel",
       "profession": "Engineer",
       "category": "guns",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00000F-BADF5FAC",
+          "uuid": "MATL-20260327054738-00000F-8FE9BBEC",
           "name": "Void Dust",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000245-762AF54D",
+          "uuid": "MATL-20260327054738-000245-3A67DB49",
           "name": "Steel",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000298-1D2F0B80",
+      "uuid": "RECP-20260327054738-000298-BB66301B",
       "name": "Craft Emberrifle",
-      "resultItemId": "ITEM-20260325010642-000297-F017AB27",
+      "resultItemId": "ITEM-20260327054738-000297-FB4C20E7",
       "resultName": "Emberrifle",
       "profession": "Engineer",
       "category": "guns",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00003A-9F4F73FA",
+          "uuid": "MATL-20260327054738-00003A-18F70D8C",
           "name": "Fire Essence",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00023B-B3677542",
+          "uuid": "MATL-20260327054738-00023B-2BBA464A",
           "name": "Iron",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0002A1-C59F5BB9",
+      "uuid": "RECP-20260327054738-0002A1-8A12B4F4",
       "name": "Craft Duskblaster",
-      "resultItemId": "ITEM-20260325010642-0002A0-E1483A01",
+      "resultItemId": "ITEM-20260327054738-0002A0-A4191298",
       "resultName": "Duskblaster",
       "profession": "Engineer",
       "category": "guns",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00002F-DB88F384",
+          "uuid": "MATL-20260327054738-00002F-FBE27F9F",
           "name": "Shadow Ingot",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000030-C163AB2C",
+          "uuid": "MATL-20260327054738-000030-6CDCB121",
           "name": "Gem",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0002AA-AA13E967",
+      "uuid": "RECP-20260327054738-0002AA-FE03BB1C",
       "name": "Craft Emberwrath Staff",
-      "resultItemId": "ITEM-20260325010642-0002A9-97DD300D",
+      "resultItemId": "ITEM-20260327054738-0002A9-166932F6",
       "resultName": "Emberwrath Staff",
       "profession": "Mystic",
       "category": "fireStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002AB-B377D17F",
+          "uuid": "MATL-20260327054738-0002AB-156D1F6F",
           "name": "Pine Log",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0002AC-E93A83BA",
+          "uuid": "MATL-20260327054738-0002AC-86F30A7F",
           "name": "Minor Fire Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0002B5-885BA89B",
+      "uuid": "RECP-20260327054738-0002B5-AC15DFC9",
       "name": "Craft Sunfire Staff",
-      "resultItemId": "ITEM-20260325010642-0002B4-6EBC4AFF",
+      "resultItemId": "ITEM-20260327054738-0002B4-463A0031",
       "resultName": "Sunfire Staff",
       "profession": "Mystic",
       "category": "fireStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002B6-EB6570CD",
+          "uuid": "MATL-20260327054738-0002B6-2BAEA196",
           "name": "Oak Log",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00003A-9F4F73FA",
+          "uuid": "MATL-20260327054738-00003A-18F70D8C",
           "name": "Fire Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0002BF-D98D4849",
+      "uuid": "RECP-20260327054738-0002BF-7076E1FE",
       "name": "Craft Inferno Spire",
-      "resultItemId": "ITEM-20260325010642-0002BE-CD49C6F2",
+      "resultItemId": "ITEM-20260327054738-0002BE-C7C20626",
       "resultName": "Inferno Spire",
       "profession": "Mystic",
       "category": "fireStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002C0-AB64C7CA",
+          "uuid": "MATL-20260327054738-0002C0-A6960773",
           "name": "Maple Log",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-0002C1-B63AB8EF",
+          "uuid": "MATL-20260327054738-0002C1-F69677E0",
           "name": "Greater Fire Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0002CA-9714379F",
+      "uuid": "RECP-20260327054738-0002CA-469843D4",
       "name": "Craft Phoenix Staff",
-      "resultItemId": "ITEM-20260325010642-0002C9-3CC09CB4",
+      "resultItemId": "ITEM-20260327054738-0002C9-670A5F6B",
       "resultName": "Phoenix Staff",
       "profession": "Mystic",
       "category": "fireStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002CB-661CFB81",
+          "uuid": "MATL-20260327054738-0002CB-AD6D6876",
           "name": "Ash Log",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-0002CC-5ACC4C3B",
+          "uuid": "MATL-20260327054738-0002CC-C9B690DA",
           "name": "Phoenix Feather",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0002D5-2F9A6EC0",
+      "uuid": "RECP-20260327054738-0002D5-8E964373",
       "name": "Craft Glacial Spire",
-      "resultItemId": "ITEM-20260325010642-0002D4-6DB33E4B",
+      "resultItemId": "ITEM-20260327054738-0002D4-E64D0B8C",
       "resultName": "Glacial Spire",
       "profession": "Mystic",
       "category": "frostStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002AB-B377D17F",
+          "uuid": "MATL-20260327054738-0002AB-156D1F6F",
           "name": "Pine Log",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0002D6-3CFD89B5",
+          "uuid": "MATL-20260327054738-0002D6-4548BBD6",
           "name": "Minor Frost Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0002DF-028A96AF",
+      "uuid": "RECP-20260327054738-0002DF-CD74B2C6",
       "name": "Craft Winter's Grudge",
-      "resultItemId": "ITEM-20260325010642-0002DE-B350B5EC",
+      "resultItemId": "ITEM-20260327054738-0002DE-97FF904B",
       "resultName": "Winter's Grudge",
       "profession": "Mystic",
       "category": "frostStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002B6-EB6570CD",
+          "uuid": "MATL-20260327054738-0002B6-2BAEA196",
           "name": "Oak Log",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0002E0-0CF42B3E",
+          "uuid": "MATL-20260327054738-0002E0-8E2BF7F2",
           "name": "Frost Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0002E9-A5B6585C",
+      "uuid": "RECP-20260327054738-0002E9-25C7A882",
       "name": "Craft Frostbite Staff",
-      "resultItemId": "ITEM-20260325010642-0002E8-E9B1F3C2",
+      "resultItemId": "ITEM-20260327054738-0002E8-318BE940",
       "resultName": "Frostbite Staff",
       "profession": "Mystic",
       "category": "frostStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002C0-AB64C7CA",
+          "uuid": "MATL-20260327054738-0002C0-A6960773",
           "name": "Maple Log",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-0002EA-C5A05A78",
+          "uuid": "MATL-20260327054738-0002EA-09E8C67C",
           "name": "Greater Frost Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0002F3-CF3AA6CA",
+      "uuid": "RECP-20260327054738-0002F3-698460B3",
       "name": "Craft Absolute Zero",
-      "resultItemId": "ITEM-20260325010642-0002F2-4D40132A",
+      "resultItemId": "ITEM-20260327054738-0002F2-2CDC2190",
       "resultName": "Absolute Zero",
       "profession": "Mystic",
       "category": "frostStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002F4-402D421C",
+          "uuid": "MATL-20260327054738-0002F4-42CAC0D8",
           "name": "Worldtree Log",
           "quantity": 8
         },
         {
-          "uuid": "MATL-20260325010642-0002F5-AB026DF4",
+          "uuid": "MATL-20260327054738-0002F5-B2021A1A",
           "name": "Void Ice",
           "quantity": 5
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0002FE-F7879179",
+      "uuid": "RECP-20260327054738-0002FE-B1ABB29F",
       "name": "Craft Dawnspire",
-      "resultItemId": "ITEM-20260325010642-0002FD-F3C4DE07",
+      "resultItemId": "ITEM-20260327054738-0002FD-5A4C46CB",
       "resultName": "Dawnspire",
       "profession": "Mystic",
       "category": "holyStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002AB-B377D17F",
+          "uuid": "MATL-20260327054738-0002AB-156D1F6F",
           "name": "Pine Log",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0002FF-883D6D88",
+          "uuid": "MATL-20260327054738-0002FF-D042308C",
           "name": "Minor Holy Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000308-944A038D",
+      "uuid": "RECP-20260327054738-000308-A8AC66B7",
       "name": "Craft Redemption Staff",
-      "resultItemId": "ITEM-20260325010642-000307-1CF6FB86",
+      "resultItemId": "ITEM-20260327054738-000307-6752FBBF",
       "resultName": "Redemption Staff",
       "profession": "Mystic",
       "category": "holyStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002B6-EB6570CD",
+          "uuid": "MATL-20260327054738-0002B6-2BAEA196",
           "name": "Oak Log",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0000E2-6D2EAEBC",
+          "uuid": "MATL-20260327054738-0000E2-951101A0",
           "name": "Holy Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000311-72A149D2",
+      "uuid": "RECP-20260327054738-000311-97F24054",
       "name": "Craft Sacred Light",
-      "resultItemId": "ITEM-20260325010642-000310-E7C1FEFC",
+      "resultItemId": "ITEM-20260327054738-000310-E967F5BF",
       "resultName": "Sacred Light",
       "profession": "Mystic",
       "category": "holyStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002C0-AB64C7CA",
+          "uuid": "MATL-20260327054738-0002C0-A6960773",
           "name": "Maple Log",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000312-0ACC71E0",
+          "uuid": "MATL-20260327054738-000312-57791761",
           "name": "Greater Holy Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00031B-6AEE993C",
+      "uuid": "RECP-20260327054738-00031B-9F440B1F",
       "name": "Craft Divine Judgment Staff",
-      "resultItemId": "ITEM-20260325010642-00031A-F4017D7D",
+      "resultItemId": "ITEM-20260327054738-00031A-39A08141",
       "resultName": "Divine Judgment Staff",
       "profession": "Mystic",
       "category": "holyStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002F4-402D421C",
+          "uuid": "MATL-20260327054738-0002F4-42CAC0D8",
           "name": "Worldtree Log",
           "quantity": 8
         },
         {
-          "uuid": "MATL-20260325010642-00031C-BD058A8D",
+          "uuid": "MATL-20260327054738-00031C-2335F928",
           "name": "Divine Essence",
           "quantity": 5
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000325-18C946D6",
+      "uuid": "RECP-20260327054738-000325-18436238",
       "name": "Craft Stormwrath",
-      "resultItemId": "ITEM-20260325010642-000324-FC97ECC1",
+      "resultItemId": "ITEM-20260327054738-000324-FF379B83",
       "resultName": "Stormwrath",
       "profession": "Mystic",
       "category": "lightningStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002AB-B377D17F",
+          "uuid": "MATL-20260327054738-0002AB-156D1F6F",
           "name": "Pine Log",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000326-A5EF49D1",
+          "uuid": "MATL-20260327054738-000326-246A05E4",
           "name": "Minor Storm Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00032F-39291D8F",
+      "uuid": "RECP-20260327054738-00032F-CD7B160B",
       "name": "Craft Tempest Spire",
-      "resultItemId": "ITEM-20260325010642-00032E-FFF91ABC",
+      "resultItemId": "ITEM-20260327054738-00032E-941D7B6F",
       "resultName": "Tempest Spire",
       "profession": "Mystic",
       "category": "lightningStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002B6-EB6570CD",
+          "uuid": "MATL-20260327054738-0002B6-2BAEA196",
           "name": "Oak Log",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000330-E9129FE7",
+          "uuid": "MATL-20260327054738-000330-ABC5A2B3",
           "name": "Storm Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000339-75AB5DBD",
+      "uuid": "RECP-20260327054738-000339-0819E2B6",
       "name": "Craft Thunderlord Staff",
-      "resultItemId": "ITEM-20260325010642-000338-85743925",
+      "resultItemId": "ITEM-20260327054738-000338-E14087CB",
       "resultName": "Thunderlord Staff",
       "profession": "Mystic",
       "category": "lightningStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002C0-AB64C7CA",
+          "uuid": "MATL-20260327054738-0002C0-A6960773",
           "name": "Maple Log",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-00033A-1D46D78C",
+          "uuid": "MATL-20260327054738-00033A-C1EF4932",
           "name": "Greater Storm Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000343-169D36AC",
+      "uuid": "RECP-20260327054738-000343-317D888B",
       "name": "Craft Zeus's Fury",
-      "resultItemId": "ITEM-20260325010642-000342-BE991FBC",
+      "resultItemId": "ITEM-20260327054738-000342-44C0F05D",
       "resultName": "Zeus's Fury",
       "profession": "Mystic",
       "category": "lightningStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002F4-402D421C",
+          "uuid": "MATL-20260327054738-0002F4-42CAC0D8",
           "name": "Worldtree Log",
           "quantity": 8
         },
         {
-          "uuid": "MATL-20260325010642-000344-B778442E",
+          "uuid": "MATL-20260327054738-000344-006EBE01",
           "name": "Divine Storm",
           "quantity": 5
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00034D-5DD89DEB",
+      "uuid": "RECP-20260327054738-00034D-057A0FDA",
       "name": "Craft Verdant Wrath",
-      "resultItemId": "ITEM-20260325010642-00034C-91185AD6",
+      "resultItemId": "ITEM-20260327054738-00034C-5B110D25",
       "resultName": "Verdant Wrath",
       "profession": "Mystic",
       "category": "natureStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002AB-B377D17F",
+          "uuid": "MATL-20260327054738-0002AB-156D1F6F",
           "name": "Pine Log",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00034E-47ED27D7",
+          "uuid": "MATL-20260327054738-00034E-A1A4CB12",
           "name": "Minor Nature Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000357-7B8AA6E0",
+      "uuid": "RECP-20260327054738-000357-2C6C4F39",
       "name": "Craft Thorn Grudge",
-      "resultItemId": "ITEM-20260325010642-000356-3279B8E5",
+      "resultItemId": "ITEM-20260327054738-000356-076E2232",
       "resultName": "Thorn Grudge",
       "profession": "Mystic",
       "category": "natureStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002B6-EB6570CD",
+          "uuid": "MATL-20260327054738-0002B6-2BAEA196",
           "name": "Oak Log",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000358-4C143138",
+          "uuid": "MATL-20260327054738-000358-802F610D",
           "name": "Nature Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000361-AA0054D5",
+      "uuid": "RECP-20260327054738-000361-ED3DF72D",
       "name": "Craft Grove Guardian",
-      "resultItemId": "ITEM-20260325010642-000360-FDA805AF",
+      "resultItemId": "ITEM-20260327054738-000360-8BECFA51",
       "resultName": "Grove Guardian",
       "profession": "Mystic",
       "category": "natureStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002C0-AB64C7CA",
+          "uuid": "MATL-20260327054738-0002C0-A6960773",
           "name": "Maple Log",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000362-4CD6F7E8",
+          "uuid": "MATL-20260327054738-000362-EAEA8F5E",
           "name": "Greater Nature Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00036B-CCBD53CE",
+      "uuid": "RECP-20260327054738-00036B-0311D9B1",
       "name": "Craft World Tree",
-      "resultItemId": "ITEM-20260325010642-00036A-EF6F729A",
+      "resultItemId": "ITEM-20260327054738-00036A-6EA1C7B7",
       "resultName": "World Tree",
       "profession": "Mystic",
       "category": "natureStaves",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0002F4-402D421C",
+          "uuid": "MATL-20260327054738-0002F4-42CAC0D8",
           "name": "Worldtree Log",
           "quantity": 8
         },
         {
-          "uuid": "MATL-20260325010642-00036C-DC1A0B0B",
+          "uuid": "MATL-20260327054738-00036C-91B4E093",
           "name": "Divine Nature",
           "quantity": 5
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000375-F0EC4662",
+      "uuid": "RECP-20260327054738-000375-ED7E946D",
       "name": "Craft Fire Tome",
-      "resultItemId": "ITEM-20260325010642-000374-F00389C1",
+      "resultItemId": "ITEM-20260327054738-000374-A4B4664A",
       "resultName": "Fire Tome",
       "profession": "Mystic",
       "category": "tomes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000376-93487816",
+          "uuid": "MATL-20260327054738-000376-3EA084A5",
           "name": "Paper",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-00003A-9F4F73FA",
+          "uuid": "MATL-20260327054738-00003A-18F70D8C",
           "name": "Fire Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00037F-72CAD521",
+      "uuid": "RECP-20260327054738-00037F-E8A28D75",
       "name": "Craft Frost Tome",
-      "resultItemId": "ITEM-20260325010642-00037E-96EFEAAF",
+      "resultItemId": "ITEM-20260327054738-00037E-782B7F37",
       "resultName": "Frost Tome",
       "profession": "Mystic",
       "category": "tomes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000376-93487816",
+          "uuid": "MATL-20260327054738-000376-3EA084A5",
           "name": "Paper",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-0002E0-0CF42B3E",
+          "uuid": "MATL-20260327054738-0002E0-8E2BF7F2",
           "name": "Frost Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000388-A51E8DC6",
+      "uuid": "RECP-20260327054738-000388-FA989F2B",
       "name": "Craft Holy Tome",
-      "resultItemId": "ITEM-20260325010642-000387-DCAC97FF",
+      "resultItemId": "ITEM-20260327054738-000387-5681D69E",
       "resultName": "Holy Tome",
       "profession": "Mystic",
       "category": "tomes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000376-93487816",
+          "uuid": "MATL-20260327054738-000376-3EA084A5",
           "name": "Paper",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-0000E2-6D2EAEBC",
+          "uuid": "MATL-20260327054738-0000E2-951101A0",
           "name": "Holy Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000391-BFE7D09B",
+      "uuid": "RECP-20260327054738-000391-BFB55D04",
       "name": "Craft Lightning Tome",
-      "resultItemId": "ITEM-20260325010642-000390-7F8A9EF9",
+      "resultItemId": "ITEM-20260327054738-000390-4995A3F1",
       "resultName": "Lightning Tome",
       "profession": "Mystic",
       "category": "tomes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000376-93487816",
+          "uuid": "MATL-20260327054738-000376-3EA084A5",
           "name": "Paper",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000330-E9129FE7",
+          "uuid": "MATL-20260327054738-000330-ABC5A2B3",
           "name": "Storm Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00039A-B0273EB0",
+      "uuid": "RECP-20260327054738-00039A-F581269C",
       "name": "Craft Nature Tome",
-      "resultItemId": "ITEM-20260325010642-000399-265A67BE",
+      "resultItemId": "ITEM-20260327054738-000399-7BF352DA",
       "resultName": "Nature Tome",
       "profession": "Mystic",
       "category": "tomes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000376-93487816",
+          "uuid": "MATL-20260327054738-000376-3EA084A5",
           "name": "Paper",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000358-4C143138",
+          "uuid": "MATL-20260327054738-000358-802F610D",
           "name": "Nature Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003A3-BEABB313",
+      "uuid": "RECP-20260327054738-0003A3-E25803FE",
       "name": "Craft Arcane Tome",
-      "resultItemId": "ITEM-20260325010642-0003A2-9EC01A9B",
+      "resultItemId": "ITEM-20260327054738-0003A2-AFA95FDE",
       "resultName": "Arcane Tome",
       "profession": "Mystic",
       "category": "tomes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000376-93487816",
+          "uuid": "MATL-20260327054738-000376-3EA084A5",
           "name": "Paper",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-0003A4-2FCD93A2",
+          "uuid": "MATL-20260327054738-0003A4-5A515A97",
           "name": "Arcane Essence",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003AD-1A119D73",
+      "uuid": "RECP-20260327054738-0003AD-570F4789",
       "name": "Craft Spellbook",
-      "resultItemId": "ITEM-20260325010642-0003AC-F2569487",
+      "resultItemId": "ITEM-20260327054738-0003AC-EA39B67B",
       "resultName": "Spellbook",
       "profession": "Mystic",
       "category": "tomes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003AE-23844A11",
+          "uuid": "MATL-20260327054738-0003AE-8C060027",
           "name": "Enchanted Paper",
           "quantity": 10
         },
         {
-          "uuid": "MATL-20260325010642-0003AF-43CC47DD",
+          "uuid": "MATL-20260327054738-0003AF-3808E0B7",
           "name": "All Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003B8-A08771D5",
+      "uuid": "RECP-20260327054738-0003B8-EE26A27C",
       "name": "Craft Arcane Book",
-      "resultItemId": "ITEM-20260325010642-0003B7-EA9A24A4",
+      "resultItemId": "ITEM-20260327054738-0003B7-A66355F1",
       "resultName": "Arcane Book",
       "profession": "Mystic",
       "category": "tomes",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003B9-EA6B05BE",
+          "uuid": "MATL-20260327054738-0003B9-A92E2EFD",
           "name": "Divine Paper",
           "quantity": 15
         },
         {
-          "uuid": "MATL-20260325010642-0003BA-2C487966",
+          "uuid": "MATL-20260327054738-0003BA-EC8855A4",
           "name": "Soul Core",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003C3-0438F6CE",
+      "uuid": "RECP-20260327054738-0003C3-384CFCD7",
       "name": "Cook Burnt Skewer",
-      "resultItemId": "FOOD-20260325010642-0003C2-11BDC7D4",
+      "resultItemId": "FOOD-20260327054738-0003C2-82F526C6",
       "resultName": "Burnt Skewer",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003C4-9305FB97",
+          "uuid": "MATL-20260327054738-0003C4-B19DD11E",
           "name": "Scrap Meat",
           "quantity": 1
         },
         {
-          "uuid": "MATL-20260325010642-0003C5-915CA7DD",
+          "uuid": "MATL-20260327054738-0003C5-A8FB3F78",
           "name": "Twig",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003C7-88D3CDB8",
+      "uuid": "RECP-20260327054738-0003C7-3C7C6506",
       "name": "Cook Roasted Rabbit",
-      "resultItemId": "FOOD-20260325010642-0003C6-A4BED763",
+      "resultItemId": "FOOD-20260327054738-0003C6-386FDF14",
       "resultName": "Roasted Rabbit",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003C8-072F4457",
+          "uuid": "MATL-20260327054738-0003C8-9238C19C",
           "name": "Rabbit Meat",
           "quantity": 1
         },
         {
-          "uuid": "MATL-20260325010642-0003C9-A679EC31",
+          "uuid": "MATL-20260327054738-0003C9-1C0FBAF5",
           "name": "Salt",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003CB-7A4D8DFD",
+      "uuid": "RECP-20260327054738-0003CB-51D7C205",
       "name": "Cook Grilled Sausage",
-      "resultItemId": "FOOD-20260325010642-0003CA-4FA749D8",
+      "resultItemId": "FOOD-20260327054738-0003CA-ECCC4B30",
       "resultName": "Grilled Sausage",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003CC-5F1BE3F0",
+          "uuid": "MATL-20260327054738-0003CC-ECAEF208",
           "name": "Ground Meat",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-0003CD-6A9249F6",
+          "uuid": "MATL-20260327054738-0003CD-6340A9E7",
           "name": "Casing",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003CF-E67C892D",
+      "uuid": "RECP-20260327054738-0003CF-FF9ACE50",
       "name": "Cook Smoked Haunch",
-      "resultItemId": "FOOD-20260325010642-0003CE-02522A9B",
+      "resultItemId": "FOOD-20260327054738-0003CE-63AD78C2",
       "resultName": "Smoked Haunch",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003D0-7974AC07",
+          "uuid": "MATL-20260327054738-0003D0-3EE75EBA",
           "name": "Prime Meat",
           "quantity": 1
         },
         {
-          "uuid": "MATL-20260325010642-0003C9-A679EC31",
+          "uuid": "MATL-20260327054738-0003C9-1C0FBAF5",
           "name": "Salt",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003D2-CD3FF3F1",
+      "uuid": "RECP-20260327054738-0003D2-2216041A",
       "name": "Cook Grilled Steak",
-      "resultItemId": "FOOD-20260325010642-0003D1-DE0386F1",
+      "resultItemId": "FOOD-20260327054738-0003D1-4FEF9C2C",
       "resultName": "Grilled Steak",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003D3-3A57957B",
+          "uuid": "MATL-20260327054738-0003D3-D7AED9D9",
           "name": "Beef",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-0003D4-27A726BC",
+          "uuid": "MATL-20260327054738-0003D4-30A901C0",
           "name": "Pepper",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003D6-81CBC52F",
+      "uuid": "RECP-20260327054738-0003D6-72359819",
       "name": "Cook Bacon Strips",
-      "resultItemId": "FOOD-20260325010642-0003D5-7CA72631",
+      "resultItemId": "FOOD-20260327054738-0003D5-917841F8",
       "resultName": "Bacon Strips",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003D7-C282E604",
+          "uuid": "MATL-20260327054738-0003D7-2CAA5545",
           "name": "Pork Belly",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-0003C9-A679EC31",
+          "uuid": "MATL-20260327054738-0003C9-1C0FBAF5",
           "name": "Salt",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003D9-D3DF0E52",
+      "uuid": "RECP-20260327054738-0003D9-4DBD7067",
       "name": "Cook Warrior's Jerky",
-      "resultItemId": "FOOD-20260325010642-0003D8-63B1537A",
+      "resultItemId": "FOOD-20260327054738-0003D8-61E75ED6",
       "resultName": "Warrior's Jerky",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003D3-3A57957B",
+          "uuid": "MATL-20260327054738-0003D3-D7AED9D9",
           "name": "Beef",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0003C9-A679EC31",
+          "uuid": "MATL-20260327054738-0003C9-1C0FBAF5",
           "name": "Salt",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003DB-074AB206",
+      "uuid": "RECP-20260327054738-0003DB-E82243B8",
       "name": "Cook Spiced Ribs",
-      "resultItemId": "FOOD-20260325010642-0003DA-36889116",
+      "resultItemId": "FOOD-20260327054738-0003DA-6E509AB0",
       "resultName": "Spiced Ribs",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003DC-10857C75",
+          "uuid": "MATL-20260327054738-0003DC-09F91B5A",
           "name": "Ribs",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0003DD-C96D41E9",
+          "uuid": "MATL-20260327054738-0003DD-E010F0CF",
           "name": "Spice",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003DF-C9EFA6DE",
+      "uuid": "RECP-20260327054738-0003DF-205081C5",
       "name": "Cook Venison Cutlet",
-      "resultItemId": "FOOD-20260325010642-0003DE-A134CEA1",
+      "resultItemId": "FOOD-20260327054738-0003DE-DD9DB6BA",
       "resultName": "Venison Cutlet",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003E0-75FA560F",
+          "uuid": "MATL-20260327054738-0003E0-E43BA25C",
           "name": "Deer Meat",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-0003E1-668938F7",
+          "uuid": "MATL-20260327054738-0003E1-D2096215",
           "name": "Herbs",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003E3-61939851",
+      "uuid": "RECP-20260327054738-0003E3-B92B9382",
       "name": "Cook Wild Boar Roast",
-      "resultItemId": "FOOD-20260325010642-0003E2-9BF32F04",
+      "resultItemId": "FOOD-20260327054738-0003E2-5076B28E",
       "resultName": "Wild Boar Roast",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003E4-A8EEEA3E",
+          "uuid": "MATL-20260327054738-0003E4-FDC56305",
           "name": "Boar Meat",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-0003E1-668938F7",
+          "uuid": "MATL-20260327054738-0003E1-D2096215",
           "name": "Herbs",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003E6-2E0833F7",
+      "uuid": "RECP-20260327054738-0003E6-AC9A1230",
       "name": "Cook Braised Lamb",
-      "resultItemId": "FOOD-20260325010642-0003E5-E190E727",
+      "resultItemId": "FOOD-20260327054738-0003E5-5E45D8B7",
       "resultName": "Braised Lamb",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003E7-16E56FD3",
+          "uuid": "MATL-20260327054738-0003E7-5596895E",
           "name": "Lamb",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0003E8-DEB13E2A",
+          "uuid": "MATL-20260327054738-0003E8-92DB93CB",
           "name": "Wine",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003EA-11C60E1C",
+      "uuid": "RECP-20260327054738-0003EA-9170EBB7",
       "name": "Cook Berserker Steak",
-      "resultItemId": "FOOD-20260325010642-0003E9-6A9A2317",
+      "resultItemId": "FOOD-20260327054738-0003E9-5BE296BB",
       "resultName": "Berserker Steak",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003EB-D0C5F477",
+          "uuid": "MATL-20260327054738-0003EB-AB817150",
           "name": "Prime Beef",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0003EC-032F8A50",
+          "uuid": "MATL-20260327054738-0003EC-72B46FD0",
           "name": "Blood Spice",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003EE-1678CEFE",
+      "uuid": "RECP-20260327054738-0003EE-C2CB552B",
       "name": "Cook Inferno Curry",
-      "resultItemId": "FOOD-20260325010642-0003ED-3DBEF140",
+      "resultItemId": "FOOD-20260327054738-0003ED-ADC2F318",
       "resultName": "Inferno Curry",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003EF-B4DCDA7B",
+          "uuid": "MATL-20260327054738-0003EF-2BE813BA",
           "name": "Spicy Herb",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-0003F0-6935878D",
+          "uuid": "MATL-20260327054738-0003F0-E197AE47",
           "name": "Meat",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003F2-32A32603",
+      "uuid": "RECP-20260327054738-0003F2-776AE456",
       "name": "Cook Rage Ribs",
-      "resultItemId": "FOOD-20260325010642-0003F1-979D94AE",
+      "resultItemId": "FOOD-20260327054738-0003F1-981C0BD6",
       "resultName": "Rage Ribs",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003F3-0A0B58FD",
+          "uuid": "MATL-20260327054738-0003F3-AD110161",
           "name": "Demon Ribs",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0003F4-1F623769",
+          "uuid": "MATL-20260327054738-0003F4-77B8A4FC",
           "name": "Fire Herb",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003F6-D695E050",
+      "uuid": "RECP-20260327054738-0003F6-772F3F2F",
       "name": "Cook Flame-Seared Boar",
-      "resultItemId": "FOOD-20260325010642-0003F5-CA0C7F69",
+      "resultItemId": "FOOD-20260327054738-0003F5-6FBDABA4",
       "resultName": "Flame-Seared Boar",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003E4-A8EEEA3E",
+          "uuid": "MATL-20260327054738-0003E4-FDC56305",
           "name": "Boar Meat",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0003F7-AD4D7667",
+          "uuid": "MATL-20260327054738-0003F7-873E6DF0",
           "name": "Fire Spice",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003F9-637E9DDE",
+      "uuid": "RECP-20260327054738-0003F9-F9004767",
       "name": "Cook Fury Feast",
-      "resultItemId": "FOOD-20260325010642-0003F8-3F60A84C",
+      "resultItemId": "FOOD-20260327054738-0003F8-94285A6E",
       "resultName": "Fury Feast",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003FA-BB283792",
+          "uuid": "MATL-20260327054738-0003FA-90A85933",
           "name": "Beast Meat",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-0003FB-3F771390",
+          "uuid": "MATL-20260327054738-0003FB-D0DCE5E0",
           "name": "Rage Spice",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0003FD-B6E9B1AF",
+      "uuid": "RECP-20260327054738-0003FD-912F7ADA",
       "name": "Cook Orcish BBQ Platter",
-      "resultItemId": "FOOD-20260325010642-0003FC-3F7FA928",
+      "resultItemId": "FOOD-20260327054738-0003FC-C898B7C0",
       "resultName": "Orcish BBQ Platter",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003FE-790DF142",
+          "uuid": "MATL-20260327054738-0003FE-7BF5E2B9",
           "name": "Mixed Meats",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-0003F7-AD4D7667",
+          "uuid": "MATL-20260327054738-0003F7-873E6DF0",
           "name": "Fire Spice",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000400-40CAF900",
+      "uuid": "RECP-20260327054738-000400-E871904C",
       "name": "Cook Bloodlust Burger",
-      "resultItemId": "FOOD-20260325010642-0003FF-1CE82488",
+      "resultItemId": "FOOD-20260327054738-0003FF-DDE4CD4F",
       "resultName": "Bloodlust Burger",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000401-019D9355",
+          "uuid": "MATL-20260327054738-000401-D00EA66F",
           "name": "Ground Beast",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000057-AB03F55B",
+          "uuid": "MATL-20260327054738-000057-4AEF7FF1",
           "name": "Blood",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000403-4A766937",
+      "uuid": "RECP-20260327054738-000403-BA8E6605",
       "name": "Cook Bear Roast",
-      "resultItemId": "FOOD-20260325010642-000402-2FD37858",
+      "resultItemId": "FOOD-20260327054738-000402-BD4FD36A",
       "resultName": "Bear Roast",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000404-17805706",
+          "uuid": "MATL-20260327054738-000404-19B6C8AE",
           "name": "Bear Meat",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000405-A0B07419",
+          "uuid": "MATL-20260327054738-000405-21EB2736",
           "name": "Honey",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000407-55A2CCA1",
+      "uuid": "RECP-20260327054738-000407-DD5ADC39",
       "name": "Cook Carnage Chops",
-      "resultItemId": "FOOD-20260325010642-000406-C3EB2853",
+      "resultItemId": "FOOD-20260327054738-000406-C43DA37E",
       "resultName": "Carnage Chops",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000408-CE485B0A",
+          "uuid": "MATL-20260327054738-000408-FAFEF6C2",
           "name": "Monster Chops",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000409-B62B26F9",
+          "uuid": "MATL-20260327054738-000409-EAF90727",
           "name": "Gore Spice",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00040B-EC7E30DE",
+      "uuid": "RECP-20260327054738-00040B-599F01BD",
       "name": "Cook Wyvern Wings",
-      "resultItemId": "FOOD-20260325010642-00040A-467E7DAA",
+      "resultItemId": "FOOD-20260327054738-00040A-A2CF6733",
       "resultName": "Wyvern Wings",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00040C-7D7603A2",
+          "uuid": "MATL-20260327054738-00040C-B55E2F63",
           "name": "Wyvern Meat",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-00040D-8A2B84D9",
+          "uuid": "MATL-20260327054738-00040D-3C391EC9",
           "name": "Hot Sauce",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00040F-280E4961",
+      "uuid": "RECP-20260327054738-00040F-286BE4E9",
       "name": "Cook Slaughter Stew",
-      "resultItemId": "FOOD-20260325010642-00040E-D63AA7C2",
+      "resultItemId": "FOOD-20260327054738-00040E-E4E5361C",
       "resultName": "Slaughter Stew",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000410-B8ACA797",
+          "uuid": "MATL-20260327054738-000410-9CC0710B",
           "name": "Mixed Monster",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000411-BB534BAE",
+          "uuid": "MATL-20260327054738-000411-AFD9F5E2",
           "name": "Blood Broth",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000413-F63388F2",
+      "uuid": "RECP-20260327054738-000413-516EC374",
       "name": "Cook Hellfire Steak",
-      "resultItemId": "FOOD-20260325010642-000412-4CB023CB",
+      "resultItemId": "FOOD-20260327054738-000412-C943CADF",
       "resultName": "Hellfire Steak",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000414-8C1846A1",
+          "uuid": "MATL-20260327054738-000414-7DC9EA91",
           "name": "Demon Beef",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-000415-AF896B2C",
+          "uuid": "MATL-20260327054738-000415-3BB476B4",
           "name": "Hellfire Salt",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000417-92488837",
+      "uuid": "RECP-20260327054738-000417-C17F6B74",
       "name": "Cook Massacre Meal",
-      "resultItemId": "FOOD-20260325010642-000416-C26A8B00",
+      "resultItemId": "FOOD-20260327054738-000416-74CD5E22",
       "resultName": "Massacre Meal",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000418-E05CFF99",
+          "uuid": "MATL-20260327054738-000418-2912A77E",
           "name": "Elite Meat",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000419-EC40B12A",
+          "uuid": "MATL-20260327054738-000419-C26437CD",
           "name": "War Spice",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00041B-33B30C6F",
+      "uuid": "RECP-20260327054738-00041B-B80B91C4",
       "name": "Cook Chimera Kebab",
-      "resultItemId": "FOOD-20260325010642-00041A-E0D22E11",
+      "resultItemId": "FOOD-20260327054738-00041A-4B40E0D1",
       "resultName": "Chimera Kebab",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00041C-1BE4184E",
+          "uuid": "MATL-20260327054738-00041C-BC6FA1EE",
           "name": "Chimera Meat",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00041D-5A97551E",
+          "uuid": "MATL-20260327054738-00041D-D065EDEA",
           "name": "Exotic Spice",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00041F-A1BFEA01",
+      "uuid": "RECP-20260327054738-00041F-166E7730",
       "name": "Cook Annihilation Roast",
-      "resultItemId": "FOOD-20260325010642-00041E-8B446F97",
+      "resultItemId": "FOOD-20260327054738-00041E-58ACDBC4",
       "resultName": "Annihilation Roast",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000420-95F343C1",
+          "uuid": "MATL-20260327054738-000420-C0811471",
           "name": "Boss Meat",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000421-213A0A1A",
+          "uuid": "MATL-20260327054738-000421-A62B6769",
           "name": "Chaos Salt",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000423-AC3ADAD2",
+      "uuid": "RECP-20260327054738-000423-11DA5D2E",
       "name": "Cook Dragon Steak",
-      "resultItemId": "FOOD-20260325010642-000422-130CEC1D",
+      "resultItemId": "FOOD-20260327054738-000422-E86D06B9",
       "resultName": "Dragon Steak",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000424-22A39D2B",
+          "uuid": "MATL-20260327054738-000424-A519A119",
           "name": "Dragon Flank",
           "quantity": 1
         },
         {
-          "uuid": "MATL-20260325010642-000425-0C396AC1",
+          "uuid": "MATL-20260327054738-000425-7F6FDCB5",
           "name": "Liquid Fire",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000427-E53622F1",
+      "uuid": "RECP-20260327054738-000427-12047DA2",
       "name": "Cook Armageddon Feast",
-      "resultItemId": "FOOD-20260325010642-000426-82904B6B",
+      "resultItemId": "FOOD-20260327054738-000426-E827F4B0",
       "resultName": "Armageddon Feast",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000428-C6A15232",
+          "uuid": "MATL-20260327054738-000428-8AF2C096",
           "name": "Legendary Meat",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000429-D10C79AC",
+          "uuid": "MATL-20260327054738-000429-EE5F8538",
           "name": "Divine Fire",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00042B-B92BB385",
+      "uuid": "RECP-20260327054738-00042B-33DE60CF",
       "name": "Cook Phoenix Roast",
-      "resultItemId": "FOOD-20260325010642-00042A-AF544DB6",
+      "resultItemId": "FOOD-20260327054738-00042A-246D2719",
       "resultName": "Phoenix Roast",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00042C-7EFE93CC",
+          "uuid": "MATL-20260327054738-00042C-B76EE682",
           "name": "Phoenix Meat",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-00042D-BCAD2AFA",
+          "uuid": "MATL-20260327054738-00042D-8FDDDD98",
           "name": "Eternal Flame",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00042F-07B4FA69",
+      "uuid": "RECP-20260327054738-00042F-D655CE4C",
       "name": "Cook Titan's Feast",
-      "resultItemId": "FOOD-20260325010642-00042E-8F01568A",
+      "resultItemId": "FOOD-20260327054738-00042E-768ACFBB",
       "resultName": "Titan's Feast",
       "profession": "Chef",
       "category": "food-red",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000430-DCB6EF62",
+          "uuid": "MATL-20260327054738-000430-F1B30610",
           "name": "Giant Meat",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000431-6940BA7F",
+          "uuid": "MATL-20260327054738-000431-49B7BDFF",
           "name": "Divine Salt",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000433-D37FC039",
+      "uuid": "RECP-20260327054738-000433-86258F0F",
       "name": "Cook Simple Salad",
-      "resultItemId": "FOOD-20260325010642-000432-AA4B3E1A",
+      "resultItemId": "FOOD-20260327054738-000432-0C3D72DE",
       "resultName": "Simple Salad",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000434-88257673",
+          "uuid": "MATL-20260327054738-000434-50096E11",
           "name": "Lettuce",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-000435-BAD06B31",
+          "uuid": "MATL-20260327054738-000435-5DADF97F",
           "name": "Tomato",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000437-69C7E305",
+      "uuid": "RECP-20260327054738-000437-9C9DF7D5",
       "name": "Cook Vegetable Soup",
-      "resultItemId": "FOOD-20260325010642-000436-6A6CB968",
+      "resultItemId": "FOOD-20260327054738-000436-1B873253",
       "resultName": "Vegetable Soup",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000438-F9C48F65",
+          "uuid": "MATL-20260327054738-000438-CEC17FC5",
           "name": "Carrot",
           "quantity": 1
         },
         {
-          "uuid": "MATL-20260325010642-000439-BA62DB4F",
+          "uuid": "MATL-20260327054738-000439-95ACE0A5",
           "name": "Potato",
           "quantity": 1
         },
         {
-          "uuid": "MATL-20260325010642-00043A-1C9840FA",
+          "uuid": "MATL-20260327054738-00043A-E238516F",
           "name": "Water",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00043C-8158A10F",
+      "uuid": "RECP-20260327054738-00043C-302F4CC5",
       "name": "Cook Herb Bundle",
-      "resultItemId": "FOOD-20260325010642-00043B-E2ED0C84",
+      "resultItemId": "FOOD-20260327054738-00043B-A540AC0B",
       "resultName": "Herb Bundle",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003E1-668938F7",
+          "uuid": "MATL-20260327054738-0003E1-D2096215",
           "name": "Herbs",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00043E-B8386A34",
+      "uuid": "RECP-20260327054738-00043E-EEA37180",
       "name": "Cook Stuffed Mushroom",
-      "resultItemId": "FOOD-20260325010642-00043D-97E21B75",
+      "resultItemId": "FOOD-20260327054738-00043D-B8AE68F2",
       "resultName": "Stuffed Mushroom",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00043F-F9D0EFC0",
+          "uuid": "MATL-20260327054738-00043F-480A5FBB",
           "name": "Large Mushroom",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-000440-A164A3EC",
+          "uuid": "MATL-20260327054738-000440-0984C40C",
           "name": "Cheese",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000442-BFB0C023",
+      "uuid": "RECP-20260327054738-000442-FDBCF5B6",
       "name": "Cook Garden Medley",
-      "resultItemId": "FOOD-20260325010642-000441-CD0AC916",
+      "resultItemId": "FOOD-20260327054738-000441-83BC45A2",
       "resultName": "Garden Medley",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000438-F9C48F65",
+          "uuid": "MATL-20260327054738-000438-CEC17FC5",
           "name": "Carrot",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-000443-40593D1F",
+          "uuid": "MATL-20260327054738-000443-815775B0",
           "name": "Celery",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-000444-BCD88F9B",
+          "uuid": "MATL-20260327054738-000444-08427846",
           "name": "Onion",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000446-5E28C4E4",
+      "uuid": "RECP-20260327054738-000446-5DF8C1FC",
       "name": "Cook Soothing Broth",
-      "resultItemId": "FOOD-20260325010642-000445-72C32792",
+      "resultItemId": "FOOD-20260327054738-000445-035BCB5A",
       "resultName": "Soothing Broth",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000447-7E8D32F9",
+          "uuid": "MATL-20260327054738-000447-AC5D323C",
           "name": "Calm Herbs",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000448-11F2AF5C",
+          "uuid": "MATL-20260327054738-000448-D5816A69",
           "name": "Broth",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00044A-E6E238EB",
+      "uuid": "RECP-20260327054738-00044A-FB13F860",
       "name": "Cook Cucumber Rolls",
-      "resultItemId": "FOOD-20260325010642-000449-D7AB292D",
+      "resultItemId": "FOOD-20260327054738-000449-424D6569",
       "resultName": "Cucumber Rolls",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00044B-919F99ED",
+          "uuid": "MATL-20260327054738-00044B-F60CFD25",
           "name": "Cucumber",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00044C-E21567EA",
+          "uuid": "MATL-20260327054738-00044C-3A19DCC5",
           "name": "Rice",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00044E-B65207FD",
+      "uuid": "RECP-20260327054738-00044E-8A4D5378",
       "name": "Cook Healing Wrap",
-      "resultItemId": "FOOD-20260325010642-00044D-DFDF2205",
+      "resultItemId": "FOOD-20260327054738-00044D-63696192",
       "resultName": "Healing Wrap",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00044F-76ED1D3D",
+          "uuid": "MATL-20260327054738-00044F-60800A91",
           "name": "Bandage Leaf",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-0003E1-668938F7",
+          "uuid": "MATL-20260327054738-0003E1-D2096215",
           "name": "Herbs",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000451-3C85AFE9",
+      "uuid": "RECP-20260327054738-000451-3E97B8FF",
       "name": "Cook Elven Greens",
-      "resultItemId": "FOOD-20260325010642-000450-0BB3BC6F",
+      "resultItemId": "FOOD-20260327054738-000450-82164CB4",
       "resultName": "Elven Greens",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000452-32D53DB5",
+          "uuid": "MATL-20260327054738-000452-E2E7C450",
           "name": "Forest Herbs",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000453-21A184EA",
+          "uuid": "MATL-20260327054738-000453-29128FCA",
           "name": "Moonpetal",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000455-870BE654",
+      "uuid": "RECP-20260327054738-000455-3C8D8B88",
       "name": "Cook Recovery Soup",
-      "resultItemId": "FOOD-20260325010642-000454-C006F277",
+      "resultItemId": "FOOD-20260327054738-000454-610F87B7",
       "resultName": "Recovery Soup",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000456-310CE507",
+          "uuid": "MATL-20260327054738-000456-E564D572",
           "name": "Recovery Herb",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000457-AC88C05C",
+          "uuid": "MATL-20260327054738-000457-3BF1FF7E",
           "name": "Vegetable",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000459-CF7F2886",
+      "uuid": "RECP-20260327054738-000459-118F728A",
       "name": "Cook Healing Herb Tea",
-      "resultItemId": "FOOD-20260325010642-000458-0240DE10",
+      "resultItemId": "FOOD-20260327054738-000458-4A07830B",
       "resultName": "Healing Herb Tea",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00045A-F874BA67",
+          "uuid": "MATL-20260327054738-00045A-96E72ABB",
           "name": "Healing Herb",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00045B-93B707BD",
+          "uuid": "MATL-20260327054738-00045B-3EEFFB42",
           "name": "Hot Water",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00045D-74B07A0C",
+      "uuid": "RECP-20260327054738-00045D-8CFC779C",
       "name": "Cook Rejuvenation Tea",
-      "resultItemId": "FOOD-20260325010642-00045C-65B63D39",
+      "resultItemId": "FOOD-20260327054738-00045C-18DAD8AA",
       "resultName": "Rejuvenation Tea",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00045E-DC61DC0A",
+          "uuid": "MATL-20260327054738-00045E-D2791181",
           "name": "Rejuv Leaf",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000405-A0B07419",
+          "uuid": "MATL-20260327054738-000405-21EB2736",
           "name": "Honey",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000460-08DC7B04",
+      "uuid": "RECP-20260327054738-000460-5902A8FC",
       "name": "Cook Vitality Wrap",
-      "resultItemId": "FOOD-20260325010642-00045F-618D581B",
+      "resultItemId": "FOOD-20260327054738-00045F-B2C369FF",
       "resultName": "Vitality Wrap",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000461-41DF36E4",
+          "uuid": "MATL-20260327054738-000461-4056FA64",
           "name": "Leaf Wrap",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-00045A-F874BA67",
+          "uuid": "MATL-20260327054738-00045A-96E72ABB",
           "name": "Healing Herb",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000463-01084609",
+      "uuid": "RECP-20260327054738-000463-11F89861",
       "name": "Cook Restoration Salad",
-      "resultItemId": "FOOD-20260325010642-000462-2FA022AB",
+      "resultItemId": "FOOD-20260327054738-000462-CCF71283",
       "resultName": "Restoration Salad",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000464-3C7492ED",
+          "uuid": "MATL-20260327054738-000464-29736104",
           "name": "Life Greens",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000465-BBC62036",
+          "uuid": "MATL-20260327054738-000465-33F3EA20",
           "name": "Dewdrop",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000467-585A5761",
+      "uuid": "RECP-20260327054738-000467-40E01C36",
       "name": "Cook Forest Stew",
-      "resultItemId": "FOOD-20260325010642-000466-02060299",
+      "resultItemId": "FOOD-20260327054738-000466-9DC0BA74",
       "resultName": "Forest Stew",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000468-2567DD7E",
+          "uuid": "MATL-20260327054738-000468-F2C16DDB",
           "name": "Wild Vegetables",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000448-11F2AF5C",
+          "uuid": "MATL-20260327054738-000448-D5816A69",
           "name": "Broth",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00046A-55EF8F15",
+      "uuid": "RECP-20260327054738-00046A-FBCAF7CD",
       "name": "Cook Renewal Stew",
-      "resultItemId": "FOOD-20260325010642-000469-27DDCB1B",
+      "resultItemId": "FOOD-20260327054738-000469-72A0AAFE",
       "resultName": "Renewal Stew",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00046B-60A71CD9",
+          "uuid": "MATL-20260327054738-00046B-A6E4958C",
           "name": "Renewal Herb",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000448-11F2AF5C",
+          "uuid": "MATL-20260327054738-000448-D5816A69",
           "name": "Broth",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00046D-24002E3D",
+      "uuid": "RECP-20260327054738-00046D-B3223F30",
       "name": "Cook Druid's Feast",
-      "resultItemId": "FOOD-20260325010642-00046C-09F52705",
+      "resultItemId": "FOOD-20260327054738-00046C-7465E9B3",
       "resultName": "Druid's Feast",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00046E-6976F3F8",
+          "uuid": "MATL-20260327054738-00046E-D0A3147B",
           "name": "Sacred Vegetables",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-00046F-D06E3FC0",
+          "uuid": "MATL-20260327054738-00046F-AA58E98B",
           "name": "Dew",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000471-E4603963",
+      "uuid": "RECP-20260327054738-000471-9FFA98D3",
       "name": "Cook Rebirth Bowl",
-      "resultItemId": "FOOD-20260325010642-000470-17CF7171",
+      "resultItemId": "FOOD-20260327054738-000470-1D17ED94",
       "resultName": "Rebirth Bowl",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000472-93D1ACBB",
+          "uuid": "MATL-20260327054738-000472-37E6F17A",
           "name": "Phoenix Herb",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000473-0447E33C",
+          "uuid": "MATL-20260327054738-000473-05537D22",
           "name": "Life Water",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000475-DE3DBB41",
+      "uuid": "RECP-20260327054738-000475-0DE18102",
       "name": "Cook Regeneration Salve",
-      "resultItemId": "FOOD-20260325010642-000474-679D6684",
+      "resultItemId": "FOOD-20260327054738-000474-7AB6B354",
       "resultName": "Regeneration Salve",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000476-AD3E9995",
+          "uuid": "MATL-20260327054738-000476-A053838B",
           "name": "Regen Herb",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000477-23A90D35",
+          "uuid": "MATL-20260327054738-000477-19F4E047",
           "name": "Aloe",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000479-53B7FD30",
+      "uuid": "RECP-20260327054738-000479-CE3D00EF",
       "name": "Cook Immortality Greens",
-      "resultItemId": "FOOD-20260325010642-000478-2B0686F0",
+      "resultItemId": "FOOD-20260327054738-000478-DE050935",
       "resultName": "Immortality Greens",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00047A-39655B45",
+          "uuid": "MATL-20260327054738-00047A-EB900011",
           "name": "Immortal Plant",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-00046F-D06E3FC0",
+          "uuid": "MATL-20260327054738-00046F-AA58E98B",
           "name": "Dew",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00047C-ED716F86",
+      "uuid": "RECP-20260327054738-00047C-783E6485",
       "name": "Cook Treant Bark Tea",
-      "resultItemId": "FOOD-20260325010642-00047B-00EBEA92",
+      "resultItemId": "FOOD-20260327054738-00047B-0B5D3B37",
       "resultName": "Treant Bark Tea",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00047D-43937235",
+          "uuid": "MATL-20260327054738-00047D-DB7F15A6",
           "name": "Living Bark",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-00047E-82464CDD",
+          "uuid": "MATL-20260327054738-00047E-A3193A4F",
           "name": "Spring Water",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000480-6B612066",
+      "uuid": "RECP-20260327054738-000480-D165DBA0",
       "name": "Cook Eternal Salad",
-      "resultItemId": "FOOD-20260325010642-00047F-C7A2552A",
+      "resultItemId": "FOOD-20260327054738-00047F-89683E5D",
       "resultName": "Eternal Salad",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000481-323299B8",
+          "uuid": "MATL-20260327054738-000481-2999B440",
           "name": "Eternal Herb",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000482-5EA981F1",
+          "uuid": "MATL-20260327054738-000482-3EE61605",
           "name": "Star Water",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000484-C8D11212",
+      "uuid": "RECP-20260327054738-000484-CBFA0A94",
       "name": "Cook Nature's Blessing",
-      "resultItemId": "FOOD-20260325010642-000483-E0DD1041",
+      "resultItemId": "FOOD-20260327054738-000483-2E888C2E",
       "resultName": "Nature's Blessing",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000485-7C63852A",
+          "uuid": "MATL-20260327054738-000485-7DD8AC5B",
           "name": "World Tree Fruit",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-000486-2043F210",
+          "uuid": "MATL-20260327054738-000486-514DCA2E",
           "name": "Life Essence",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000488-69AFD6F7",
+      "uuid": "RECP-20260327054738-000488-F5387F3C",
       "name": "Cook Divine Greens Platter",
-      "resultItemId": "FOOD-20260325010642-000487-83EDD158",
+      "resultItemId": "FOOD-20260327054738-000487-5AE84B20",
       "resultName": "Divine Greens Platter",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000489-5F0D61CA",
+          "uuid": "MATL-20260327054738-000489-AA524CC0",
           "name": "God Herb",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-00048A-CB13E24A",
+          "uuid": "MATL-20260327054738-00048A-6360A4F1",
           "name": "Holy Dew",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00048C-6B074C32",
+      "uuid": "RECP-20260327054738-00048C-5B275433",
       "name": "Cook Fairy Ring Salad",
-      "resultItemId": "FOOD-20260325010642-00048B-1D349910",
+      "resultItemId": "FOOD-20260327054738-00048B-40069A74",
       "resultName": "Fairy Ring Salad",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00048D-0C7EDB6E",
+          "uuid": "MATL-20260327054738-00048D-1B37BCCB",
           "name": "Fairy Mushroom",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00048E-D4BB06FE",
+          "uuid": "MATL-20260327054738-00048E-C6C8EA1A",
           "name": "Dewdrops",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000490-E3B2444F",
+      "uuid": "RECP-20260327054738-000490-1F60F788",
       "name": "Cook Life Blossom Soup",
-      "resultItemId": "FOOD-20260325010642-00048F-F5CC4596",
+      "resultItemId": "FOOD-20260327054738-00048F-CD8B4CB5",
       "resultName": "Life Blossom Soup",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000491-FBD10D4A",
+          "uuid": "MATL-20260327054738-000491-1ED9AF46",
           "name": "Life Blossom",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000492-C913AEB8",
+          "uuid": "MATL-20260327054738-000492-ABE074D5",
           "name": "Pure Water",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000494-E28278F2",
+      "uuid": "RECP-20260327054738-000494-988EF17B",
       "name": "Cook Ambrosia Salad",
-      "resultItemId": "FOOD-20260325010642-000493-6E8DDEED",
+      "resultItemId": "FOOD-20260327054738-000493-A1408BBB",
       "resultName": "Ambrosia Salad",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000495-43E65B07",
+          "uuid": "MATL-20260327054738-000495-021A2175",
           "name": "Divine Greens",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000496-5ACA4641",
+          "uuid": "MATL-20260327054738-000496-B1898693",
           "name": "Starfruit",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000498-1FCB8AAF",
+      "uuid": "RECP-20260327054738-000498-26329551",
       "name": "Cook Eternal Spring Mix",
-      "resultItemId": "FOOD-20260325010642-000497-3EA092ED",
+      "resultItemId": "FOOD-20260327054738-000497-4BB351C4",
       "resultName": "Eternal Spring Mix",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000499-65E36092",
+          "uuid": "MATL-20260327054738-000499-27F71419",
           "name": "Eternal Petals",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-00049A-7D1F1137",
+          "uuid": "MATL-20260327054738-00049A-0ED5C595",
           "name": "Lifewater",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00049C-9551150F",
+      "uuid": "RECP-20260327054738-00049C-F5CCB445",
       "name": "Cook World Tree Nectar",
-      "resultItemId": "FOOD-20260325010642-00049B-C0879753",
+      "resultItemId": "FOOD-20260327054738-00049B-E91E4D6C",
       "resultName": "World Tree Nectar",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00049D-6986DD12",
+          "uuid": "MATL-20260327054738-00049D-0AA5A694",
           "name": "World Tree Sap",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-00049E-4A3CE5CB",
+          "uuid": "MATL-20260327054738-00049E-E4BA59A9",
           "name": "Divine Pollen",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004A0-5AA0D65A",
+      "uuid": "RECP-20260327054738-0004A0-82F97033",
       "name": "Cook Divine Restoration",
-      "resultItemId": "FOOD-20260325010642-00049F-0DBAC0C9",
+      "resultItemId": "FOOD-20260327054738-00049F-E191012B",
       "resultName": "Divine Restoration",
       "profession": "Chef",
       "category": "food-green",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004A1-128546AA",
+          "uuid": "MATL-20260327054738-0004A1-678350E4",
           "name": "Divine Herbs",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-0004A2-65F0029B",
+          "uuid": "MATL-20260327054738-0004A2-36FAFAC8",
           "name": "Holy Water",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004A4-BA5FB306",
+      "uuid": "RECP-20260327054738-0004A4-02863C80",
       "name": "Cook Basic Broth",
-      "resultItemId": "FOOD-20260325010642-0004A3-9346A461",
+      "resultItemId": "FOOD-20260327054738-0004A3-FCEAC6E0",
       "resultName": "Basic Broth",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00043A-1C9840FA",
+          "uuid": "MATL-20260327054738-00043A-E238516F",
           "name": "Water",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-0003C9-A679EC31",
+          "uuid": "MATL-20260327054738-0003C9-1C0FBAF5",
           "name": "Salt",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004A6-A000D412",
+      "uuid": "RECP-20260327054738-0004A6-1B1FF007",
       "name": "Cook Wheat Bread",
-      "resultItemId": "FOOD-20260325010642-0004A5-5B97CAB4",
+      "resultItemId": "FOOD-20260327054738-0004A5-B3B758E9",
       "resultName": "Wheat Bread",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004A7-CDE63D01",
+          "uuid": "MATL-20260327054738-0004A7-0A2A7164",
           "name": "Flour",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-00043A-1C9840FA",
+          "uuid": "MATL-20260327054738-00043A-E238516F",
           "name": "Water",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004A9-F688AA7C",
+      "uuid": "RECP-20260327054738-0004A9-11CDC053",
       "name": "Cook Stamina Brew",
-      "resultItemId": "FOOD-20260325010642-0004A8-6B0ECFD4",
+      "resultItemId": "FOOD-20260327054738-0004A8-7F9DC2E3",
       "resultName": "Stamina Brew",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004AA-C170DBCD",
+          "uuid": "MATL-20260327054738-0004AA-C71FAFC5",
           "name": "Grain",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-0004AB-1B111477",
+          "uuid": "MATL-20260327054738-0004AB-F42B4E04",
           "name": "Hops",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004AD-D3F30B98",
+      "uuid": "RECP-20260327054738-0004AD-FFE4980C",
       "name": "Cook Warrior's Bread",
-      "resultItemId": "FOOD-20260325010642-0004AC-01EB7A05",
+      "resultItemId": "FOOD-20260327054738-0004AC-5E8DC645",
       "resultName": "Warrior's Bread",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004AA-C170DBCD",
+          "uuid": "MATL-20260327054738-0004AA-C71FAFC5",
           "name": "Grain",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00043A-1C9840FA",
+          "uuid": "MATL-20260327054738-00043A-E238516F",
           "name": "Water",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004AF-1604758D",
+      "uuid": "RECP-20260327054738-0004AF-E5E3D1C8",
       "name": "Cook Fish Stew",
-      "resultItemId": "FOOD-20260325010642-0004AE-E664D64C",
+      "resultItemId": "FOOD-20260327054738-0004AE-7FBEA3FC",
       "resultName": "Fish Stew",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004B0-8BC9E589",
+          "uuid": "MATL-20260327054738-0004B0-E0A82018",
           "name": "Fish",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-000439-BA62DB4F",
+          "uuid": "MATL-20260327054738-000439-95ACE0A5",
           "name": "Potato",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-000448-11F2AF5C",
+          "uuid": "MATL-20260327054738-000448-D5816A69",
           "name": "Broth",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004B2-59BCC7E0",
+      "uuid": "RECP-20260327054738-0004B2-2FBFBAFF",
       "name": "Cook Mana Biscuit",
-      "resultItemId": "FOOD-20260325010642-0004B1-03342314",
+      "resultItemId": "FOOD-20260327054738-0004B1-75AE51EB",
       "resultName": "Mana Biscuit",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004B3-7EB2008A",
+          "uuid": "MATL-20260327054738-0004B3-7B72971C",
           "name": "Magic Flour",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-0004B4-9E11F9DC",
+          "uuid": "MATL-20260327054738-0004B4-DD51BB8B",
           "name": "Mana Honey",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004B6-EAE81F5E",
+      "uuid": "RECP-20260327054738-0004B6-3477818E",
       "name": "Cook Hearty Stew",
-      "resultItemId": "FOOD-20260325010642-0004B5-C17D4436",
+      "resultItemId": "FOOD-20260327054738-0004B5-91134AAC",
       "resultName": "Hearty Stew",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0003F0-6935878D",
+          "uuid": "MATL-20260327054738-0003F0-E197AE47",
           "name": "Meat",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-000439-BA62DB4F",
+          "uuid": "MATL-20260327054738-000439-95ACE0A5",
           "name": "Potato",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000448-11F2AF5C",
+          "uuid": "MATL-20260327054738-000448-D5816A69",
           "name": "Broth",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004B8-AA5DEF23",
+      "uuid": "RECP-20260327054738-0004B8-AD19D39A",
       "name": "Cook Arcane Toast",
-      "resultItemId": "FOOD-20260325010642-0004B7-3B661B5D",
+      "resultItemId": "FOOD-20260327054738-0004B7-95BFEF1B",
       "resultName": "Arcane Toast",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004B9-D6B1DA4D",
+          "uuid": "MATL-20260327054738-0004B9-3DA5529A",
           "name": "Enchanted Bread",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-0004BA-17E4332A",
+          "uuid": "MATL-20260327054738-0004BA-E1DDC7EB",
           "name": "Spell Butter",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004BC-0699B369",
+      "uuid": "RECP-20260327054738-0004BC-65E70545",
       "name": "Cook Honey Bread",
-      "resultItemId": "FOOD-20260325010642-0004BB-91AAB36E",
+      "resultItemId": "FOOD-20260327054738-0004BB-E19CC80E",
       "resultName": "Honey Bread",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004A7-CDE63D01",
+          "uuid": "MATL-20260327054738-0004A7-0A2A7164",
           "name": "Flour",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000405-A0B07419",
+          "uuid": "MATL-20260327054738-000405-21EB2736",
           "name": "Honey",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004BE-F92F01BD",
+      "uuid": "RECP-20260327054738-0004BE-1AFECEC2",
       "name": "Cook Mystic Muffin",
-      "resultItemId": "FOOD-20260325010642-0004BD-EC9886F7",
+      "resultItemId": "FOOD-20260327054738-0004BD-AA2AB380",
       "resultName": "Mystic Muffin",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004BF-5C76BB55",
+          "uuid": "MATL-20260327054738-0004BF-A672A751",
           "name": "Arcane Flour",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0004C0-604CBE70",
+          "uuid": "MATL-20260327054738-0004C0-C62837DE",
           "name": "Mana Cream",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004C2-6A14AB6C",
+      "uuid": "RECP-20260327054738-0004C2-B820F4A9",
       "name": "Cook Mana Soup",
-      "resultItemId": "FOOD-20260325010642-0004C1-D462A342",
+      "resultItemId": "FOOD-20260327054738-0004C1-38C85880",
       "resultName": "Mana Soup",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004C3-95804EDF",
+          "uuid": "MATL-20260327054738-0004C3-574D8409",
           "name": "Magic Mushroom",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0004C4-538687D4",
+          "uuid": "MATL-20260327054738-0004C4-0E9CC875",
           "name": "Arcane Water",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004C6-38781655",
+      "uuid": "RECP-20260327054738-0004C6-2DF6F5AB",
       "name": "Cook Spellcaster's Soup",
-      "resultItemId": "FOOD-20260325010642-0004C5-13B7B38E",
+      "resultItemId": "FOOD-20260327054738-0004C5-CE96CF8F",
       "resultName": "Spellcaster's Soup",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004C7-DF710E82",
+          "uuid": "MATL-20260327054738-0004C7-41C822A6",
           "name": "Magic Noodle",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0004C8-9D1DDED9",
+          "uuid": "MATL-20260327054738-0004C8-7E78FB97",
           "name": "Spell Broth",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004CA-6B4E30D1",
+      "uuid": "RECP-20260327054738-0004CA-5143CB62",
       "name": "Cook Sailor's Chowder",
-      "resultItemId": "FOOD-20260325010642-0004C9-4C70D362",
+      "resultItemId": "FOOD-20260327054738-0004C9-2B4C5F92",
       "resultName": "Sailor's Chowder",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004CB-14B91C38",
+          "uuid": "MATL-20260327054738-0004CB-6A53142B",
           "name": "Shellfish",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0004CC-D3EC38C7",
+          "uuid": "MATL-20260327054738-0004CC-7BFE26FE",
           "name": "Cream",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004CE-6FE4DC46",
+      "uuid": "RECP-20260327054738-0004CE-5F062014",
       "name": "Cook Wizard's Pie",
-      "resultItemId": "FOOD-20260325010642-0004CD-C0019DF4",
+      "resultItemId": "FOOD-20260327054738-0004CD-A949E5F9",
       "resultName": "Wizard's Pie",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004CF-CD59080C",
+          "uuid": "MATL-20260327054738-0004CF-5D941D71",
           "name": "Arcane Fruit",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0004D0-A24BEF33",
+          "uuid": "MATL-20260327054738-0004D0-C98D6AAD",
           "name": "Magic Crust",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004D2-5B0784EE",
+      "uuid": "RECP-20260327054738-0004D2-A07365CE",
       "name": "Cook Mystic Gumbo",
-      "resultItemId": "FOOD-20260325010642-0004D1-5D5139E7",
+      "resultItemId": "FOOD-20260327054738-0004D1-DF78619A",
       "resultName": "Mystic Gumbo",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004D3-D0190F76",
+          "uuid": "MATL-20260327054738-0004D3-121CACBF",
           "name": "Seafood",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0004D4-972024A9",
+          "uuid": "MATL-20260327054738-0004D4-F759A46A",
           "name": "Spellwort",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-000448-11F2AF5C",
+          "uuid": "MATL-20260327054738-000448-D5816A69",
           "name": "Broth",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004D6-71324849",
+      "uuid": "RECP-20260327054738-0004D6-EA700164",
       "name": "Cook Sorcerer's Stew",
-      "resultItemId": "FOOD-20260325010642-0004D5-E78DCA98",
+      "resultItemId": "FOOD-20260327054738-0004D5-392CBE59",
       "resultName": "Sorcerer's Stew",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004D7-73BC06A6",
+          "uuid": "MATL-20260327054738-0004D7-AD358EDC",
           "name": "Enchanted Meat",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0004D8-5BD58FE6",
+          "uuid": "MATL-20260327054738-0004D8-B7C0521D",
           "name": "Spell Water",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004DA-33FB7DA0",
+      "uuid": "RECP-20260327054738-0004DA-8E6150DE",
       "name": "Cook Arcane Pastry",
-      "resultItemId": "FOOD-20260325010642-0004D9-C165CB6A",
+      "resultItemId": "FOOD-20260327054738-0004D9-466831B8",
       "resultName": "Arcane Pastry",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004B3-7EB2008A",
+          "uuid": "MATL-20260327054738-0004B3-7B72971C",
           "name": "Magic Flour",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0004DB-E4E459AE",
+          "uuid": "MATL-20260327054738-0004DB-BFDD2EF1",
           "name": "Mana Butter",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004DD-C574BED3",
+      "uuid": "RECP-20260327054738-0004DD-9A1FE630",
       "name": "Cook Mage's Feast",
-      "resultItemId": "FOOD-20260325010642-0004DC-AD10E447",
+      "resultItemId": "FOOD-20260327054738-0004DC-CC86BA17",
       "resultName": "Mage's Feast",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004DE-829D79BF",
+          "uuid": "MATL-20260327054738-0004DE-C5B6357B",
           "name": "Arcane Dish",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-0004DF-9E24A985",
+          "uuid": "MATL-20260327054738-0004DF-12290081",
           "name": "Mana Sauce",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004E1-DAD0C120",
+      "uuid": "RECP-20260327054738-0004E1-B22DEB0E",
       "name": "Cook Grog of Courage",
-      "resultItemId": "FOOD-20260325010642-0004E0-2A59C7BC",
+      "resultItemId": "FOOD-20260327054738-0004E0-426D0FE8",
       "resultName": "Grog of Courage",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004E2-15E3C5B1",
+          "uuid": "MATL-20260327054738-0004E2-78FAF501",
           "name": "Strong Grain",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-0004E3-F14441CC",
+          "uuid": "MATL-20260327054738-0004E3-33FD450D",
           "name": "Fire Water",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004E5-CD4E9A0B",
+      "uuid": "RECP-20260327054738-0004E5-9CDF54F8",
       "name": "Cook Enchanter's Bread",
-      "resultItemId": "FOOD-20260325010642-0004E4-D4A82420",
+      "resultItemId": "FOOD-20260327054738-0004E4-3EE21911",
       "resultName": "Enchanter's Bread",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004E6-6B04FA3B",
+          "uuid": "MATL-20260327054738-0004E6-05D3D531",
           "name": "Divine Flour",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-0004E7-6CA6D2E3",
+          "uuid": "MATL-20260327054738-0004E7-37CAFBC0",
           "name": "Star Honey",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004E9-D046E7C5",
+      "uuid": "RECP-20260327054738-0004E9-3D4044A3",
       "name": "Cook Wizard's Stew",
-      "resultItemId": "FOOD-20260325010642-0004E8-688E7CE1",
+      "resultItemId": "FOOD-20260327054738-0004E8-0E17594E",
       "resultName": "Wizard's Stew",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004EA-051EA695",
+          "uuid": "MATL-20260327054738-0004EA-F46AEA35",
           "name": "Magic Ingredients",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-0004EB-0170D397",
+          "uuid": "MATL-20260327054738-0004EB-26F126C5",
           "name": "Mana Crystal",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004ED-D4BDE879",
+      "uuid": "RECP-20260327054738-0004ED-0EB22EA3",
       "name": "Cook Archmage's Cake",
-      "resultItemId": "FOOD-20260325010642-0004EC-E85B2F55",
+      "resultItemId": "FOOD-20260327054738-0004EC-7388ECD7",
       "resultName": "Archmage's Cake",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004EE-D306EDB9",
+          "uuid": "MATL-20260327054738-0004EE-D4F3EF98",
           "name": "Celestial Flour",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-0004EF-495D8782",
+          "uuid": "MATL-20260327054738-0004EF-061E67A1",
           "name": "Moon Cream",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004F1-22D4B810",
+      "uuid": "RECP-20260327054738-0004F1-ADA5C70E",
       "name": "Cook Enchanted Pie",
-      "resultItemId": "FOOD-20260325010642-0004F0-0C95F312",
+      "resultItemId": "FOOD-20260327054738-0004F0-8660E9E3",
       "resultName": "Enchanted Pie",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004F2-EA5AFCA0",
+          "uuid": "MATL-20260327054738-0004F2-73113E54",
           "name": "Enchanted Fruit",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-0004D0-A24BEF33",
+          "uuid": "MATL-20260327054738-0004D0-C98D6AAD",
           "name": "Magic Crust",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004F4-AAAA05E5",
+      "uuid": "RECP-20260327054738-0004F4-BA83E210",
       "name": "Cook Divine Mana Feast",
-      "resultItemId": "FOOD-20260325010642-0004F3-E11E2E80",
+      "resultItemId": "FOOD-20260327054738-0004F3-C24EC1B5",
       "resultName": "Divine Mana Feast",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004F5-EE422D79",
+          "uuid": "MATL-20260327054738-0004F5-4816199E",
           "name": "God Ingredients",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-0004F6-165CDC6B",
+          "uuid": "MATL-20260327054738-0004F6-E11E9506",
           "name": "Holy Mana",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004F8-BBFA570D",
+      "uuid": "RECP-20260327054738-0004F8-95868A5E",
       "name": "Cook Astral Soup",
-      "resultItemId": "FOOD-20260325010642-0004F7-4CB81D5A",
+      "resultItemId": "FOOD-20260327054738-0004F7-219598A7",
       "resultName": "Astral Soup",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004F9-865F2703",
+          "uuid": "MATL-20260327054738-0004F9-55088749",
           "name": "Star Essence",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-0004FA-9E431881",
+          "uuid": "MATL-20260327054738-0004FA-F2F73942",
           "name": "Void Mushroom",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-0004FC-21EF27D5",
+      "uuid": "RECP-20260327054738-0004FC-02606DB1",
       "name": "Cook Void Bisque",
-      "resultItemId": "FOOD-20260325010642-0004FB-5ECAE3F0",
+      "resultItemId": "FOOD-20260327054738-0004FB-7D349921",
       "resultName": "Void Bisque",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004FD-2615B846",
+          "uuid": "MATL-20260327054738-0004FD-1ED781DA",
           "name": "Void Crab",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-0004FE-4E5FEC4F",
+          "uuid": "MATL-20260327054738-0004FE-53921A35",
           "name": "Shadow Cream",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000500-4D6FB37E",
+      "uuid": "RECP-20260327054738-000500-BEF665C3",
       "name": "Cook Celestial Cake",
-      "resultItemId": "FOOD-20260325010642-0004FF-044FFB35",
+      "resultItemId": "FOOD-20260327054738-0004FF-B93BD4CC",
       "resultName": "Celestial Cake",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000501-97F430A2",
+          "uuid": "MATL-20260327054738-000501-011A1B02",
           "name": "Starlight Flour",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000502-E57F829E",
+          "uuid": "MATL-20260327054738-000502-25263763",
           "name": "Moon Sugar",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000504-9866C653",
+      "uuid": "RECP-20260327054738-000504-67F56912",
       "name": "Cook Cosmic Brew",
-      "resultItemId": "FOOD-20260325010642-000503-2F7CD51B",
+      "resultItemId": "FOOD-20260327054738-000503-1C5156A6",
       "resultName": "Cosmic Brew",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000505-84122E4E",
+          "uuid": "MATL-20260327054738-000505-09A3FC9A",
           "name": "Cosmic Hops",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000506-0D54B6E7",
+          "uuid": "MATL-20260327054738-000506-CB343327",
           "name": "Starwater",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000508-744CA2A1",
+      "uuid": "RECP-20260327054738-000508-774A2FEC",
       "name": "Cook Eternal Cake",
-      "resultItemId": "FOOD-20260325010642-000507-3F21787D",
+      "resultItemId": "FOOD-20260327054738-000507-22C4BC09",
       "resultName": "Eternal Cake",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-0004E6-6B04FA3B",
+          "uuid": "MATL-20260327054738-0004E6-05D3D531",
           "name": "Divine Flour",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000509-8550782D",
+          "uuid": "MATL-20260327054738-000509-F4972FC3",
           "name": "Eternal Sugar",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00050B-24EDC9E3",
+      "uuid": "RECP-20260327054738-00050B-7DC833FA",
       "name": "Cook Nectar of Gods",
-      "resultItemId": "FOOD-20260325010642-00050A-57DB914B",
+      "resultItemId": "FOOD-20260327054738-00050A-07C7BC36",
       "resultName": "Nectar of Gods",
       "profession": "Chef",
       "category": "food-blue",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00050C-63F5764A",
+          "uuid": "MATL-20260327054738-00050C-4659E953",
           "name": "Astral Fruit",
           "quantity": 10
         },
         {
-          "uuid": "MATL-20260325010642-0004A2-65F0029B",
+          "uuid": "MATL-20260327054738-0004A2-36FAFAC8",
           "name": "Holy Water",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00050E-110F4095",
+      "uuid": "RECP-20260327054738-00050E-AE8D5E07",
       "name": "Brew Minor Health Potion",
-      "resultItemId": "POTN-20260325010642-00050D-8582D89F",
+      "resultItemId": "POTN-20260327054738-00050D-4E0030A4",
       "resultName": "Minor Health Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00050F-9852FD73",
+          "uuid": "MATL-20260327054738-00050F-F176C961",
           "name": "Red Herb",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-00043A-1C9840FA",
+          "uuid": "MATL-20260327054738-00043A-E238516F",
           "name": "Water",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000511-0464E644",
+      "uuid": "RECP-20260327054738-000511-299FF151",
       "name": "Brew Minor Mana Potion",
-      "resultItemId": "POTN-20260325010642-000510-D69E81D1",
+      "resultItemId": "POTN-20260327054738-000510-8436CC47",
       "resultName": "Minor Mana Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000512-796A8DB6",
+          "uuid": "MATL-20260327054738-000512-2BD549A9",
           "name": "Blue Herb",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-00043A-1C9840FA",
+          "uuid": "MATL-20260327054738-00043A-E238516F",
           "name": "Water",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000514-CF3F3927",
+      "uuid": "RECP-20260327054738-000514-3888CB57",
       "name": "Brew Minor Stamina Potion",
-      "resultItemId": "POTN-20260325010642-000513-07E621E1",
+      "resultItemId": "POTN-20260327054738-000513-7222224E",
       "resultName": "Minor Stamina Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000515-3D0BD358",
+          "uuid": "MATL-20260327054738-000515-F9C3A2CE",
           "name": "Yellow Herb",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-00043A-1C9840FA",
+          "uuid": "MATL-20260327054738-00043A-E238516F",
           "name": "Water",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000517-E507773B",
+      "uuid": "RECP-20260327054738-000517-622C04D1",
       "name": "Brew Antidote",
-      "resultItemId": "POTN-20260325010642-000516-52BCC2D2",
+      "resultItemId": "POTN-20260327054738-000516-F8B6A9AE",
       "resultName": "Antidote",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000518-57523600",
+          "uuid": "MATL-20260327054738-000518-D85A6CA5",
           "name": "Antitoxin Herb",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000492-C913AEB8",
+          "uuid": "MATL-20260327054738-000492-ABE074D5",
           "name": "Pure Water",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00051A-6C1D65EE",
+      "uuid": "RECP-20260327054738-00051A-E09D4E55",
       "name": "Brew Health Potion",
-      "resultItemId": "POTN-20260325010642-000519-1F7E167E",
+      "resultItemId": "POTN-20260327054738-000519-FC0E1F81",
       "resultName": "Health Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00051B-E346CC9A",
+          "uuid": "MATL-20260327054738-00051B-BF29E420",
           "name": "Blood Moss",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00051C-9D2AF8F3",
+          "uuid": "MATL-20260327054738-00051C-45A98CB5",
           "name": "Distilled Water",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00051E-F7AEEBBF",
+      "uuid": "RECP-20260327054738-00051E-F0513C25",
       "name": "Brew Mana Potion",
-      "resultItemId": "POTN-20260325010642-00051D-EAE302AE",
+      "resultItemId": "POTN-20260327054738-00051D-8BA34C86",
       "resultName": "Mana Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00051F-F0BE22CA",
+          "uuid": "MATL-20260327054738-00051F-C80A0C95",
           "name": "Mana Bloom",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00051C-9D2AF8F3",
+          "uuid": "MATL-20260327054738-00051C-45A98CB5",
           "name": "Distilled Water",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000521-A601E3A3",
+      "uuid": "RECP-20260327054738-000521-410EAB85",
       "name": "Brew Rage Potion",
-      "resultItemId": "POTN-20260325010642-000520-0DA7594F",
+      "resultItemId": "POTN-20260327054738-000520-1537E83C",
       "resultName": "Rage Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000522-2477BCC0",
+          "uuid": "MATL-20260327054738-000522-7C9BD75D",
           "name": "Berserker Root",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00003A-9F4F73FA",
+          "uuid": "MATL-20260327054738-00003A-18F70D8C",
           "name": "Fire Essence",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000524-BD458B9A",
+      "uuid": "RECP-20260327054738-000524-6D8AEDAD",
       "name": "Brew Speed Potion",
-      "resultItemId": "POTN-20260325010642-000523-6428864E",
+      "resultItemId": "POTN-20260327054738-000523-B15C215C",
       "resultName": "Speed Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000525-88F288A0",
+          "uuid": "MATL-20260327054738-000525-311ADBB8",
           "name": "Swift Herb",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000526-D23A7E3A",
+          "uuid": "MATL-20260327054738-000526-505ACA2B",
           "name": "Wind Essence",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000528-CE68486D",
+      "uuid": "RECP-20260327054738-000528-1483AC1B",
       "name": "Brew Defense Potion",
-      "resultItemId": "POTN-20260325010642-000527-AEC17879",
+      "resultItemId": "POTN-20260327054738-000527-9BEF09AB",
       "resultName": "Defense Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000529-FA0DE496",
+          "uuid": "MATL-20260327054738-000529-346BE0E1",
           "name": "Ironbark",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00052A-3B467BDE",
+          "uuid": "MATL-20260327054738-00052A-1DACEAB6",
           "name": "Earth Essence",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00052C-52E21151",
+      "uuid": "RECP-20260327054738-00052C-3118DD4F",
       "name": "Brew Greater Health Potion",
-      "resultItemId": "POTN-20260325010642-00052B-3B7E6E11",
+      "resultItemId": "POTN-20260327054738-00052B-C7741392",
       "resultName": "Greater Health Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00052D-201FACA0",
+          "uuid": "MATL-20260327054738-00052D-EA6F2986",
           "name": "Heart Blossom",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000486-2043F210",
+          "uuid": "MATL-20260327054738-000486-514DCA2E",
           "name": "Life Essence",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00052F-D9D85E3D",
+      "uuid": "RECP-20260327054738-00052F-48247986",
       "name": "Brew Greater Mana Potion",
-      "resultItemId": "POTN-20260325010642-00052E-8F97BF78",
+      "resultItemId": "POTN-20260327054738-00052E-7C277106",
       "resultName": "Greater Mana Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000530-51E67209",
+          "uuid": "MATL-20260327054738-000530-893910C4",
           "name": "Mana Crystal Dust",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-0004C4-538687D4",
+          "uuid": "MATL-20260327054738-0004C4-0E9CC875",
           "name": "Arcane Water",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000532-5D766552",
+      "uuid": "RECP-20260327054738-000532-ECE98A12",
       "name": "Brew Invisibility Potion",
-      "resultItemId": "POTN-20260325010642-000531-A433E61E",
+      "resultItemId": "POTN-20260327054738-000531-677D4D4E",
       "resultName": "Invisibility Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000533-5900B64F",
+          "uuid": "MATL-20260327054738-000533-D3C8FF12",
           "name": "Ghost Orchid",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000231-2E7DF016",
+          "uuid": "MATL-20260327054738-000231-34B35E5A",
           "name": "Shadow Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000535-14103024",
+      "uuid": "RECP-20260327054738-000535-7E9EE2CB",
       "name": "Brew Fire Resistance",
-      "resultItemId": "POTN-20260325010642-000534-ACEFD30F",
+      "resultItemId": "POTN-20260327054738-000534-CC14D634",
       "resultName": "Fire Resistance",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000536-E75FDF9B",
+          "uuid": "MATL-20260327054738-000536-93B75E8C",
           "name": "Firebloom",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-000537-99DB0836",
+          "uuid": "MATL-20260327054738-000537-0A92C8A9",
           "name": "Ice Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000539-3D9F178D",
+      "uuid": "RECP-20260327054738-000539-73F2FFD4",
       "name": "Brew Frost Resistance",
-      "resultItemId": "POTN-20260325010642-000538-FD418AF8",
+      "resultItemId": "POTN-20260327054738-000538-557F6763",
       "resultName": "Frost Resistance",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00053A-1DB25280",
+          "uuid": "MATL-20260327054738-00053A-C79088A1",
           "name": "Frostleaf",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-00003A-9F4F73FA",
+          "uuid": "MATL-20260327054738-00003A-18F70D8C",
           "name": "Fire Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00053C-62B9D91C",
+      "uuid": "RECP-20260327054738-00053C-31E1CDE1",
       "name": "Brew Super Health Potion",
-      "resultItemId": "POTN-20260325010642-00053B-1EBF62F6",
+      "resultItemId": "POTN-20260327054738-00053B-DE226587",
       "resultName": "Super Health Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00053D-E83BB02A",
+          "uuid": "MATL-20260327054738-00053D-923035B0",
           "name": "Dragon Blood Herb",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-00053E-26BAD066",
+          "uuid": "MATL-20260327054738-00053E-CAD8DEE7",
           "name": "Life Crystal",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000540-C3656FC6",
+      "uuid": "RECP-20260327054738-000540-9397C104",
       "name": "Brew Super Mana Potion",
-      "resultItemId": "POTN-20260325010642-00053F-49B05F49",
+      "resultItemId": "POTN-20260327054738-00053F-AE883162",
       "resultName": "Super Mana Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000541-CCCBB55E",
+          "uuid": "MATL-20260327054738-000541-12C2F93B",
           "name": "Arcane Lotus",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-0004EB-0170D397",
+          "uuid": "MATL-20260327054738-0004EB-26F126C5",
           "name": "Mana Crystal",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000543-EE3207AA",
+      "uuid": "RECP-20260327054738-000543-178734E8",
       "name": "Brew Berserker Elixir",
-      "resultItemId": "POTN-20260325010642-000542-68032D06",
+      "resultItemId": "POTN-20260327054738-000542-1F51C247",
       "resultName": "Berserker Elixir",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000544-99422C2C",
+          "uuid": "MATL-20260327054738-000544-AB6EADF8",
           "name": "Rage Flower",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000545-EB735E6F",
+          "uuid": "MATL-20260327054738-000545-CE527F24",
           "name": "Blood Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000547-5CFC34A7",
+      "uuid": "RECP-20260327054738-000547-7FE174B1",
       "name": "Brew Titan Strength",
-      "resultItemId": "POTN-20260325010642-000546-731A9E7A",
+      "resultItemId": "POTN-20260327054738-000546-1D1B4A37",
       "resultName": "Titan Strength",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000548-5F99D058",
+          "uuid": "MATL-20260327054738-000548-2F4C4B69",
           "name": "Giant's Blood",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000549-F5AEFA90",
+          "uuid": "MATL-20260327054738-000549-7101DD0C",
           "name": "Power Crystal",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00054B-52DE05F0",
+      "uuid": "RECP-20260327054738-00054B-2FF4609B",
       "name": "Brew Divine Health",
-      "resultItemId": "POTN-20260325010642-00054A-919BE7FD",
+      "resultItemId": "POTN-20260327054738-00054A-E4863754",
       "resultName": "Divine Health",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00054C-EE1C996A",
+          "uuid": "MATL-20260327054738-00054C-051EE890",
           "name": "Phoenix Tear",
           "quantity": 2
         },
         {
-          "uuid": "MATL-20260325010642-00031C-BD058A8D",
+          "uuid": "MATL-20260327054738-00031C-2335F928",
           "name": "Divine Essence",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00054E-7A19D9A6",
+      "uuid": "RECP-20260327054738-00054E-F8850D02",
       "name": "Brew Elixir of Immortality",
-      "resultItemId": "POTN-20260325010642-00054D-1E7CE551",
+      "resultItemId": "POTN-20260327054738-00054D-8142412D",
       "resultName": "Elixir of Immortality",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00054F-16F17B75",
+          "uuid": "MATL-20260327054738-00054F-92A69540",
           "name": "Philosopher's Stone",
           "quantity": 1
         },
         {
-          "uuid": "MATL-20260325010642-000550-5FC1D85B",
+          "uuid": "MATL-20260327054738-000550-593A07B7",
           "name": "Dragon Blood",
           "quantity": 3
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000552-EF10445F",
+      "uuid": "RECP-20260327054738-000552-CEA82BCF",
       "name": "Brew Lightning Resistance",
-      "resultItemId": "POTN-20260325010642-000551-13F35EBC",
+      "resultItemId": "POTN-20260327054738-000551-9B5866E0",
       "resultName": "Lightning Resistance",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000553-AB717216",
+          "uuid": "MATL-20260327054738-000553-CDBDA8DF",
           "name": "Storm Leaf",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-00052A-3B467BDE",
+          "uuid": "MATL-20260327054738-00052A-1DACEAB6",
           "name": "Earth Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000555-5742A8A3",
+      "uuid": "RECP-20260327054738-000555-12B76E34",
       "name": "Brew Nature Resistance",
-      "resultItemId": "POTN-20260325010642-000554-9B00D98B",
+      "resultItemId": "POTN-20260327054738-000554-A043E855",
       "resultName": "Nature Resistance",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000529-FA0DE496",
+          "uuid": "MATL-20260327054738-000529-346BE0E1",
           "name": "Ironbark",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-00003A-9F4F73FA",
+          "uuid": "MATL-20260327054738-00003A-18F70D8C",
           "name": "Fire Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000557-F9FA6441",
+      "uuid": "RECP-20260327054738-000557-D9445D7E",
       "name": "Brew Shadow Resistance",
-      "resultItemId": "POTN-20260325010642-000556-97B5D1C6",
+      "resultItemId": "POTN-20260327054738-000556-BBF0CD31",
       "resultName": "Shadow Resistance",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000558-D63FCF12",
+          "uuid": "MATL-20260327054738-000558-CD34A278",
           "name": "Lightbloom",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-0000E2-6D2EAEBC",
+          "uuid": "MATL-20260327054738-0000E2-951101A0",
           "name": "Holy Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00055A-20A640B9",
+      "uuid": "RECP-20260327054738-00055A-F5C1957F",
       "name": "Brew Holy Resistance",
-      "resultItemId": "POTN-20260325010642-000559-63ADAF28",
+      "resultItemId": "POTN-20260327054738-000559-30DDF17F",
       "resultName": "Holy Resistance",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00055B-FA7A38CB",
+          "uuid": "MATL-20260327054738-00055B-0A426266",
           "name": "Shadowleaf",
           "quantity": 4
         },
         {
-          "uuid": "MATL-20260325010642-00055C-641FFA51",
+          "uuid": "MATL-20260327054738-00055C-9713C8A9",
           "name": "Dark Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00055E-05DECE3A",
+      "uuid": "RECP-20260327054738-00055E-EC74E25F",
       "name": "Brew Focus Potion",
-      "resultItemId": "POTN-20260325010642-00055D-FFB1F8E7",
+      "resultItemId": "POTN-20260327054738-00055D-0808D20E",
       "resultName": "Focus Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00055F-1FF23638",
+          "uuid": "MATL-20260327054738-00055F-CF5DF4D7",
           "name": "Focus Herb",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000560-B0F114C3",
+          "uuid": "MATL-20260327054738-000560-71C3D225",
           "name": "Mind Crystal",
           "quantity": 1
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000562-FD3EAC40",
+      "uuid": "RECP-20260327054738-000562-E5124887",
       "name": "Brew Luck Potion",
-      "resultItemId": "POTN-20260325010642-000561-5A4EAD0F",
+      "resultItemId": "POTN-20260327054738-000561-02C7D2FF",
       "resultName": "Luck Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000563-7637B87A",
+          "uuid": "MATL-20260327054738-000563-CF9503E6",
           "name": "Lucky Clover",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000564-533BDAC1",
+          "uuid": "MATL-20260327054738-000564-9DC8F0D7",
           "name": "Star Dust",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000566-D4EED2E1",
+      "uuid": "RECP-20260327054738-000566-F0AD7BCB",
       "name": "Brew Experience Potion",
-      "resultItemId": "POTN-20260325010642-000565-2DC9E60D",
+      "resultItemId": "POTN-20260327054738-000565-A795D5A8",
       "resultName": "Experience Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000567-B81499F7",
+          "uuid": "MATL-20260327054738-000567-1E95E833",
           "name": "Wisdom Herb",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-000568-9863AFF2",
+          "uuid": "MATL-20260327054738-000568-FEE2DA10",
           "name": "Soul Dust",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00056A-26A49E08",
+      "uuid": "RECP-20260327054738-00056A-8DF83A75",
       "name": "Brew Giant's Potion",
-      "resultItemId": "POTN-20260325010642-000569-F657B26A",
+      "resultItemId": "POTN-20260327054738-000569-55D149B6",
       "resultName": "Giant's Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00056B-4066B73B",
+          "uuid": "MATL-20260327054738-00056B-324EF491",
           "name": "Giant Root",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-00056C-01FE995E",
+          "uuid": "MATL-20260327054738-00056C-1E4D596F",
           "name": "Growth Essence",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-00056E-26EA9177",
+      "uuid": "RECP-20260327054738-00056E-11C27488",
       "name": "Brew Shrinking Potion",
-      "resultItemId": "POTN-20260325010642-00056D-DFBC60E2",
+      "resultItemId": "POTN-20260327054738-00056D-B2F0AEF2",
       "resultName": "Shrinking Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-00056F-231FD261",
+          "uuid": "MATL-20260327054738-00056F-1C7F3359",
           "name": "Tiny Mushroom",
           "quantity": 5
         },
         {
-          "uuid": "MATL-20260325010642-00000F-BADF5FAC",
+          "uuid": "MATL-20260327054738-00000F-8FE9BBEC",
           "name": "Void Dust",
           "quantity": 2
         }
       ]
     },
     {
-      "uuid": "RECP-20260325010642-000571-3418441A",
+      "uuid": "RECP-20260327054738-000571-651E20F5",
       "name": "Brew Flight Potion",
-      "resultItemId": "POTN-20260325010642-000570-ACF487A5",
+      "resultItemId": "POTN-20260327054738-000570-C7E822F0",
       "resultName": "Flight Potion",
       "profession": "Mystic",
       "category": "potion",
       "materials": [
         {
-          "uuid": "MATL-20260325010642-000572-498ADA8F",
+          "uuid": "MATL-20260327054738-000572-0495DE64",
           "name": "Angel Feather",
           "quantity": 3
         },
         {
-          "uuid": "MATL-20260325010642-000526-D23A7E3A",
+          "uuid": "MATL-20260327054738-000526-505ACA2B",
           "name": "Wind Essence",
           "quantity": 3
         }

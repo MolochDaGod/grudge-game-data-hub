@@ -61,6 +61,16 @@
   <script>
     let ALL_ITEMS = [], ALL_RECIPES = [];
     const recipeMap = new Map();
+    const CDN = 'https://molochdagod.github.io/ObjectStore';
+    function fixIconUrl(url) {
+      if (!url) return '';
+      if (url.includes('/icons/food/')) {
+        const map = { 'food_red.png':'food_steak_cooked.png', 'food_green.png':'food_grapes.png', 'food_blue.png':'food_fish_red.png' };
+        return `${CDN}/icons/consumables/${map[url.split('/').pop()] || 'food_steak_cooked.png'}`;
+      }
+      if (url.includes('/icons/potions/')) return `${CDN}/icons/consumables/health_potion.png`;
+      return url;
+    }
 
     async function init() {
       const [itemsData, recipesData] = await Promise.all([
@@ -109,7 +119,7 @@
                      onmouseenter="showTip(event,'${item.uuid}')" onmouseleave="hideTip()">
           ${item.tier ? `<span class="tier-tag" style="background:${tierColor}33;color:${tierColor}">T${item.tier}</span>` : ''}
           <div style="height:64px;display:flex;align-items:center;justify-content:center;">
-            <img src="${item.iconUrl}" alt="${item.name}" onerror="this.src='https://molochdagod.github.io/ObjectStore/icons/wcs/weapons/Sword_01.png';this.onerror=null;">
+            <img src="${fixIconUrl(item.iconUrl)}" alt="${item.name}" onerror="this.src='https://molochdagod.github.io/ObjectStore/icons/consumables/food_steak_cooked.png';this.onerror=null;">
           </div>
           <div class="item-name">${item.name}</div>
           <div class="item-type">${item.category} · ${item.craftedBy||''}</div>

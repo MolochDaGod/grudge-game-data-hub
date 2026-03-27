@@ -110,21 +110,21 @@ const WEAPON_ICONS = {
 };
 
 const POTION_ICONS = {
-  health:      ICON('potions/P_Red03.png'),
-  mana:        ICON('potions/P_Blue03.png'),
-  stamina:     ICON('potions/P_Yellow01.png'),
-  antidote:    ICON('potions/P_Green05.png'),
-  rage:        ICON('potions/fire_potion.png'),
-  speed:       ICON('potions/air_potion.png'),
-  defense:     ICON('potions/earth_potion.png'),
-  invisibility:ICON('potions/P_White05.png'),
-  fireResist:  ICON('potions/fire_potion.png'),
-  frostResist: ICON('potions/P_Blue06.png'),
-  focus:       ICON('potions/P_Blue05.png'),
-  luck:        ICON('potions/P_Green05.png'),
-  exp:         ICON('potions/P_Yellow01.png'),
-  flight:      ICON('potions/air_potion.png'),
-  divine:      ICON('potions/P_Medicine06.png'),
+  health:      ICON('consumables/health_potion.png'),
+  mana:        ICON('consumables/mana_potion.png'),
+  stamina:     ICON('consumables/potion_3.png'),
+  antidote:    ICON('consumables/potion_5.png'),
+  rage:        ICON('consumables/potion_8.png'),
+  speed:       ICON('consumables/potion_12.png'),
+  defense:     ICON('consumables/potion_15.png'),
+  invisibility:ICON('consumables/potion_18.png'),
+  fireResist:  ICON('consumables/potion_22.png'),
+  frostResist: ICON('consumables/potion_25.png'),
+  focus:       ICON('consumables/potion_28.png'),
+  luck:        ICON('consumables/potion_32.png'),
+  exp:         ICON('consumables/potion_35.png'),
+  flight:      ICON('consumables/potion_38.png'),
+  divine:      ICON('consumables/potion_42.png'),
 };
 
 // ============================================================
@@ -543,9 +543,9 @@ console.log(`  ⚔️  ${weaponCount} weapon items (${weaponCount / 8} base × 8
 // --- Process Foods ---
 let foodCount = 0;
 const foodIcons = {
-  red: ICON('food/food_red.png'),
-  green: ICON('food/food_green.png'),
-  blue: ICON('food/food_blue.png'),
+  red: ICON('consumables/food_steak_cooked.png'),
+  green: ICON('consumables/food_grapes.png'),
+  blue: ICON('consumables/food_fish_red.png'),
 };
 
 for (const [color, foods] of Object.entries(FOOD_DATA)) {
@@ -615,7 +615,7 @@ POTION_DATA.forEach((potion) => {
     category: 'potion',
     type: 'potion',
     tier: 1,
-    iconUrl: POTION_ICONS[potion.icon] || ICON('potions/P_Red03.png'),
+    iconUrl: POTION_ICONS[potion.icon] || ICON('consumables/health_potion.png'),
     description: potion.effect,
     effect: potion.effect,
     craftedBy: 'Mystic',
