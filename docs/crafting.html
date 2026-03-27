@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grudge Warlords — Crafting</title>
+  <link rel="stylesheet" href="css/grudge-theme.css">
+  <style>
+    .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+    .header { text-align: center; padding: 30px 0; border-bottom: 3px solid transparent; border-image: linear-gradient(90deg, transparent, var(--gold), transparent) 1; margin-bottom: 30px; }
+    .header h1 { font-family: var(--font-display); font-size: 2.2em; }
+    .back-link { display: inline-block; margin-bottom: 16px; color: var(--gold); font-size: 0.9em; }
+    .section { margin-bottom: 40px; }
+    .section h2 { color: var(--gold); font-size: 1.4em; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gold-dim); }
+    .prof-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-bottom: 30px; }
+    .prof-card { padding: 20px; border-left: 4px solid; border-radius: 4px; }
+    .prof-card h3 { margin: 0 0 6px; }
+    .prof-card .desc { color: var(--muted); font-size: 0.9em; line-height: 1.5; }
+    .recipe-filters { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .recipe-filters select, .recipe-filters input { padding: 8px 12px; border-radius: 4px; border: 1px solid var(--border); background: hsl(225 28% 10%); color: var(--text); font-size: 0.9em; }
+    .recipe-filters input { flex: 1; min-width: 200px; }
+    .recipe-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+    .recipe-card { padding: 16px; border-radius: 4px; }
+    .recipe-card h4 { color: var(--gold); margin: 0 0 6px; font-size: 1em; display: flex; align-items: center; gap: 8px; }
+    .recipe-card .mats { font-size: 0.82em; color: var(--muted); line-height: 1.6; }
+    .recipe-card .mats span { color: var(--green); font-family: var(--font-mono); }
+    .recipe-card .tier-badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 0.7em; font-family: var(--font-mono); }
+    .station-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+    .station-card { padding: 16px; text-align: center; border-radius: 4px; }
+    .station-card h4 { color: var(--gold); margin: 8px 0 4px; }
+    .station-card .desc { color: var(--muted); font-size: 0.85em; }
+    .empty-state { text-align: center; padding: 40px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="index.html">← Back to Hub</a>
+    <header class="header">
+      <h1 class="gold-text">Crafting</h1>
+      <p style="color:var(--muted);margin-top:8px;">220 recipes · 254 materials · 5 professions · 8 tiers</p>
+    </header>
+
+    <div class="section">
+      <h2>Harvesting Professions</h2>
+      <div class="prof-grid">
+        <div class="prof-card fantasy-panel" style="border-color:#8b6914">
+          <h3 style="color:#d4a84b">Mining</h3>
+          <div class="desc">Extract ores and gems from mineral nodes. Higher tiers unlock rare veins and enchanted deposits.</div>
+        </div>
+        <div class="prof-card fantasy-panel" style="border-color:#2d8a4e">
+          <h3 style="color:#49de95">Herbalism</h3>
+          <div class="desc">Gather herbs, roots, and magical plants. Used for potions, poisons, and enchantments.</div>
+        </div>
+        <div class="prof-card fantasy-panel" style="border-color:#5a3a1a">
+          <h3 style="color:#b8814a">Woodcutting</h3>
+          <div class="desc">Fell trees and harvest lumber. Essential for weapons, bows, staffs, and structures.</div>
+        </div>
+        <div class="prof-card fantasy-panel" style="border-color:#4a6fa5">
+          <h3 style="color:#7ab3ff">Fishing</h3>
+          <div class="desc">Catch fish and aquatic resources. Provides food buffs and rare crafting reagents.</div>
+        </div>
+        <div class="prof-card fantasy-panel" style="border-color:#8a4a6a">
+          <h3 style="color:#d47aa0">Skinning</h3>
+          <div class="desc">Skin creatures for leather and hides. Required for armor crafting and special enchants.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Crafting Stations</h2>
+      <div class="station-grid">
+        <div class="station-card fantasy-panel">
+          <h4>Forge</h4>
+          <div class="desc">Weapons & heavy armor. Requires ore and fuel.</div>
+        </div>
+        <div class="station-card fantasy-panel">
+          <h4>Workbench</h4>
+          <div class="desc">General crafting, wood items, bows, and tools.</div>
+        </div>
+        <div class="station-card fantasy-panel">
+          <h4>Alchemy Table</h4>
+          <div class="desc">Potions, elixirs, poisons, and enchanting oils.</div>
+        </div>
+        <div class="station-card fantasy-panel">
+          <h4>Loom</h4>
+          <div class="desc">Cloth armor, capes, bags, and magical fabrics.</div>
+        </div>
+        <div class="station-card fantasy-panel">
+          <h4>Tannery</h4>
+          <div class="desc">Leather armor, belts, boots from hides and skins.</div>
+        </div>
+        <div class="station-card fantasy-panel">
+          <h4>Enchanting Altar</h4>
+          <div class="desc">Apply enchantments, runes, and magical properties to gear.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Recipes</h2>
+      <div class="recipe-filters">
+        <select id="filterTier">
+          <option value="">All Tiers</option>
+          <option value="1">T1 Common</option>
+          <option value="2">T2 Uncommon</option>
+          <option value="3">T3 Rare</option>
+          <option value="4">T4 Epic</option>
+          <option value="5">T5 Legendary</option>
+          <option value="6">T6 Mythic</option>
+        </select>
+        <select id="filterType">
+          <option value="">All Types</option>
+          <option value="weapon">Weapons</option>
+          <option value="armor">Armor</option>
+          <option value="potion">Potions</option>
+          <option value="food">Food</option>
+          <option value="material">Materials</option>
+        </select>
+        <input type="text" id="searchBox" placeholder="Search recipes...">
+      </div>
+      <div class="recipe-grid" id="recipeGrid">
+        <div class="empty-state">Loading recipes...</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const CDN = 'https://molochdagod.github.io/ObjectStore';
+    const TIER_COLORS = { 1:'#8b7355', 2:'#a8a8a8', 3:'#4a9eff', 4:'#9d4dff', 5:'#ff4d4d', 6:'#ffaa00', 7:'#d4a84b', 8:'#f0d890' };
+    const TIER_NAMES = { 1:'Common', 2:'Uncommon', 3:'Rare', 4:'Epic', 5:'Legendary', 6:'Mythic', 7:'Ancient', 8:'Artifact' };
+    let allRecipes = [];
+
+    async function init() {
+      try {
+        const data = await fetch('/data/master-recipes.json').then(r => r.json());
+        allRecipes = data.recipes || [];
+        renderRecipes(allRecipes);
+      } catch(e) {
+        document.getElementById('recipeGrid').innerHTML = '<div class="empty-state">Recipe data will be loaded from the Grudge backend.</div>';
+      }
+
+      document.getElementById('filterTier').addEventListener('change', applyFilters);
+      document.getElementById('filterType').addEventListener('change', applyFilters);
+      document.getElementById('searchBox').addEventListener('input', applyFilters);
+    }
+
+    function applyFilters() {
+      const tier = document.getElementById('filterTier').value;
+      const type = document.getElementById('filterType').value;
+      const search = document.getElementById('searchBox').value.toLowerCase();
+      let filtered = allRecipes;
+      if (tier) filtered = filtered.filter(r => String(r.tier) === tier);
+      if (type) filtered = filtered.filter(r => (r.type || '').toLowerCase().includes(type));
+      if (search) filtered = filtered.filter(r => (r.name || '').toLowerCase().includes(search));
+      renderRecipes(filtered);
+    }
+
+    function renderRecipes(recipes) {
+      const grid = document.getElementById('recipeGrid');
+      if (!recipes.length) { grid.innerHTML = '<div class="empty-state">No recipes match your filters.</div>'; return; }
+      grid.innerHTML = recipes.slice(0, 60).map(r => {
+        const t = r.tier || 1;
+        const color = TIER_COLORS[t] || '#8b7355';
+        const matsHtml = (r.materials || []).map(m => `${m.name} x<span>${m.quantity}</span>`).join('<br>');
+        return `<div class="recipe-card inset-panel">
+          <h4><span class="tier-badge" style="background:${color}22;color:${color}">${TIER_NAMES[t] || 'T'+t}</span> ${r.name || 'Unknown'}</h4>
+          <div class="mats">${matsHtml || 'Materials TBD'}</div>
+        </div>`;
+      }).join('');
+    }
+
+    init();
+  </script>
+</body>
+</html>

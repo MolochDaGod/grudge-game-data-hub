@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grudge Warlords — Spells & Skills</title>
+  <link rel="stylesheet" href="css/grudge-theme.css">
+  <style>
+    .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+    .header { text-align: center; padding: 30px 0; border-bottom: 3px solid transparent; border-image: linear-gradient(90deg, transparent, var(--gold), transparent) 1; margin-bottom: 30px; }
+    .header h1 { font-family: var(--font-display); font-size: 2.2em; }
+    .back-link { display: inline-block; margin-bottom: 16px; color: var(--gold); font-size: 0.9em; }
+    .section { margin-bottom: 40px; }
+    .section h2 { color: var(--gold); font-size: 1.4em; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gold-dim); }
+    .class-tabs { display: flex; gap: 10px; margin-bottom: 24px; flex-wrap: wrap; }
+    .class-tab { padding: 12px 24px; border: 2px solid hsl(225 20% 20%); border-radius: 4px; cursor: pointer; font-size: 0.95em; color: var(--text); background: hsl(225 28% 10%); font-family: var(--font-heading); transition: 0.2s; }
+    .class-tab:hover { border-color: var(--gold-dim); }
+    .class-tab.active { border-color: var(--gold); color: var(--gold); background: rgba(212,175,55,0.08); }
+    .skill-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+    .skill-card { padding: 18px; border-radius: 4px; border-left: 4px solid; }
+    .skill-card h4 { color: var(--gold); margin: 0 0 4px; font-size: 1em; display: flex; align-items: center; gap: 8px; }
+    .skill-card .skill-type { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 0.7em; font-family: var(--font-mono); }
+    .skill-card .skill-desc { color: var(--muted); font-size: 0.85em; line-height: 1.5; margin: 6px 0; }
+    .skill-card .skill-stats { font-family: var(--font-mono); font-size: 0.78em; color: var(--dim); }
+    .skill-card .skill-stats span { color: var(--green); }
+    .tree-section { margin-bottom: 30px; }
+    .tree-section h3 { color: var(--gold-light); font-size: 1.1em; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="index.html">← Back to Hub</a>
+    <header class="header">
+      <h1 class="gold-text">Spells & Skills</h1>
+      <p style="color:var(--muted);margin-top:8px;">Class abilities, skill trees, cooldowns, and scaling for all 4 classes</p>
+    </header>
+
+    <div class="section">
+      <h2>Select Class</h2>
+      <div class="class-tabs" id="classTabs">
+        <div class="class-tab active" data-class="warrior" style="border-color:#ff7d87;color:#ff7d87">Warrior</div>
+        <div class="class-tab" data-class="mage">Mage</div>
+        <div class="class-tab" data-class="ranger">Ranger</div>
+        <div class="class-tab" data-class="worge">Worge</div>
+      </div>
+    </div>
+
+    <div id="skillContent">
+      <!-- WARRIOR -->
+      <div class="tree-section">
+        <h3>Combat Skills</h3>
+        <div class="skill-grid">
+          <div class="skill-card fantasy-panel" style="border-color:#ff7d87">
+            <h4><span class="skill-type" style="background:rgba(255,125,135,0.15);color:#ff7d87">Active</span> Crushing Blow</h4>
+            <div class="skill-desc">A devastating overhead strike that deals 180% weapon damage and has a 30% chance to stagger the target for 1s.</div>
+            <div class="skill-stats">CD: <span>8s</span> | Cost: <span>25 Stamina</span> | Scale: <span>STR 1.5x</span></div>
+          </div>
+          <div class="skill-card fantasy-panel" style="border-color:#ff7d87">
+            <h4><span class="skill-type" style="background:rgba(255,125,135,0.15);color:#ff7d87">Active</span> Shield Wall</h4>
+            <div class="skill-desc">Raise your shield, increasing block chance by 40% and block effectiveness by 25% for 6 seconds.</div>
+            <div class="skill-stats">CD: <span>18s</span> | Cost: <span>30 Stamina</span> | Scale: <span>END 1.2x</span></div>
+          </div>
+          <div class="skill-card fantasy-panel" style="border-color:#ff7d87">
+            <h4><span class="skill-type" style="background:rgba(255,125,135,0.15);color:#ff7d87">Active</span> Whirlwind</h4>
+            <div class="skill-desc">Spin in a circle dealing 120% weapon damage to all enemies within 5m. Hits up to 8 targets.</div>
+            <div class="skill-stats">CD: <span>12s</span> | Cost: <span>40 Stamina</span> | Scale: <span>STR 1.3x</span></div>
+          </div>
+          <div class="skill-card fantasy-panel" style="border-color:#ff7d87">
+            <h4><span class="skill-type" style="background:rgba(110,231,183,0.15);color:#6ee7b7">Passive</span> Battle Hardened</h4>
+            <div class="skill-desc">Increase armor by 10% and reduce incoming critical damage by 15%. Stacks with shield bonuses.</div>
+            <div class="skill-stats">Req: <span>Lv 5</span> | Scale: <span>VIT 0.5x</span></div>
+          </div>
+          <div class="skill-card fantasy-panel" style="border-color:#ff7d87">
+            <h4><span class="skill-type" style="background:rgba(255,125,135,0.15);color:#ff7d87">Active</span> Charge</h4>
+            <div class="skill-desc">Rush toward a target up to 15m away, dealing 150% damage on impact and stunning for 0.5s.</div>
+            <div class="skill-stats">CD: <span>14s</span> | Cost: <span>20 Stamina</span> | Scale: <span>STR 1.2x + AGI 0.3x</span></div>
+          </div>
+          <div class="skill-card fantasy-panel" style="border-color:#ff7d87">
+            <h4><span class="skill-type" style="background:rgba(255,187,36,0.15);color:#fbbf24">Ultimate</span> Warlord’s Fury</h4>
+            <div class="skill-desc">Enter a berserker rage for 10s: +30% damage, +20% attack speed, immune to CC. Drains 5 Stamina/s.</div>
+            <div class="skill-stats">CD: <span>90s</span> | Cost: <span>60 Stamina</span> | Req: <span>Lv 15</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tree-section">
+        <h3>Weapon Skills</h3>
+        <div class="skill-grid">
+          <div class="skill-card fantasy-panel" style="border-color:#ff7d87">
+            <h4><span class="skill-type" style="background:rgba(255,125,135,0.15);color:#ff7d87">Sword</span> Riposte</h4>
+            <div class="skill-desc">After a successful parry, instantly counter-attack for 200% weapon damage. 2s window.</div>
+            <div class="skill-stats">CD: <span>0s (reactive)</span> | Scale: <span>DEX 1.0x</span></div>
+          </div>
+          <div class="skill-card fantasy-panel" style="border-color:#ff7d87">
+            <h4><span class="skill-type" style="background:rgba(255,125,135,0.15);color:#ff7d87">2H Weapon</span> Cleave</h4>
+            <div class="skill-desc">Wide arc attack hitting all enemies in front for 160% damage. Ignores 15% of target armor.</div>
+            <div class="skill-stats">CD: <span>6s</span> | Cost: <span>20 Stamina</span> | Scale: <span>STR 1.4x</span></div>
+          </div>
+          <div class="skill-card fantasy-panel" style="border-color:#ff7d87">
+            <h4><span class="skill-type" style="background:rgba(255,125,135,0.15);color:#ff7d87">Shield</span> Shield Bash</h4>
+            <div class="skill-desc">Slam your shield into a target, dealing 100% damage and stunning for 1.5s. Generates aggro.</div>
+            <div class="skill-stats">CD: <span>10s</span> | Cost: <span>15 Stamina</span> | Scale: <span>END 1.0x</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const CLASS_SKILLS = {
+      warrior: null, // Already rendered as default HTML above
+      mage: {
+        combat: [
+          { name:'Fireball', type:'Active', color:'#bb95ff', desc:'Launch a fireball dealing 200% magic damage to target and 50% splash damage within 3m.', stats:'CD: 6s | Cost: 35 Mana | Scale: INT 1.8x' },
+          { name:'Frost Nova', type:'Active', color:'#bb95ff', desc:'Freeze all enemies within 8m for 2s. Deals 80% magic damage and slows by 40% for 4s after.', stats:'CD: 20s | Cost: 50 Mana | Scale: INT 1.2x + WIS 0.5x' },
+          { name:'Arcane Shield', type:'Active', color:'#bb95ff', desc:'Create a magical barrier absorbing damage equal to 30% of max mana for 8s.', stats:'CD: 24s | Cost: 40 Mana | Scale: WIS 1.0x' },
+          { name:'Mana Surge', type:'Passive', color:'#6ee7b7', desc:'Spells have 15% chance to refund 50% of their mana cost. Increases with INT.', stats:'Req: Lv 5 | Scale: INT 0.3x' },
+          { name:'Teleport', type:'Active', color:'#bb95ff', desc:'Instantly teleport up to 20m in the direction you are facing. Brief invulnerability during cast.', stats:'CD: 16s | Cost: 30 Mana | Scale: AGI 0.5x' },
+          { name:'Meteor Storm', type:'Ultimate', color:'#fbbf24', desc:'Call down 5 meteors over 4s in target area. Each deals 250% magic damage. Massive AoE.', stats:'CD: 120s | Cost: 100 Mana | Req: Lv 15' },
+        ],
+        weapon: [
+          { name:'Staff Strike', type:'Staff', color:'#bb95ff', desc:'Channel arcane energy through your staff, dealing 140% magic damage and restoring 10 mana.', stats:'CD: 4s | Scale: INT 1.0x' },
+          { name:'Wand Volley', type:'Wand', color:'#bb95ff', desc:'Fire 3 rapid arcane bolts at the target. Each deals 60% magic damage.', stats:'CD: 8s | Cost: 20 Mana | Scale: INT 0.8x' },
+        ]
+      },
+      ranger: {
+        combat: [
+          { name:'Power Shot', type:'Active', color:'#49de95', desc:'Charge a powerful arrow dealing 220% weapon damage. Ignores 20% armor at full charge (2s).', stats:'CD: 10s | Cost: 25 Stamina | Scale: DEX 1.6x' },
+          { name:'Evasive Roll', type:'Active', color:'#49de95', desc:'Roll 8m in any direction, gaining 0.5s invulnerability. Next attack within 3s deals +30% damage.', stats:'CD: 8s | Cost: 15 Stamina | Scale: AGI 0.8x' },
+          { name:'Rain of Arrows', type:'Active', color:'#49de95', desc:'Fire arrows into the sky raining down in target area for 3s. Deals 80% damage per tick.', stats:'CD: 22s | Cost: 45 Stamina | Scale: DEX 1.3x' },
+          { name:'Eagle Eye', type:'Passive', color:'#6ee7b7', desc:'Increase critical chance by 10% and accuracy by 15% when using ranged weapons.', stats:'Req: Lv 5 | Scale: DEX 0.3x' },
+          { name:'Trap', type:'Active', color:'#49de95', desc:'Place an invisible trap that roots the first enemy for 3s and deals 100% damage.', stats:'CD: 30s | Cost: 20 Stamina | Scale: TAC 0.8x' },
+          { name:'Sniper\'s Mark', type:'Ultimate', color:'#fbbf24', desc:'Mark a target for 10s. All attacks against them deal +40% damage and cannot miss. Team-wide.', stats:'CD: 90s | Cost: 40 Stamina | Req: Lv 15' },
+        ],
+        weapon: [
+          { name:'Double Shot', type:'Bow', color:'#49de95', desc:'Fire two arrows in rapid succession. Each deals 90% weapon damage.', stats:'CD: 5s | Scale: DEX 1.2x' },
+          { name:'Dagger Flurry', type:'Dagger', color:'#49de95', desc:'Unleash 4 rapid strikes dealing 70% damage each. Final hit applies bleed for 4s.', stats:'CD: 8s | Cost: 20 Stamina | Scale: AGI 1.0x' },
+        ]
+      },
+      worge: {
+        combat: [
+          { name:'Savage Swipe', type:'Active', color:'#ffb16d', desc:'Claw attack dealing 170% damage. In Bear form: AoE. In Raptor form: applies bleed.', stats:'CD: 6s | Cost: 20 Stamina | Scale: STR 1.2x + AGI 0.5x' },
+          { name:'Shapeshift: Bear', type:'Active', color:'#ffb16d', desc:'Transform into Bear form. +40% HP, +25% armor, -20% speed. Enables Bear abilities.', stats:'CD: 3s | Cost: 30 Mana | Duration: Toggle' },
+          { name:'Shapeshift: Raptor', type:'Active', color:'#ffb16d', desc:'Transform into Raptor form. +30% speed, +20% crit, stealth capability. Enables Raptor abilities.', stats:'CD: 3s | Cost: 30 Mana | Duration: Toggle' },
+          { name:'Regeneration', type:'Passive', color:'#6ee7b7', desc:'Passively regenerate 2% max HP per second while in any shifted form. Doubles out of combat.', stats:'Req: Lv 5 | Scale: VIT 0.4x' },
+          { name:'Primal Roar', type:'Active', color:'#ffb16d', desc:'Let out a terrifying roar. Fears enemies within 10m for 2s and reduces their damage by 20% for 6s.', stats:'CD: 30s | Cost: 35 Stamina | Scale: STR 0.8x' },
+          { name:'Shapeshift: Bird', type:'Ultimate', color:'#fbbf24', desc:'Transform into Large Bird form. Gain flight, can carry 1 ally. Dive attack deals 300% damage.', stats:'CD: 120s | Cost: 60 Mana | Req: Lv 15' },
+        ],
+        weapon: [
+          { name:'Feral Charge', type:'Bear', color:'#ffb16d', desc:'Charge as a bear, knocking all enemies in path aside. Deals 180% damage at endpoint.', stats:'CD: 12s | Cost: 25 Stamina | Scale: STR 1.3x' },
+          { name:'Ambush', type:'Raptor', color:'#ffb16d', desc:'Strike from stealth dealing 250% damage. Guarantees critical hit. Breaks stealth.', stats:'CD: 0s (requires stealth) | Scale: DEX 1.5x + AGI 0.5x' },
+        ]
+      }
+    };
+
+    function renderClass(cls) {
+      document.querySelectorAll('.class-tab').forEach(t => {
+        t.classList.toggle('active', t.dataset.class === cls);
+        if (t.dataset.class === cls) {
+          const colors = { warrior:'#ff7d87', mage:'#bb95ff', ranger:'#49de95', worge:'#ffb16d' };
+          t.style.borderColor = colors[cls];
+          t.style.color = colors[cls];
+        } else {
+          t.style.borderColor = '';
+          t.style.color = '';
+        }
+      });
+
+      if (cls === 'warrior') {
+        // Warrior is the default HTML, re-render from page load
+        location.reload(); return;
+      }
+
+      const data = CLASS_SKILLS[cls];
+      if (!data) return;
+      const colors = { warrior:'#ff7d87', mage:'#bb95ff', ranger:'#49de95', worge:'#ffb16d' };
+      const c = colors[cls];
+
+      function skillCard(s) {
+        const typeColor = s.type === 'Passive' ? '#6ee7b7' : s.type === 'Ultimate' ? '#fbbf24' : c;
+        return `<div class="skill-card fantasy-panel" style="border-color:${c}">
+          <h4><span class="skill-type" style="background:${typeColor}15;color:${typeColor}">${s.type}</span> ${s.name}</h4>
+          <div class="skill-desc">${s.desc}</div>
+          <div class="skill-stats">${s.stats.replace(/(\d+[smx%]+)/g, '<span>$1</span>')}</div>
+        </div>`;
+      }
+
+      document.getElementById('skillContent').innerHTML =
+        `<div class="tree-section"><h3>Combat Skills</h3><div class="skill-grid">${data.combat.map(skillCard).join('')}</div></div>` +
+        `<div class="tree-section"><h3>Weapon Skills</h3><div class="skill-grid">${data.weapon.map(skillCard).join('')}</div></div>`;
+    }
+
+    document.querySelectorAll('.class-tab').forEach(tab => {
+      tab.addEventListener('click', () => renderClass(tab.dataset.class));
+    });
+  </script>
+</body>
+</html>
