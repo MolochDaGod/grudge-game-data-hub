@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <title>Grudge Warlords — Stats & Attributes Guide</title>
   <link rel="stylesheet" href="css/grudge-theme.css">
   <style>
@@ -162,7 +165,7 @@
     const CDN = 'https://molochdagod.github.io/ObjectStore';
     const PERCENT_STATS = new Set(['block','blockEffect','evasion','accuracy','criticalChance','criticalDamage',
       'attackSpeed','movementSpeed','resistance','cdrResist','defenseBreakResist','armorPenetration',
-      'blockPenetration','defenseBreak','drainHealth','cooldownReduction','abilityCost','spellAccuracy',
+      'blockPenetration','defenseBreak','drainHealth','drainMana','cooldownReduction','abilityCost','spellAccuracy',
       'stagger','ccResistance','damageReduction','bleedResist','statusEffect','spellblock','dodge',
       'reflexTime','criticalEvasion','fallDamage','comboCooldownRed']);
 
@@ -172,17 +175,27 @@
 
       // Render attribute cards
       document.getElementById('attrGrid').innerHTML = attrs.map(a => {
-        const gainsHtml = Object.entries(a.gains).map(([k, g]) => {
-          const unit = PERCENT_STATS.has(k) ? '%' : '';
-          return `<li><span class="gl">${g.label}</span><span class="gv">+${g.value}${unit}</span></li>`;
+        const gainsHtml = Object.entries(a.gains || {}).map(([k, g]) => {
+          const isPercent = PERCENT_STATS.has(k);
+          const parts = [];
+          if (g.flat !== undefined && g.flat !== 0) parts.push(`+${g.flat}${isPercent ? '%' : ''} flat`);
+          if (g.percent !== undefined && g.percent !== 0) parts.push(`+${g.percent}% base`);
+          const display = parts.length ? parts.join(' / ') : '+0';
+          return `<li><span class="gl">${g.label}</span><span class="gv">${display}</span></li>`;
         }).join('');
+
+        const iconSrc = a.icon ? `${CDN}/${a.icon}` : '';
+        const iconHtml = iconSrc
+          ? `<img src="${iconSrc}" class="attr-icon" alt="${a.name}" onerror="this.outerHTML='<span style=font-size:1.2em>${a.emoji}</span>'">`
+          : `<span style="font-size:1.2em">${a.emoji}</span>`;
+
         return `
           <div class="attr-card fantasy-panel" style="border-color:${a.color}">
             <h3 style="color:${a.color}">
-              <img src="${CDN}/${a.icon}" class="attr-icon" alt="${a.name}">
+              ${iconHtml}
               ${a.name}
             </h3>
-            <span class="role-badge" style="background:${a.color}22;color:${a.color}">${a.role}</span>
+            <span class="role-badge" style="background:${a.color}22;color:${a.color}">${a.role || ''}</span>
             <p class="desc">${a.description}</p>
             <ul class="gains-list">${gainsHtml}</ul>
             <div class="uuid-line">UUID: ${a.uuid}</div>

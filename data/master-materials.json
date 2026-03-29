@@ -1,1528 +1,1528 @@
 {
   "version": "1.0.0",
-  "generated": "2026-03-27T10:47:38.625Z",
+  "generated": "2026-03-29T13:38:48.449Z",
   "totalMaterials": 254,
   "materials": [
     {
-      "uuid": "MATL-20260327054738-000003-8217A9BB",
+      "uuid": "MATL-20260329083848-000003-FB9E1FC2",
       "name": "Iron Ingot",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/iron_ingot.png"
     },
     {
-      "uuid": "MATL-20260327054738-000004-309E6E09",
+      "uuid": "MATL-20260329083848-000004-851BA3A4",
       "name": "Leather",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/leather.png"
     },
     {
-      "uuid": "MATL-20260327054738-00000E-E8001523",
+      "uuid": "MATL-20260329083848-00000E-F53286D6",
       "name": "Steel Ingot",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/steel_ingot.png"
     },
     {
-      "uuid": "MATL-20260327054738-00000F-8FE9BBEC",
+      "uuid": "MATL-20260329083848-00000F-AC547E4A",
       "name": "Void Dust",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/void_dust.png"
     },
     {
-      "uuid": "MATL-20260327054738-000019-841D4C7E",
+      "uuid": "MATL-20260329083848-000019-012D4400",
       "name": "Dark Iron Ingot",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/dark_iron_ingot.png"
     },
     {
-      "uuid": "MATL-20260327054738-00001A-3FD09D8B",
+      "uuid": "MATL-20260329083848-00001A-DD8506A8",
       "name": "Obsidian",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/obsidian.png"
     },
     {
-      "uuid": "MATL-20260327054738-000024-4DC8C857",
+      "uuid": "MATL-20260329083848-000024-6339155B",
       "name": "Blood Stone",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/blood_stone.png"
     },
     {
-      "uuid": "MATL-20260327054738-000025-37712E18",
+      "uuid": "MATL-20260329083848-000025-AF817423",
       "name": "Bone",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/bone.png"
     },
     {
-      "uuid": "MATL-20260327054738-00002F-FBE27F9F",
+      "uuid": "MATL-20260329083848-00002F-051B7646",
       "name": "Shadow Ingot",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/shadow_ingot.png"
     },
     {
-      "uuid": "MATL-20260327054738-000030-6CDCB121",
+      "uuid": "MATL-20260329083848-000030-B4897A66",
       "name": "Gem",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/gem.png"
     },
     {
-      "uuid": "MATL-20260327054738-00003A-18F70D8C",
+      "uuid": "MATL-20260329083848-00003A-7D81971B",
       "name": "Fire Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/fire_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-000044-9B58CBB3",
+      "uuid": "MATL-20260329083848-000044-D8DDCB30",
       "name": "Wood",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/wood.png"
     },
     {
-      "uuid": "MATL-20260327054738-000057-4AEF7FF1",
+      "uuid": "MATL-20260329083848-000057-DE146611",
       "name": "Blood",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/blood.png"
     },
     {
-      "uuid": "MATL-20260327054738-0000B2-9102B6F5",
+      "uuid": "MATL-20260329083848-0000B2-59EF4BE2",
       "name": "Stone",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/stone.png"
     },
     {
-      "uuid": "MATL-20260327054738-0000C5-0AAF2C2A",
+      "uuid": "MATL-20260329083848-0000C5-AFA5D27B",
       "name": "Mithril Ingot",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/mithril_ingot.png"
     },
     {
-      "uuid": "MATL-20260327054738-0000E1-132CD5FD",
+      "uuid": "MATL-20260329083848-0000E1-DF788A58",
       "name": "Divine Ingot",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine_ingot.png"
     },
     {
-      "uuid": "MATL-20260327054738-0000E2-951101A0",
+      "uuid": "MATL-20260329083848-0000E2-EFE91B6B",
       "name": "Holy Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/holy_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-000134-03FD32A7",
+      "uuid": "MATL-20260329083848-000134-F09BC83F",
       "name": "Void Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/void_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-000198-E2C57109",
+      "uuid": "MATL-20260329083848-000198-121A434A",
       "name": "Chain",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/chain.png"
     },
     {
-      "uuid": "MATL-20260327054738-0001FC-F98E2BD5",
+      "uuid": "MATL-20260329083848-0001FC-D1C78478",
       "name": "String",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/string.png"
     },
     {
-      "uuid": "MATL-20260327054738-000206-B46C8112",
+      "uuid": "MATL-20260329083848-000206-9DB736DB",
       "name": "Hardwood",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/hardwood.png"
     },
     {
-      "uuid": "MATL-20260327054738-000207-D38DA125",
+      "uuid": "MATL-20260329083848-000207-2FFCC0C7",
       "name": "Sinew",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/sinew.png"
     },
     {
-      "uuid": "MATL-20260327054738-000211-6ACA15C0",
+      "uuid": "MATL-20260329083848-000211-138D7155",
       "name": "Darkwood",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/darkwood.png"
     },
     {
-      "uuid": "MATL-20260327054738-00021B-B6376CB4",
+      "uuid": "MATL-20260329083848-00021B-ED63BE86",
       "name": "Ashwood",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/ashwood.png"
     },
     {
-      "uuid": "MATL-20260327054738-000225-15820BE5",
+      "uuid": "MATL-20260329083848-000225-4BE82164",
       "name": "Ironwood",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/ironwood.png"
     },
     {
-      "uuid": "MATL-20260327054738-000226-F56E1628",
+      "uuid": "MATL-20260329083848-000226-675D14F1",
       "name": "Vine",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/vine.png"
     },
     {
-      "uuid": "MATL-20260327054738-000230-EA8DAE41",
+      "uuid": "MATL-20260329083848-000230-D97CC628",
       "name": "Worldtree Wood",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/worldtree_wood.png"
     },
     {
-      "uuid": "MATL-20260327054738-000231-34B35E5A",
+      "uuid": "MATL-20260329083848-000231-53B2DB25",
       "name": "Shadow Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/shadow_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-00023B-2BBA464A",
+      "uuid": "MATL-20260329083848-00023B-6D51EC5D",
       "name": "Iron",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/iron.png"
     },
     {
-      "uuid": "MATL-20260327054738-000245-3A67DB49",
+      "uuid": "MATL-20260329083848-000245-966DABB3",
       "name": "Steel",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/steel.png"
     },
     {
-      "uuid": "MATL-20260327054738-00024F-E36F36E3",
+      "uuid": "MATL-20260329083848-00024F-2F5C22B4",
       "name": "Dark Iron",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/dark_iron.png"
     },
     {
-      "uuid": "MATL-20260327054738-000274-87062ADC",
+      "uuid": "MATL-20260329083848-000274-C50EC0AA",
       "name": "Powder",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/powder.png"
     },
     {
-      "uuid": "MATL-20260327054738-0002AB-156D1F6F",
+      "uuid": "MATL-20260329083848-0002AB-3DD88D5E",
       "name": "Pine Log",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/pine_log.png"
     },
     {
-      "uuid": "MATL-20260327054738-0002AC-86F30A7F",
+      "uuid": "MATL-20260329083848-0002AC-6B161588",
       "name": "Minor Fire Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/minor_fire_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-0002B6-2BAEA196",
+      "uuid": "MATL-20260329083848-0002B6-83B6699E",
       "name": "Oak Log",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/oak_log.png"
     },
     {
-      "uuid": "MATL-20260327054738-0002C0-A6960773",
+      "uuid": "MATL-20260329083848-0002C0-0E7CEA2B",
       "name": "Maple Log",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/maple_log.png"
     },
     {
-      "uuid": "MATL-20260327054738-0002C1-F69677E0",
+      "uuid": "MATL-20260329083848-0002C1-B2687294",
       "name": "Greater Fire Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/greater_fire_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-0002CB-AD6D6876",
+      "uuid": "MATL-20260329083848-0002CB-DE8AF2F8",
       "name": "Ash Log",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/ash_log.png"
     },
     {
-      "uuid": "MATL-20260327054738-0002CC-C9B690DA",
+      "uuid": "MATL-20260329083848-0002CC-1A40FA90",
       "name": "Phoenix Feather",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/phoenix_feather.png"
     },
     {
-      "uuid": "MATL-20260327054738-0002D6-4548BBD6",
+      "uuid": "MATL-20260329083848-0002D6-49411AAA",
       "name": "Minor Frost Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/minor_frost_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-0002E0-8E2BF7F2",
+      "uuid": "MATL-20260329083848-0002E0-5435A04F",
       "name": "Frost Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/frost_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-0002EA-09E8C67C",
+      "uuid": "MATL-20260329083848-0002EA-9A9E148C",
       "name": "Greater Frost Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/greater_frost_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-0002F4-42CAC0D8",
+      "uuid": "MATL-20260329083848-0002F4-AEBF393D",
       "name": "Worldtree Log",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/worldtree_log.png"
     },
     {
-      "uuid": "MATL-20260327054738-0002F5-B2021A1A",
+      "uuid": "MATL-20260329083848-0002F5-618DFE2A",
       "name": "Void Ice",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/void_ice.png"
     },
     {
-      "uuid": "MATL-20260327054738-0002FF-D042308C",
+      "uuid": "MATL-20260329083848-0002FF-7733CC41",
       "name": "Minor Holy Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/minor_holy_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-000312-57791761",
+      "uuid": "MATL-20260329083848-000312-449DC6EF",
       "name": "Greater Holy Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/greater_holy_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-00031C-2335F928",
+      "uuid": "MATL-20260329083848-00031C-AEF4F880",
       "name": "Divine Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-000326-246A05E4",
+      "uuid": "MATL-20260329083848-000326-F68F0978",
       "name": "Minor Storm Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/minor_storm_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-000330-ABC5A2B3",
+      "uuid": "MATL-20260329083848-000330-8D93103E",
       "name": "Storm Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/storm_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-00033A-C1EF4932",
+      "uuid": "MATL-20260329083848-00033A-40FA4895",
       "name": "Greater Storm Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/greater_storm_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-000344-006EBE01",
+      "uuid": "MATL-20260329083848-000344-0DE270BC",
       "name": "Divine Storm",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine_storm.png"
     },
     {
-      "uuid": "MATL-20260327054738-00034E-A1A4CB12",
+      "uuid": "MATL-20260329083848-00034E-F4593534",
       "name": "Minor Nature Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/minor_nature_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-000358-802F610D",
+      "uuid": "MATL-20260329083848-000358-F3CF0B16",
       "name": "Nature Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/nature_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-000362-EAEA8F5E",
+      "uuid": "MATL-20260329083848-000362-72E5B053",
       "name": "Greater Nature Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/greater_nature_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-00036C-91B4E093",
+      "uuid": "MATL-20260329083848-00036C-FAD98558",
       "name": "Divine Nature",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine_nature.png"
     },
     {
-      "uuid": "MATL-20260327054738-000376-3EA084A5",
+      "uuid": "MATL-20260329083848-000376-CD189E34",
       "name": "Paper",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/paper.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003A4-5A515A97",
+      "uuid": "MATL-20260329083848-0003A4-BAEDAFBD",
       "name": "Arcane Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/arcane_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003AE-8C060027",
+      "uuid": "MATL-20260329083848-0003AE-82F69C82",
       "name": "Enchanted Paper",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/enchanted_paper.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003AF-3808E0B7",
+      "uuid": "MATL-20260329083848-0003AF-937178B3",
       "name": "All Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/all_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003B9-A92E2EFD",
+      "uuid": "MATL-20260329083848-0003B9-31BBF893",
       "name": "Divine Paper",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine_paper.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003BA-EC8855A4",
+      "uuid": "MATL-20260329083848-0003BA-DE59D056",
       "name": "Soul Core",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/soul_core.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003C4-B19DD11E",
+      "uuid": "MATL-20260329083848-0003C4-1D0AB6B1",
       "name": "Scrap Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/scrap_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003C5-A8FB3F78",
+      "uuid": "MATL-20260329083848-0003C5-50F4D02C",
       "name": "Twig",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/twig.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003C8-9238C19C",
+      "uuid": "MATL-20260329083848-0003C8-B615E715",
       "name": "Rabbit Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/rabbit_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003C9-1C0FBAF5",
+      "uuid": "MATL-20260329083848-0003C9-44713042",
       "name": "Salt",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/salt.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003CC-ECAEF208",
+      "uuid": "MATL-20260329083848-0003CC-45715FB1",
       "name": "Ground Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/ground_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003CD-6340A9E7",
+      "uuid": "MATL-20260329083848-0003CD-A7CCEF44",
       "name": "Casing",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/casing.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003D0-3EE75EBA",
+      "uuid": "MATL-20260329083848-0003D0-D5DE4124",
       "name": "Prime Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/prime_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003D3-D7AED9D9",
+      "uuid": "MATL-20260329083848-0003D3-CDB9B0B8",
       "name": "Beef",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/beef.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003D4-30A901C0",
+      "uuid": "MATL-20260329083848-0003D4-31607E88",
       "name": "Pepper",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/pepper.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003D7-2CAA5545",
+      "uuid": "MATL-20260329083848-0003D7-8C34DF5D",
       "name": "Pork Belly",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/pork_belly.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003DC-09F91B5A",
+      "uuid": "MATL-20260329083848-0003DC-5A657AF5",
       "name": "Ribs",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/ribs.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003DD-E010F0CF",
+      "uuid": "MATL-20260329083848-0003DD-2D87F29B",
       "name": "Spice",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/spice.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003E0-E43BA25C",
+      "uuid": "MATL-20260329083848-0003E0-1E700767",
       "name": "Deer Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/deer_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003E1-D2096215",
+      "uuid": "MATL-20260329083848-0003E1-D5065EFF",
       "name": "Herbs",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/herbs.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003E4-FDC56305",
+      "uuid": "MATL-20260329083848-0003E4-5B6379E8",
       "name": "Boar Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/boar_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003E7-5596895E",
+      "uuid": "MATL-20260329083848-0003E7-35A45265",
       "name": "Lamb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/lamb.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003E8-92DB93CB",
+      "uuid": "MATL-20260329083848-0003E8-906AC2F2",
       "name": "Wine",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/wine.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003EB-AB817150",
+      "uuid": "MATL-20260329083848-0003EB-F9E6486A",
       "name": "Prime Beef",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/prime_beef.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003EC-72B46FD0",
+      "uuid": "MATL-20260329083848-0003EC-6E62497E",
       "name": "Blood Spice",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/blood_spice.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003EF-2BE813BA",
+      "uuid": "MATL-20260329083848-0003EF-2ECD15B0",
       "name": "Spicy Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/spicy_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003F0-E197AE47",
+      "uuid": "MATL-20260329083848-0003F0-8867D9B1",
       "name": "Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003F3-AD110161",
+      "uuid": "MATL-20260329083848-0003F3-6772902F",
       "name": "Demon Ribs",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/demon_ribs.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003F4-77B8A4FC",
+      "uuid": "MATL-20260329083848-0003F4-5F86875C",
       "name": "Fire Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/fire_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003F7-873E6DF0",
+      "uuid": "MATL-20260329083848-0003F7-C09393AB",
       "name": "Fire Spice",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/fire_spice.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003FA-90A85933",
+      "uuid": "MATL-20260329083848-0003FA-918F1CCA",
       "name": "Beast Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/beast_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003FB-D0DCE5E0",
+      "uuid": "MATL-20260329083848-0003FB-71EA62AA",
       "name": "Rage Spice",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/rage_spice.png"
     },
     {
-      "uuid": "MATL-20260327054738-0003FE-7BF5E2B9",
+      "uuid": "MATL-20260329083848-0003FE-6938E6CA",
       "name": "Mixed Meats",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/mixed_meats.png"
     },
     {
-      "uuid": "MATL-20260327054738-000401-D00EA66F",
+      "uuid": "MATL-20260329083848-000401-87CD4646",
       "name": "Ground Beast",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/ground_beast.png"
     },
     {
-      "uuid": "MATL-20260327054738-000404-19B6C8AE",
+      "uuid": "MATL-20260329083848-000404-2A3379D3",
       "name": "Bear Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/bear_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-000405-21EB2736",
+      "uuid": "MATL-20260329083848-000405-4907C755",
       "name": "Honey",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/honey.png"
     },
     {
-      "uuid": "MATL-20260327054738-000408-FAFEF6C2",
+      "uuid": "MATL-20260329083848-000408-135D02EC",
       "name": "Monster Chops",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/monster_chops.png"
     },
     {
-      "uuid": "MATL-20260327054738-000409-EAF90727",
+      "uuid": "MATL-20260329083848-000409-366C3156",
       "name": "Gore Spice",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/gore_spice.png"
     },
     {
-      "uuid": "MATL-20260327054738-00040C-B55E2F63",
+      "uuid": "MATL-20260329083848-00040C-5993DD79",
       "name": "Wyvern Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/wyvern_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-00040D-3C391EC9",
+      "uuid": "MATL-20260329083848-00040D-1F69358A",
       "name": "Hot Sauce",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/hot_sauce.png"
     },
     {
-      "uuid": "MATL-20260327054738-000410-9CC0710B",
+      "uuid": "MATL-20260329083848-000410-C7DA4C08",
       "name": "Mixed Monster",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/mixed_monster.png"
     },
     {
-      "uuid": "MATL-20260327054738-000411-AFD9F5E2",
+      "uuid": "MATL-20260329083848-000411-013DE717",
       "name": "Blood Broth",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/blood_broth.png"
     },
     {
-      "uuid": "MATL-20260327054738-000414-7DC9EA91",
+      "uuid": "MATL-20260329083848-000414-C78442AA",
       "name": "Demon Beef",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/demon_beef.png"
     },
     {
-      "uuid": "MATL-20260327054738-000415-3BB476B4",
+      "uuid": "MATL-20260329083848-000415-53F74DCE",
       "name": "Hellfire Salt",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/hellfire_salt.png"
     },
     {
-      "uuid": "MATL-20260327054738-000418-2912A77E",
+      "uuid": "MATL-20260329083848-000418-49A82523",
       "name": "Elite Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/elite_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-000419-C26437CD",
+      "uuid": "MATL-20260329083848-000419-6ED9820B",
       "name": "War Spice",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/war_spice.png"
     },
     {
-      "uuid": "MATL-20260327054738-00041C-BC6FA1EE",
+      "uuid": "MATL-20260329083848-00041C-A6720B66",
       "name": "Chimera Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/chimera_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-00041D-D065EDEA",
+      "uuid": "MATL-20260329083848-00041D-8BAE943D",
       "name": "Exotic Spice",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/exotic_spice.png"
     },
     {
-      "uuid": "MATL-20260327054738-000420-C0811471",
+      "uuid": "MATL-20260329083848-000420-1E5D96B9",
       "name": "Boss Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/boss_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-000421-A62B6769",
+      "uuid": "MATL-20260329083848-000421-2C68708D",
       "name": "Chaos Salt",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/chaos_salt.png"
     },
     {
-      "uuid": "MATL-20260327054738-000424-A519A119",
+      "uuid": "MATL-20260329083848-000424-B9F44183",
       "name": "Dragon Flank",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/dragon_flank.png"
     },
     {
-      "uuid": "MATL-20260327054738-000425-7F6FDCB5",
+      "uuid": "MATL-20260329083848-000425-E837AE4C",
       "name": "Liquid Fire",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/liquid_fire.png"
     },
     {
-      "uuid": "MATL-20260327054738-000428-8AF2C096",
+      "uuid": "MATL-20260329083848-000428-D6BF57CA",
       "name": "Legendary Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/legendary_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-000429-EE5F8538",
+      "uuid": "MATL-20260329083848-000429-B08C16D1",
       "name": "Divine Fire",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine_fire.png"
     },
     {
-      "uuid": "MATL-20260327054738-00042C-B76EE682",
+      "uuid": "MATL-20260329083848-00042C-B72A4536",
       "name": "Phoenix Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/phoenix_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-00042D-8FDDDD98",
+      "uuid": "MATL-20260329083848-00042D-B7A7EC29",
       "name": "Eternal Flame",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/eternal_flame.png"
     },
     {
-      "uuid": "MATL-20260327054738-000430-F1B30610",
+      "uuid": "MATL-20260329083848-000430-F6D3FF49",
       "name": "Giant Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/giant_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-000431-49B7BDFF",
+      "uuid": "MATL-20260329083848-000431-F1FC9058",
       "name": "Divine Salt",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine_salt.png"
     },
     {
-      "uuid": "MATL-20260327054738-000434-50096E11",
+      "uuid": "MATL-20260329083848-000434-6B362C34",
       "name": "Lettuce",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/lettuce.png"
     },
     {
-      "uuid": "MATL-20260327054738-000435-5DADF97F",
+      "uuid": "MATL-20260329083848-000435-8F87706B",
       "name": "Tomato",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/tomato.png"
     },
     {
-      "uuid": "MATL-20260327054738-000438-CEC17FC5",
+      "uuid": "MATL-20260329083848-000438-9A230E1A",
       "name": "Carrot",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/carrot.png"
     },
     {
-      "uuid": "MATL-20260327054738-000439-95ACE0A5",
+      "uuid": "MATL-20260329083848-000439-0C7F6CED",
       "name": "Potato",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/potato.png"
     },
     {
-      "uuid": "MATL-20260327054738-00043A-E238516F",
+      "uuid": "MATL-20260329083848-00043A-9A9A58CB",
       "name": "Water",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/water.png"
     },
     {
-      "uuid": "MATL-20260327054738-00043F-480A5FBB",
+      "uuid": "MATL-20260329083848-00043F-0D047822",
       "name": "Large Mushroom",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/large_mushroom.png"
     },
     {
-      "uuid": "MATL-20260327054738-000440-0984C40C",
+      "uuid": "MATL-20260329083848-000440-235788FE",
       "name": "Cheese",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/cheese.png"
     },
     {
-      "uuid": "MATL-20260327054738-000443-815775B0",
+      "uuid": "MATL-20260329083848-000443-E79A20AD",
       "name": "Celery",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/celery.png"
     },
     {
-      "uuid": "MATL-20260327054738-000444-08427846",
+      "uuid": "MATL-20260329083848-000444-03792E2B",
       "name": "Onion",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/onion.png"
     },
     {
-      "uuid": "MATL-20260327054738-000447-AC5D323C",
+      "uuid": "MATL-20260329083848-000447-601FCB80",
       "name": "Calm Herbs",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/calm_herbs.png"
     },
     {
-      "uuid": "MATL-20260327054738-000448-D5816A69",
+      "uuid": "MATL-20260329083848-000448-7098DE57",
       "name": "Broth",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/broth.png"
     },
     {
-      "uuid": "MATL-20260327054738-00044B-F60CFD25",
+      "uuid": "MATL-20260329083848-00044B-5300A20F",
       "name": "Cucumber",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/cucumber.png"
     },
     {
-      "uuid": "MATL-20260327054738-00044C-3A19DCC5",
+      "uuid": "MATL-20260329083848-00044C-7C77AC61",
       "name": "Rice",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/rice.png"
     },
     {
-      "uuid": "MATL-20260327054738-00044F-60800A91",
+      "uuid": "MATL-20260329083848-00044F-F7D5D4E0",
       "name": "Bandage Leaf",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/bandage_leaf.png"
     },
     {
-      "uuid": "MATL-20260327054738-000452-E2E7C450",
+      "uuid": "MATL-20260329083848-000452-67262A0E",
       "name": "Forest Herbs",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/forest_herbs.png"
     },
     {
-      "uuid": "MATL-20260327054738-000453-29128FCA",
+      "uuid": "MATL-20260329083848-000453-A48728A5",
       "name": "Moonpetal",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/moonpetal.png"
     },
     {
-      "uuid": "MATL-20260327054738-000456-E564D572",
+      "uuid": "MATL-20260329083848-000456-9062E8A8",
       "name": "Recovery Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/recovery_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-000457-3BF1FF7E",
+      "uuid": "MATL-20260329083848-000457-4988B13B",
       "name": "Vegetable",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/vegetable.png"
     },
     {
-      "uuid": "MATL-20260327054738-00045A-96E72ABB",
+      "uuid": "MATL-20260329083848-00045A-FDE0AD7F",
       "name": "Healing Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/healing_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-00045B-3EEFFB42",
+      "uuid": "MATL-20260329083848-00045B-EE681822",
       "name": "Hot Water",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/hot_water.png"
     },
     {
-      "uuid": "MATL-20260327054738-00045E-D2791181",
+      "uuid": "MATL-20260329083848-00045E-E95B3266",
       "name": "Rejuv Leaf",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/rejuv_leaf.png"
     },
     {
-      "uuid": "MATL-20260327054738-000461-4056FA64",
+      "uuid": "MATL-20260329083848-000461-87D2C33C",
       "name": "Leaf Wrap",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/leaf_wrap.png"
     },
     {
-      "uuid": "MATL-20260327054738-000464-29736104",
+      "uuid": "MATL-20260329083848-000464-ED86F8DF",
       "name": "Life Greens",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/life_greens.png"
     },
     {
-      "uuid": "MATL-20260327054738-000465-33F3EA20",
+      "uuid": "MATL-20260329083848-000465-87ECFDAF",
       "name": "Dewdrop",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/dewdrop.png"
     },
     {
-      "uuid": "MATL-20260327054738-000468-F2C16DDB",
+      "uuid": "MATL-20260329083848-000468-65C06512",
       "name": "Wild Vegetables",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/wild_vegetables.png"
     },
     {
-      "uuid": "MATL-20260327054738-00046B-A6E4958C",
+      "uuid": "MATL-20260329083848-00046B-AA26785F",
       "name": "Renewal Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/renewal_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-00046E-D0A3147B",
+      "uuid": "MATL-20260329083848-00046E-D2FBAD39",
       "name": "Sacred Vegetables",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/sacred_vegetables.png"
     },
     {
-      "uuid": "MATL-20260327054738-00046F-AA58E98B",
+      "uuid": "MATL-20260329083848-00046F-BDB47C5D",
       "name": "Dew",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/dew.png"
     },
     {
-      "uuid": "MATL-20260327054738-000472-37E6F17A",
+      "uuid": "MATL-20260329083848-000472-2A15BBF7",
       "name": "Phoenix Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/phoenix_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-000473-05537D22",
+      "uuid": "MATL-20260329083848-000473-50E26571",
       "name": "Life Water",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/life_water.png"
     },
     {
-      "uuid": "MATL-20260327054738-000476-A053838B",
+      "uuid": "MATL-20260329083848-000476-0D45C34C",
       "name": "Regen Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/regen_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-000477-19F4E047",
+      "uuid": "MATL-20260329083848-000477-F3593F74",
       "name": "Aloe",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/aloe.png"
     },
     {
-      "uuid": "MATL-20260327054738-00047A-EB900011",
+      "uuid": "MATL-20260329083848-00047A-26EF290B",
       "name": "Immortal Plant",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/immortal_plant.png"
     },
     {
-      "uuid": "MATL-20260327054738-00047D-DB7F15A6",
+      "uuid": "MATL-20260329083848-00047D-512959A1",
       "name": "Living Bark",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/living_bark.png"
     },
     {
-      "uuid": "MATL-20260327054738-00047E-A3193A4F",
+      "uuid": "MATL-20260329083848-00047E-AFAC68BB",
       "name": "Spring Water",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/spring_water.png"
     },
     {
-      "uuid": "MATL-20260327054738-000481-2999B440",
+      "uuid": "MATL-20260329083848-000481-E54DFD03",
       "name": "Eternal Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/eternal_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-000482-3EE61605",
+      "uuid": "MATL-20260329083848-000482-C9ED5CD9",
       "name": "Star Water",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/star_water.png"
     },
     {
-      "uuid": "MATL-20260327054738-000485-7DD8AC5B",
+      "uuid": "MATL-20260329083848-000485-756A4451",
       "name": "World Tree Fruit",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/world_tree_fruit.png"
     },
     {
-      "uuid": "MATL-20260327054738-000486-514DCA2E",
+      "uuid": "MATL-20260329083848-000486-E512E146",
       "name": "Life Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/life_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-000489-AA524CC0",
+      "uuid": "MATL-20260329083848-000489-6B307FCC",
       "name": "God Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/god_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-00048A-6360A4F1",
+      "uuid": "MATL-20260329083848-00048A-791DA4B8",
       "name": "Holy Dew",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/holy_dew.png"
     },
     {
-      "uuid": "MATL-20260327054738-00048D-1B37BCCB",
+      "uuid": "MATL-20260329083848-00048D-00135F91",
       "name": "Fairy Mushroom",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/fairy_mushroom.png"
     },
     {
-      "uuid": "MATL-20260327054738-00048E-C6C8EA1A",
+      "uuid": "MATL-20260329083848-00048E-D7A728E4",
       "name": "Dewdrops",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/dewdrops.png"
     },
     {
-      "uuid": "MATL-20260327054738-000491-1ED9AF46",
+      "uuid": "MATL-20260329083848-000491-4FE63FDA",
       "name": "Life Blossom",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/life_blossom.png"
     },
     {
-      "uuid": "MATL-20260327054738-000492-ABE074D5",
+      "uuid": "MATL-20260329083848-000492-93FB3035",
       "name": "Pure Water",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/pure_water.png"
     },
     {
-      "uuid": "MATL-20260327054738-000495-021A2175",
+      "uuid": "MATL-20260329083848-000495-C5518241",
       "name": "Divine Greens",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine_greens.png"
     },
     {
-      "uuid": "MATL-20260327054738-000496-B1898693",
+      "uuid": "MATL-20260329083848-000496-80755F0B",
       "name": "Starfruit",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/starfruit.png"
     },
     {
-      "uuid": "MATL-20260327054738-000499-27F71419",
+      "uuid": "MATL-20260329083848-000499-688EC74F",
       "name": "Eternal Petals",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/eternal_petals.png"
     },
     {
-      "uuid": "MATL-20260327054738-00049A-0ED5C595",
+      "uuid": "MATL-20260329083848-00049A-402852F4",
       "name": "Lifewater",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/lifewater.png"
     },
     {
-      "uuid": "MATL-20260327054738-00049D-0AA5A694",
+      "uuid": "MATL-20260329083848-00049D-53878F1D",
       "name": "World Tree Sap",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/world_tree_sap.png"
     },
     {
-      "uuid": "MATL-20260327054738-00049E-E4BA59A9",
+      "uuid": "MATL-20260329083848-00049E-C3453446",
       "name": "Divine Pollen",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine_pollen.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004A1-678350E4",
+      "uuid": "MATL-20260329083848-0004A1-08745175",
       "name": "Divine Herbs",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine_herbs.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004A2-36FAFAC8",
+      "uuid": "MATL-20260329083848-0004A2-8ACFD9FD",
       "name": "Holy Water",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/holy_water.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004A7-0A2A7164",
+      "uuid": "MATL-20260329083848-0004A7-ECCF2FA7",
       "name": "Flour",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/flour.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004AA-C71FAFC5",
+      "uuid": "MATL-20260329083848-0004AA-B1126BC5",
       "name": "Grain",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/grain.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004AB-F42B4E04",
+      "uuid": "MATL-20260329083848-0004AB-16B3DDC0",
       "name": "Hops",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/hops.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004B0-E0A82018",
+      "uuid": "MATL-20260329083848-0004B0-5B5D9DF9",
       "name": "Fish",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/fish.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004B3-7B72971C",
+      "uuid": "MATL-20260329083848-0004B3-14680972",
       "name": "Magic Flour",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/magic_flour.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004B4-DD51BB8B",
+      "uuid": "MATL-20260329083848-0004B4-744A315E",
       "name": "Mana Honey",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/mana_honey.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004B9-3DA5529A",
+      "uuid": "MATL-20260329083848-0004B9-D8224111",
       "name": "Enchanted Bread",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/enchanted_bread.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004BA-E1DDC7EB",
+      "uuid": "MATL-20260329083848-0004BA-5A3B35CF",
       "name": "Spell Butter",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/spell_butter.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004BF-A672A751",
+      "uuid": "MATL-20260329083848-0004BF-084BC566",
       "name": "Arcane Flour",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/arcane_flour.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004C0-C62837DE",
+      "uuid": "MATL-20260329083848-0004C0-3A987099",
       "name": "Mana Cream",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/mana_cream.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004C3-574D8409",
+      "uuid": "MATL-20260329083848-0004C3-E9E14B7B",
       "name": "Magic Mushroom",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/magic_mushroom.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004C4-0E9CC875",
+      "uuid": "MATL-20260329083848-0004C4-434F7AF8",
       "name": "Arcane Water",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/arcane_water.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004C7-41C822A6",
+      "uuid": "MATL-20260329083848-0004C7-80BFD114",
       "name": "Magic Noodle",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/magic_noodle.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004C8-7E78FB97",
+      "uuid": "MATL-20260329083848-0004C8-496A6A6E",
       "name": "Spell Broth",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/spell_broth.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004CB-6A53142B",
+      "uuid": "MATL-20260329083848-0004CB-B484054F",
       "name": "Shellfish",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/shellfish.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004CC-7BFE26FE",
+      "uuid": "MATL-20260329083848-0004CC-16EC7C01",
       "name": "Cream",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/cream.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004CF-5D941D71",
+      "uuid": "MATL-20260329083848-0004CF-C2B536C5",
       "name": "Arcane Fruit",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/arcane_fruit.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004D0-C98D6AAD",
+      "uuid": "MATL-20260329083848-0004D0-449C1332",
       "name": "Magic Crust",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/magic_crust.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004D3-121CACBF",
+      "uuid": "MATL-20260329083848-0004D3-C2B52BD4",
       "name": "Seafood",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/seafood.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004D4-F759A46A",
+      "uuid": "MATL-20260329083848-0004D4-76ED1D8B",
       "name": "Spellwort",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/spellwort.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004D7-AD358EDC",
+      "uuid": "MATL-20260329083848-0004D7-4381E7C7",
       "name": "Enchanted Meat",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/enchanted_meat.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004D8-B7C0521D",
+      "uuid": "MATL-20260329083848-0004D8-C451046D",
       "name": "Spell Water",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/spell_water.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004DB-BFDD2EF1",
+      "uuid": "MATL-20260329083848-0004DB-401020D7",
       "name": "Mana Butter",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/mana_butter.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004DE-C5B6357B",
+      "uuid": "MATL-20260329083848-0004DE-4BC3FA68",
       "name": "Arcane Dish",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/arcane_dish.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004DF-12290081",
+      "uuid": "MATL-20260329083848-0004DF-0D0AEB75",
       "name": "Mana Sauce",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/mana_sauce.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004E2-78FAF501",
+      "uuid": "MATL-20260329083848-0004E2-0A042620",
       "name": "Strong Grain",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/strong_grain.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004E3-33FD450D",
+      "uuid": "MATL-20260329083848-0004E3-C158A36B",
       "name": "Fire Water",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/fire_water.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004E6-05D3D531",
+      "uuid": "MATL-20260329083848-0004E6-5029B0DB",
       "name": "Divine Flour",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine_flour.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004E7-37CAFBC0",
+      "uuid": "MATL-20260329083848-0004E7-2EB491E2",
       "name": "Star Honey",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/star_honey.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004EA-F46AEA35",
+      "uuid": "MATL-20260329083848-0004EA-9AA7CA44",
       "name": "Magic Ingredients",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/magic_ingredients.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004EB-26F126C5",
+      "uuid": "MATL-20260329083848-0004EB-D2B996AE",
       "name": "Mana Crystal",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/mana_crystal.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004EE-D4F3EF98",
+      "uuid": "MATL-20260329083848-0004EE-ABE33676",
       "name": "Celestial Flour",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/celestial_flour.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004EF-061E67A1",
+      "uuid": "MATL-20260329083848-0004EF-239DA5A0",
       "name": "Moon Cream",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/moon_cream.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004F2-73113E54",
+      "uuid": "MATL-20260329083848-0004F2-F5A32875",
       "name": "Enchanted Fruit",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/enchanted_fruit.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004F5-4816199E",
+      "uuid": "MATL-20260329083848-0004F5-CE35967F",
       "name": "God Ingredients",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/god_ingredients.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004F6-E11E9506",
+      "uuid": "MATL-20260329083848-0004F6-F99D25D3",
       "name": "Holy Mana",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/holy_mana.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004F9-55088749",
+      "uuid": "MATL-20260329083848-0004F9-046ED574",
       "name": "Star Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/star_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004FA-F2F73942",
+      "uuid": "MATL-20260329083848-0004FA-B086951D",
       "name": "Void Mushroom",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/void_mushroom.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004FD-1ED781DA",
+      "uuid": "MATL-20260329083848-0004FD-30708242",
       "name": "Void Crab",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/void_crab.png"
     },
     {
-      "uuid": "MATL-20260327054738-0004FE-53921A35",
+      "uuid": "MATL-20260329083848-0004FE-48C8FBE1",
       "name": "Shadow Cream",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/shadow_cream.png"
     },
     {
-      "uuid": "MATL-20260327054738-000501-011A1B02",
+      "uuid": "MATL-20260329083848-000501-64AEC1C7",
       "name": "Starlight Flour",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/starlight_flour.png"
     },
     {
-      "uuid": "MATL-20260327054738-000502-25263763",
+      "uuid": "MATL-20260329083848-000502-9090C265",
       "name": "Moon Sugar",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/moon_sugar.png"
     },
     {
-      "uuid": "MATL-20260327054738-000505-09A3FC9A",
+      "uuid": "MATL-20260329083848-000505-5FB9EC27",
       "name": "Cosmic Hops",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/cosmic_hops.png"
     },
     {
-      "uuid": "MATL-20260327054738-000506-CB343327",
+      "uuid": "MATL-20260329083848-000506-23C686E9",
       "name": "Starwater",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/starwater.png"
     },
     {
-      "uuid": "MATL-20260327054738-000509-F4972FC3",
+      "uuid": "MATL-20260329083848-000509-AE1734C1",
       "name": "Eternal Sugar",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/eternal_sugar.png"
     },
     {
-      "uuid": "MATL-20260327054738-00050C-4659E953",
+      "uuid": "MATL-20260329083848-00050C-9F61EFE9",
       "name": "Astral Fruit",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/astral_fruit.png"
     },
     {
-      "uuid": "MATL-20260327054738-00050F-F176C961",
+      "uuid": "MATL-20260329083848-00050F-1DDEBF90",
       "name": "Red Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/red_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-000512-2BD549A9",
+      "uuid": "MATL-20260329083848-000512-3C37049C",
       "name": "Blue Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/blue_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-000515-F9C3A2CE",
+      "uuid": "MATL-20260329083848-000515-335AEB6A",
       "name": "Yellow Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/yellow_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-000518-D85A6CA5",
+      "uuid": "MATL-20260329083848-000518-227255B0",
       "name": "Antitoxin Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/antitoxin_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-00051B-BF29E420",
+      "uuid": "MATL-20260329083848-00051B-94DD6A4E",
       "name": "Blood Moss",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/blood_moss.png"
     },
     {
-      "uuid": "MATL-20260327054738-00051C-45A98CB5",
+      "uuid": "MATL-20260329083848-00051C-8F988336",
       "name": "Distilled Water",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/distilled_water.png"
     },
     {
-      "uuid": "MATL-20260327054738-00051F-C80A0C95",
+      "uuid": "MATL-20260329083848-00051F-5E650BC4",
       "name": "Mana Bloom",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/mana_bloom.png"
     },
     {
-      "uuid": "MATL-20260327054738-000522-7C9BD75D",
+      "uuid": "MATL-20260329083848-000522-7D57A3A3",
       "name": "Berserker Root",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/berserker_root.png"
     },
     {
-      "uuid": "MATL-20260327054738-000525-311ADBB8",
+      "uuid": "MATL-20260329083848-000525-C91A24B7",
       "name": "Swift Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/swift_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-000526-505ACA2B",
+      "uuid": "MATL-20260329083848-000526-B0740E99",
       "name": "Wind Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/wind_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-000529-346BE0E1",
+      "uuid": "MATL-20260329083848-000529-89DD77B5",
       "name": "Ironbark",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/ironbark.png"
     },
     {
-      "uuid": "MATL-20260327054738-00052A-1DACEAB6",
+      "uuid": "MATL-20260329083848-00052A-546FA46C",
       "name": "Earth Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/earth_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-00052D-EA6F2986",
+      "uuid": "MATL-20260329083848-00052D-529D7821",
       "name": "Heart Blossom",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/heart_blossom.png"
     },
     {
-      "uuid": "MATL-20260327054738-000530-893910C4",
+      "uuid": "MATL-20260329083848-000530-ED24642D",
       "name": "Mana Crystal Dust",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/mana_crystal_dust.png"
     },
     {
-      "uuid": "MATL-20260327054738-000533-D3C8FF12",
+      "uuid": "MATL-20260329083848-000533-3F6F2F4A",
       "name": "Ghost Orchid",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/ghost_orchid.png"
     },
     {
-      "uuid": "MATL-20260327054738-000536-93B75E8C",
+      "uuid": "MATL-20260329083848-000536-23979CEA",
       "name": "Firebloom",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/firebloom.png"
     },
     {
-      "uuid": "MATL-20260327054738-000537-0A92C8A9",
+      "uuid": "MATL-20260329083848-000537-39AEA3AA",
       "name": "Ice Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/ice_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-00053A-C79088A1",
+      "uuid": "MATL-20260329083848-00053A-0256AA6C",
       "name": "Frostleaf",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/frostleaf.png"
     },
     {
-      "uuid": "MATL-20260327054738-00053D-923035B0",
+      "uuid": "MATL-20260329083848-00053D-6C95CEEC",
       "name": "Dragon Blood Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/dragon_blood_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-00053E-CAD8DEE7",
+      "uuid": "MATL-20260329083848-00053E-0DBD3C15",
       "name": "Life Crystal",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/life_crystal.png"
     },
     {
-      "uuid": "MATL-20260327054738-000541-12C2F93B",
+      "uuid": "MATL-20260329083848-000541-C8338EA2",
       "name": "Arcane Lotus",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/arcane_lotus.png"
     },
     {
-      "uuid": "MATL-20260327054738-000544-AB6EADF8",
+      "uuid": "MATL-20260329083848-000544-44EEC10F",
       "name": "Rage Flower",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/rage_flower.png"
     },
     {
-      "uuid": "MATL-20260327054738-000545-CE527F24",
+      "uuid": "MATL-20260329083848-000545-4CE8AB37",
       "name": "Blood Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/blood_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-000548-2F4C4B69",
+      "uuid": "MATL-20260329083848-000548-7047563A",
       "name": "Giant's Blood",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/giant's_blood.png"
     },
     {
-      "uuid": "MATL-20260327054738-000549-7101DD0C",
+      "uuid": "MATL-20260329083848-000549-50BE7C0B",
       "name": "Power Crystal",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/power_crystal.png"
     },
     {
-      "uuid": "MATL-20260327054738-00054C-051EE890",
+      "uuid": "MATL-20260329083848-00054C-D0F8AB59",
       "name": "Phoenix Tear",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/phoenix_tear.png"
     },
     {
-      "uuid": "MATL-20260327054738-00054F-92A69540",
+      "uuid": "MATL-20260329083848-00054F-CC0BA4F9",
       "name": "Philosopher's Stone",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/philosopher's_stone.png"
     },
     {
-      "uuid": "MATL-20260327054738-000550-593A07B7",
+      "uuid": "MATL-20260329083848-000550-2CDD217F",
       "name": "Dragon Blood",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/dragon_blood.png"
     },
     {
-      "uuid": "MATL-20260327054738-000553-CDBDA8DF",
+      "uuid": "MATL-20260329083848-000553-595D2CF5",
       "name": "Storm Leaf",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/storm_leaf.png"
     },
     {
-      "uuid": "MATL-20260327054738-000558-CD34A278",
+      "uuid": "MATL-20260329083848-000558-5D0CB17C",
       "name": "Lightbloom",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/lightbloom.png"
     },
     {
-      "uuid": "MATL-20260327054738-00055B-0A426266",
+      "uuid": "MATL-20260329083848-00055B-186CA880",
       "name": "Shadowleaf",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/shadowleaf.png"
     },
     {
-      "uuid": "MATL-20260327054738-00055C-9713C8A9",
+      "uuid": "MATL-20260329083848-00055C-347A4A64",
       "name": "Dark Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/dark_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-00055F-CF5DF4D7",
+      "uuid": "MATL-20260329083848-00055F-4767A0C1",
       "name": "Focus Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/focus_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-000560-71C3D225",
+      "uuid": "MATL-20260329083848-000560-FA546E41",
       "name": "Mind Crystal",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/mind_crystal.png"
     },
     {
-      "uuid": "MATL-20260327054738-000563-CF9503E6",
+      "uuid": "MATL-20260329083848-000563-3F87941E",
       "name": "Lucky Clover",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/lucky_clover.png"
     },
     {
-      "uuid": "MATL-20260327054738-000564-9DC8F0D7",
+      "uuid": "MATL-20260329083848-000564-DD7AF0C3",
       "name": "Star Dust",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/star_dust.png"
     },
     {
-      "uuid": "MATL-20260327054738-000567-1E95E833",
+      "uuid": "MATL-20260329083848-000567-67EF8E1B",
       "name": "Wisdom Herb",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/wisdom_herb.png"
     },
     {
-      "uuid": "MATL-20260327054738-000568-FEE2DA10",
+      "uuid": "MATL-20260329083848-000568-9B263FAB",
       "name": "Soul Dust",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/soul_dust.png"
     },
     {
-      "uuid": "MATL-20260327054738-00056B-324EF491",
+      "uuid": "MATL-20260329083848-00056B-B5533BFE",
       "name": "Giant Root",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/giant_root.png"
     },
     {
-      "uuid": "MATL-20260327054738-00056C-1E4D596F",
+      "uuid": "MATL-20260329083848-00056C-71CF09B0",
       "name": "Growth Essence",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/growth_essence.png"
     },
     {
-      "uuid": "MATL-20260327054738-00056F-1C7F3359",
+      "uuid": "MATL-20260329083848-00056F-9F0414B2",
       "name": "Tiny Mushroom",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/tiny_mushroom.png"
     },
     {
-      "uuid": "MATL-20260327054738-000572-0495DE64",
+      "uuid": "MATL-20260329083848-000572-6A82963D",
       "name": "Angel Feather",
       "type": "material",
       "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/angel_feather.png"
