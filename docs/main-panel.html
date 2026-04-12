@@ -191,11 +191,11 @@
 
   // Profession data (5 harvesting professions)
   const PROFESSIONS = [
-    { name:'Mining', color:'var(--miner)', level:3, xp:45 },
-    { name:'Forestry', color:'var(--forester)', level:2, xp:60 },
-    { name:'Mysticism', color:'var(--mystic)', level:1, xp:20 },
-    { name:'Cooking', color:'var(--chef)', level:4, xp:80 },
-    { name:'Engineering', color:'var(--engineer)', level:1, xp:10 },
+    { name:'Mining', color:'var(--miner)', level:3, xp:45, icon:`${CDN}/icons/wcs/misc/Core.png` },
+    { name:'Forestry', color:'var(--forester)', level:2, xp:60, icon:`${CDN}/icons/wcs/weapons/Hammer_01.png` },
+    { name:'Mysticism', color:'var(--mystic)', level:1, xp:20, icon:`${CDN}/icons/wcs/weapons/staff_1.png` },
+    { name:'Cooking', color:'var(--chef)', level:4, xp:80, icon:`${CDN}/icons/wcs/misc/Slash_07.png` },
+    { name:'Engineering', color:'var(--engineer)', level:1, xp:10, icon:`${CDN}/icons/wcs/misc/runic_tablet_01.png` },
   ];
 
   // Runtime icon URL fixer — remaps legacy broken paths to real ObjectStore paths
@@ -295,6 +295,7 @@
       <div class="section-title" style="margin-top:20px;">Professions</div>
       ${PROFESSIONS.map(p => `
         <div class="prof-row">
+          <img src="${p.icon}" alt="${p.name}" style="width:16px;height:16px;object-fit:contain;image-rendering:pixelated;" onerror="this.style.display='none'">
           <span class="prof-name">${p.name}</span>
           <div class="prof-bar"><div class="prof-fill" style="width:${p.xp}%;background:${p.color};"></div></div>
           <span class="prof-lv">${p.level}</span>
@@ -540,16 +541,18 @@
       const iconUrl = attr.icon ? `${CDN}/${attr.icon}` : '';
       html += `<div class="attr-card" style="border-left:3px solid ${attr.color || 'var(--gold)'};">`;
       html += `<div class="attr-card-head">`;
-      if (iconUrl) html += `<img src="${esc(iconUrl)}" alt="${esc(attr.name)}" onerror="this.style.display='none'">`;
+      if (iconUrl) html += `<img src="${esc(iconUrl)}" alt="${esc(attr.name)}" style="width:28px;height:28px;object-fit:contain;image-rendering:pixelated;" onerror="this.style.display='none'">`;
       html += `<div><div class="attr-name" style="color:${attr.color || 'var(--gold)'};">${esc(attr.name)}</div>`;
       html += `<div class="attr-role">${esc(attr.role)}</div></div></div>`;
       html += `<div class="attr-desc">${esc(attr.description)}</div>`;
-      html += `<div class="attr-formula">${esc(attr.formula)}</div>`;
       if (attr.gains) {
         html += `<div class="attr-gains">`;
         for (const [, g] of Object.entries(attr.gains)) {
-          const sign = g.value >= 0 ? '+' : '';
-          html += `<span class="attr-gain-chip">${esc(g.label)} ${sign}${g.value}</span>`;
+          const parts = [];
+          if (g.flat !== undefined && g.flat !== 0) parts.push(`+${g.flat} flat`);
+          if (g.percent !== undefined && g.percent !== 0) parts.push(`+${g.percent}% base`);
+          const display = parts.length ? parts.join(' / ') : '+0';
+          html += `<span class="attr-gain-chip">${esc(g.label)} ${display}</span>`;
         }
         html += `</div>`;
       }
@@ -560,14 +563,24 @@
 
   // ── Crafting Tab ───────────────────────────────────────────────────
   function renderCraftingTab() {
-    const recipes = allRecipes.slice(0, 30);
-    return `<div class="section-title">Crafting Recipes (${allRecipes.length} total)</div>` +
-      recipes.map(r => `<div style="padding:10px;margin-bottom:6px;background:#1e1510;border-radius:8px;border-left:3px solid var(--gold);transition:all 0.15s;cursor:default;" onmouseenter="this.style.borderLeftColor='var(--gold-light)'" onmouseleave="this.style.borderLeftColor='var(--gold)'">
-        <div style="font-weight:700;font-size:13px">${esc(r.name)}</div>
-        <div style="font-size:11px;color:var(--muted);margin-top:4px">${esc(r.profession)} · ${esc(r.category)}</div>
-        <div style="font-size:10px;color:var(--dim);margin-top:4px">${r.materials.map(m=>`${esc(m.name)} ×${m.quantity}`).join(', ')}</div>
-        <div style="font-size:8px;color:var(--dim);margin-top:4px;font-family:monospace;opacity:0.6">${esc(r.uuid)}</div>
-      </div>`).join('');
+    const recipes = allRecipes.slice(0, 40);
+    return `<div class="section-title">Crafting Recipes (${allRecipes.length} total)</div>
+      <div style="font-size:10px;color:var(--dim);margin-bottom:10px;">Showing ${recipes.length} of ${allRecipes.length} — <a href="crafting.html" style="font-size:10px;">View all recipes →</a></div>` +
+      recipes.map(r => {
+        const resultItem = r.resultItemId ? findAnyItem(r.resultItemId) : null;
+        const iconUrl = resultItem?.iconUrl || '';
+        const iconHtml = iconUrl
+          ? `<img src="${esc(iconUrl)}" alt="${esc(r.resultName || r.name)}" style="width:36px;height:36px;object-fit:contain;image-rendering:pixelated;border-radius:4px;border:1px solid rgba(255,255,255,0.08);background:rgba(0,0,0,0.2);padding:2px;flex-shrink:0;" onerror="this.style.display='none'">`
+          : '';
+        return `<div style="padding:10px;margin-bottom:6px;background:#1e1510;border-radius:8px;border-left:3px solid var(--gold);transition:all 0.15s;cursor:default;display:flex;gap:10px;align-items:flex-start;" onmouseenter="this.style.borderLeftColor='var(--gold-light)'" onmouseleave="this.style.borderLeftColor='var(--gold)'">
+          ${iconHtml}
+          <div>
+            <div style="font-weight:700;font-size:13px">${esc(r.resultName || r.name)}</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px">${esc(r.profession)} · ${esc(r.category)}</div>
+            <div style="font-size:10px;color:var(--dim);margin-top:4px">${(r.materials||[]).map(m=>`${esc(m.name)} ×${m.quantity}`).join(', ')}</div>
+          </div>
+        </div>`;
+      }).join('');
   }
 
   // ── Slot Interactions ──────────────────────────────────────────────

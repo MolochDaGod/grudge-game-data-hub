@@ -75,7 +75,8 @@
     let selectedClass = 'Warrior', selectedRace = 'Human';
     let buildChart = null;
 
-    const ATTR_ICONS = {
+    // Fallback icons only used if attribute JSON has no icon field
+    const ATTR_ICONS_FALLBACK = {
       strength:  'icons/wcs/weapons/Hammer_01.png',
       intellect: 'icons/wcs/weapons/Book_1.png',
       vitality:  'icons/wcs/misc/Core.png',
@@ -140,7 +141,11 @@
         const pts = getTotal(a.id);
         if (pts > 0 && a.gains) {
           Object.entries(a.gains).forEach(([key, g]) => {
-            if (stats[key] !== undefined) stats[key] += g.value * pts;
+            if (stats[key] !== undefined) {
+              // Use flat gain per point; percent is base-stat scaling (displayed separately)
+              const flatGain = g.flat !== undefined ? g.flat : (g.value || 0);
+              stats[key] += flatGain * pts;
+            }
           });
         }
       });
@@ -175,7 +180,7 @@
     function getIconUrl(attrId) {
       const a = ATTR_DATA.find(x => x.id === attrId);
       if (a && a.icon) return CDN + '/' + a.icon;
-      if (ATTR_ICONS[attrId]) return CDN + '/' + ATTR_ICONS[attrId];
+      if (ATTR_ICONS_FALLBACK[attrId]) return CDN + '/' + ATTR_ICONS_FALLBACK[attrId];
       return '';
     }
 
@@ -314,9 +319,12 @@
           const iconUrl = getIconUrl(a.id);
           const iconTag = iconUrl ? `<img src="${iconUrl}" class="attr-icon" style="width:18px;height:18px" onerror="this.style.display='none'">` : '';
           const gainsText = a.gains ? Object.entries(a.gains).map(([k,g]) => {
-            const unit = PERCENT_STATS.has(k) ? '%' : '';
-            const total = (g.value * pts).toFixed(2);
-            return `${g.label}: +${total}${unit}`;
+            const isPercent = PERCENT_STATS.has(k);
+            const flatGain = g.flat !== undefined ? g.flat : (g.value || 0);
+            const total = (flatGain * pts).toFixed(2);
+            const parts = [`+${total}${isPercent ? '%' : ''}`];
+            if (g.percent && g.percent !== 0) parts.push(`(+${(g.percent * pts).toFixed(1)}% base)`);
+            return `${g.label}: ${parts.join(' ')}`;
           }).join(' | ') : '';
           return `
             <div class="detail-card inset-panel" style="border-color:${a.color}">

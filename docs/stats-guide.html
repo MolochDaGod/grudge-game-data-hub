@@ -203,17 +203,64 @@
       }).join('');
 
       // Render all 37 derived stats
-      if (data.statDescriptions) {
+      if (data.statDescriptions && Object.keys(data.statDescriptions).length) {
         document.getElementById('allStats').innerHTML = Object.entries(data.statDescriptions).map(([k, desc]) =>
           `<div class="stat-item inset-panel"><span class="sk">${k.replace(/([A-Z])/g,' $1').trim()}</span><span class="sv" title="${desc}">${desc}</span></div>`
         ).join('');
+      } else {
+        // Fallback: derive stat names from attribute gains keys
+        const allStatKeys = new Set();
+        attrs.forEach(a => {
+          if (a.gains) Object.keys(a.gains).forEach(k => allStatKeys.add(k));
+        });
+        // Add known base stats
+        ['health','mana','stamina','damage','defense','block','blockEffect','evasion','accuracy',
+         'criticalChance','criticalDamage','attackSpeed','movementSpeed','resistance','cdrResist',
+         'defenseBreakResist','armorPenetration','blockPenetration','defenseBreak','drainHealth',
+         'manaRegen','healthRegen','cooldownReduction','abilityCost','spellAccuracy','stagger',
+         'ccResistance','armor','damageReduction','bleedResist','statusEffect','spellblock',
+         'dodge','reflexTime','criticalEvasion','fallDamage','comboCooldownRed'].forEach(k => allStatKeys.add(k));
+        const sortedStats = [...allStatKeys].sort();
+        document.getElementById('allStats').innerHTML = sortedStats.map(k => {
+          const label = k.replace(/([A-Z])/g, ' $1').trim();
+          const unit = PERCENT_STATS.has(k) ? '%' : '';
+          // Find which attributes contribute to this stat
+          const sources = attrs.filter(a => a.gains && a.gains[k]).map(a => {
+            const g = a.gains[k];
+            const parts = [];
+            if (g.flat && g.flat !== 0) parts.push(`+${g.flat}${unit}/pt`);
+            if (g.percent && g.percent !== 0) parts.push(`+${g.percent}%/pt`);
+            return `${a.name}: ${parts.join(', ')}`;
+          });
+          const desc = sources.length ? sources.join(' · ') : 'Base stat';
+          return `<div class="stat-item inset-panel"><span class="sk">${label}</span><span class="sv" title="${desc}" style="font-size:0.75em;">${desc}</span></div>`;
+        }).join('');
       }
 
       // Render stat caps
-      if (data.statCaps) {
+      if (data.statCaps && Object.keys(data.statCaps).length) {
         document.getElementById('capsTable').innerHTML = '<tr><th>Stat</th><th>Cap</th><th>Rationale</th></tr>' +
           Object.entries(data.statCaps).map(([k, c]) =>
             `<tr><td>${k.replace(/([A-Z])/g,' $1').trim()}</td><td style="color:var(--gold)">${c.display}</td><td>${c.rationale}</td></tr>`
+          ).join('');
+      } else {
+        // Fallback: known stat caps from game design
+        const defaultCaps = [
+          ['Block Chance', '75%', 'Prevents permanent immunity'],
+          ['Critical Chance', '75%', 'Balanced with Crit Evasion'],
+          ['Evasion', '50%', 'Cannot dodge more than half of attacks'],
+          ['Damage Reduction', '75%', 'Always take some damage'],
+          ['Drain Health', '50%', 'Lifesteal cap prevents full sustain'],
+          ['Cooldown Reduction', '50%', 'Skills must have minimum cooldowns'],
+          ['Movement Speed', '200%', 'Map balance; prevents extreme kiting'],
+          ['Attack Speed', '200%', 'Animation and server tick limits'],
+          ['Resistance', '75%', 'Magic damage remains relevant'],
+          ['Absorb', '50%', 'Damage shields cannot negate all damage'],
+          ['Reflect', '50%', 'Reflected damage has diminishing returns'],
+        ];
+        document.getElementById('capsTable').innerHTML = '<tr><th>Stat</th><th>Cap</th><th>Rationale</th></tr>' +
+          defaultCaps.map(([stat, cap, why]) =>
+            `<tr><td>${stat}</td><td style="color:var(--gold)">${cap}</td><td>${why}</td></tr>`
           ).join('');
       }
     }

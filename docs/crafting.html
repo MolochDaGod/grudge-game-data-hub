@@ -16,23 +16,32 @@
     .section { margin-bottom: 40px; }
     .section h2 { color: var(--gold); font-size: 1.4em; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gold-dim); }
     .prof-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-bottom: 30px; }
-    .prof-card { padding: 20px; border-left: 4px solid; border-radius: 4px; }
+    .prof-card { padding: 20px; border-left: 4px solid; border-radius: 4px; display: flex; gap: 14px; align-items: flex-start; }
+    .prof-card .prof-icon { width: 48px; height: 48px; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(0 0 6px rgba(212,175,55,0.3)); flex-shrink: 0; }
     .prof-card h3 { margin: 0 0 6px; }
     .prof-card .desc { color: var(--muted); font-size: 0.9em; line-height: 1.5; }
     .recipe-filters { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
     .recipe-filters select, .recipe-filters input { padding: 8px 12px; border-radius: 4px; border: 1px solid var(--border); background: hsl(225 28% 10%); color: var(--text); font-size: 0.9em; }
     .recipe-filters input { flex: 1; min-width: 200px; }
     .recipe-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
-    .recipe-card { padding: 16px; border-radius: 4px; }
-    .recipe-card h4 { color: var(--gold); margin: 0 0 6px; font-size: 1em; display: flex; align-items: center; gap: 8px; }
+    .recipe-card { padding: 16px; border-radius: 4px; display: flex; gap: 12px; align-items: flex-start; transition: all 0.15s; }
+    .recipe-card:hover { border-color: var(--gold-dim); box-shadow: 0 0 8px rgba(212,175,55,0.15); }
+    .recipe-card .recipe-icon { width: 48px; height: 48px; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(0 0 4px rgba(212,175,55,0.3)); flex-shrink: 0; border-radius: 6px; border: 2px solid rgba(255,255,255,0.08); background: rgba(0,0,0,0.2); padding: 4px; }
+    .recipe-card .recipe-body { flex: 1; min-width: 0; }
+    .recipe-card h4 { color: var(--gold); margin: 0 0 6px; font-size: 1em; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .recipe-card .recipe-meta { font-size: 0.75em; color: var(--dim); font-family: var(--font-mono); margin-bottom: 4px; }
     .recipe-card .mats { font-size: 0.82em; color: var(--muted); line-height: 1.6; }
     .recipe-card .mats span { color: var(--green); font-family: var(--font-mono); }
     .recipe-card .tier-badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 0.7em; font-family: var(--font-mono); }
     .station-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
-    .station-card { padding: 16px; text-align: center; border-radius: 4px; }
+    .station-card { padding: 20px; text-align: center; border-radius: 4px; transition: all 0.15s; }
+    .station-card:hover { border-color: var(--gold-dim); transform: translateY(-2px); }
+    .station-card .station-icon { width: 48px; height: 48px; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(0 0 6px rgba(212,175,55,0.3)); margin-bottom: 6px; }
     .station-card h4 { color: var(--gold); margin: 8px 0 4px; }
     .station-card .desc { color: var(--muted); font-size: 0.85em; }
     .empty-state { text-align: center; padding: 40px; color: var(--muted); }
+    .recipe-count { font-size: 0.85em; color: var(--muted); margin-bottom: 12px; }
+    .load-more { display: block; margin: 20px auto; padding: 12px 30px; }
   </style>
 </head>
 <body>
@@ -47,24 +56,29 @@
       <h2>Harvesting Professions</h2>
       <div class="prof-grid">
         <div class="prof-card fantasy-panel" style="border-color:#8b6914">
-          <h3 style="color:#d4a84b">Mining</h3>
-          <div class="desc">Extract ores and gems from mineral nodes. Higher tiers unlock rare veins and enchanted deposits.</div>
+          <img class="prof-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/misc/Core.png" alt="Mining" onerror="this.style.display='none'">
+          <div><h3 style="color:#d4a84b">Mining</h3>
+          <div class="desc">Extract ores and gems from mineral nodes. Higher tiers unlock rare veins and enchanted deposits.</div></div>
         </div>
         <div class="prof-card fantasy-panel" style="border-color:#2d8a4e">
-          <h3 style="color:#49de95">Herbalism</h3>
-          <div class="desc">Gather herbs, roots, and magical plants. Used for potions, poisons, and enchantments.</div>
+          <img class="prof-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/misc/Slash_07.png" alt="Herbalism" onerror="this.style.display='none'">
+          <div><h3 style="color:#49de95">Herbalism</h3>
+          <div class="desc">Gather herbs, roots, and magical plants. Used for potions, poisons, and enchantments.</div></div>
         </div>
         <div class="prof-card fantasy-panel" style="border-color:#5a3a1a">
-          <h3 style="color:#b8814a">Woodcutting</h3>
-          <div class="desc">Fell trees and harvest lumber. Essential for weapons, bows, staffs, and structures.</div>
+          <img class="prof-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/weapons/Hammer_01.png" alt="Woodcutting" onerror="this.style.display='none'">
+          <div><h3 style="color:#b8814a">Woodcutting</h3>
+          <div class="desc">Fell trees and harvest lumber. Essential for weapons, bows, staffs, and structures.</div></div>
         </div>
         <div class="prof-card fantasy-panel" style="border-color:#4a6fa5">
-          <h3 style="color:#7ab3ff">Fishing</h3>
-          <div class="desc">Catch fish and aquatic resources. Provides food buffs and rare crafting reagents.</div>
+          <img class="prof-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/weapons/staff_1.png" alt="Fishing" onerror="this.style.display='none'">
+          <div><h3 style="color:#7ab3ff">Fishing</h3>
+          <div class="desc">Catch fish and aquatic resources. Provides food buffs and rare crafting reagents.</div></div>
         </div>
         <div class="prof-card fantasy-panel" style="border-color:#8a4a6a">
-          <h3 style="color:#d47aa0">Skinning</h3>
-          <div class="desc">Skin creatures for leather and hides. Required for armor crafting and special enchants.</div>
+          <img class="prof-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/weapons/Dagger_01.png" alt="Skinning" onerror="this.style.display='none'">
+          <div><h3 style="color:#d47aa0">Skinning</h3>
+          <div class="desc">Skin creatures for leather and hides. Required for armor crafting and special enchants.</div></div>
         </div>
       </div>
     </div>
@@ -73,26 +87,32 @@
       <h2>Crafting Stations</h2>
       <div class="station-grid">
         <div class="station-card fantasy-panel">
+          <img class="station-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/weapons/Hammer_01.png" alt="Forge" onerror="this.style.display='none'">
           <h4>Forge</h4>
           <div class="desc">Weapons & heavy armor. Requires ore and fuel.</div>
         </div>
         <div class="station-card fantasy-panel">
+          <img class="station-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/weapons/Sword_01.png" alt="Workbench" onerror="this.style.display='none'">
           <h4>Workbench</h4>
           <div class="desc">General crafting, wood items, bows, and tools.</div>
         </div>
         <div class="station-card fantasy-panel">
+          <img class="station-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/misc/Core.png" alt="Alchemy" onerror="this.style.display='none'">
           <h4>Alchemy Table</h4>
           <div class="desc">Potions, elixirs, poisons, and enchanting oils.</div>
         </div>
         <div class="station-card fantasy-panel">
+          <img class="station-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/misc/runic_tablet_01.png" alt="Loom" onerror="this.style.display='none'">
           <h4>Loom</h4>
           <div class="desc">Cloth armor, capes, bags, and magical fabrics.</div>
         </div>
         <div class="station-card fantasy-panel">
+          <img class="station-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/weapons/Dagger_01.png" alt="Tannery" onerror="this.style.display='none'">
           <h4>Tannery</h4>
           <div class="desc">Leather armor, belts, boots from hides and skins.</div>
         </div>
         <div class="station-card fantasy-panel">
+          <img class="station-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/misc/runic_tablet_02.png" alt="Enchanting" onerror="this.style.display='none'">
           <h4>Enchanting Altar</h4>
           <div class="desc">Apply enchantments, runes, and magical properties to gear.</div>
         </div>
@@ -110,6 +130,8 @@
           <option value="4">T4 Epic</option>
           <option value="5">T5 Legendary</option>
           <option value="6">T6 Mythic</option>
+          <option value="7">T7 Ancient</option>
+          <option value="8">T8 Artifact</option>
         </select>
         <select id="filterType">
           <option value="">All Types</option>
@@ -131,20 +153,27 @@
     const CDN = 'https://molochdagod.github.io/ObjectStore';
     const TIER_COLORS = { 1:'#8b7355', 2:'#a8a8a8', 3:'#4a9eff', 4:'#9d4dff', 5:'#ff4d4d', 6:'#ffaa00', 7:'#d4a84b', 8:'#f0d890' };
     const TIER_NAMES = { 1:'Common', 2:'Uncommon', 3:'Rare', 4:'Epic', 5:'Legendary', 6:'Mythic', 7:'Ancient', 8:'Artifact' };
-    let allRecipes = [];
+    let allRecipes = [], allItems = [], itemMap = {};
+    let displayCount = 60;
 
     async function init() {
       try {
-        const data = await fetch('/data/master-recipes.json').then(r => r.json());
-        allRecipes = data.recipes || [];
+        const [recipeData, itemData] = await Promise.all([
+          fetch('/data/master-recipes.json').then(r => r.json()),
+          fetch('/data/master-items.json').then(r => r.json()),
+        ]);
+        allRecipes = recipeData.recipes || [];
+        allItems = itemData.items || [];
+        // Build UUID lookup map for item icons
+        allItems.forEach(i => { itemMap[i.uuid] = i; });
         renderRecipes(allRecipes);
       } catch(e) {
         document.getElementById('recipeGrid').innerHTML = '<div class="empty-state">Recipe data will be loaded from the Grudge backend.</div>';
       }
 
-      document.getElementById('filterTier').addEventListener('change', applyFilters);
-      document.getElementById('filterType').addEventListener('change', applyFilters);
-      document.getElementById('searchBox').addEventListener('input', applyFilters);
+      document.getElementById('filterTier').addEventListener('change', () => { displayCount = 60; applyFilters(); });
+      document.getElementById('filterType').addEventListener('change', () => { displayCount = 60; applyFilters(); });
+      document.getElementById('searchBox').addEventListener('input', () => { displayCount = 60; applyFilters(); });
     }
 
     function applyFilters() {
@@ -153,23 +182,54 @@
       const search = document.getElementById('searchBox').value.toLowerCase();
       let filtered = allRecipes;
       if (tier) filtered = filtered.filter(r => String(r.tier) === tier);
-      if (type) filtered = filtered.filter(r => (r.type || '').toLowerCase().includes(type));
-      if (search) filtered = filtered.filter(r => (r.name || '').toLowerCase().includes(search));
+      if (type) filtered = filtered.filter(r => (r.type || r.category || '').toLowerCase().includes(type));
+      if (search) filtered = filtered.filter(r =>
+        (r.name || '').toLowerCase().includes(search) ||
+        (r.resultName || '').toLowerCase().includes(search) ||
+        (r.category || '').toLowerCase().includes(search)
+      );
       renderRecipes(filtered);
     }
+
+    function esc(s) { return s ? String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;') : ''; }
 
     function renderRecipes(recipes) {
       const grid = document.getElementById('recipeGrid');
       if (!recipes.length) { grid.innerHTML = '<div class="empty-state">No recipes match your filters.</div>'; return; }
-      grid.innerHTML = recipes.slice(0, 60).map(r => {
+
+      const visible = recipes.slice(0, displayCount);
+      const countHtml = `<div class="recipe-count" style="grid-column:1/-1;">Showing ${visible.length} of ${recipes.length} recipes</div>`;
+
+      const cardsHtml = visible.map(r => {
         const t = r.tier || 1;
         const color = TIER_COLORS[t] || '#8b7355';
-        const matsHtml = (r.materials || []).map(m => `${m.name} x<span>${m.quantity}</span>`).join('<br>');
+        const matsHtml = (r.materials || []).map(m => `${esc(m.name)} x<span>${m.quantity}</span>`).join('<br>');
+        // Resolve result item icon from item UUID
+        const resultItem = r.resultItemId ? itemMap[r.resultItemId] : null;
+        const iconUrl = resultItem?.iconUrl || '';
+        const iconHtml = iconUrl
+          ? `<img class="recipe-icon" src="${esc(iconUrl)}" alt="${esc(r.resultName || r.name)}" onerror="this.style.display='none'">`
+          : '';
         return `<div class="recipe-card inset-panel">
-          <h4><span class="tier-badge" style="background:${color}22;color:${color}">${TIER_NAMES[t] || 'T'+t}</span> ${r.name || 'Unknown'}</h4>
-          <div class="mats">${matsHtml || 'Materials TBD'}</div>
+          ${iconHtml}
+          <div class="recipe-body">
+            <h4><span class="tier-badge" style="background:${color}22;color:${color}">${TIER_NAMES[t] || 'T'+t}</span> ${esc(r.resultName || r.name || 'Unknown')}</h4>
+            <div class="recipe-meta">${esc(r.profession || '')} · ${esc(r.category || '')}</div>
+            <div class="mats">${matsHtml || 'Materials TBD'}</div>
+          </div>
         </div>`;
       }).join('');
+
+      const loadMoreHtml = visible.length < recipes.length
+        ? `<div style="grid-column:1/-1;text-align:center;"><button class="gilded-button load-more" onclick="loadMore()">Load More (${recipes.length - visible.length} remaining)</button></div>`
+        : '';
+
+      grid.innerHTML = countHtml + cardsHtml + loadMoreHtml;
+    }
+
+    function loadMore() {
+      displayCount += 60;
+      applyFilters();
     }
 
     init();
