@@ -88,18 +88,18 @@
     };
 
     const CLASS_DATA = {
-      Warrior: { color:'#ff7d87', bonuses:{strength:3,endurance:2,vitality:1}, desc:'Melee powerhouse' },
-      Mage:    { color:'#bb95ff', bonuses:{intellect:3,wisdom:2,tactics:1}, desc:'Arcane spellcaster' },
-      Ranger:  { color:'#49de95', bonuses:{dexterity:3,agility:2,wisdom:1}, desc:'Ranged precision' },
-      Worge:   { color:'#ffb16d', bonuses:{vitality:2,strength:2,agility:2}, desc:'Shapeshifter' },
+      Warrior:          { color:'#ff7d87', bonuses:{strength:2,vitality:1,endurance:1,tactics:1}, desc:'Tank / DPS / Support' },
+      'Mage Priest':    { color:'#bb95ff', bonuses:{intellect:3,wisdom:2}, desc:'Healer / DPS / Utility' },
+      'Ranger Scout':   { color:'#49de95', bonuses:{dexterity:2,agility:2,tactics:1}, desc:'DPS / Utility / Off-Tank' },
+      'Worg Shapeshifter': { color:'#ffb16d', bonuses:{strength:1,vitality:2,endurance:1,agility:1}, desc:'Tank / DPS / Utility' },
     };
     const RACE_DATA = {
-      Human:     { bonuses:{tactics:2,wisdom:1}, desc:'+10% EXP' },
-      Elf:       { bonuses:{intellect:2,agility:1}, desc:'+Mana regen' },
-      Dwarf:     { bonuses:{endurance:2,vitality:1}, desc:'+Mining' },
-      Orc:       { bonuses:{strength:2,vitality:1}, desc:'+Melee dmg' },
-      Barbarian: { bonuses:{agility:2,dexterity:1}, desc:'+HP regen' },
-      Undead:    { bonuses:{intellect:1,endurance:1,tactics:1}, desc:'+Shadow resist' },
+      Human:     { bonuses:{strength:2,vitality:2,intellect:1}, desc:'Crusade — Balanced fighters' },
+      Elf:       { bonuses:{intellect:2,dexterity:1,wisdom:2}, desc:'Fabled — Nature & arcane arts' },
+      Dwarf:     { bonuses:{vitality:2,endurance:2,wisdom:1}, desc:'Fabled — Master craftsmen' },
+      Orc:       { bonuses:{strength:2,vitality:1,endurance:2}, desc:'Legion — Overwhelming force' },
+      Barbarian: { bonuses:{strength:2,vitality:2,endurance:1}, desc:'Crusade — Tribal warriors' },
+      Undead:    { bonuses:{intellect:2,wisdom:3}, desc:'Legion — Dark sorcery' },
     };
 
     const BASE_STATS = { health:250, mana:100, stamina:100, damage:0, defense:0,

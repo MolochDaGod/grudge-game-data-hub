@@ -42,9 +42,9 @@
       <h2>Select Class</h2>
       <div class="class-tabs" id="classTabs">
         <div class="class-tab active" data-class="warrior" style="border-color:#ff7d87;color:#ff7d87">Warrior</div>
-        <div class="class-tab" data-class="mage">Mage</div>
-        <div class="class-tab" data-class="ranger">Ranger</div>
-        <div class="class-tab" data-class="worge">Worge</div>
+        <div class="class-tab" data-class="mage">Mage Priest</div>
+        <div class="class-tab" data-class="ranger">Ranger Scout</div>
+        <div class="class-tab" data-class="worg">Worg Shapeshifter</div>
       </div>
     </div>
 
@@ -140,7 +140,7 @@
           { name:'Dagger Flurry', type:'Dagger', color:'#49de95', desc:'Unleash 4 rapid strikes dealing 70% damage each. Final hit applies bleed for 4s.', stats:'CD: 8s | Cost: 20 Stamina | Scale: AGI 1.0x' },
         ]
       },
-      worge: {
+      worg: {
         combat: [
           { name:'Savage Swipe', type:'Active', color:'#ffb16d', desc:'Claw attack dealing 170% damage. In Bear form: AoE. In Raptor form: applies bleed.', stats:'CD: 6s | Cost: 20 Stamina | Scale: STR 1.2x + AGI 0.5x' },
           { name:'Shapeshift: Bear', type:'Active', color:'#ffb16d', desc:'Transform into Bear form. +40% HP, +25% armor, -20% speed. Enables Bear abilities.', stats:'CD: 3s | Cost: 30 Mana | Duration: Toggle' },
@@ -176,7 +176,7 @@
 
       const data = CLASS_SKILLS[cls];
       if (!data) return;
-      const colors = { warrior:'#ff7d87', mage:'#bb95ff', ranger:'#49de95', worge:'#ffb16d' };
+      const colors = { warrior:'#ff7d87', mage:'#bb95ff', ranger:'#49de95', worg:'#ffb16d' };
       const c = colors[cls];
 
       function skillCard(s) {
