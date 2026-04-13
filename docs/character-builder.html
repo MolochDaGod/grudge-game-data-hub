@@ -62,7 +62,12 @@
     </header>
     <div class="layout">
       <div class="panel fantasy-panel" id="leftPanel"></div>
-      <div class="panel fantasy-panel" id="centerPanel"></div>
+      <div class="panel fantasy-panel" id="centerPanel">
+        <div id="centerClassRace"></div>
+        <div class="radar-wrap"><canvas id="buildChart"></canvas></div>
+        <div id="centerReview"></div>
+        <div id="centerStats"></div>
+      </div>
       <div class="panel fantasy-panel" id="rightPanel"></div>
     </div>
   </div>
@@ -196,50 +201,51 @@
 
     function renderRadarChart(stats) {
       const maxHP = 3000, maxDmg = 500, maxDef = 500;
-      const data = {
-        labels: ['Survivability', 'Damage', 'Utility', 'Mobility', 'Control', 'Magic'],
-        datasets: [{
-          label: 'Current Build',
-          data: [
-            Math.min(100, (stats.health / maxHP) * 100 + (stats.defense / maxDef) * 50),
-            Math.min(100, (stats.damage / maxDmg) * 100 + stats.criticalChance),
-            Math.min(100, stats.cooldownReduction * 2 + stats.manaRegen * 5),
-            Math.min(100, stats.movementSpeed * 5 + stats.evasion),
-            Math.min(100, stats.block + stats.stagger * 2),
-            Math.min(100, stats.resistance + stats.mana / 20)
-          ],
-          fill: true,
-          backgroundColor: 'rgba(212, 175, 55, 0.15)',
-          borderColor: '#d4af37',
-          pointBackgroundColor: '#d4af37',
-          pointBorderColor: '#fff',
-          pointHoverBackgroundColor: '#fff',
-          pointHoverBorderColor: '#d4af37'
-        }, {
-          label: 'Balanced Reference',
-          data: [60, 60, 50, 50, 40, 40],
-          fill: true,
-          backgroundColor: 'rgba(165, 180, 208, 0.08)',
-          borderColor: '#a5b4d0',
-          pointBackgroundColor: '#a5b4d0',
-          pointBorderColor: '#fff',
-          borderDash: [5, 5]
-        }]
-      };
+      const newData = [
+        Math.min(100, (stats.health / maxHP) * 100 + (stats.defense / maxDef) * 50),
+        Math.min(100, (stats.damage / maxDmg) * 100 + stats.criticalChance),
+        Math.min(100, stats.cooldownReduction * 2 + stats.manaRegen * 5),
+        Math.min(100, stats.movementSpeed * 5 + stats.evasion),
+        Math.min(100, stats.block + stats.stagger * 2),
+        Math.min(100, stats.resistance + stats.mana / 20)
+      ];
 
       const ctx = document.getElementById('buildChart');
       if (!ctx) return;
 
       if (buildChart) {
-        buildChart.data = data;
+        buildChart.data.datasets[0].data = newData;
         buildChart.update();
       } else {
-        buildChart = new Chart(ctx.getContext('2d'), {
+        buildChart = new Chart(ctx, {
           type: 'radar',
-          data: data,
+          data: {
+            labels: ['Survivability', 'Damage', 'Utility', 'Mobility', 'Control', 'Magic'],
+            datasets: [{
+              label: 'Current Build',
+              data: newData,
+              fill: true,
+              backgroundColor: 'rgba(212, 175, 55, 0.15)',
+              borderColor: '#d4af37',
+              pointBackgroundColor: '#d4af37',
+              pointBorderColor: '#fff',
+              pointHoverBackgroundColor: '#fff',
+              pointHoverBorderColor: '#d4af37'
+            }, {
+              label: 'Balanced Reference',
+              data: [60, 60, 50, 50, 40, 40],
+              fill: true,
+              backgroundColor: 'rgba(165, 180, 208, 0.08)',
+              borderColor: '#a5b4d0',
+              pointBackgroundColor: '#a5b4d0',
+              pointBorderColor: '#fff',
+              borderDash: [5, 5]
+            }]
+          },
           options: {
             responsive: true,
             maintainAspectRatio: false,
+            animation: false,
             elements: { line: { borderWidth: 2 } },
             scales: {
               r: {
@@ -247,8 +253,8 @@
                 grid: { color: 'rgba(255,255,255,0.1)' },
                 pointLabels: { color: '#e8eaf6', font: { size: 11 } },
                 ticks: { display: false, backdropColor: 'transparent' },
-                suggestedMin: 0,
-                suggestedMax: 100
+                min: 0,
+                max: 100
               }
             },
             plugins: {
@@ -294,16 +300,16 @@
           <button class="gilded-button" style="grid-column:1/-1" onclick="exportBuild()">Export Build</button>
         </div>`;
 
-      // CENTER PANEL
-      const center = document.getElementById('centerPanel');
-      center.innerHTML = '<h2>Class & Race</h2>' +
+      // CENTER PANEL — update sub-sections without touching the persistent canvas
+      document.getElementById('centerClassRace').innerHTML = '<h2>Class & Race</h2>' +
         `<div class="class-grid">${Object.entries(CLASS_DATA).map(([n,d]) =>
           `<div class="class-btn ${selectedClass===n?'active':''}" style="${selectedClass===n?'border-color:'+d.color:''}" onclick="selectClass('${n}')">${n}<br><small style="color:var(--muted)">${d.desc}</small></div>`
         ).join('')}</div>` +
         `<div class="race-grid">${Object.entries(RACE_DATA).map(([n,d]) =>
           `<div class="race-btn ${selectedRace===n?'active':''}" onclick="selectRace('${n}')">${n}<br><small style="color:var(--muted)">${d.desc}</small></div>`
-        ).join('')}</div>` +
-        `<div class="radar-wrap"><canvas id="buildChart"></canvas></div>` +
+        ).join('')}</div>`;
+
+      document.getElementById('centerReview').innerHTML =
         `<div class="review-box inset-panel">
           <h3>Statistical Review</h3>
           <div class="review-row">
@@ -311,7 +317,9 @@
             <div style="text-align:right"><div class="review-label">Build Rating</div><div class="review-value" style="color:${br.color}">${remaining()===0 ? br.rating : '?'}</div></div>
           </div>
           <div class="review-advice">${remaining()===0 ? (cp < 3000 ? 'Low combat effectiveness. Try focusing on synergy stats.' : cp > 5000 ? 'Excellent build efficiency!' : 'Solid build. Consider specializing further for higher tiers.') : 'Allocate all 160 points to see your build rating.'}</div>
-        </div>` +
+        </div>`;
+
+      document.getElementById('centerStats').innerHTML =
         '<h2 style="margin-top:20px">Derived Stats (37)</h2>' +
         '<div class="stats-grid">' +
           Object.entries(stats).map(([k,v]) => {
@@ -347,7 +355,7 @@
             </div>`;
         }).join('');
 
-      setTimeout(() => renderRadarChart(stats), 0);
+      renderRadarChart(stats);
     }
 
     function setAttr(id, val) {
