@@ -134,23 +134,33 @@
     function usedPoints() { return Object.values(attrs).reduce((s,v) => s+v, 0); }
     function remaining() { return TOTAL_POINTS - usedPoints(); }
 
+    // Diminishing returns: Full 1-25, Half 26-50, Quarter 51+
+    // Synced with stats-guide.html formula
+    function effectivePoints(raw) {
+      if (raw <= 25) return raw;
+      if (raw <= 50) return 25 + (raw - 25) * 0.5;
+      return 25 + 12.5 + (raw - 50) * 0.25;
+    }
+
     function calculateStats() {
       const stats = { ...BASE_STATS };
-      const tacticsPoints = getTotal('tactics');
+      const tacticsRaw = getTotal('tactics');
+      const tacticsEff = effectivePoints(tacticsRaw);
       ATTR_DATA.forEach(a => {
-        const pts = getTotal(a.id);
-        if (pts > 0 && a.gains) {
+        const rawPts = getTotal(a.id);
+        const effPts = effectivePoints(rawPts);
+        if (rawPts > 0 && a.gains) {
           Object.entries(a.gains).forEach(([key, g]) => {
             if (stats[key] !== undefined) {
-              // Use flat gain per point; percent is base-stat scaling (displayed separately)
               const flatGain = g.flat !== undefined ? g.flat : (g.value || 0);
-              stats[key] += flatGain * pts;
+              stats[key] += flatGain * effPts;
             }
           });
         }
       });
-      if (tacticsPoints > 0) {
-        const bonus = tacticsPoints * 0.5;
+      // Tactics global bonus uses effective points
+      if (tacticsEff > 0) {
+        const bonus = tacticsEff * 0.5;
         Object.keys(stats).forEach(k => {
           if (k !== 'health' && k !== 'mana' && k !== 'stamina' && typeof stats[k] === 'number') {
             stats[k] *= (1 + bonus / 100);
@@ -318,17 +328,20 @@
           const pts = getTotal(a.id);
           const iconUrl = getIconUrl(a.id);
           const iconTag = iconUrl ? `<img src="${iconUrl}" class="attr-icon" style="width:18px;height:18px" onerror="this.style.display='none'">` : '';
+          const eff = effectivePoints(pts);
+          const drPct = pts > 0 ? Math.floor((eff / pts) * 100) : 100;
           const gainsText = a.gains ? Object.entries(a.gains).map(([k,g]) => {
             const isPercent = PERCENT_STATS.has(k);
             const flatGain = g.flat !== undefined ? g.flat : (g.value || 0);
-            const total = (flatGain * pts).toFixed(2);
+            const total = (flatGain * eff).toFixed(2);
             const parts = [`+${total}${isPercent ? '%' : ''}`];
-            if (g.percent && g.percent !== 0) parts.push(`(+${(g.percent * pts).toFixed(1)}% base)`);
+            if (g.percent && g.percent !== 0) parts.push(`(+${(g.percent * eff).toFixed(1)}% base)`);
             return `${g.label}: ${parts.join(' ')}`;
           }).join(' | ') : '';
+          const drTag = pts > 25 ? ` <span style="color:${drPct<75?'#ef4444':'#fbbf24'};font-size:0.75em">DR:${drPct}%</span>` : '';
           return `
             <div class="detail-card inset-panel" style="border-color:${a.color}">
-              <h4 style="color:${a.color}">${iconTag} ${a.name} \u2014 ${pts}</h4>
+              <h4 style="color:${a.color}">${iconTag} ${a.name} \u2014 ${pts} (eff: ${eff.toFixed(1)})${drTag}</h4>
               <div class="dd">${a.description}</div>
               <div class="dg">${gainsText}</div>
             </div>`;

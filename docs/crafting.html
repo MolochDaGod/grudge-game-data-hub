@@ -39,6 +39,11 @@
     .station-card .station-icon { width: 48px; height: 48px; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(0 0 6px rgba(212,175,55,0.3)); margin-bottom: 6px; }
     .station-card h4 { color: var(--gold); margin: 8px 0 4px; }
     .station-card .desc { color: var(--muted); font-size: 0.85em; }
+    .tier-list { font-size: 0.78em; color: var(--dim); margin-top: 8px; font-family: var(--font-mono); line-height: 1.5; }
+    .formula-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    .formula-table th { text-align: left; color: var(--gold); padding: 10px 12px; border-bottom: 2px solid var(--gold-dim); font-size: 0.85em; font-family: var(--font-heading); }
+    .formula-table td { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.85em; }
+    .formula-table td:first-child { color: var(--text); font-weight: 600; font-family: var(--font-mono); }
     .empty-state { text-align: center; padding: 40px; color: var(--muted); }
     .recipe-count { font-size: 0.85em; color: var(--muted); margin-bottom: 12px; }
     .load-more { display: block; margin: 20px auto; padding: 12px 30px; }
@@ -49,36 +54,103 @@
     <a class="back-link" href="index.html">← Back to Hub</a>
     <header class="header">
       <h1 class="gold-text">Crafting</h1>
-      <p style="color:var(--muted);margin-top:8px;">220 recipes · 254 materials · 5 professions · 8 tiers</p>
+      <p style="color:var(--muted);margin-top:8px;">6 Gathering · 5 Crafting · 8 Tiers · 100 Levels · 22 Milestones</p>
     </header>
 
     <div class="section">
-      <h2>Harvesting Professions</h2>
+      <h2>Gathering Professions (6)</h2>
+      <p style="color:var(--muted);margin-bottom:16px">Resource collection from the world. Levels 1-100 with 5 progression tiers. Each profession unlocks T1-T8 resources as you level.</p>
       <div class="prof-grid">
         <div class="prof-card fantasy-panel" style="border-color:#8b6914">
-          <img class="prof-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/misc/Core.png" alt="Mining" onerror="this.style.display='none'">
-          <div><h3 style="color:#d4a84b">Mining</h3>
-          <div class="desc">Extract ores and gems from mineral nodes. Higher tiers unlock rare veins and enchanted deposits.</div></div>
+          <div><h3 style="color:#d4a84b">⛏️ Mining</h3>
+          <div class="desc">Extract ores, gems, and minerals. Feeds into Miner, Engineer, Mystic professions.</div>
+          <div class="tier-list">T1: Iron/Copper/Stone → T2: Steel/Silver → T3: Gold/Mithril → T4: Adamantine/Platinum → T5: Celestial/Void Stone → T6: Starmetal/Moonstone → T7: Dragon Scale/Phoenix Metal → T8: Infinity Ore/Godmetal</div></div>
         </div>
         <div class="prof-card fantasy-panel" style="border-color:#2d8a4e">
-          <img class="prof-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/misc/Slash_07.png" alt="Herbalism" onerror="this.style.display='none'">
-          <div><h3 style="color:#49de95">Herbalism</h3>
-          <div class="desc">Gather herbs, roots, and magical plants. Used for potions, poisons, and enchantments.</div></div>
+          <div><h3 style="color:#49de95">🌿 Herbalism</h3>
+          <div class="desc">Gather herbs, roots, magical plants. Feeds into Chef, Mystic, Forester.</div>
+          <div class="tier-list">T1: Red Flower/Common Herb → T2: Moonpetal/Sunleaf → T3: Dragon's Breath/Nightshade → T4: Ethereal Orchid/Shadow Lotus → T5: Celestial Bloom → T6: Starflower → T7: Phoenix Ash Flower → T8: Infinity Bloom/Cosmic Lotus</div></div>
         </div>
         <div class="prof-card fantasy-panel" style="border-color:#5a3a1a">
-          <img class="prof-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/weapons/Hammer_01.png" alt="Woodcutting" onerror="this.style.display='none'">
-          <div><h3 style="color:#b8814a">Woodcutting</h3>
-          <div class="desc">Fell trees and harvest lumber. Essential for weapons, bows, staffs, and structures.</div></div>
+          <div><h3 style="color:#b8814a">🪓 Logging</h3>
+          <div class="desc">Fell trees for lumber, bark, sap. Feeds into Forester, Engineer.</div>
+          <div class="tier-list">T1: Pine/Oak/Birch → T2: Ironwood/Cedar → T3: Elderwood/Yew → T4: Bloodwood/Frostoak → T5: Ancient Oak/Dreamwood → T6: World Tree Branch → T7: Dragon Root → T8: Godwood/Cosmic Heartwood</div></div>
         </div>
         <div class="prof-card fantasy-panel" style="border-color:#4a6fa5">
-          <img class="prof-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/weapons/staff_1.png" alt="Fishing" onerror="this.style.display='none'">
-          <div><h3 style="color:#7ab3ff">Fishing</h3>
-          <div class="desc">Catch fish and aquatic resources. Provides food buffs and rare crafting reagents.</div></div>
+          <div><h3 style="color:#7ab3ff">🎣 Fishing</h3>
+          <div class="desc">Catch fish and aquatic resources. Feeds into Chef, Mystic.</div>
+          <div class="tier-list">T1: Common Fish/Salmon/Clam → T2: Tuna/Lobster → T3: Golden Fish/Giant Crab → T4: Moonfish/Kraken Tentacle → T5: Void Fish/Abyssal Eel → T6: Celestial Koi → T7: Phoenix Fin → T8: Infinity Fish/Cosmic Pearl</div></div>
         </div>
-        <div class="prof-card fantasy-panel" style="border-color:#8a4a6a">
-          <img class="prof-icon" src="https://molochdagod.github.io/ObjectStore/icons/wcs/weapons/Dagger_01.png" alt="Skinning" onerror="this.style.display='none'">
-          <div><h3 style="color:#d47aa0">Skinning</h3>
-          <div class="desc">Skin creatures for leather and hides. Required for armor crafting and special enchants.</div></div>
+        <div class="prof-card fantasy-panel" style="border-color:#d4a060">
+          <div><h3 style="color:#d4a060">🔪 Skinning</h3>
+          <div class="desc">Skin creatures for hides, leather, bones. Feeds into Forester, Chef, Mystic.</div>
+          <div class="tier-list">T1: Rough/Thick Leather → T2: Fine Leather/Tough Hide → T3: Exotic Leather → T4: Dragon Hide/Demon Leather → T5: Celestial Hide/Spirit Bones → T6: Titan Skin → T7: Phoenix Feather/Leviathan Scale → T8: Infinity Hide/Cosmic Scale</div></div>
+        </div>
+        <div class="prof-card fantasy-panel" style="border-color:#9b59b6">
+          <div><h3 style="color:#c39bd3">🧲 Scavenging</h3>
+          <div class="desc">Salvage scrap, components, relics. Feeds into Engineer, Miner.</div>
+          <div class="tier-list">T1: Scrap Metal/Rusty Cogs → T2: Iron Gears/Copper Wire → T3: Steel Components/Power Cell → T4: Mythril Circuits/Energy Core → T5: Void Engine Parts → T6: Celestial Machinery → T7: Dragon Tech/Phoenix Reactor → T8: Infinity Machine/God Engine</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Gathering Level Milestones</h2>
+      <p style="color:var(--muted);margin-bottom:16px">Progression tiers: <strong style="color:var(--gold)">Novice</strong> (1-10) → <strong style="color:#49de95">Apprentice</strong> (11-25) → <strong style="color:#4a9eff">Journeyman</strong> (26-50) → <strong style="color:#9d4dff">Expert</strong> (51-75) → <strong style="color:#ff4d4d">Master</strong> (76-100)</p>
+      <table class="formula-table">
+        <tr><th>Level</th><th>Unlock</th><th>Description</th></tr>
+        <tr><td>1</td><td style="color:var(--gold)">Tier 1 Resources</td><td>Basic resources — Iron Ore, Pine Logs, Common Fish</td></tr>
+        <tr><td>10</td><td style="color:var(--green)">+1 Quantity</td><td>Gather +1 additional resource per harvest</td></tr>
+        <tr><td>13</td><td style="color:var(--gold)">Tier 2 Resources</td><td>Copper Ore, Oak Logs, Salmon, Fine Leather</td></tr>
+        <tr><td>20</td><td style="color:var(--green)">+2 Quantity</td><td>Gather +2 additional resources per harvest</td></tr>
+        <tr><td>25</td><td style="color:var(--gold)">Tier 3 Resources</td><td>Steel Ore, Ironwood, Tuna, Moonpetal</td></tr>
+        <tr><td>30</td><td style="color:var(--green)">+3 Quantity</td><td>Gather +3 additional resources per harvest</td></tr>
+        <tr><td>35</td><td style="color:#9d4dff">5% Gear Drop</td><td>5% chance for equipment drops while gathering</td></tr>
+        <tr><td>38</td><td style="color:var(--gold)">Tier 4 Resources</td><td>Gold Ore, Elderwood, Golden Fish, Dragon's Breath</td></tr>
+        <tr><td>40</td><td style="color:var(--green)">+4 Quantity</td><td>Gather +4 additional resources per harvest</td></tr>
+        <tr><td>50</td><td style="color:var(--gold)">Tier 5 Resources</td><td>Mythril Ore, Ancient Wood, Void Gems</td></tr>
+        <tr><td>55</td><td style="color:#9d4dff">10% Gear Drop</td><td>10% chance for equipment drops while gathering</td></tr>
+        <tr><td>60</td><td style="color:var(--green)">+6 Quantity</td><td>Gather +6 additional resources per harvest</td></tr>
+        <tr><td>63</td><td style="color:var(--gold)">Tier 6 Resources</td><td>Adamantine, Sunwood, Prismatic Gems</td></tr>
+        <tr><td>70</td><td style="color:var(--green)">+7 Quantity</td><td>Gather +7 additional resources per harvest</td></tr>
+        <tr><td>75</td><td style="color:#ff4d4d">15% Gear Drop</td><td>15% chance for equipment drops while gathering</td></tr>
+        <tr><td>76</td><td style="color:var(--gold)">Tier 7 Resources</td><td>Celestial Ore, World Tree Bark, Divine Pearls</td></tr>
+        <tr><td>80</td><td style="color:var(--green)">+8 Quantity</td><td>Gather +8 additional resources per harvest</td></tr>
+        <tr><td>88</td><td style="color:var(--gold)">Tier 8 Resources</td><td>Legendary materials — Starmetal, Godwood, Infinity Gems</td></tr>
+        <tr><td>90</td><td style="color:var(--green)">+9 Quantity</td><td>Gather +9 additional resources per harvest</td></tr>
+        <tr><td>95</td><td style="color:#ff4d4d">20% Gear Drop</td><td>20% chance for rare/epic equipment drops</td></tr>
+        <tr><td>100</td><td style="color:#fbbf24">Grandmaster</td><td>Maximum efficiency: 25% legendary drop chance, +10 quantity</td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Crafting Professions (5)</h2>
+      <p style="color:var(--muted);margin-bottom:16px">Specializations that consume gathered materials to create equipment, consumables, and structures.</p>
+      <div class="prof-grid">
+        <div class="prof-card fantasy-panel" style="border-color:#ff7d87">
+          <div><h3 style="color:#ff7d87">⛏️ Miner</h3>
+          <div class="desc">Forge weapons and heavy armor from ores. Creates: Swords, Axes, Daggers, Hammers, Greatswords, Greataxes, Plate Armor. Smelts raw ore into refined ingots.</div>
+          <div class="tier-list">Synergies: Mining, Scavenging</div></div>
+        </div>
+        <div class="prof-card fantasy-panel" style="border-color:#49de95">
+          <div><h3 style="color:#49de95">🌲 Forester</h3>
+          <div class="desc">Craft bows, leather gear, and ship parts. Creates: Bows, Leather Armor, Hunting Daggers, Ship Components. Mills planks and tans leather.</div>
+          <div class="tier-list">Synergies: Logging, Skinning, Herbalism</div></div>
+        </div>
+        <div class="prof-card fantasy-panel" style="border-color:#bb95ff">
+          <div><h3 style="color:#bb95ff">🔮 Mystic</h3>
+          <div class="desc">Enchant items and weave magic cloth. Creates: Staves, Cloth Armor, Enchantments, Scrolls, Grimoires, Soul Gems. Weaves magic fabric from fibers.</div>
+          <div class="tier-list">Synergies: Mining (Gems), Herbalism, Fishing</div></div>
+        </div>
+        <div class="prof-card fantasy-panel" style="border-color:#ffb16d">
+          <div><h3 style="color:#ffb16d">👨‍🍳 Chef</h3>
+          <div class="desc">Cook food buffs and brew potions. Creates: Buff Food (red/blue/green), Potions, Elixirs, Preserved Rations, Antidotes.</div>
+          <div class="tier-list">Synergies: Fishing, Skinning, Herbalism</div></div>
+        </div>
+        <div class="prof-card fantasy-panel" style="border-color:#7ab3ff">
+          <div><h3 style="color:#7ab3ff">🔧 Engineer</h3>
+          <div class="desc">Build ranged weapons and siege equipment. Creates: Crossbows, Firearms, Grenades, Traps, Scopes, Siege Equipment, Automata.</div>
+          <div class="tier-list">Synergies: Mining, Scavenging, Logging</div></div>
         </div>
       </div>
     </div>
