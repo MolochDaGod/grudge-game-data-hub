@@ -1,5 +1,5 @@
 {
-  "buildCommand": "node scripts/generate-master-database.mjs",
+  "buildCommand": "node scripts/prefetch-objectstore.mjs",
   "outputDirectory": "docs",
   "rewrites": [
     { "source": "/data/:path*", "destination": "/data/:path*" }
