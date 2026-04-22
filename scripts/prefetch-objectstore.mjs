@@ -20,7 +20,15 @@ const ROOT = join(__dirname, '..');
 const OUT_DIR = join(ROOT, 'docs', 'data');
 if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
 
-const OBJECT_STORE = 'https://molochdagod.github.io/ObjectStore/api/v1';
+// Source precedence:
+//   1. raw.githubusercontent.com main branch - always fresh on push, no Pages lag
+//   2. Pages CDN (molochdagod.github.io/ObjectStore) - fallback in case raw is rate-limited
+// We never let a build go out with stale data: if both remotes fail we keep the
+// committed local copy (docs/data/*.json) so Vercel never ships empty.
+const SOURCES = [
+  'https://raw.githubusercontent.com/MolochDaGod/ObjectStore/main/api/v1',
+  'https://molochdagod.github.io/ObjectStore/api/v1',
+];
 const FILES = [
   'master-items.json',
   'master-weapons.json',
@@ -33,15 +41,20 @@ const FILES = [
 ];
 
 async function pull(name) {
-  try {
-    const res = await fetch(`${OBJECT_STORE}/${name}`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const body = await res.text();
-    writeFileSync(join(OUT_DIR, name), body);
-    console.log(`[prefetch] ok  ${name} (${body.length} bytes)`);
-  } catch (err) {
-    console.warn(`[prefetch] skip ${name} - ${err.message}; keeping committed copy`);
+  for (const src of SOURCES) {
+    try {
+      const res = await fetch(`${src}/${name}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const body = await res.text();
+      writeFileSync(join(OUT_DIR, name), body);
+      const host = new URL(src).hostname;
+      console.log(`[prefetch] ok  ${name} (${body.length} bytes) from ${host}`);
+      return;
+    } catch (err) {
+      console.warn(`[prefetch] ${name} failed from ${src} - ${err.message}`);
+    }
   }
+  console.warn(`[prefetch] all sources failed for ${name}; keeping committed copy`);
 }
 
 for (const f of FILES) await pull(f);
