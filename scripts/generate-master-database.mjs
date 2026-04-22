@@ -70,15 +70,18 @@ const PACK_ICON = (path) => `${CDN}/icons/pack/${path}`;
 // ============================================================
 // TIER SYSTEM
 // ============================================================
+// D5: tier labels — T5 renamed to 'Heroic', T8 renamed to 'Legendary'.
+// This repo is being retired in favor of ObjectStore as the canonical source
+// (see plan D1/D6). Kept in sync until the propagation step removes this file.
 const TIERS = [
   { tier: 1, name: 'Bronze',  color: '#8b7355', label: 'Common' },
   { tier: 2, name: 'Silver',  color: '#a8a8a8', label: 'Uncommon' },
   { tier: 3, name: 'Blue',    color: '#4a9eff', label: 'Rare' },
   { tier: 4, name: 'Purple',  color: '#9d4dff', label: 'Epic' },
-  { tier: 5, name: 'Red',     color: '#ff4d4d', label: 'Legendary' },
+  { tier: 5, name: 'Red',     color: '#ff4d4d', label: 'Heroic' },
   { tier: 6, name: 'Orange',  color: '#ffaa00', label: 'Mythic' },
   { tier: 7, name: 'Gold',    color: '#d4a84b', label: 'Ancient' },
-  { tier: 8, name: 'Shimmer', color: '#f0d890', label: 'Legendary Artifact' },
+  { tier: 8, name: 'Shimmer', color: '#f0d890', label: 'Legendary' },
 ];
 
 function scaleStat(base, perTier, tier) {
