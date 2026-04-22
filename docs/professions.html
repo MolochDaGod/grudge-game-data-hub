@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>Grudge Warlords - Professions & Skills</title>
+  <link rel="stylesheet" href="css/grudge-theme.css">
+  <style>
+    .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+    .header { text-align: center; padding: 30px 0; border-bottom: 3px solid transparent; border-image: linear-gradient(90deg, transparent, var(--gold), transparent) 1; margin-bottom: 30px; }
+    .header h1 { font-family: var(--font-display); font-size: 2.4em; }
+    .header p { color: var(--muted); margin-top: 8px; max-width: 780px; margin-left:auto; margin-right:auto; }
+    .counts { display:flex; gap:28px; justify-content:center; margin-top: 16px; flex-wrap:wrap; }
+    .counts .c { text-align:center; }
+    .counts .c .n { color: var(--gold); font-size: 1.6em; font-weight: bold; font-family: var(--font-mono); }
+    .counts .c .l { color: var(--muted); font-size: 0.8em; }
+
+    .tabs { display:flex; gap:8px; margin-bottom: 24px; flex-wrap:wrap; justify-content:center; }
+    .tabs button { background: var(--card); border: 1px solid var(--gold-dim); color: var(--muted); padding: 8px 18px; border-radius: 4px; cursor: pointer; font-family: var(--font-mono); font-size:0.85em; }
+    .tabs button.active { background: var(--gold-dim); color: var(--gold); border-color: var(--gold); }
+    .tabs button:hover { color: var(--gold); }
+    .section { display:none; }
+    .section.active { display:block; }
+
+    .prof-row { display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:16px; margin-bottom: 30px; }
+    .prof-card { background: var(--card); border: 1px solid var(--gold-dim); border-left:4px solid var(--gold); border-radius:4px; padding: 18px; cursor:pointer; transition: all 0.2s; }
+    .prof-card:hover { transform: translateY(-2px); border-left-color: var(--gold-light); }
+    .prof-card h3 { color: var(--gold); margin-bottom: 4px; font-size: 1.1em; display:flex; align-items:center; gap:8px; }
+    .prof-card .role { color: var(--gold-light); font-size:0.82em; font-family: var(--font-mono); margin-bottom: 10px; }
+    .prof-card .meta { color: var(--muted); font-size:0.8em; line-height: 1.5; }
+    .prof-card .crafts { display:flex; gap:4px; flex-wrap:wrap; margin-top: 8px; }
+    .prof-card .tag { background: rgba(255,255,255,0.04); color: var(--muted); padding:2px 7px; border-radius:3px; font-size:0.7em; font-family: var(--font-mono); }
+
+    .detail { background: var(--card); border: 1px solid var(--gold-dim); border-radius: 4px; padding: 24px; margin-bottom: 24px; display:none; }
+    .detail.active { display:block; }
+    .detail h2 { color: var(--gold); margin-bottom: 10px; }
+    .detail .back { display:inline-block; color: var(--gold); font-size: 0.85em; margin-bottom: 12px; text-decoration:none; cursor:pointer; }
+    .nodes { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; margin-top: 16px; }
+    .node { padding: 10px 14px; background: rgba(255,255,255,0.02); border-left: 3px solid; border-radius: 3px; }
+    .node h4 { color: var(--text); font-size:0.9em; margin:0 0 4px; display:flex; justify-content:space-between; gap:8px; }
+    .node .lv { color: var(--gold); font-family: var(--font-mono); font-size:0.75em; }
+    .node .branch { color: var(--muted); font-size:0.72em; font-family: var(--font-mono); }
+    .node .desc { color: var(--muted); font-size:0.78em; line-height: 1.4; margin-top: 4px; }
+    .node[data-branch="Core"]       { border-left-color: #8b7355; }
+    .node[data-branch="Weapons"]    { border-left-color: #ef4444; }
+    .node[data-branch="Armor"]      { border-left-color: #4a9eff; }
+    .node[data-branch="Gathering"]  { border-left-color: #22c55e; }
+    .node[data-branch="Logging"]    { border-left-color: #22c55e; }
+    .node[data-branch="Leatherworking"] { border-left-color: #d4a84b; }
+    .node[data-branch="Fletching"]  { border-left-color: #9d4dff; }
+    .node[data-branch="Hybrid"]     { border-left-color: #f0d890; }
+
+    .class-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+    .class-card { background: var(--card); border-top: 3px solid var(--gold); border-radius: 4px; padding: 18px; }
+    .class-card h3 { color: var(--gold); margin-bottom: 8px; }
+    .tier-block { margin-top: 14px; }
+    .tier-block h4 { color: var(--gold-light); font-size: 0.85em; margin-bottom: 6px; font-family: var(--font-mono); }
+    .skill { display:flex; align-items:flex-start; gap:10px; padding: 6px 10px; background: rgba(255,255,255,0.02); border-radius: 3px; margin-bottom: 4px; }
+    .skill img { width: 28px; height: 28px; border-radius: 3px; background: #222; object-fit: contain; flex-shrink: 0; }
+    .skill .info { flex:1; min-width:0; }
+    .skill .n { color: var(--text); font-size: 0.85em; font-weight: 600; }
+    .skill .d { color: var(--muted); font-size: 0.75em; line-height: 1.35; }
+
+    .weapon-types { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+    .weapon-type { background: var(--card); border-left: 3px solid var(--gold-dim); padding: 14px 18px; border-radius: 4px; }
+    .weapon-type h3 { color: var(--gold); font-size: 0.95em; margin-bottom: 4px; display:flex; align-items:center; gap: 8px; }
+    .weapon-type h3 img { width: 22px; height: 22px; object-fit: contain; }
+    .weapon-type .class-tag { background: rgba(239,68,68,0.18); color: #ef4444; padding: 1px 8px; border-radius: 3px; font-size: 0.7em; font-family: var(--font-mono); margin-right: 4px; }
+    .weapon-type .slot { color: var(--muted); font-size:0.72em; margin-top: 8px; }
+    .weapon-type .slot b { color: var(--gold-light); }
+
+    .back-link { display: inline-block; color: var(--gold); font-size: 0.9em; margin-bottom: 16px; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="index.html">&larr; Back to Hub</a>
+    <header class="header">
+      <h1 class="gold-text">Professions & Skills</h1>
+      <p>
+        5 crafting professions, 6 gathering professions, 148 profession skill-tree nodes, 4 class skill trees (69 skills), 17 weapon types (207 weapon skills).
+        Consolidated from the <strong>WCS</strong> canonical data and served through the new <code>master-professions</code>,
+        <code>master-skillTrees</code>, and <code>master-weaponSkills</code> endpoints.
+      </p>
+      <div class="counts" id="counts"></div>
+    </header>
+
+    <div class="tabs">
+      <button class="active" data-tab="professions">Professions</button>
+      <button data-tab="classes">Class Skill Trees</button>
+      <button data-tab="weapon-skills">Weapon Skills</button>
+    </div>
+
+    <!-- PROFESSIONS -->
+    <div class="section active" id="tab-professions">
+      <h2 class="gold-text" style="font-size:1.4em;margin-bottom:8px;">Gathering</h2>
+      <div class="prof-row" id="gatheringRow"></div>
+
+      <h2 class="gold-text" style="font-size:1.4em;margin-bottom:8px;">Crafting</h2>
+      <div class="prof-row" id="craftingRow"></div>
+
+      <div class="detail" id="profDetail">
+        <a class="back" onclick="closeDetail()">&larr; Back to professions</a>
+        <h2 id="profDetailName"></h2>
+        <div id="profDetailMeta" style="color: var(--muted); font-size: 0.9em; margin-bottom: 12px;"></div>
+        <h3 style="color: var(--gold-light); font-size: 1em; margin-top: 14px;">Skill Tree</h3>
+        <div class="nodes" id="profDetailNodes"></div>
+      </div>
+    </div>
+
+    <!-- CLASSES -->
+    <div class="section" id="tab-classes">
+      <div class="class-grid" id="classGrid"></div>
+    </div>
+
+    <!-- WEAPON SKILLS -->
+    <div class="section" id="tab-weapon-skills">
+      <div class="weapon-types" id="weaponTypes"></div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { loadMasterProfessions, loadMasterSkillTrees, loadMasterWeaponSkills } from '../lib/data-loader.js';
+
+    const CDN = 'https://molochdagod.github.io/ObjectStore';
+    const rel = (p) => p?.startsWith('http') ? p : `${CDN}${p}`;
+
+    async function init() {
+      const [profs, classes, weapons] = await Promise.all([
+        loadMasterProfessions(),
+        loadMasterSkillTrees(),
+        loadMasterWeaponSkills(),
+      ]);
+      if (!profs || !classes || !weapons) {
+        document.querySelector('.container').insertAdjacentHTML('beforeend', '<p style="color:var(--red);">Failed to load data.</p>');
+        return;
+      }
+
+      renderCounts(profs, classes, weapons);
+      renderProfessions(profs);
+      renderClasses(classes);
+      renderWeaponSkills(weapons);
+      wireTabs();
+    }
+
+    function renderCounts(p, c, w) {
+      document.getElementById('counts').innerHTML = `
+        <div class="c"><div class="n">${p.totalGathering ?? 0}</div><div class="l">Gathering</div></div>
+        <div class="c"><div class="n">${p.totalCrafting ?? 0}</div><div class="l">Crafting</div></div>
+        <div class="c"><div class="n">${p.totalNodes ?? 0}</div><div class="l">Prof Nodes</div></div>
+        <div class="c"><div class="n">${c.totalClasses ?? 0}</div><div class="l">Classes</div></div>
+        <div class="c"><div class="n">${c.totalSkills ?? 0}</div><div class="l">Class Skills</div></div>
+        <div class="c"><div class="n">${w.totalWeaponTypes ?? 0}</div><div class="l">Weapon Types</div></div>
+        <div class="c"><div class="n">${w.totalSkills ?? 0}</div><div class="l">Weapon Skills</div></div>
+      `;
+    }
+
+    function renderProfessions(data) {
+      const gather = document.getElementById('gatheringRow');
+      gather.innerHTML = Object.entries(data.gathering || {}).map(([name, g]) => `
+        <div class="prof-card" data-kind="gather" data-name="${name}">
+          <h3>${g.icon || ''} ${g.name || name}</h3>
+          <div class="role">Gathering</div>
+          <div class="meta">Resources across T1-T8 tiers. Feeds into: <b>${(g.feedsInto || []).join(', ')}</b></div>
+          <div class="crafts">${(g.resources || []).slice(0, 4).map(r => `<span class="tag">${r}</span>`).join('')}</div>
+        </div>
+      `).join('');
+
+      const craft = document.getElementById('craftingRow');
+      craft.innerHTML = Object.entries(data.crafting || {}).map(([name, p]) => `
+        <div class="prof-card" data-kind="craft" data-name="${name}">
+          <h3>${p.icon || ''} ${p.name || name}</h3>
+          <div class="role">${p.role || ''}</div>
+          <div class="meta">${p.skillTree?.length || 0} skill-tree nodes &middot; ${p.recipeCount || 0} recipes</div>
+          <div class="crafts">${(p.specializations || []).map(s => `<span class="tag">${s}</span>`).join('')}</div>
+        </div>
+      `).join('');
+
+      document.querySelectorAll('.prof-card').forEach(card => {
+        card.addEventListener('click', () => openProfession(data, card.dataset.kind, card.dataset.name));
+      });
+    }
+
+    function openProfession(data, kind, name) {
+      const p = kind === 'craft' ? data.crafting[name] : data.gathering[name];
+      if (!p) return;
+      document.getElementById('profDetailName').textContent = `${p.icon || ''} ${p.name || name}`;
+      document.getElementById('profDetailMeta').innerHTML = `
+        <div><b>${kind === 'craft' ? 'Crafting' : 'Gathering'}</b> &middot; ${p.role || ''}</div>
+        ${p.crafts?.length ? `<div>Crafts: ${(p.crafts || []).join(', ')}</div>` : ''}
+        ${p.specializations?.length ? `<div>Branches: ${p.specializations.join(', ')}</div>` : ''}
+        ${p.recipeCount ? `<div>Recipes: ${p.recipeCount}${p.recipeTypes?.length ? ' (' + p.recipeTypes.join(', ') + ')' : ''}</div>` : ''}
+      `;
+      const nodes = p.skillTree || [];
+      nodes.sort((a, b) => (a.reqLevel ?? 0) - (b.reqLevel ?? 0));
+      document.getElementById('profDetailNodes').innerHTML = nodes.map(n => `
+        <div class="node" data-branch="${n.branch || 'Core'}">
+          <h4>${n.name}<span class="lv">Lv ${n.reqLevel ?? 0}</span></h4>
+          <div class="branch">${n.branch || 'Core'} &middot; ${n.nodeType || ''}</div>
+          ${n.desc ? `<div class="desc">${n.desc}</div>` : ''}
+          ${n.unlocks?.length ? `<div class="desc"><b>Unlocks:</b> ${n.unlocks.join(', ')}</div>` : ''}
+        </div>
+      `).join('');
+      document.getElementById('profDetail').classList.add('active');
+      document.getElementById('profDetail').scrollIntoView({ behavior: 'smooth' });
+    }
+    window.closeDetail = () => document.getElementById('profDetail').classList.remove('active');
+
+    function renderClasses(data) {
+      const grid = document.getElementById('classGrid');
+      grid.innerHTML = Object.entries(data.skillTrees || {}).map(([name, c]) => `
+        <div class="class-card" style="border-top-color:${c.color || 'var(--gold)'};">
+          <h3 style="color:${c.color || 'var(--gold)'};">${c.className || name}</h3>
+          <div style="color:var(--muted); font-size:0.78em;">${(c.tiers || []).reduce((a, t) => a + (t.skills?.length || 0), 0)} skills across ${(c.tiers || []).length} tiers</div>
+          ${(c.tiers || []).map(t => `
+            <div class="tier-block">
+              <h4>${t.name} &middot; Lv ${t.requiredLevel}</h4>
+              ${(t.skills || []).map(s => `
+                <div class="skill">
+                  ${s.icon?.startsWith('http') ? `<img src="${s.icon}" alt="" onerror="this.style.display='none'">` : ''}
+                  <div class="info">
+                    <div class="n">${s.name}</div>
+                    <div class="d">${s.description || ''}${s.effect ? ' &middot; ' + s.effect : ''}</div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          `).join('')}
+        </div>
+      `).join('');
+    }
+
+    function renderWeaponSkills(data) {
+      const grid = document.getElementById('weaponTypes');
+      const restrictions = data.classRestrictions || {};
+      const classesFor = (wid) => Object.entries(restrictions).filter(([, v]) => v.includes(wid)).map(([k]) => k);
+      grid.innerHTML = (data.weaponTypes || []).map(wt => {
+        const tags = classesFor(wt.id).map(c => `<span class="class-tag">${c}</span>`).join('');
+        const slots = (wt.slots || []).map(slot => {
+          const names = (slot.skills || []).map(s => s.name).join(', ');
+          return `<div class="slot"><b>${slot.label || slot.type}:</b> ${names}</div>`;
+        }).join('');
+        return `
+          <div class="weapon-type">
+            <h3>${wt.icon?.startsWith('/') ? `<img src="${rel(wt.icon)}" alt="">` : ''}${wt.name}</h3>
+            <div style="color: var(--muted); font-size: 0.78em; margin-bottom: 4px;">${wt.totalSkills ?? (wt.slots || []).reduce((a,s)=>a+(s.skills?.length||0),0)} skills</div>
+            <div>${tags}</div>
+            ${slots}
+          </div>
+        `;
+      }).join('');
+    }
+
+    function wireTabs() {
+      document.querySelectorAll('.tabs button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+          document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+        });
+      });
+    }
+
+    init();
+  </script>
+</body>
+</html>

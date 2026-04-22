@@ -78,10 +78,15 @@
         <h3>Crafting</h3>
         <p>Full crafting system with 220 recipes, material requirements, profession tiers, and crafting stations.</p>
       </a>
+      <a class="hub-card" href="professions.html">
+        <div class="icon"><img src="https://molochdagod.github.io/ObjectStore/icons/wcs/misc/runic_tablet_02.png" alt="Professions" class="attr-icon lg"></div>
+        <h3>Professions &amp; Skills</h3>
+        <p>WCS-consolidated. 6 gathering + 5 crafting professions with 148 skill-tree nodes, 4 class skill trees (69 skills), 17 weapon types (207 weapon skills).</p>
+      </a>
       <a class="hub-card" href="spells-skills.html">
         <div class="icon"><img src="https://molochdagod.github.io/ObjectStore/icons/wcs/misc/Slash_07.png" alt="Spells & Skills" class="attr-icon lg"></div>
-        <h3>Spells & Skills</h3>
-        <p>Skill trees, spell lists, class abilities, cooldowns, and scaling for all 4 classes.</p>
+        <h3>Spells &amp; Skills</h3>
+        <p>Legacy skill tree view. Being folded into the new Professions &amp; Skills page.</p>
       </a>
     </div>
 
@@ -130,6 +135,21 @@
         <span class="method">GET</span>
         <span class="path">/data/master-registry.json</span>
         <span class="desc">Combined UUID index across weapons + armor + consumables + materials + artifacts</span>
+      </div>
+      <div class="endpoint">
+        <span class="method">GET</span>
+        <span class="path">/data/master-professions.json</span>
+        <span class="desc">WCS professions: 6 gathering + 5 crafting, 148 skill-tree nodes (each with GRUDGE node UUID)</span>
+      </div>
+      <div class="endpoint">
+        <span class="method">GET</span>
+        <span class="path">/data/master-skillTrees.json</span>
+        <span class="desc">4 class skill trees with 69 skills (each skill has GRUDGE SKIL UUID)</span>
+      </div>
+      <div class="endpoint">
+        <span class="method">GET</span>
+        <span class="path">/data/master-weaponSkills.json</span>
+        <span class="desc">17 weapon types with 207 weapon skills + class restriction map</span>
       </div>
       <div class="endpoint">
         <span class="method">GET</span>

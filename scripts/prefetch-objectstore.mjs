@@ -37,6 +37,9 @@ const FILES = [
   'master-recipes.json',
   'master-materials.json',
   'master-artifacts.json',
+  'master-professions.json',
+  'master-skillTrees.json',
+  'master-weaponSkills.json',
   'master-registry.json',
 ];
 
