@@ -94,7 +94,22 @@
       <div class="endpoint">
         <span class="method">GET</span>
         <span class="path">/data/master-items.json</span>
-        <span class="desc">Tier-expanded items with GRUDGE UUIDs</span>
+        <span class="desc">All items combined (weapons + armor + consumables) with GRUDGE UUIDs</span>
+      </div>
+      <div class="endpoint">
+        <span class="method">GET</span>
+        <span class="path">/data/master-weapons.json</span>
+        <span class="desc">Weapons only (820 tier rows across 24 categories incl. tomes + tools)</span>
+      </div>
+      <div class="endpoint">
+        <span class="method">GET</span>
+        <span class="path">/data/master-armor.json</span>
+        <span class="desc">Armor only (1200 tier rows across cloth/leather/metal/gem sets)</span>
+      </div>
+      <div class="endpoint">
+        <span class="method">GET</span>
+        <span class="path">/data/master-consumables.json</span>
+        <span class="desc">132 consumables (red/green/blue foods, mystic potions, engineer items)</span>
       </div>
       <div class="endpoint">
         <span class="method">GET</span>
@@ -104,7 +119,7 @@
       <div class="endpoint">
         <span class="method">GET</span>
         <span class="path">/data/master-materials.json</span>
-        <span class="desc">Unique crafting materials</span>
+        <span class="desc">63 crafting materials (ore/ingot/wood/cloth/leather/gem/essence)</span>
       </div>
       <div class="endpoint">
         <span class="method">GET</span>
@@ -114,12 +129,31 @@
       <div class="endpoint">
         <span class="method">GET</span>
         <span class="path">/data/master-registry.json</span>
-        <span class="desc">Combined UUID index across items + artifacts</span>
+        <span class="desc">Combined UUID index across weapons + armor + consumables + materials + artifacts</span>
       </div>
       <div class="endpoint">
         <span class="method">GET</span>
         <span class="path">/data/master-attributes.json</span>
         <span class="desc">8 attributes with gains, 37 derived stats, 11 stat caps, diminishing returns</span>
+      </div>
+    </div>
+
+    <div class="api-section">
+      <h2>Related Tools</h2>
+      <div class="endpoint">
+        <span class="method">TOOL</span>
+        <span class="path"><a href="https://molochdagod.github.io/ObjectStore/ItemBrowser.html" style="color:var(--gold)">ItemBrowser.html</a></span>
+        <span class="desc">Canonical item browser. Source of truth for names, icons, and lore.</span>
+      </div>
+      <div class="endpoint">
+        <span class="method">TOOL</span>
+        <span class="path"><a href="https://molochdagod.github.io/ObjectStore/SPRITE_DATABASE.html" style="color:var(--gold)">SPRITE_DATABASE.html</a></span>
+        <span class="desc">Full sprite + material browser (<code>#materials</code>, <code>#consumables</code>, etc.)</span>
+      </div>
+      <div class="endpoint">
+        <span class="method">TOOL</span>
+        <span class="path"><a href="https://molochdagod.github.io/ObjectStore/tools/icon-generator.html" style="color:var(--gold)">Icon Generator</a></span>
+        <span class="desc">Puter-AI icon generator. Fill missing item icons into the canonical set.</span>
       </div>
     </div>
 
@@ -145,9 +179,9 @@
       ).join('');
     }).catch(()=>{
       document.getElementById('statsRow').innerHTML =
-        '<div class="stat-box"><div class="stat-num">770+</div><div class="stat-lbl">Items</div></div>' +
-        '<div class="stat-box"><div class="stat-num">130</div><div class="stat-lbl">Recipes</div></div>' +
-        '<div class="stat-box"><div class="stat-num">93</div><div class="stat-lbl">Materials</div></div>' +
+        '<div class="stat-box"><div class="stat-num">2150+</div><div class="stat-lbl">Items</div></div>' +
+        '<div class="stat-box"><div class="stat-num">132</div><div class="stat-lbl">Recipes</div></div>' +
+        '<div class="stat-box"><div class="stat-num">63</div><div class="stat-lbl">Materials</div></div>' +
         '<div class="stat-box"><div class="stat-num">8</div><div class="stat-lbl">Attributes</div></div>';
     });
   </script>

@@ -77,6 +77,13 @@
         Every item and icon in Grudge Warlords lives in <strong>ObjectStore</strong> - the shared backend used by all Grudge Studio games.
         This page is a per-game view; it does not store item data. When ObjectStore updates, this page picks the changes up automatically.
       </p>
+      <div class="callout">
+        <span class="tag">Canonical</span> The <a href="https://molochdagod.github.io/ObjectStore/ItemBrowser.html" style="color:var(--gold)">ItemBrowser</a>
+        on ObjectStore is the source of truth for item names, categories, and icons. The master-* JSONs served here are
+        derived from <code>api/v1/weapons.json</code>, <code>armor.json</code>, <code>materials.json</code>, and <code>consumables.json</code> - the same files ItemBrowser reads.
+        Missing or placeholder icons are filled through the <a href="https://molochdagod.github.io/ObjectStore/tools/icon-generator.html" style="color:var(--gold)">Icon Generator</a>
+        (Puter AI) and land back in the same canonical set.
+      </div>
       <div class="flow">
         <div class="node">
           <h4>ObjectStore</h4>

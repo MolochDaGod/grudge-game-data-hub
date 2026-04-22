@@ -23,6 +23,9 @@ if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
 const OBJECT_STORE = 'https://molochdagod.github.io/ObjectStore/api/v1';
 const FILES = [
   'master-items.json',
+  'master-weapons.json',
+  'master-armor.json',
+  'master-consumables.json',
   'master-recipes.json',
   'master-materials.json',
   'master-artifacts.json',
