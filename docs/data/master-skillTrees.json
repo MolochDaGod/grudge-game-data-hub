@@ -2,13 +2,48 @@
   "version": "3.0.0",
   "generated": "2026-04-22T10:03:30.499Z",
   "totalClasses": 4,
-  "totalSkills": 69,
+  "totalSkills": 78,
   "skillTrees": {
     "warrior": {
       "uuid": "ITEM-20260422050330-000BC1-A73F2D5C",
       "className": "Warrior",
       "color": "#ef4444",
       "tiers": [
+        {
+          "name": "Level 0 - Starter",
+          "requiredLevel": 0,
+          "skills": [
+            {
+              "uuid": "SKIL-20260501000000-000C00-A1B2C3D4",
+              "id": "w_invincibility",
+              "name": "Invincibility",
+              "icon": "https://molochdagod.github.io/ObjectStore/icons/skill_nobg/Warriorskill_18_nobg.png",
+              "description": "Class starter — brief, on-demand immunity to all incoming damage",
+              "effect": "Damage Immunity (3s, long cooldown)",
+              "maxPoints": 1,
+              "starter": true,
+              "bonuses": {
+                "defense": 5
+              },
+              "grantedAbility": {
+                "id": "invincibility",
+                "name": "Invincibility",
+                "icon": "shield",
+                "description": "Become immune to all damage for 3 seconds",
+                "type": "buff",
+                "damage": 0,
+                "manaCost": 0,
+                "staminaCost": 30,
+                "cooldown": 60,
+                "target": "self",
+                "effect": {
+                  "type": "immunity",
+                  "duration": 3
+                }
+              }
+            }
+          ]
+        },
         {
           "name": "Level 1 - Combat Basics",
           "requiredLevel": 1,
@@ -400,6 +435,96 @@
       "className": "Mage Priest",
       "color": "#8b5cf6",
       "tiers": [
+        {
+          "name": "Level 0 - Starter",
+          "requiredLevel": 0,
+          "skills": [
+            {
+              "uuid": "SKIL-20260501000000-000C01-B2C3D4E5",
+              "id": "m_mana_shield",
+              "name": "Mana Shield",
+              "icon": "https://molochdagod.github.io/ObjectStore/icons/skill_nobg/Mageskill_15_nobg.png",
+              "description": "Class starter — incoming damage is paid from mana before health",
+              "effect": "Damage → Mana (while mana > 0)",
+              "maxPoints": 1,
+              "starter": true,
+              "passive": true,
+              "bonuses": {
+                "defense": 4
+              }
+            },
+            {
+              "uuid": "SKIL-20260501000000-000C02-C3D4E5F6",
+              "id": "m_wand_magic",
+              "name": "Wand Magic",
+              "icon": "https://molochdagod.github.io/ObjectStore/icons/skill_nobg/Mageskill_16_nobg.png",
+              "description": "Class starter — equip up to 2 spell recipes (slot 1 and slot 2) and cast them with your wand",
+              "effect": "Unlocks spell slots 1 & 2 from spell recipes",
+              "maxPoints": 1,
+              "starter": true,
+              "bonuses": {
+                "damage": 2
+              }
+            },
+            {
+              "uuid": "SKIL-20260501000000-000C03-D4E5F6A7",
+              "id": "m_renew",
+              "name": "Renew",
+              "icon": "https://molochdagod.github.io/ObjectStore/icons/skill_nobg/Priestskill_05_nobg.png",
+              "description": "Class starter — gentle heal-over-time on a friendly target",
+              "effect": "Heal Over Time (5s)",
+              "maxPoints": 1,
+              "starter": true,
+              "bonuses": {
+                "health": 8
+              },
+              "grantedAbility": {
+                "id": "renew",
+                "name": "Renew",
+                "icon": "heart",
+                "description": "Heal target for 4% HP per second for 5 seconds",
+                "type": "heal_over_time",
+                "damage": 0,
+                "manaCost": 12,
+                "staminaCost": 0,
+                "cooldown": 4,
+                "target": "ally",
+                "healPercent": 0.04,
+                "duration": 5
+              }
+            },
+            {
+              "uuid": "SKIL-20260501000000-000C04-E5F6A7B8",
+              "id": "m_fireball",
+              "name": "Fireball",
+              "icon": "https://molochdagod.github.io/ObjectStore/icons/skill_nobg/Mageskill_17_nobg.png",
+              "description": "Class starter — low-damage fire projectile that applies a burn DoT",
+              "effect": "Fire Projectile + Burn (3s)",
+              "maxPoints": 1,
+              "starter": true,
+              "bonuses": {
+                "damage": 3
+              },
+              "grantedAbility": {
+                "id": "fireball",
+                "name": "Fireball",
+                "icon": "fire",
+                "description": "Hurl a low-damage fireball that applies burn for 3% damage per second over 3 seconds",
+                "type": "magical",
+                "damage": 0.7,
+                "manaCost": 10,
+                "staminaCost": 0,
+                "cooldown": 2,
+                "target": "enemy",
+                "effect": {
+                  "type": "burn",
+                  "damage": 0.03,
+                  "duration": 3
+                }
+              }
+            }
+          ]
+        },
         {
           "name": "Level 1 - Arcane Basics",
           "requiredLevel": 1,
@@ -830,12 +955,7 @@
               "passive": true,
               "procEffect": {
                 "type": "random_debuff",
-                "options": [
-                  "burn",
-                  "sleep",
-                  "confuse",
-                  "lower_defense"
-                ],
+                "options": ["burn", "sleep", "confuse", "lower_defense"],
                 "chance": 0.2
               }
             }
@@ -848,6 +968,43 @@
       "className": "Worge",
       "color": "#d97706",
       "tiers": [
+        {
+          "name": "Level 0 - Starter",
+          "requiredLevel": 0,
+          "skills": [
+            {
+              "uuid": "SKIL-20260501000000-000C05-F6A7B8C9",
+              "id": "wr_bear_form",
+              "name": "Bear Form",
+              "icon": "https://molochdagod.github.io/ObjectStore/icons/skill_nobg/Druideskill_17_nobg.png",
+              "description": "Class starter — shapeshift into a bear: high HP, melee claws, slow but tanky",
+              "effect": "Shapeshift: +Health, +Defense, melee claws",
+              "maxPoints": 1,
+              "starter": true,
+              "bonuses": {
+                "health": 20,
+                "defense": 6
+              },
+              "grantedAbility": {
+                "id": "bear_form",
+                "name": "Bear Form",
+                "icon": "bear",
+                "description": "Take the form of a bear — gain bonus HP and defense, melee claw attacks",
+                "type": "shapeshift",
+                "damage": 0,
+                "manaCost": 0,
+                "staminaCost": 15,
+                "cooldown": 6,
+                "target": "self",
+                "effect": {
+                  "type": "form",
+                  "form": "bear",
+                  "duration": 0
+                }
+              }
+            }
+          ]
+        },
         {
           "name": "Level 1 - Primal Roots",
           "requiredLevel": 1,
@@ -983,6 +1140,37 @@
                 "target": "self",
                 "healPercent": 0.06,
                 "duration": 5
+              }
+            },
+            {
+              "uuid": "SKIL-20260501000000-000C06-A7B8C9DA",
+              "id": "wr_raptor_form",
+              "name": "Raptor Form",
+              "icon": "https://molochdagod.github.io/ObjectStore/icons/skill_nobg/Druideskill_18_nobg.png",
+              "description": "Shapeshift into a raptor: fast, agile, hit-and-run claw strikes",
+              "effect": "Shapeshift: +Speed, +Crit, light melee",
+              "maxPoints": 1,
+              "starter": true,
+              "bonuses": {
+                "attackSpeed": 8,
+                "criticalChance": 5
+              },
+              "grantedAbility": {
+                "id": "raptor_form",
+                "name": "Raptor Form",
+                "icon": "raptor",
+                "description": "Take the form of a raptor — gain attack speed and crit, fast claw strikes",
+                "type": "shapeshift",
+                "damage": 0,
+                "manaCost": 0,
+                "staminaCost": 15,
+                "cooldown": 6,
+                "target": "self",
+                "effect": {
+                  "type": "form",
+                  "form": "raptor",
+                  "duration": 0
+                }
               }
             }
           ]
@@ -1204,6 +1392,37 @@
                 "damage": 0.12,
                 "duration": 3
               }
+            },
+            {
+              "uuid": "SKIL-20260501000000-000C07-B8C9DAEB",
+              "id": "wr_flight_form",
+              "name": "Flight Form",
+              "icon": "https://molochdagod.github.io/ObjectStore/icons/skill_nobg/Druideskill_19_nobg.png",
+              "description": "Shapeshift into a flying form: aerial mobility and ranged dive attacks",
+              "effect": "Shapeshift: Flight + dive strike",
+              "maxPoints": 1,
+              "starter": true,
+              "bonuses": {
+                "attackSpeed": 6,
+                "evasion": 8
+              },
+              "grantedAbility": {
+                "id": "flight_form",
+                "name": "Flight Form",
+                "icon": "wing",
+                "description": "Take to the air — gain flight, evasion, and a dive-strike attack",
+                "type": "shapeshift",
+                "damage": 0,
+                "manaCost": 0,
+                "staminaCost": 20,
+                "cooldown": 8,
+                "target": "self",
+                "effect": {
+                  "type": "form",
+                  "form": "flight",
+                  "duration": 0
+                }
+              }
             }
           ]
         },
@@ -1270,6 +1489,44 @@
       "className": "Ranger",
       "color": "#22c55e",
       "tiers": [
+        {
+          "name": "Level 0 - Starter",
+          "requiredLevel": 0,
+          "skills": [
+            {
+              "uuid": "SKIL-20260501000000-000C08-C9DAEBFC",
+              "id": "r_focus_strike",
+              "name": "Focus Strike",
+              "icon": "https://molochdagod.github.io/ObjectStore/icons/skill_nobg/Archerskill_17_nobg.png",
+              "description": "Class starter — every 3rd attack becomes a Focus Strike. Choose between Micro Crit (1.25x damage) or Poison Sting (4s slow + poison DoT). Toggleable.",
+              "effect": "Every 3rd attack: Micro Crit OR Poison Sting (player choice)",
+              "maxPoints": 1,
+              "starter": true,
+              "passive": true,
+              "bonuses": {
+                "damage": 2
+              },
+              "variants": [
+                {
+                  "id": "micro_crit",
+                  "name": "Micro Crit",
+                  "description": "Every 3rd attack deals 1.25x damage",
+                  "effect": "1.25x damage on Focus Strike",
+                  "multiplier": 1.25
+                },
+                {
+                  "id": "poison_sting",
+                  "name": "Poison Sting",
+                  "description": "Every 3rd attack applies poison + slow for 4 seconds",
+                  "effect": "+Slow + Poison DoT (4s)",
+                  "duration": 4,
+                  "slowPercent": 0.25,
+                  "poisonDamage": 0.05
+                }
+              ]
+            }
+          ]
+        },
         {
           "name": "Level 1 - Marksmanship",
           "requiredLevel": 1,
@@ -1694,11 +1951,7 @@
               "passive": true,
               "procEffect": {
                 "type": "multi_dot",
-                "effects": [
-                  "poison",
-                  "bleed",
-                  "lower_defense"
-                ],
+                "effects": ["poison", "bleed", "lower_defense"],
                 "chance": 0.25
               }
             }
