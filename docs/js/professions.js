@@ -19,15 +19,16 @@
     gray: "#a8a8a8",
     brown: "#8b7355",
   };
+  // Canonical tier colors (matches master-weapons.json / master-armor.json tierColor field)
   const TIER_COLOR = {
-    1: "#a8a8a8",
-    2: "#5fd862",
+    1: "#8b7355",
+    2: "#a8a8a8",
     3: "#4a9eff",
     4: "#9d4dff",
-    5: "#ff9846",
-    6: "#ef4444",
-    7: "#ec4899",
-    8: "#f59e0b",
+    5: "#ff4d4d",
+    6: "#ffaa00",
+    7: "#d4a84b",
+    8: "#f0d890",
   };
   const TIER_NAME = [
     "",
