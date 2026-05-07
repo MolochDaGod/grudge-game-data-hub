@@ -267,12 +267,7 @@
     <div class="g g2" style="margin-bottom:24px">
       <div class="card" style="border-left:4px solid #ff4d4d">
         <h3 style="color:#ff4d4d"><img src="https://molochdagod.github.io/ObjectStore/icons/pack/weapons/Sword_01.png" class="icon-sm"> Warrior</h3>
-        <div class="sub">Melee specialist. Stamina system tied to sprint → invisible target lock, speed boost, charge attacks.
-          Stamina fills through parries, dodges, blocks. Perfect actions grant extra. Can double jump, AoE attacks, group invincibility.</div>
-        <div class="tags">
-          <span class="tag">Sword</span><span class="tag">Axe</span><span class="tag">Hammer</span>
-          <span class="tag">Shield</span><span class="tag">Greatsword</span><span class="tag">Greataxe</span><span class="tag">Scythe</span>
-        </div>
+        <div class="sub">Melee specialist. Stamina system tied to sprint → invisible target lock, speed boost, charge attacks. Stamina fills through parries, dodges, blocks. Perfect actions grant extra. Can double jump, AoE attacks, group invincibility.</div><div class="sub" style="color:var(--gold);font-size:.78em;margin-top:6px">No weapon restrictions — can equip any weapon type</div>
       </div>
       <div class="card" style="border-left:4px solid #9d4dff">
         <h3 style="color:#9d4dff"><img src="https://molochdagod.github.io/ObjectStore/icons/pack/weapons/Staff_01.png" class="icon-sm"> Mage</h3>
@@ -336,6 +331,9 @@
       Every craftable (non-gathered) item needs a recipe. The WCS CSV has 109 explicit recipes.
       Full coverage requires 600+ when all weapon types × tiers, armor × tiers, and enchants are included.
     </p>
+    <div class="note" style="margin-top:0;margin-bottom:20px">
+      <strong>T0 starter recipes:</strong> T0 recipes are universal starter crafts. Everyone can make them at the shared starter crafting site that supports the T0→T1 onboarding flow, including the current auto-harvest starter loop and baseline starter outputs for armor, capes, potions, foods, and related basics.
+    </div>
     <div class="rc"><span style="font-size:1.2em">🔥</span><span class="rc-name">Smelting</span><span class="rc-prof">Miner</span><span class="rc-count">8 tiers · Ore → Ingot</span></div>
     <div class="rc"><span style="font-size:1.2em">🪵</span><span class="rc-name">Woodworking</span><span class="rc-prof">Forester</span><span class="rc-count">8 tiers · Log → Plank</span></div>
     <div class="rc"><span style="font-size:1.2em">🧵</span><span class="rc-name">Leatherworking</span><span class="rc-prof">Forester</span><span class="rc-count">6 tiers · Hide → Leather</span></div>
@@ -476,6 +474,9 @@
       <strong>Node types:</strong> <code>stat</code> (passive bonus), <code>recipe</code> (unlocks tier/resource), <code>effect</code> (rare drop chance, detection).
       <strong>Bonus types:</strong> successChance, rareDropChance, qualityBonus, bonusYield, tierUnlock, speedBonus.
       Each node has x/y position for visual tree layout, required level, and parent node for prerequisite chains.
+    </div>
+    <div style="text-align:center;margin-top:24px">
+      <a href="profession-trees.html" style="display:inline-block;padding:14px 32px;background:var(--gold-dim);color:var(--gold);border:2px solid var(--gold);border-radius:6px;font-family:var(--font-heading);font-size:1.1em;text-decoration:none;transition:all .2s" onmouseover="this.style.background='var(--gold)';this.style.color='#0a0e1a'" onmouseout="this.style.background='var(--gold-dim)';this.style.color='var(--gold)'">🌳 Open Skill Trees &amp; Arsenal →</a>
     </div>
   </div>
 
