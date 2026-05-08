@@ -179,7 +179,8 @@
     undead:    { name:'Undead',     display:'Undead',           faction:'legion',  color:'#8b2020', mount:'Skeletal Horse' },
     barbarian: { name:'Barbarian',  display:'Barbarians',       faction:'crusade', color:'#c9a04e', mount:'Warhorse' },
   };
-  const CLASSES = ['Warrior','Ranger','Mage Priest','Worge'];
+  // Classes exist but players don't switch class — it's set at character creation
+  // Class only affects armor material type for the demo display
 
   // Equipment slot definitions — matches ObjectStore armor slotTypes
   const ARMOR_SLOTS = ['Helm','Shoulder','Chest','Hands','Feet','Relic'];
@@ -200,21 +201,9 @@
     'Warrior': 'metal', 'Ranger': 'leather', 'Mage Priest': 'cloth', 'Worge': 'leather'
   };
 
-  // Class → allowed weapon categories (from game design rules)
-  const CLASS_WEAPONS = {
-    'Warrior':     ['swords','axes1h','greatswords','greataxes','hammers1h','hammers2h','spears','maces'],
-    'Ranger':      ['bows','crossbows','guns','daggers','swords','spears'],
-    'Mage Priest': ['fireStaves','frostStaves','holyStaves','lightningStaves','natureStaves','maces'],
-    'Worge':       ['spears','daggers','bows','hammers1h','maces','fireStaves','natureStaves'],
-  };
-
-  // Class → allowed offhand types
-  const CLASS_OFFHAND = {
-    'Warrior':     ['shields'],
-    'Ranger':      ['daggers'],
-    'Mage Priest': ['tomes','offhand-tome'],
-    'Worge':       ['shields'],
-  };
+  // All weapon categories — no class restrictions, any class can use any weapon
+  const ALL_WEAPON_CATS = ['swords','axes1h','daggers','greatswords','greataxes','hammers1h','hammers2h','spears','maces','bows','crossbows','guns','fireStaves','frostStaves','holyStaves','lightningStaves','natureStaves','tools'];
+  const ALL_OFFHAND_CATS = ['shields','tomes','offhand-tome','daggers'];
 
   // Equipped items (slot → item UUID). Connect to Grudge backend for real data.
   const equippedItems = {};
@@ -336,8 +325,8 @@
   function findEquippedItem(uuid) { return findItemByUuid(uuid) || findArmorItem(uuid); }
 
   function getClassArmorMaterial() { return CLASS_ARMOR[selectedClass] || 'metal'; }
-  function getClassWeapons() { return CLASS_WEAPONS[selectedClass] || CLASS_WEAPONS['Warrior']; }
-  function getClassOffhands() { return CLASS_OFFHAND[selectedClass] || CLASS_OFFHAND['Warrior']; }
+  function getClassWeapons() { return ALL_WEAPON_CATS; }
+  function getClassOffhands() { return ALL_OFFHAND_CATS; }
 
   // ── Demo Data Population ────────────────────────────────────────────
   function autoEquipDemo() {
@@ -644,13 +633,6 @@
     populateInventoryDemo();
     refreshAll();
   }
-  function selectClass(cls) {
-    selectedClass = cls;
-    document.getElementById('playerClass').textContent = `Lv.1 ${selectedClass}`;
-    autoEquipDemo();
-    populateInventoryDemo();
-    refreshAll();
-  }
 
   // ── Equipment Panel ─────────────────────────────────────────────────
   function renderEquipmentPanel() {
@@ -675,17 +657,6 @@
       ">${m.name}</button>`;
     }).join('');
 
-    // Class selector
-    const classPills = CLASSES.map(c => {
-      const active = c === selectedClass;
-      return `<button onclick="selectClass('${c}')" style="
-        border:1px solid ${active ? 'var(--gold)' : '#3a2a1a'};
-        background:${active ? 'rgba(212,175,55,0.1)' : 'transparent'};
-        color:${active ? 'var(--gold)' : 'var(--dim)'};
-        padding:3px 8px;border-radius:12px;font-size:9px;cursor:pointer;
-        font-family:var(--font-display);letter-spacing:0.5px;transition:all 0.15s;
-      ">${c}</button>`;
-    }).join('');
 
     // Race info panel (replaces silhouette)
     let centerHtml = `
@@ -731,8 +702,7 @@
     centerHtml += `</div>`;
 
     return `
-      <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:6px;">${racePills}</div>
-      <div style="display:flex;gap:4px;justify-content:center;flex-wrap:wrap;margin-bottom:10px;">${classPills}</div>
+      <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:10px;">${racePills}</div>
       <div class="section-title" style="text-align:center;border-left:0;padding-left:0;">Grudge Warlord</div>
       <div style="text-align:center;font-family:var(--font-display);font-size:11px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">${rm.name} &bull; ${selectedClass}</div>
       <div class="eq-panel">
