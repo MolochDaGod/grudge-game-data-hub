@@ -181,15 +181,39 @@
   };
   const CLASSES = ['Warrior','Ranger','Mage Priest','Worge'];
 
-  // Equipment slot definitions — 6 per side, matching ItemBrowser armor slots
-  const LEFT_SLOTS  = ['Helm','Shoulder','Chest','Legs','Boots','Belt'];
-  const RIGHT_SLOTS = ['Mainhand','Offhand','Gloves','Cape','Ring','Necklace'];
+  // Equipment slot definitions — matches ObjectStore armor slotTypes
+  const ARMOR_SLOTS = ['Helm','Shoulder','Chest','Hands','Feet','Relic'];
+  const WEAPON_SLOTS = ['Mainhand','Offhand'];
+  const JEWELRY_SLOTS = ['Ring','Necklace'];
+  const LEFT_SLOTS  = ARMOR_SLOTS;
+  const RIGHT_SLOTS = [...WEAPON_SLOTS, ...JEWELRY_SLOTS];
   const ALL_SLOTS = [...LEFT_SLOTS, ...RIGHT_SLOTS];
 
   // Slot placeholder icons
   const SLOT_ICONS = {
-    Helm:'🪖', Shoulder:'🛡', Chest:'🎽', Legs:'👖', Boots:'🥾', Belt:'⛓',
-    Mainhand:'⚔', Offhand:'🛡', Gloves:'🧤', Cape:'🧣', Ring:'💍', Necklace:'📿'
+    Helm:'🪖', Shoulder:'🛡', Chest:'🎽', Hands:'🧤', Feet:'🥾', Relic:'🔮',
+    Mainhand:'⚔', Offhand:'🛡', Ring:'💍', Necklace:'📿'
+  };
+
+  // Class → armor material type
+  const CLASS_ARMOR = {
+    'Warrior': 'metal', 'Ranger': 'leather', 'Mage Priest': 'cloth', 'Worge': 'leather'
+  };
+
+  // Class → allowed weapon categories (from game design rules)
+  const CLASS_WEAPONS = {
+    'Warrior':     ['swords','axes1h','greatswords','greataxes','hammers1h','hammers2h','spears','maces'],
+    'Ranger':      ['bows','crossbows','guns','daggers','swords','spears'],
+    'Mage Priest': ['fireStaves','frostStaves','holyStaves','lightningStaves','natureStaves','maces'],
+    'Worge':       ['spears','daggers','bows','hammers1h','maces','fireStaves','natureStaves'],
+  };
+
+  // Class → allowed offhand types
+  const CLASS_OFFHAND = {
+    'Warrior':     ['shields'],
+    'Ranger':      ['daggers'],
+    'Mage Priest': ['tomes','offhand-tome'],
+    'Worge':       ['shields'],
   };
 
   // Equipped items (slot → item UUID). Connect to Grudge backend for real data.
@@ -197,6 +221,9 @@
 
   // Inventory items (array of {uuid, stack})
   let inventoryItems = [];
+
+  // All armor items (loaded separately from master-armor.json)
+  let allArmor = [];
 
   // Tier colors matching ObjectStore tier system
   const TIER_COLORS = {
@@ -270,6 +297,9 @@
       allSkillTrees = skillsRes?.classes || skillsRes?.skillTrees || [];
       allWeaponSkills = wpnSkillsRes?.weaponTypes || wpnSkillsRes?.weapons || [];
       allArtifacts = artsRes?.artifacts || [];
+      // Load armor separately (master-items has them but master-armor has slotType/material)
+      const armorRes = await fetchJSON('master-armor.json');
+      allArmor = armorRes?.items || [];
       if (!allItems.length) showError('No items loaded — ObjectStore API may be unreachable.');
     } catch (err) {
       showError('Failed to load game data: ' + err.message);
@@ -301,30 +331,75 @@
     el.classList.add('visible');
   }
 
+  // ── Helpers: find armor/weapon by slot ─────────────────────────────
+  function findArmorItem(uuid) { return allArmor.find(i => i.uuid === uuid); }
+  function findEquippedItem(uuid) { return findItemByUuid(uuid) || findArmorItem(uuid); }
+
+  function getClassArmorMaterial() { return CLASS_ARMOR[selectedClass] || 'metal'; }
+  function getClassWeapons() { return CLASS_WEAPONS[selectedClass] || CLASS_WEAPONS['Warrior']; }
+  function getClassOffhands() { return CLASS_OFFHAND[selectedClass] || CLASS_OFFHAND['Warrior']; }
+
   // ── Demo Data Population ────────────────────────────────────────────
   function autoEquipDemo() {
-    const slotCategoryMap = {
-      'Mainhand':'swords', 'Offhand':'shields', 'Helm':'hammers', 'Chest':'axes',
-      'Shoulder':'maces', 'Gloves':'daggers', 'Boots':'bows', 'Legs':'spears',
-      'Cape':'greatswords', 'Ring':'crossbows', 'Belt':'greataxes', 'Necklace':'tomes',
-    };
-    for (const [slot, cat] of Object.entries(slotCategoryMap)) {
-      const match = allItems.find(i => i.type === 'weapon' && i.category === cat);
-      if (match) equippedItems[slot] = match.uuid;
+    // Clear previous
+    Object.keys(equippedItems).forEach(k => delete equippedItems[k]);
+
+    const mat = getClassArmorMaterial();
+    const allowedWpns = getClassWeapons();
+    const allowedOff = getClassOffhands();
+
+    // Equip armor: pick first T1 set piece in the right material for each slot
+    ARMOR_SLOTS.forEach(slot => {
+      const piece = allArmor.find(i => i.slotType === slot && i.material === mat && i.tier === 1);
+      if (piece) equippedItems[slot] = piece.uuid;
+    });
+
+    // Equip jewelry from armor data
+    JEWELRY_SLOTS.forEach(slot => {
+      const piece = allArmor.find(i => i.slotType === slot && i.material === mat && i.tier === 1);
+      if (piece) equippedItems[slot] = piece.uuid;
+    });
+
+    // Equip mainhand: first allowed weapon category T1
+    if (allowedWpns.length) {
+      const wpn = allItems.find(i => i.type === 'weapon' && allowedWpns.includes(i.category) && i.tier === 1);
+      if (wpn) equippedItems['Mainhand'] = wpn.uuid;
+    }
+
+    // Equip offhand: shield/tome/dagger or gem relic
+    if (allowedOff.length) {
+      // Try weapon offhand first
+      const off = allItems.find(i => i.type === 'weapon' && allowedOff.includes(i.category) && i.tier === 1)
+        || allItems.find(i => allowedOff.includes(i.type) && i.tier === 1);
+      if (off) equippedItems['Offhand'] = off.uuid;
+      else {
+        // Gem relic from armor
+        const relic = allArmor.find(i => i.slotType === 'Offhand' && i.material === 'gem' && i.tier === 1);
+        if (relic) equippedItems['Offhand'] = relic.uuid;
+      }
     }
   }
 
   function populateInventoryDemo() {
     inventoryItems = [];
-    // Add a spread of items: different weapon types, food, potions
-    const cats = ['swords','daggers','bows','hammers','shields','guns','fireStaves','frostStaves'];
-    cats.forEach(cat => {
-      const items = allItems.filter(i => i.type === 'weapon' && i.category === cat);
-      if (items.length > 1) inventoryItems.push({ uuid: items[1].uuid, stack: 1 });
+    const allowedWpns = getClassWeapons();
+
+    // Add class-appropriate weapons (T1 and T2 samples)
+    allowedWpns.slice(0, 4).forEach(cat => {
+      const wpns = allItems.filter(i => i.type === 'weapon' && i.category === cat && i.tier <= 2);
+      wpns.slice(0, 2).forEach(w => inventoryItems.push({ uuid: w.uuid, stack: 1 }));
     });
+
+    // Add some armor from a different set (for swapping)
+    const mat = getClassArmorMaterial();
+    const altArmor = allArmor.filter(i => i.material === mat && i.tier === 2);
+    altArmor.slice(0, 4).forEach(a => inventoryItems.push({ uuid: a.uuid, stack: 1 }));
+
     // Add food and potions
-    allItems.filter(i => i.type === 'food').slice(0, 6).forEach(i => inventoryItems.push({ uuid: i.uuid, stack: Math.floor(Math.random()*15)+1 }));
-    allItems.filter(i => i.type === 'potion').slice(0, 4).forEach(i => inventoryItems.push({ uuid: i.uuid, stack: Math.floor(Math.random()*8)+1 }));
+    allItems.filter(i => i.type === 'food').slice(0, 4).forEach(i =>
+      inventoryItems.push({ uuid: i.uuid, stack: Math.floor(Math.random()*10)+1 }));
+    allItems.filter(i => i.type === 'potion').slice(0, 3).forEach(i =>
+      inventoryItems.push({ uuid: i.uuid, stack: Math.floor(Math.random()*5)+1 }));
   }
 
   // ── Left Column: Stats + Professions ────────────────────────────────
@@ -375,14 +450,18 @@
   function computeStats() {
     const s = { ...BASE_STATS };
     for (const uuid of Object.values(equippedItems)) {
-      const item = findItemByUuid(uuid);
+      const item = findEquippedItem(uuid);
       if (!item?.stats) continue;
+      // Weapon stats
       if (item.stats.damage) s.damage += item.stats.damage;
       if (item.stats.defense) s.defense += item.stats.defense;
       if (item.stats.crit) s.crit += item.stats.crit;
       if (item.stats.block) s.block += item.stats.block;
       if (item.stats.speed) s.speed += item.stats.speed / 100;
+      // Armor stats (use hp/mana from armor data)
+      if (item.stats.hp) s.health += item.stats.hp;
       if (item.stats.health) s.health += item.stats.health;
+      if (item.stats.mana) s.mana += item.stats.mana;
     }
     return s;
   }
@@ -438,16 +517,40 @@
     tt.classList.add('visible');
   }
 
+  // onInvClick moved above into findBestSlot section
+
+  function findBestSlot(item) {
+    // Armor items go to their slotType
+    if (item.type === 'armor' && item.slotType) {
+      const slot = item.slotType;
+      // Map armor slotType to panel slots
+      if (ALL_SLOTS.includes(slot)) return slot;
+      if (slot === 'Offhand') return 'Offhand';
+      return null;
+    }
+    // Weapon items
+    if (item.type === 'weapon' || item.type === 'tool' || item.type === 'offhand-tome') {
+      const cat = item.category || item.type;
+      const offhandCats = ['shields','tomes','offhand-tome'];
+      const pref = offhandCats.includes(cat) ? 'Offhand' : 'Mainhand';
+      if (!equippedItems[pref]) return pref;
+      // Try the other weapon slot
+      const alt = pref === 'Mainhand' ? 'Offhand' : 'Mainhand';
+      if (!equippedItems[alt]) return alt;
+      return pref; // swap
+    }
+    return null;
+  }
+
   function onInvClick(e) {
     const uuid = e.currentTarget.dataset.uuid;
     const idx = parseInt(e.currentTarget.dataset.invIdx);
     if (!uuid) return;
-    const item = findItemByUuid(uuid);
+    // Try finding in weapons/items first, then armor
+    const item = findItemByUuid(uuid) || findArmorItem(uuid);
     if (!item) return;
-    // Find a compatible empty slot (or first slot of type)
     const slot = findBestSlot(item);
     if (slot) {
-      // If slot already has an item, swap to inventory
       if (equippedItems[slot]) {
         inventoryItems[idx] = { uuid: equippedItems[slot], stack: 1 };
       } else {
@@ -456,21 +559,6 @@
       equippedItems[slot] = uuid;
       refreshAll();
     }
-  }
-
-  function findBestSlot(item) {
-    if (item.type !== 'weapon') return null;
-    const cat = item.category;
-    // Weapon category to preferred slot
-    const preferred = { swords:'Mainhand', shields:'Offhand', daggers:'Mainhand', bows:'Mainhand',
-      crossbows:'Mainhand', guns:'Mainhand', spears:'Mainhand', hammers:'Mainhand', axes:'Mainhand',
-      maces:'Mainhand', greatswords:'Mainhand', greataxes:'Mainhand', tomes:'Offhand',
-      fireStaves:'Mainhand', frostStaves:'Mainhand', holyStaves:'Mainhand', lightningStaves:'Mainhand', natureStaves:'Mainhand' };
-    const pref = preferred[cat] || 'Mainhand';
-    // Try preferred slot first, then any empty slot
-    if (!equippedItems[pref]) return pref;
-    const empty = ALL_SLOTS.find(s => !equippedItems[s]);
-    return empty || pref; // if all full, replace preferred
   }
 
   // ── Hotbar: slots 1-4 skills, 5 divider, 6-8 consumables ──────────
@@ -552,13 +640,16 @@
   function selectRace(race) {
     selectedRace = race;
     document.getElementById('playerClass').textContent = `Lv.1 ${selectedClass}`;
-    renderTab();
-    renderLeftCol();
+    autoEquipDemo();
+    populateInventoryDemo();
+    refreshAll();
   }
   function selectClass(cls) {
     selectedClass = cls;
     document.getElementById('playerClass').textContent = `Lv.1 ${selectedClass}`;
-    renderTab();
+    autoEquipDemo();
+    populateInventoryDemo();
+    refreshAll();
   }
 
   // ── Equipment Panel ─────────────────────────────────────────────────
@@ -669,7 +760,7 @@
 
   function renderSlot(slotName) {
     const uuid = equippedItems[slotName];
-    const item = uuid ? findItemByUuid(uuid) : null;
+    const item = uuid ? findEquippedItem(uuid) : null;
     const isEquipped = !!item;
     const tier = item ? item.tier : 0;
     const tierColor = TIER_COLORS[tier] || '#3a2a1a';
@@ -752,7 +843,7 @@
   function onSlotHover(e) {
     const uuid = e.currentTarget.dataset.uuid;
     if (!uuid) return;
-    const item = findItemByUuid(uuid);
+    const item = findEquippedItem(uuid);
     if (!item) return;
     const tt = document.getElementById('eqTooltip');
     tt.innerHTML = buildTooltipHTML(item, 'Click to unequip');
