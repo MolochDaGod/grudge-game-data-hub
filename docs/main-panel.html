@@ -9,6 +9,7 @@
   <title>Grudge Warlords — Main Panel</title>
   <link rel="stylesheet" href="css/grudge-theme.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
   <style>
     .app { display: flex; height: 100vh; flex-direction: column; overflow: hidden; }
     .top-bar { display: flex; align-items: center; justify-content: space-between; padding: 8px 16px; background: linear-gradient(90deg,#1a100a,#221710,#1a100a); border-bottom: 2px solid var(--gold); flex-shrink: 0; }
@@ -165,6 +166,20 @@
   let activeTab = 'Equipment';
   let allItems = [], allRecipes = [], allAttributes = [], allMaterials = [];
   let allProfessions = [], allSkillTrees = [], allWeaponSkills = [], allArtifacts = [];
+  let raceManifest = null;
+  let selectedRace = 'human';
+  let selectedClass = 'Warrior';
+  const RACE_PACK = `${CDN}/asset-packs/toon-rts-characters`;
+  const RACE_IDS = ['human','orc','elf','dwarf','undead','barbarian'];
+  const RACE_META = {
+    human:     { name:'Human',     display:'Western Kingdoms', faction:'crusade', color:'#c9a04e', mount:'Horse' },
+    orc:       { name:'Orc',       display:'Orcs',             faction:'legion',  color:'#8b2020', mount:'Wolf' },
+    elf:       { name:'Elf',       display:'Elves',            faction:'fabled',  color:'#7ec8e3', mount:'Stag' },
+    dwarf:     { name:'Dwarf',     display:'Dwarves',          faction:'fabled',  color:'#7ec8e3', mount:'Boar' },
+    undead:    { name:'Undead',     display:'Undead',           faction:'legion',  color:'#8b2020', mount:'Skeletal Horse' },
+    barbarian: { name:'Barbarian',  display:'Barbarians',       faction:'crusade', color:'#c9a04e', mount:'Warhorse' },
+  };
+  const CLASSES = ['Warrior','Ranger','Mage Priest','Worge'];
 
   // Equipment slot definitions — 6 per side, matching ItemBrowser armor slots
   const LEFT_SLOTS  = ['Helm','Shoulder','Chest','Legs','Boots','Belt'];
@@ -259,6 +274,12 @@
     } catch (err) {
       showError('Failed to load game data: ' + err.message);
     }
+
+    // Load race manifest from CDN
+    try {
+      const mRes = await fetch(`${RACE_PACK}/manifest.json`);
+      if (mRes.ok) raceManifest = await mRes.json();
+    } catch { /* non-fatal */ }
 
     autoEquipDemo();
     populateInventoryDemo();
@@ -527,18 +548,108 @@
     }
   }
 
+  // ── Race/Class Selector ────────────────────────────────────────────
+  function selectRace(race) {
+    selectedRace = race;
+    document.getElementById('playerClass').textContent = `Lv.1 ${selectedClass}`;
+    renderTab();
+    renderLeftCol();
+  }
+  function selectClass(cls) {
+    selectedClass = cls;
+    document.getElementById('playerClass').textContent = `Lv.1 ${selectedClass}`;
+    renderTab();
+  }
+
   // ── Equipment Panel ─────────────────────────────────────────────────
   function renderEquipmentPanel() {
     const stats = computeStats();
+    const rm = RACE_META[selectedRace];
+    const rd = raceManifest?.races?.[selectedRace];
+    const modelUrl = `${RACE_PACK}/glb/characters/${selectedRace}.glb`;
+    const equipSlots = raceManifest?.meta?.sharedEquipmentSlots;
+    const animPacks = raceManifest?.animationPacks?.packs;
+
+    // Race selector pills
+    const racePills = RACE_IDS.map(id => {
+      const m = RACE_META[id];
+      const active = id === selectedRace;
+      return `<button onclick="selectRace('${id}')" style="
+        border:2px solid ${active ? m.color : '#3a2a1a'};
+        background:${active ? m.color+'22' : 'transparent'};
+        color:${active ? m.color : 'var(--muted)'};
+        padding:4px 10px;border-radius:16px;font-size:10px;font-family:var(--font-display);
+        cursor:pointer;font-weight:${active?'700':'400'};letter-spacing:1px;text-transform:uppercase;
+        transition:all 0.15s;
+      ">${m.name}</button>`;
+    }).join('');
+
+    // Class selector
+    const classPills = CLASSES.map(c => {
+      const active = c === selectedClass;
+      return `<button onclick="selectClass('${c}')" style="
+        border:1px solid ${active ? 'var(--gold)' : '#3a2a1a'};
+        background:${active ? 'rgba(212,175,55,0.1)' : 'transparent'};
+        color:${active ? 'var(--gold)' : 'var(--dim)'};
+        padding:3px 8px;border-radius:12px;font-size:9px;cursor:pointer;
+        font-family:var(--font-display);letter-spacing:0.5px;transition:all 0.15s;
+      ">${c}</button>`;
+    }).join('');
+
+    // Race info panel (replaces silhouette)
+    let centerHtml = `
+      <div style="text-align:center;padding:8px;">
+        <div style="font-family:var(--font-display);font-size:14px;color:${rm.color};letter-spacing:1px;">${rm.name}</div>
+        <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin:2px 0 8px;">${rm.display} · ${rm.faction}</div>
+        <div style="width:140px;height:200px;margin:0 auto;border-radius:8px;overflow:hidden;border:2px solid ${rm.color}44;
+          background:linear-gradient(180deg,rgba(30,20,12,0.95),rgba(20,14,8,0.8));position:relative;">
+          <model-viewer src="${modelUrl}" alt="${rm.name}" auto-rotate camera-controls
+            style="width:100%;height:100%;--poster-color:transparent;"
+            camera-orbit="0deg 80deg 2.2m" min-camera-orbit="auto auto 1.5m" max-camera-orbit="auto auto 4m"
+            interaction-prompt="none" ar-status="not-presenting"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></model-viewer>
+          <div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-size:48px;color:var(--dim);position:absolute;top:0;left:0;">&#9876;</div>
+        </div>
+        <div style="font-size:8px;color:var(--dim);margin-top:6px;">Mount: ${rm.mount}</div>`;
+
+    // Equipment slot info from manifest
+    if (equipSlots) {
+      const armorSlots = equipSlots.armor ? Object.keys(equipSlots.armor).length : 0;
+      const wpnSlots = (equipSlots.mainHand ? Object.keys(equipSlots.mainHand).length : 0) +
+                       (equipSlots.offHand ? Object.keys(equipSlots.offHand).length : 0) +
+                       (equipSlots.shield ? Object.keys(equipSlots.shield).length : 0);
+      centerHtml += `<div style="font-size:8px;color:var(--dim);margin-top:2px;">${armorSlots} armor slots · ${wpnSlots} weapon slots</div>`;
+    }
+
+    // Extra weapons for this race
+    if (rd?.extraWeapons?.length) {
+      centerHtml += `<div style="display:flex;gap:4px;justify-content:center;flex-wrap:wrap;margin-top:6px;">`;
+      rd.extraWeapons.forEach(w => {
+        centerHtml += `<span style="font-size:7px;padding:2px 6px;background:rgba(74,158,255,0.1);color:#4a9eff;border-radius:8px;">${w.type}</span>`;
+      });
+      centerHtml += `</div>`;
+    }
+
+    // Animation packs summary
+    if (animPacks) {
+      const totalClips = Object.values(animPacks).reduce((s, p) => s + (p.clipCount || 0), 0);
+      centerHtml += `<div style="font-size:8px;color:var(--dim);margin-top:4px;">${Object.keys(animPacks).length} anim packs · ${totalClips} clips</div>`;
+    }
+
+    centerHtml += `<div style="margin-top:6px;"><a href="${modelUrl}" target="_blank" style="font-size:8px;color:var(--gold);">Download GLB ↗</a></div>`;
+    centerHtml += `</div>`;
+
     return `
+      <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:6px;">${racePills}</div>
+      <div style="display:flex;gap:4px;justify-content:center;flex-wrap:wrap;margin-bottom:10px;">${classPills}</div>
       <div class="section-title" style="text-align:center;border-left:0;padding-left:0;">Grudge Warlord</div>
-      <div style="text-align:center;font-family:var(--font-display);font-size:11px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">Human &bull; Warrior</div>
+      <div style="text-align:center;font-family:var(--font-display);font-size:11px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">${rm.name} &bull; ${selectedClass}</div>
       <div class="eq-panel">
         <div class="eq-col">
           ${LEFT_SLOTS.map(s => renderSlot(s)).join('')}
         </div>
         <div class="eq-center">
-          <div class="silhouette">&#9876;</div>
+          ${centerHtml}
         </div>
         <div class="eq-col">
           ${RIGHT_SLOTS.map(s => renderSlot(s)).join('')}

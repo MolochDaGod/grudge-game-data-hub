@@ -12,6 +12,14 @@ import { loadMasterItems, loadMasterRecipes, loadMasterMaterials, loadMasterAttr
 import { RecipeLinker } from '../lib/recipe-linker.js';
 import { AccountConnector } from '../lib/account-connector.js';
 import { generateUuid, parseUuid, isValid } from '../lib/uuid-registry.js';
+import {
+  getRaceCharacterUrl, getRaceCavalryUrl, getRaceSiegeUrl,
+  getRaceMeta, getRaceIds, getAllRaces, getRaceManifest,
+  getRaceData, getEquipmentSlots, getBoneContainers, getAnimationPacks,
+  assetUrl, iconUrl, packIconUrl, modelUrl, effectUrl, shaderUrl,
+  animationUrl, audioUrl, spriteUrl, textureUrl,
+  CDN, RACES, RACE_META,
+} from '../lib/objectstore-api.js';
 
 export class GameDataClient {
   constructor() {
@@ -51,6 +59,26 @@ export class GameDataClient {
   parseUuid(uuid) { return parseUuid(uuid); }
   isValidUuid(uuid) { return isValid(uuid); }
 
+  // --- Race Characters (3D models from CF R2) ---
+  getRaceCharacterUrl(race) { return getRaceCharacterUrl(race); }
+  getRaceCavalryUrl(race) { return getRaceCavalryUrl(race); }
+  getRaceSiegeUrl(race) { return getRaceSiegeUrl(race); }
+  getRaceMeta(race) { return getRaceMeta(race); }
+  getRaceIds() { return getRaceIds(); }
+  getAllRaces() { return getAllRaces(); }
+  async getRaceManifest() { return getRaceManifest(); }
+  async getRaceData(race) { return getRaceData(race); }
+  async getEquipmentSlots() { return getEquipmentSlots(); }
+  async getBoneContainers() { return getBoneContainers(); }
+  async getAnimationPacks() { return getAnimationPacks(); }
+
+  // --- Asset URL Builders ---
+  assetUrl(path) { return assetUrl(path); }
+  iconUrl(path) { return iconUrl(path); }
+  modelUrl(path) { return modelUrl(path); }
+  effectUrl(path) { return effectUrl(path); }
+  animationUrl(pack, clip) { return animationUrl(pack, clip); }
+
   // --- Account ---
   get isConnected() { return this.account.isConnected; }
   async connectAccount(username, password) { return this.account.login(username, password); }
@@ -60,4 +88,11 @@ export class GameDataClient {
   disconnect() { this.account.logout(); }
 }
 
-export { generateUuid, parseUuid, isValid };
+export {
+  generateUuid, parseUuid, isValid,
+  getRaceCharacterUrl, getRaceCavalryUrl, getRaceSiegeUrl,
+  getRaceMeta, getRaceIds, getAllRaces, getRaceManifest, getRaceData,
+  assetUrl, iconUrl, packIconUrl, modelUrl, effectUrl, shaderUrl,
+  animationUrl, audioUrl, spriteUrl, textureUrl,
+  CDN, RACES, RACE_META,
+};
