@@ -194,6 +194,14 @@
     <div class="section">
       <h2>Recipes</h2>
       <div class="recipe-filters">
+        <select id="filterProf">
+          <option value="">All Professions</option>
+          <option value="Miner">⛏ Miner</option>
+          <option value="Forester">🌲 Forester</option>
+          <option value="Mystic">🔮 Mystic</option>
+          <option value="Chef">👨‍🍳 Chef</option>
+          <option value="Engineer">🔧 Engineer</option>
+        </select>
         <select id="filterTier">
           <option value="">All Tiers</option>
           <option value="1">T1 Common</option>
@@ -211,7 +219,6 @@
           <option value="armor">Armor</option>
           <option value="potion">Potions</option>
           <option value="food">Food</option>
-          <option value="material">Materials</option>
         </select>
         <input type="text" id="searchBox" placeholder="Search recipes...">
       </div>
@@ -225,39 +232,48 @@
     const CDN = 'https://assets.grudge-studio.com';
     const TIER_COLORS = { 1:'#8b7355', 2:'#a8a8a8', 3:'#4a9eff', 4:'#9d4dff', 5:'#ff4d4d', 6:'#ffaa00', 7:'#d4a84b', 8:'#f0d890' };
     const TIER_NAMES = { 1:'Common', 2:'Uncommon', 3:'Rare', 4:'Epic', 5:'Heroic', 6:'Mythic', 7:'Ancient', 8:'Legendary' };
-    let allRecipes = [], allItems = [], itemMap = {};
+    const PROF_COLORS = { Miner:'#d4a84b', Forester:'#49de95', Mystic:'#bb95ff', Chef:'#ffb16d', Engineer:'#7ab3ff' };
+    let allRecipes = [], allItems = [], itemMap = {}, armorMap = {};
     let displayCount = 60;
 
     async function init() {
       try {
-        const [recipeData, itemData] = await Promise.all([
+        const [recipeData, itemData, armorData] = await Promise.all([
           fetch('/data/master-recipes.json').then(r => r.json()),
           fetch('/data/master-items.json').then(r => r.json()),
+          fetch('/data/master-armor.json').then(r => r.json()).catch(() => ({ items: [] })),
         ]);
         allRecipes = recipeData.recipes || [];
         allItems = itemData.items || [];
-        // Build UUID lookup map for item icons
+        // Build UUID lookup maps
         allItems.forEach(i => { itemMap[i.uuid] = i; });
+        (armorData.items || []).forEach(i => { armorMap[i.uuid] = i; });
+        document.querySelector('.header p').textContent =
+          `6 Gathering · 5 Crafting · ${allRecipes.length} Recipes · 8 Tiers · 100 Levels · 22 Milestones`;
         renderRecipes(allRecipes);
       } catch(e) {
         document.getElementById('recipeGrid').innerHTML = '<div class="empty-state">Recipe data will be loaded from the Grudge backend.</div>';
       }
 
+      document.getElementById('filterProf').addEventListener('change', () => { displayCount = 60; applyFilters(); });
       document.getElementById('filterTier').addEventListener('change', () => { displayCount = 60; applyFilters(); });
       document.getElementById('filterType').addEventListener('change', () => { displayCount = 60; applyFilters(); });
       document.getElementById('searchBox').addEventListener('input', () => { displayCount = 60; applyFilters(); });
     }
 
     function applyFilters() {
+      const prof = document.getElementById('filterProf').value;
       const tier = document.getElementById('filterTier').value;
       const type = document.getElementById('filterType').value;
       const search = document.getElementById('searchBox').value.toLowerCase();
       let filtered = allRecipes;
+      if (prof) filtered = filtered.filter(r => r.profession === prof);
       if (tier) filtered = filtered.filter(r => String(r.tier) === tier);
       if (type) filtered = filtered.filter(r => (r.type || r.category || '').toLowerCase().includes(type));
       if (search) filtered = filtered.filter(r =>
         (r.name || '').toLowerCase().includes(search) ||
         (r.resultName || '').toLowerCase().includes(search) ||
+        (r.profession || '').toLowerCase().includes(search) ||
         (r.category || '').toLowerCase().includes(search)
       );
       renderRecipes(filtered);
@@ -275,18 +291,19 @@
       const cardsHtml = visible.map(r => {
         const t = r.tier || 1;
         const color = TIER_COLORS[t] || '#8b7355';
+        const profColor = PROF_COLORS[r.profession] || 'var(--muted)';
         const matsHtml = (r.materials || []).map(m => `${esc(m.name)} x<span>${m.quantity}</span>`).join('<br>');
-        // Resolve result item icon from item UUID
-        const resultItem = r.resultItemId ? itemMap[r.resultItemId] : null;
+        // Resolve result item icon from item UUID — check both item map and armor map
+        const resultItem = r.resultItemId ? (itemMap[r.resultItemId] || armorMap[r.resultItemId]) : null;
         const iconUrl = resultItem?.iconUrl || '';
         const iconHtml = iconUrl
           ? `<img class="recipe-icon" src="${esc(iconUrl)}" alt="${esc(r.resultName || r.name)}" onerror="this.style.display='none'">`
-          : '';
+          : `<div class="recipe-icon" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:24px;opacity:0.3;flex-shrink:0;">🔨</div>`;
         return `<div class="recipe-card inset-panel">
           ${iconHtml}
           <div class="recipe-body">
             <h4><span class="tier-badge" style="background:${color}22;color:${color}">${TIER_NAMES[t] || 'T'+t}</span> ${esc(r.resultName || r.name || 'Unknown')}</h4>
-            <div class="recipe-meta">${esc(r.profession || '')} · ${esc(r.category || '')}</div>
+            <div class="recipe-meta"><span style="color:${profColor}">${esc(r.profession || '')}</span> · ${esc(r.category || '')}${r.slot ? ' · '+esc(r.slot) : ''}</div>
             <div class="mats">${matsHtml || 'Materials TBD'}</div>
           </div>
         </div>`;
