@@ -1,12 +1,14 @@
 # Grudge Warlords — Game Data Hub
 The **Grudge Warlords game data/systems page**. One of several Grudge Studio games, each with its own hub that consumes the shared `ObjectStore` backend. This repo owns the UI and lore for Grudge Warlords specifically; it does not own the item data itself.
 **Live:** [info.grudge-studio.com](https://info.grudge-studio.com)
-**Master backend:** [ObjectStore](https://molochdagod.github.io/ObjectStore) — single source of truth for all games.
+**Master backend:** [ObjectStore](https://objectstore.grudge-studio.com) — single source of truth for all games (Cloudflare R2 + D1).
+**Asset CDN:** [assets.grudge-studio.com](https://assets.grudge-studio.com) — edge-cached delivery of all icons, 3D models, VFX, and static assets.
 ## Architecture (One-Truth / D1 + D6)
-- ObjectStore owns every canonical item, icon, recipe, material, and UUID.
-- This hub fetches from ObjectStore at deploy (build-time prefetch) and re-fetches at runtime to pick up edits without redeploying (runtime revalidate).
+- ObjectStore on Cloudflare (R2 + D1 + Workers) owns every canonical item, icon, recipe, material, and UUID.
+- This hub fetches from `objectstore.grudge-studio.com/api/v1/` at deploy (build-time prefetch) and re-fetches at runtime to pick up edits without redeploying (runtime revalidate).
 - **No static `data/*.json` will be committed here once migration completes.** The current files are a transition artifact that tracks the old generator until the ObjectStore-consumer loader ships.
 - **No generator lives here long-term.** `scripts/generate-master-database.mjs` is scheduled for deletion per plan D6.
+- GitHub Pages (`molochdagod.github.io/ObjectStore`) is retained only as a last-resort fallback in fetch chains.
 ## Features (from ObjectStore)
 - Full master item database with GRUDGE UUIDs (weapons + armor + consumables + artifacts + tomes)
 - Recipe system with materials, profession requirements, and skill-tree unlocks

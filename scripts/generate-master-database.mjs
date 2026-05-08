@@ -63,7 +63,7 @@ function generateUuid(entityType, metadata = '') {
 // ============================================================
 // OBJECTSTORE CDN BASE
 // ============================================================
-const CDN = 'https://molochdagod.github.io/ObjectStore';
+const CDN = 'https://assets.grudge-studio.com';
 const ICON = (path) => `${CDN}/icons/${path}`;
 const PACK_ICON = (path) => `${CDN}/icons/pack/${path}`;
 

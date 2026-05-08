@@ -21,13 +21,15 @@ const OUT_DIR = join(ROOT, 'docs', 'data');
 if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
 
 // Source precedence:
-//   1. raw.githubusercontent.com main branch - always fresh on push, no Pages lag
-//   2. Pages CDN (molochdagod.github.io/ObjectStore) - fallback in case raw is rate-limited
-// We never let a build go out with stale data: if both remotes fail we keep the
+//   1. CF ObjectStore API (primary, always fresh)
+//   2. CF CDN (edge-cached, near-instant)
+//   3. GitHub Pages (legacy fallback)
+// We never let a build go out with stale data: if all remotes fail we keep the
 // committed local copy (docs/data/*.json) so Vercel never ships empty.
 const SOURCES = [
-  'https://raw.githubusercontent.com/MolochDaGod/ObjectStore/main/api/v1',
-  'https://molochdagod.github.io/ObjectStore/api/v1',
+  'https://objectstore.grudge-studio.com/api/v1',
+  'https://assets.grudge-studio.com/api/v1',
+  'https://molochdagod.github.io/ObjectStore/api/v1',  // legacy fallback
 ];
 const FILES = [
   'master-items.json',

@@ -13,7 +13,7 @@
       "tier": 0,
       "emoji": "🪨",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/scrap-ore.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/scrap-ore.png"
     },
     {
       "uuid": "MATL-20260422050330-0008F9-49CAAC32",
@@ -24,7 +24,7 @@
       "tier": 1,
       "emoji": "🪨",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/copper-ore.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/copper-ore.png"
     },
     {
       "uuid": "MATL-20260422050330-0008FA-A96D341F",
@@ -35,7 +35,7 @@
       "tier": 2,
       "emoji": "⛏️",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/iron-ore.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/iron-ore.png"
     },
     {
       "uuid": "MATL-20260422050330-0008FB-3F98C6E6",
@@ -46,7 +46,7 @@
       "tier": 3,
       "emoji": "🔩",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/steel-ore.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/steel-ore.png"
     },
     {
       "uuid": "MATL-20260422050330-0008FC-AB242E18",
@@ -57,7 +57,7 @@
       "tier": 4,
       "emoji": "✨",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/mithril-ore.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/mithril-ore.png"
     },
     {
       "uuid": "MATL-20260422050330-0008FD-964246AB",
@@ -68,7 +68,7 @@
       "tier": 5,
       "emoji": "💎",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/adamantine-ore.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/adamantine-ore.png"
     },
     {
       "uuid": "MATL-20260422050330-0008FE-2272E0F4",
@@ -79,7 +79,7 @@
       "tier": 6,
       "emoji": "🌟",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/orichalcum-ore.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/orichalcum-ore.png"
     },
     {
       "uuid": "MATL-20260422050330-0008FF-5C8CD5AC",
@@ -90,7 +90,7 @@
       "tier": 7,
       "emoji": "☄️",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/starmetal-ore.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/starmetal-ore.png"
     },
     {
       "uuid": "MATL-20260422050330-000900-466839BB",
@@ -101,7 +101,7 @@
       "tier": 8,
       "emoji": "👑",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine-ore.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/divine-ore.png"
     },
     {
       "uuid": "MATL-20260422050330-000901-70F87C79",
@@ -112,7 +112,7 @@
       "tier": 0,
       "emoji": "🟤",
       "gatheredBy": null,
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/scrap-ingot.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/scrap-ingot.png"
     },
     {
       "uuid": "MATL-20260422050330-000902-2D32F8D4",
@@ -123,7 +123,7 @@
       "tier": 1,
       "emoji": "🟫",
       "gatheredBy": null,
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/copper-ingot.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/copper-ingot.png"
     },
     {
       "uuid": "MATL-20260422050330-000903-166AFC78",
@@ -134,7 +134,7 @@
       "tier": 2,
       "emoji": "⬛",
       "gatheredBy": null,
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/iron-ingot.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/iron-ingot.png"
     },
     {
       "uuid": "MATL-20260422050330-000904-58FB2C9F",
@@ -145,7 +145,7 @@
       "tier": 3,
       "emoji": "⬜",
       "gatheredBy": null,
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/steel-ingot.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/steel-ingot.png"
     },
     {
       "uuid": "MATL-20260422050330-000905-EF20DCFC",
@@ -156,7 +156,7 @@
       "tier": 4,
       "emoji": "🔵",
       "gatheredBy": null,
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/mithril-ingot.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/mithril-ingot.png"
     },
     {
       "uuid": "MATL-20260422050330-000906-675A09A3",
@@ -167,7 +167,7 @@
       "tier": 5,
       "emoji": "🟣",
       "gatheredBy": null,
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/adamantine-ingot.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/adamantine-ingot.png"
     },
     {
       "uuid": "MATL-20260422050330-000907-7389D869",
@@ -178,7 +178,7 @@
       "tier": 6,
       "emoji": "🟡",
       "gatheredBy": null,
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/orichalcum-ingot.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/orichalcum-ingot.png"
     },
     {
       "uuid": "MATL-20260422050330-000908-8809563B",
@@ -189,7 +189,7 @@
       "tier": 7,
       "emoji": "⭐",
       "gatheredBy": null,
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/starmetal-ingot.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/starmetal-ingot.png"
     },
     {
       "uuid": "MATL-20260422050330-000909-15038C6F",
@@ -200,7 +200,7 @@
       "tier": 8,
       "emoji": "👑",
       "gatheredBy": null,
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine-ingot.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/divine-ingot.png"
     },
     {
       "uuid": "MATL-20260422050330-00090A-3F16032D",
@@ -211,7 +211,7 @@
       "tier": 0,
       "emoji": "🪵",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/driftwood-log.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/driftwood-log.png"
     },
     {
       "uuid": "MATL-20260422050330-00090B-EFEEC53D",
@@ -222,7 +222,7 @@
       "tier": 1,
       "emoji": "🪵",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/pine-log.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/pine-log.png"
     },
     {
       "uuid": "MATL-20260422050330-00090C-2C6B90CE",
@@ -233,7 +233,7 @@
       "tier": 2,
       "emoji": "🌳",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/oak-log.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/oak-log.png"
     },
     {
       "uuid": "MATL-20260422050330-00090D-E687791E",
@@ -244,7 +244,7 @@
       "tier": 3,
       "emoji": "🍁",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/maple-log.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/maple-log.png"
     },
     {
       "uuid": "MATL-20260422050330-00090E-117F7C64",
@@ -255,7 +255,7 @@
       "tier": 4,
       "emoji": "🌲",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/ash-log.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/ash-log.png"
     },
     {
       "uuid": "MATL-20260422050330-00090F-AF2DBC0A",
@@ -266,7 +266,7 @@
       "tier": 5,
       "emoji": "🪓",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/ironwood-log.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/ironwood-log.png"
     },
     {
       "uuid": "MATL-20260422050330-000910-5E32EE8E",
@@ -277,7 +277,7 @@
       "tier": 6,
       "emoji": "🖤",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/ebony-log.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/ebony-log.png"
     },
     {
       "uuid": "MATL-20260422050330-000911-D447A070",
@@ -288,7 +288,7 @@
       "tier": 7,
       "emoji": "🐉",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/wyrmwood-log.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/wyrmwood-log.png"
     },
     {
       "uuid": "MATL-20260422050330-000912-3A417CB9",
@@ -299,7 +299,7 @@
       "tier": 8,
       "emoji": "🌍",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/worldtree-log.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/worldtree-log.png"
     },
     {
       "uuid": "MATL-20260422050330-000913-C6C87ABA",
@@ -310,7 +310,7 @@
       "tier": 0,
       "emoji": "🧶",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/rag-thread.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/rag-thread.png"
     },
     {
       "uuid": "MATL-20260422050330-000914-687D1E27",
@@ -321,7 +321,7 @@
       "tier": 1,
       "emoji": "🧵",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/linen-thread.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/linen-thread.png"
     },
     {
       "uuid": "MATL-20260422050330-000915-E4E8326D",
@@ -332,7 +332,7 @@
       "tier": 2,
       "emoji": "🐑",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/wool-thread.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/wool-thread.png"
     },
     {
       "uuid": "MATL-20260422050330-000916-24F6C20D",
@@ -343,7 +343,7 @@
       "tier": 3,
       "emoji": "☁️",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/cotton-thread.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/cotton-thread.png"
     },
     {
       "uuid": "MATL-20260422050330-000917-EB69AA70",
@@ -354,7 +354,7 @@
       "tier": 4,
       "emoji": "🕸️",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/silk-thread.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/silk-thread.png"
     },
     {
       "uuid": "MATL-20260422050330-000918-639916EB",
@@ -365,7 +365,7 @@
       "tier": 5,
       "emoji": "🌙",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/moonweave-thread.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/moonweave-thread.png"
     },
     {
       "uuid": "MATL-20260422050330-000919-C7D5F7D1",
@@ -376,7 +376,7 @@
       "tier": 6,
       "emoji": "⭐",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/starweave-thread.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/starweave-thread.png"
     },
     {
       "uuid": "MATL-20260422050330-00091A-DE8A28BB",
@@ -387,7 +387,7 @@
       "tier": 7,
       "emoji": "🕳️",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/voidweave-thread.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/voidweave-thread.png"
     },
     {
       "uuid": "MATL-20260422050330-00091B-492B114C",
@@ -398,7 +398,7 @@
       "tier": 8,
       "emoji": "✨",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine-thread.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/divine-thread.png"
     },
     {
       "uuid": "MATL-20260422050330-00091C-BFA96E4A",
@@ -409,7 +409,7 @@
       "tier": 0,
       "emoji": "🥩",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/scraps-leather.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/scraps-leather.png"
     },
     {
       "uuid": "MATL-20260422050330-00091D-A7694BEF",
@@ -420,7 +420,7 @@
       "tier": 1,
       "emoji": "🦴",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/rawhide.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/rawhide.png"
     },
     {
       "uuid": "MATL-20260422050330-00091E-A6B4FBCC",
@@ -431,7 +431,7 @@
       "tier": 2,
       "emoji": "🐂",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/thick-hide.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/thick-hide.png"
     },
     {
       "uuid": "MATL-20260422050330-00091F-D121E3B5",
@@ -442,7 +442,7 @@
       "tier": 3,
       "emoji": "🧥",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/rugged-leather.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/rugged-leather.png"
     },
     {
       "uuid": "MATL-20260422050330-000920-ACA68046",
@@ -453,7 +453,7 @@
       "tier": 4,
       "emoji": "🛡️",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/hardened-leather.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/hardened-leather.png"
     },
     {
       "uuid": "MATL-20260422050330-000921-EF8AFFFC",
@@ -464,7 +464,7 @@
       "tier": 5,
       "emoji": "🐲",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/wyrm-leather.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/wyrm-leather.png"
     },
     {
       "uuid": "MATL-20260422050330-000922-A85B30AD",
@@ -475,7 +475,7 @@
       "tier": 6,
       "emoji": "😈",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/infernal-leather.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/infernal-leather.png"
     },
     {
       "uuid": "MATL-20260422050330-000923-089E9EC8",
@@ -486,7 +486,7 @@
       "tier": 7,
       "emoji": "🦣",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/titan-leather.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/titan-leather.png"
     },
     {
       "uuid": "MATL-20260422050330-000924-D4D7795C",
@@ -497,7 +497,7 @@
       "tier": 8,
       "emoji": "👼",
       "gatheredBy": "Forester",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine-leather.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/divine-leather.png"
     },
     {
       "uuid": "MATL-20260422050330-000925-C51811B5",
@@ -508,7 +508,7 @@
       "tier": 0,
       "emoji": "💨",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/faint-essence.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/faint-essence.png"
     },
     {
       "uuid": "MATL-20260422050330-000926-E6AF4AFB",
@@ -519,7 +519,7 @@
       "tier": 1,
       "emoji": "💧",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/minor-essence.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/minor-essence.png"
     },
     {
       "uuid": "MATL-20260422050330-000927-D973F8EC",
@@ -530,7 +530,7 @@
       "tier": 2,
       "emoji": "💙",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/lesser-essence.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/lesser-essence.png"
     },
     {
       "uuid": "MATL-20260422050330-000928-2D0E2E86",
@@ -541,7 +541,7 @@
       "tier": 3,
       "emoji": "💜",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/greater-essence.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/greater-essence.png"
     },
     {
       "uuid": "MATL-20260422050330-000929-F06B3487",
@@ -552,7 +552,7 @@
       "tier": 4,
       "emoji": "🔮",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/superior-essence.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/superior-essence.png"
     },
     {
       "uuid": "MATL-20260422050330-00092A-585916C8",
@@ -563,7 +563,7 @@
       "tier": 5,
       "emoji": "⚗️",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/refined-essence.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/refined-essence.png"
     },
     {
       "uuid": "MATL-20260422050330-00092B-06DA32E1",
@@ -574,7 +574,7 @@
       "tier": 6,
       "emoji": "💎",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/perfect-essence.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/perfect-essence.png"
     },
     {
       "uuid": "MATL-20260422050330-00092C-0DB5BA6F",
@@ -585,7 +585,7 @@
       "tier": 7,
       "emoji": "🌀",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/ancient-essence.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/ancient-essence.png"
     },
     {
       "uuid": "MATL-20260422050330-00092D-10CDBCE4",
@@ -596,7 +596,7 @@
       "tier": 8,
       "emoji": "👑",
       "gatheredBy": "Mystic",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine-essence.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/divine-essence.png"
     },
     {
       "uuid": "MATL-20260422050330-00092E-BC2D87B7",
@@ -607,7 +607,7 @@
       "tier": 0,
       "emoji": "⚪",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/pebble-gem.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/pebble-gem.png"
     },
     {
       "uuid": "MATL-20260422050330-00092F-B9466733",
@@ -618,7 +618,7 @@
       "tier": 1,
       "emoji": "💠",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/rough-gem.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/rough-gem.png"
     },
     {
       "uuid": "MATL-20260422050330-000930-84211BE5",
@@ -629,7 +629,7 @@
       "tier": 2,
       "emoji": "🔷",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/flawed-gem.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/flawed-gem.png"
     },
     {
       "uuid": "MATL-20260422050330-000931-58D29EE8",
@@ -640,7 +640,7 @@
       "tier": 3,
       "emoji": "🔶",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/standard-gem.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/standard-gem.png"
     },
     {
       "uuid": "MATL-20260422050330-000932-B99FD8B1",
@@ -651,7 +651,7 @@
       "tier": 4,
       "emoji": "💎",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/fine-gem.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/fine-gem.png"
     },
     {
       "uuid": "MATL-20260422050330-000933-285A36D5",
@@ -662,7 +662,7 @@
       "tier": 5,
       "emoji": "♦️",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/pristine-gem.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/pristine-gem.png"
     },
     {
       "uuid": "MATL-20260422050330-000934-A5BB110B",
@@ -673,7 +673,7 @@
       "tier": 6,
       "emoji": "🌟",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/flawless-gem.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/flawless-gem.png"
     },
     {
       "uuid": "MATL-20260422050330-000935-DF2889A3",
@@ -684,7 +684,7 @@
       "tier": 7,
       "emoji": "✨",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/radiant-gem.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/radiant-gem.png"
     },
     {
       "uuid": "MATL-20260422050330-000936-B00B00B3",
@@ -695,7 +695,7 @@
       "tier": 8,
       "emoji": "👑",
       "gatheredBy": "Miner",
-      "iconUrl": "https://molochdagod.github.io/ObjectStore/icons/materials/divine-gem.png"
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/divine-gem.png"
     }
   ]
 }

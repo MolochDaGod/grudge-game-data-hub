@@ -155,9 +155,16 @@
 <div class="eq-tooltip" id="eqTooltip"></div>
 
 <script>
-  const CDN = 'https://molochdagod.github.io/ObjectStore';
+  const CDN = 'https://assets.grudge-studio.com';
+  const API_SOURCES = [
+    'https://objectstore.grudge-studio.com/api/v1',
+    'https://assets.grudge-studio.com/api/v1',
+    '/data',  // local build-time prefetch fallback
+  ];
   const TABS = ['Equipment','Attributes','Skills','Crafting','Quests'];
-  let activeTab = 'Equipment', allItems = [], allRecipes = [], allAttributes = [], allMaterials = [];
+  let activeTab = 'Equipment';
+  let allItems = [], allRecipes = [], allAttributes = [], allMaterials = [];
+  let allProfessions = [], allSkillTrees = [], allWeaponSkills = [], allArtifacts = [];
 
   // Equipment slot definitions — 6 per side, matching ItemBrowser armor slots
   const LEFT_SLOTS  = ['Helm','Shoulder','Chest','Legs','Boots','Belt'];
@@ -189,13 +196,13 @@
   // Base stats before gear
   const BASE_STATS = { health:250, mana:100, stamina:100, damage:0, defense:0, speed:1.0, crit:0, block:0 };
 
-  // Profession data (5 harvesting professions)
-  const PROFESSIONS = [
-    { name:'Miner', color:'var(--miner)', level:3, xp:45, icon:`${CDN}/icons/pack/weapons/Hammer_01.png` },
-    { name:'Forester', color:'var(--forester)', level:2, xp:60, icon:`${CDN}/icons/pack/weapons/Bow_01.png` },
-    { name:'Mystic', color:'var(--mystic)', level:1, xp:20, icon:`${CDN}/icons/pack/weapons/Staff_01.png` },
-    { name:'Chef', color:'var(--chef)', level:4, xp:80, icon:`${CDN}/icons/pack/misc/Burns.png` },
-    { name:'Engineer', color:'var(--engineer)', level:1, xp:10, icon:`${CDN}/icons/pack/weapons/Crossbow_01.png` },
+  // Profession data — loaded from master-professions.json, demo fallback
+  const PROFESSION_FALLBACK = [
+    { name:'Miner', color:'var(--miner)', level:3, xp:45, iconUrl:`${CDN}/icons/pack/weapons/Hammer_01.png` },
+    { name:'Forester', color:'var(--forester)', level:2, xp:60, iconUrl:`${CDN}/icons/pack/weapons/Bow_01.png` },
+    { name:'Mystic', color:'var(--mystic)', level:1, xp:20, iconUrl:`${CDN}/icons/pack/weapons/Staff_01.png` },
+    { name:'Chef', color:'var(--chef)', level:4, xp:80, iconUrl:`${CDN}/icons/pack/misc/Burns.png` },
+    { name:'Engineer', color:'var(--engineer)', level:1, xp:10, iconUrl:`${CDN}/icons/pack/weapons/Crossbow_01.png` },
   ];
 
   // Runtime icon URL fixer — remaps legacy broken paths to real ObjectStore paths
@@ -215,21 +222,42 @@
   function findItemByUuid(uuid) { return allItems.find(i => i.uuid === uuid); }
   function findAnyItem(uuid) { return findItemByUuid(uuid) || allMaterials.find(m => m.uuid === uuid); }
 
+  // ── API Fetch with CF-first fallback ─────────────────────────────────
+  async function fetchJSON(filename) {
+    for (const base of API_SOURCES) {
+      try {
+        const res = await fetch(`${base}/${filename}`);
+        if (!res.ok) continue;
+        return await res.json();
+      } catch { continue; }
+    }
+    return null;
+  }
+
   // ── Init ────────────────────────────────────────────────────────────
   async function init() {
     try {
-      const [itemsRes, recipesRes, attrsRes, matsRes] = await Promise.all([
-        fetch('/data/master-items.json').then(r => { if(!r.ok) throw new Error('items '+r.status); return r.json(); }),
-        fetch('/data/master-recipes.json').then(r => { if(!r.ok) throw new Error('recipes '+r.status); return r.json(); }),
-        fetch('/data/master-attributes.json').then(r => { if(!r.ok) throw new Error('attrs '+r.status); return r.json(); }).catch(() => null),
-        fetch('/data/master-materials.json').then(r => { if(!r.ok) throw new Error('mats '+r.status); return r.json(); }).catch(() => null),
+      const [itemsRes, recipesRes, attrsRes, matsRes, profsRes, skillsRes, wpnSkillsRes, artsRes] = await Promise.all([
+        fetchJSON('master-items.json'),
+        fetchJSON('master-recipes.json'),
+        fetchJSON('master-attributes.json'),
+        fetchJSON('master-materials.json'),
+        fetchJSON('master-professions.json'),
+        fetchJSON('master-skillTrees.json'),
+        fetchJSON('master-weaponSkills.json'),
+        fetchJSON('master-artifacts.json'),
       ]);
-      allItems = itemsRes.items || [];
-      allRecipes = recipesRes.recipes || [];
+      allItems = itemsRes?.items || [];
+      allRecipes = recipesRes?.recipes || [];
       allAttributes = attrsRes?.attributes || [];
       allMaterials = matsRes?.materials || [];
+      allProfessions = profsRes?.professions || profsRes?.gathering?.concat?.(profsRes?.crafting || []) || [];
+      allSkillTrees = skillsRes?.classes || skillsRes?.skillTrees || [];
+      allWeaponSkills = wpnSkillsRes?.weaponTypes || wpnSkillsRes?.weapons || [];
+      allArtifacts = artsRes?.artifacts || [];
+      if (!allItems.length) showError('No items loaded — ObjectStore API may be unreachable.');
     } catch (err) {
-      showError('Failed to load game data: ' + err.message + '. Check /data/ files.');
+      showError('Failed to load game data: ' + err.message);
     }
 
     autoEquipDemo();
@@ -281,6 +309,7 @@
   // ── Left Column: Stats + Professions ────────────────────────────────
   function renderLeftCol() {
     const stats = computeStats();
+    const profs = allProfessions.length ? allProfessions : PROFESSION_FALLBACK;
     const col = document.getElementById('leftCol');
     col.innerHTML = `
       <div class="section-title">Combat Stats</div>
@@ -292,17 +321,33 @@
       <div class="stat-row"><span class="k">Defense</span><span class="v">${stats.defense}</span></div>
       <div class="stat-row"><span class="k">Block %</span><span class="v">${stats.block}%</span></div>
       <div class="stat-row"><span class="k">Speed</span><span class="v">${stats.speed.toFixed(1)}</span></div>
-      <div class="section-title" style="margin-top:20px;">Professions</div>
-      ${PROFESSIONS.map(p => `
-        <div class="prof-row">
-          <img src="${p.icon}" alt="${p.name}" style="width:16px;height:16px;object-fit:contain;image-rendering:pixelated;" onerror="this.style.display='none'">
-          <span class="prof-name">${p.name}</span>
-          <div class="prof-bar"><div class="prof-fill" style="width:${p.xp}%;background:${p.color};"></div></div>
-          <span class="prof-lv">${p.level}</span>
-        </div>
-      `).join('')}
+      <div class="section-title" style="margin-top:20px;">Professions (${profs.length})</div>
+      ${profs.map(p => {
+        const icon = p.iconUrl || p.icon || '';
+        const name = p.name || p.professionName || 'Unknown';
+        const level = p.level || 1;
+        const xp = p.xp || Math.min(level * 15, 100);
+        const color = p.color || 'var(--gold)';
+        return `<div class="prof-row">
+          <img src="${icon}" alt="${name}" style="width:16px;height:16px;object-fit:contain;image-rendering:pixelated;" onerror="this.style.display='none'">
+          <span class="prof-name">${name}</span>
+          <div class="prof-bar"><div class="prof-fill" style="width:${xp}%;background:${color};"></div></div>
+          <span class="prof-lv">${level}</span>
+        </div>`;
+      }).join('')}
       <div class="section-title" style="margin-top:20px;">Equipped</div>
       <div style="font-size:10px;color:var(--dim);">${Object.keys(equippedItems).length} / ${ALL_SLOTS.length} slots filled</div>
+      <div class="section-title" style="margin-top:20px;">Data Sources</div>
+      <div style="font-size:9px;color:var(--dim);line-height:1.6;">
+        Items: ${allItems.length}<br>
+        Recipes: ${allRecipes.length}<br>
+        Materials: ${allMaterials.length}<br>
+        Attributes: ${allAttributes.length}<br>
+        Professions: ${allProfessions.length}<br>
+        Class Trees: ${allSkillTrees.length}<br>
+        Weapon Skills: ${allWeaponSkills.length}<br>
+        Artifacts: ${allArtifacts.length}
+      </div>
     `;
   }
 
@@ -474,7 +519,7 @@
     } else if (activeTab === 'Crafting') {
       area.innerHTML = renderCraftingTab();
     } else if (activeTab === 'Skills') {
-      area.innerHTML = `<div class="section-title">Weapon Skill Trees</div><p style="color:var(--muted)">Skill trees loaded from master data — ${allItems.filter(i=>i.type==='weapon').length} weapons available</p>`;
+      area.innerHTML = renderSkillsTab();
     } else if (activeTab === 'Quests') {
       area.innerHTML = `<div class="section-title">Active Quests</div><p style="color:var(--muted)">Connect to Grudge backend to view quests</p>`;
     } else {
@@ -507,7 +552,7 @@
         <div class="eq-sum-item"><div class="eq-sum-val">${stats.block}%</div><div class="eq-sum-lbl">Block</div></div>
         <div class="eq-sum-item"><div class="eq-sum-val">${stats.speed.toFixed(1)}</div><div class="eq-sum-lbl">Speed</div></div>
       </div>
-      <div style="text-align:center;margin-top:10px;font-size:10px;color:var(--dim);">Click equipped slot to unequip &middot; Click inventory item to equip &middot; <a href="https://objectstore.vercel.app/ItemBrowser" target="_blank" rel="noopener" style="font-size:10px;">Item Browser &#8599;</a></div>
+      <div style="text-align:center;margin-top:10px;font-size:10px;color:var(--dim);">Click equipped slot to unequip &middot; Click inventory item to equip &middot; <a href="https://assets.grudge-studio.com/ItemBrowser.html" target="_blank" rel="noopener" style="font-size:10px;">Item Browser &#8599;</a></div>
     `;
   }
 
@@ -699,6 +744,88 @@
     }
 
     return h;
+  }
+
+  // ── Skills Tab: Class Skill Trees + Weapon Skills ───────────────────
+  function renderSkillsTab() {
+    let html = '';
+
+    // Class skill trees
+    if (allSkillTrees.length) {
+      html += `<div class="section-title">Class Skill Trees (${allSkillTrees.length} classes)</div>`;
+      allSkillTrees.forEach(cls => {
+        const name = cls.className || cls.name || 'Unknown';
+        const skills = cls.skills || cls.nodes || [];
+        html += `<div style="padding:12px;margin-bottom:8px;background:#1e1510;border-radius:8px;border-left:3px solid var(--gold);">`;
+        html += `<div style="font-weight:700;font-size:13px;color:var(--gold);font-family:var(--font-display);">${esc(name)}</div>`;
+        html += `<div style="font-size:10px;color:var(--muted);margin:4px 0 8px;">${skills.length} skills</div>`;
+        html += `<div style="display:flex;flex-wrap:wrap;gap:4px;">`;
+        skills.forEach(sk => {
+          const skName = sk.name || sk.skillName || 'Skill';
+          const tier = sk.tier || sk.unlockLevel || 1;
+          const tc = TIER_COLORS[Math.min(tier, 8)] || '#3a2a1a';
+          const icon = sk.iconUrl || '';
+          html += `<div style="display:flex;align-items:center;gap:4px;padding:4px 8px;background:rgba(0,0,0,0.3);border-radius:6px;border:1px solid ${tc};font-size:10px;" title="${esc(sk.description || skName)}">`;
+          if (icon) html += `<img src="${esc(icon)}" style="width:16px;height:16px;object-fit:contain;image-rendering:pixelated;" onerror="this.style.display='none'">`;
+          html += `<span style="color:${tc};">${esc(skName)}</span></div>`;
+        });
+        html += `</div></div>`;
+      });
+    } else {
+      html += `<div class="section-title">Class Skill Trees</div><p style="color:var(--muted);font-size:11px;">No class skill tree data loaded from ObjectStore API.</p>`;
+    }
+
+    // Weapon skills
+    if (allWeaponSkills.length) {
+      html += `<div class="section-title" style="margin-top:20px;">Weapon Skills (${allWeaponSkills.length} weapon types)</div>`;
+      allWeaponSkills.forEach(wt => {
+        const name = wt.weaponType || wt.name || 'Unknown';
+        const skills = wt.skills || wt.nodes || [];
+        const classes = wt.allowedClasses || wt.classRestrictions || [];
+        html += `<div style="padding:10px;margin-bottom:6px;background:#1e1510;border-radius:8px;border-left:3px solid #4a9eff;">`;
+        html += `<div style="font-weight:700;font-size:12px;">${esc(name)}</div>`;
+        html += `<div style="font-size:9px;color:var(--muted);margin:2px 0 6px;">${skills.length} skills`;
+        if (classes.length) html += ` · Classes: ${classes.map(c => esc(c)).join(', ')}`;
+        html += `</div>`;
+        html += `<div style="display:flex;flex-wrap:wrap;gap:3px;">`;
+        skills.slice(0, 12).forEach(sk => {
+          const skName = sk.name || sk.skillName || 'Skill';
+          const icon = sk.iconUrl || '';
+          html += `<div style="padding:3px 6px;background:rgba(74,158,255,0.1);border-radius:4px;font-size:9px;color:#4a9eff;" title="${esc(sk.description || skName)}">`;
+          if (icon) html += `<img src="${esc(icon)}" style="width:12px;height:12px;object-fit:contain;vertical-align:middle;margin-right:2px;" onerror="this.style.display='none'">`;
+          html += `${esc(skName)}</div>`;
+        });
+        if (skills.length > 12) html += `<div style="padding:3px 6px;font-size:9px;color:var(--dim);">+${skills.length - 12} more</div>`;
+        html += `</div></div>`;
+      });
+    } else {
+      html += `<div class="section-title" style="margin-top:20px;">Weapon Skills</div><p style="color:var(--muted);font-size:11px;">No weapon skill data loaded.</p>`;
+    }
+
+    // Artifacts
+    if (allArtifacts.length) {
+      html += `<div class="section-title" style="margin-top:20px;">Artifacts (${allArtifacts.length})</div>`;
+      allArtifacts.forEach(art => {
+        const name = art.name || 'Unknown Artifact';
+        const hidden = art.hiddenUntilFound;
+        html += `<div style="padding:10px;margin-bottom:6px;background:#1e1510;border-radius:8px;border-left:3px solid #f0d890;">`;
+        if (hidden) {
+          html += `<div style="font-weight:700;font-size:12px;color:var(--dim);">??? Hidden Artifact</div>`;
+          html += `<div style="font-size:10px;color:var(--dim);font-style:italic;">Discover this artifact in the world</div>`;
+        } else {
+          html += `<div style="font-weight:700;font-size:12px;color:#f0d890;">${esc(name)}</div>`;
+          if (art.description) html += `<div style="font-size:10px;color:var(--muted);margin-top:4px;">${esc(art.description)}</div>`;
+        }
+        html += `</div>`;
+      });
+    }
+
+    // Summary
+    const totalWeapons = allItems.filter(i => i.type === 'weapon').length;
+    html += `<div style="margin-top:16px;padding:10px;background:rgba(0,0,0,0.2);border-radius:6px;font-size:10px;color:var(--dim);text-align:center;">`;
+    html += `${totalWeapons} weapons · ${allSkillTrees.length} class trees · ${allWeaponSkills.length} weapon types · ${allArtifacts.length} artifacts`;
+    html += `<br>Source: <a href="https://objectstore.grudge-studio.com/api/v1/" style="font-size:10px;">objectstore.grudge-studio.com</a></div>`;
+    return html;
   }
 
   init();
