@@ -1,8 +1,8 @@
 {
   "version": "3.0.0",
   "generated": "2026-04-22T10:03:30.499Z",
-  "total": 132,
-  "totalRecipes": 132,
+  "total": 383,
+  "totalRecipes": 383,
   "recipes": [
     {
       "uuid": "RECP-20260422050330-00093A-C538A9D7",
@@ -2680,6 +2680,5356 @@
         {
           "uuid": "MATL-20260422050330-000AFE-74206C29",
           "name": "Oil",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100001-06AE4D9C",
+      "name": "Craft Bloodfeud Blade",
+      "resultItemId": "ITEM-20260422050330-000001-E168AE2A",
+      "resultName": "Bloodfeud Blade",
+      "profession": "Miner",
+      "category": "swords",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100004-B212F794",
+      "name": "Craft Wraithfang",
+      "resultItemId": "ITEM-20260422050330-00000A-10AF604E",
+      "resultName": "Wraithfang",
+      "profession": "Miner",
+      "category": "swords",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100005-19258034",
+      "name": "Craft Oathbreaker",
+      "resultItemId": "ITEM-20260422050330-000013-037B71FB",
+      "resultName": "Oathbreaker",
+      "profession": "Miner",
+      "category": "swords",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100006-A7BB7D3D",
+      "name": "Craft Kinrend",
+      "resultItemId": "ITEM-20260422050330-00001C-EEF10012",
+      "resultName": "Kinrend",
+      "profession": "Miner",
+      "category": "swords",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100007-35ADBE93",
+      "name": "Craft Dusksinger",
+      "resultItemId": "ITEM-20260422050330-000025-5DAD3551",
+      "resultName": "Dusksinger",
+      "profession": "Miner",
+      "category": "swords",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100008-AF2038C2",
+      "name": "Craft Emberclad",
+      "resultItemId": "ITEM-20260422050330-00002E-32974133",
+      "resultName": "Emberclad",
+      "profession": "Miner",
+      "category": "swords",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100009-A6134D51",
+      "name": "Craft Gorehowl",
+      "resultItemId": "ITEM-20260422050330-000037-6BAD00D8",
+      "resultName": "Gorehowl",
+      "profession": "Miner",
+      "category": "axes1h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10000B-FF5E8AEC",
+      "name": "Craft Skullsplitter",
+      "resultItemId": "ITEM-20260422050330-000040-9AFFD65D",
+      "resultName": "Skullsplitter",
+      "profession": "Miner",
+      "category": "axes1h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10000C-A145A9B0",
+      "name": "Craft Veinreaver",
+      "resultItemId": "ITEM-20260422050330-000049-C1BBD5B3",
+      "resultName": "Veinreaver",
+      "profession": "Miner",
+      "category": "axes1h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10000D-104F104A",
+      "name": "Craft Ironmaw",
+      "resultItemId": "ITEM-20260422050330-000052-C9D772C4",
+      "resultName": "Ironmaw",
+      "profession": "Miner",
+      "category": "axes1h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10000E-DF2A3FE5",
+      "name": "Craft Dreadcleaver",
+      "resultItemId": "ITEM-20260422050330-00005B-14FCA0BC",
+      "resultName": "Dreadcleaver",
+      "profession": "Miner",
+      "category": "axes1h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10000F-BC36B0AB",
+      "name": "Craft Bonehew",
+      "resultItemId": "ITEM-20260422050330-000064-E3BB973F",
+      "resultName": "Bonehew",
+      "profession": "Miner",
+      "category": "axes1h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100010-E9F26075",
+      "name": "Craft Bloodshiv",
+      "resultItemId": "ITEM-20260422050330-00006D-0F41EBB8",
+      "resultName": "Bloodshiv",
+      "profession": "Miner",
+      "category": "daggers",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100011-A0284281",
+      "name": "Craft Wraithclaw",
+      "resultItemId": "ITEM-20260422050330-000076-898F4A6C",
+      "resultName": "Wraithclaw",
+      "profession": "Miner",
+      "category": "daggers",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100012-16140C6A",
+      "name": "Craft Emberfang",
+      "resultItemId": "ITEM-20260422050330-00007F-10D92689",
+      "resultName": "Emberfang",
+      "profession": "Miner",
+      "category": "daggers",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100013-79FECF43",
+      "name": "Craft Ironspike",
+      "resultItemId": "ITEM-20260422050330-000088-2B8940BC",
+      "resultName": "Ironspike",
+      "profession": "Miner",
+      "category": "daggers",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100014-C2C19BDE",
+      "name": "Craft Nightfang",
+      "resultItemId": "ITEM-20260422050330-000091-0CAB3D64",
+      "resultName": "Nightfang",
+      "profession": "Miner",
+      "category": "daggers",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100015-CA90A1BC",
+      "name": "Craft Duskblade",
+      "resultItemId": "ITEM-20260422050330-00009A-8688DB8E",
+      "resultName": "Duskblade",
+      "profession": "Miner",
+      "category": "daggers",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100016-FBC4F47F",
+      "name": "Craft Doomspire",
+      "resultItemId": "ITEM-20260422050330-0000A3-CFFA1DD1",
+      "resultName": "Doomspire",
+      "profession": "Miner",
+      "category": "greatswords",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 8
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100017-AA62FC2C",
+      "name": "Craft Bloodspire",
+      "resultItemId": "ITEM-20260422050330-0000AC-8628A81E",
+      "resultName": "Bloodspire",
+      "profession": "Miner",
+      "category": "greatswords",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 8
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100018-D23911DF",
+      "name": "Craft Wraithblade",
+      "resultItemId": "ITEM-20260422050330-0000B5-AF7522E3",
+      "resultName": "Wraithblade",
+      "profession": "Miner",
+      "category": "greatswords",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 8
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100019-B6D099E7",
+      "name": "Craft Emberbrand",
+      "resultItemId": "ITEM-20260422050330-0000BE-29533DB2",
+      "resultName": "Emberbrand",
+      "profession": "Miner",
+      "category": "greatswords",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 8
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10001A-C01F63DE",
+      "name": "Craft Ironedge",
+      "resultItemId": "ITEM-20260422050330-0000C7-8C318581",
+      "resultName": "Ironedge",
+      "profession": "Miner",
+      "category": "greatswords",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 8
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10001B-6C427798",
+      "name": "Craft Duskbringer",
+      "resultItemId": "ITEM-20260422050330-0000D0-B800950D",
+      "resultName": "Duskbringer",
+      "profession": "Miner",
+      "category": "greatswords",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 8
+        },
+        {
+          "uuid": "MATL-20260508030000-100003-F4D011A4",
+          "name": "Leather",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10001C-2B559BDB",
+      "name": "Craft Skullsunder",
+      "resultItemId": "ITEM-20260422050330-0000D9-FBDD2CBE",
+      "resultName": "Skullsunder",
+      "profession": "Miner",
+      "category": "greataxes",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 5
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10001D-F8CE5DAD",
+      "name": "Craft Bloodreaver",
+      "resultItemId": "ITEM-20260422050330-0000E2-12168965",
+      "resultName": "Bloodreaver",
+      "profession": "Miner",
+      "category": "greataxes",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 5
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10001E-60FA6889",
+      "name": "Craft Wraithhew",
+      "resultItemId": "ITEM-20260422050330-0000EB-B3A0BF3F",
+      "resultName": "Wraithhew",
+      "profession": "Miner",
+      "category": "greataxes",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 5
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10001F-DD54B2B2",
+      "name": "Craft Embermaul",
+      "resultItemId": "ITEM-20260422050330-0000F4-9167FBBF",
+      "resultName": "Embermaul",
+      "profession": "Miner",
+      "category": "greataxes",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 5
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100020-F2A0DD8D",
+      "name": "Craft Ironrend",
+      "resultItemId": "ITEM-20260422050330-0000FD-23E92755",
+      "resultName": "Ironrend",
+      "profession": "Miner",
+      "category": "greataxes",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 5
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100021-57A497CA",
+      "name": "Craft Dusksplitter",
+      "resultItemId": "ITEM-20260422050330-000106-4EBCC211",
+      "resultName": "Dusksplitter",
+      "profession": "Miner",
+      "category": "greataxes",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 5
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100022-98E33956",
+      "name": "Craft Grudgehammer",
+      "resultItemId": "ITEM-20260422050330-00010F-AAC94E26",
+      "resultName": "Grudgehammer",
+      "profession": "Miner",
+      "category": "hammers1h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 5
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100023-A11745EE",
+      "name": "Craft Oathcrusher",
+      "resultItemId": "ITEM-20260422050330-000118-55A01E7B",
+      "resultName": "Oathcrusher",
+      "profession": "Miner",
+      "category": "hammers1h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 5
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100024-CFE7610F",
+      "name": "Craft Bloodmaul",
+      "resultItemId": "ITEM-20260422050330-000121-BF46BD86",
+      "resultName": "Bloodmaul",
+      "profession": "Miner",
+      "category": "hammers1h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 5
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100025-DA307B74",
+      "name": "Craft Ironbreak",
+      "resultItemId": "ITEM-20260422050330-00012A-4D22C9C8",
+      "resultName": "Ironbreak",
+      "profession": "Miner",
+      "category": "hammers1h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 5
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100026-FF02A887",
+      "name": "Craft Wrathpound",
+      "resultItemId": "ITEM-20260422050330-000133-CCD44034",
+      "resultName": "Wrathpound",
+      "profession": "Miner",
+      "category": "hammers1h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 5
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100027-1D7B4A0F",
+      "name": "Craft Emberpound",
+      "resultItemId": "ITEM-20260422050330-00013C-D799F632",
+      "resultName": "Emberpound",
+      "profession": "Miner",
+      "category": "hammers1h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 5
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100028-291DF02F",
+      "name": "Craft Titanmaul",
+      "resultItemId": "ITEM-20260422050330-000145-A6D66595",
+      "resultName": "Titanmaul",
+      "profession": "Miner",
+      "category": "hammers2h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 6
+        },
+        {
+          "uuid": "MATL-20260508030000-100029-D18FA43E",
+          "name": "Stone",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10002A-FF118C14",
+      "name": "Craft Doomhammer",
+      "resultItemId": "ITEM-20260422050330-00014E-E6B23450",
+      "resultName": "Doomhammer",
+      "profession": "Miner",
+      "category": "hammers2h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 6
+        },
+        {
+          "uuid": "MATL-20260508030000-100029-D18FA43E",
+          "name": "Stone",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10002B-96016D64",
+      "name": "Craft Wrathquake",
+      "resultItemId": "ITEM-20260422050330-000157-626ACB84",
+      "resultName": "Wrathquake",
+      "profession": "Miner",
+      "category": "hammers2h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 6
+        },
+        {
+          "uuid": "MATL-20260508030000-100029-D18FA43E",
+          "name": "Stone",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10002C-3DC53044",
+      "name": "Craft Bloodpound",
+      "resultItemId": "ITEM-20260422050330-000160-DE2B2AB7",
+      "resultName": "Bloodpound",
+      "profession": "Miner",
+      "category": "hammers2h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 6
+        },
+        {
+          "uuid": "MATL-20260508030000-100029-D18FA43E",
+          "name": "Stone",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10002D-6BA4D130",
+      "name": "Craft Ironcrush",
+      "resultItemId": "ITEM-20260422050330-000169-7A971061",
+      "resultName": "Ironcrush",
+      "profession": "Miner",
+      "category": "hammers2h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 6
+        },
+        {
+          "uuid": "MATL-20260508030000-100029-D18FA43E",
+          "name": "Stone",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10002E-28E21309",
+      "name": "Craft Embershatter",
+      "resultItemId": "ITEM-20260422050330-000172-AE9CC3F3",
+      "resultName": "Embershatter",
+      "profession": "Miner",
+      "category": "hammers2h",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 6
+        },
+        {
+          "uuid": "MATL-20260508030000-100029-D18FA43E",
+          "name": "Stone",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10002F-ADCA9232",
+      "name": "Craft Iron Pike",
+      "resultItemId": "ITEM-20260422050330-00017B-E75318F7",
+      "resultName": "Iron Pike",
+      "profession": "Miner",
+      "category": "spears",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100030-5F6B8502",
+      "name": "Craft Steel Lance",
+      "resultItemId": "ITEM-20260422050330-000184-8E5FFB99",
+      "resultName": "Steel Lance",
+      "profession": "Miner",
+      "category": "spears",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100031-7D46EBFB",
+      "name": "Craft Mithril Javelin",
+      "resultItemId": "ITEM-20260422050330-00018D-B0DC7E1C",
+      "resultName": "Mithril Javelin",
+      "profession": "Miner",
+      "category": "spears",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100032-4A52CD14",
+      "name": "Craft Bloodspear",
+      "resultItemId": "ITEM-20260422050330-000196-1BA3E6BE",
+      "resultName": "Bloodspear",
+      "profession": "Miner",
+      "category": "spears",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100033-077B79E4",
+      "name": "Craft Voidpiercer",
+      "resultItemId": "ITEM-20260422050330-00019F-71D2D9D1",
+      "resultName": "Voidpiercer",
+      "profession": "Miner",
+      "category": "spears",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100034-1A74844C",
+      "name": "Craft Divine Trident",
+      "resultItemId": "ITEM-20260422050330-0001A8-CC88902E",
+      "resultName": "Divine Trident",
+      "profession": "Miner",
+      "category": "spears",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100035-CFB3EF89",
+      "name": "Craft Wraithbone Bow",
+      "resultItemId": "ITEM-20260422050330-0001B1-F52D77CE",
+      "resultName": "Wraithbone Bow",
+      "profession": "Forester",
+      "category": "bows",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-100036-2F97C08D",
+          "name": "String",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100037-9E408F61",
+      "name": "Craft Bloodstring Bow",
+      "resultItemId": "ITEM-20260422050330-0001BA-777DF448",
+      "resultName": "Bloodstring Bow",
+      "profession": "Forester",
+      "category": "bows",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-100036-2F97C08D",
+          "name": "String",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100038-39B29B9C",
+      "name": "Craft Shadowflight",
+      "resultItemId": "ITEM-20260422050330-0001C3-85EA06AB",
+      "resultName": "Shadowflight",
+      "profession": "Forester",
+      "category": "bows",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-100036-2F97C08D",
+          "name": "String",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100039-C3DF0B9B",
+      "name": "Craft Emberthorn Bow",
+      "resultItemId": "ITEM-20260422050330-0001CC-5DCA3359",
+      "resultName": "Emberthorn Bow",
+      "profession": "Forester",
+      "category": "bows",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-100036-2F97C08D",
+          "name": "String",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10003A-C3FF657C",
+      "name": "Craft Ironvine Bow",
+      "resultItemId": "ITEM-20260422050330-0001D5-33022415",
+      "resultName": "Ironvine Bow",
+      "profession": "Forester",
+      "category": "bows",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-100036-2F97C08D",
+          "name": "String",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10003B-3B8D0042",
+      "name": "Craft Duskreaver Bow",
+      "resultItemId": "ITEM-20260422050330-0001DE-8F29DB3D",
+      "resultName": "Duskreaver Bow",
+      "profession": "Forester",
+      "category": "bows",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-100036-2F97C08D",
+          "name": "String",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10003C-FF3987BA",
+      "name": "Craft Ironveil Repeater",
+      "resultItemId": "ITEM-20260422050330-0001E7-7B67CB3A",
+      "resultName": "Ironveil Repeater",
+      "profession": "Engineer",
+      "category": "crossbows",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10003D-963347E9",
+      "name": "Craft Skullpiercer",
+      "resultItemId": "ITEM-20260422050330-0001F0-2B42C31F",
+      "resultName": "Skullpiercer",
+      "profession": "Engineer",
+      "category": "crossbows",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10003E-7ACD67FF",
+      "name": "Craft Bloodreaver Xbow",
+      "resultItemId": "ITEM-20260422050330-0001F9-0401C836",
+      "resultName": "Bloodreaver Xbow",
+      "profession": "Engineer",
+      "category": "crossbows",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10003F-99ACF79E",
+      "name": "Craft Wraithspike",
+      "resultItemId": "ITEM-20260422050330-000202-485FED8A",
+      "resultName": "Wraithspike",
+      "profession": "Engineer",
+      "category": "crossbows",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100040-94A31799",
+      "name": "Craft Emberbolt",
+      "resultItemId": "ITEM-20260422050330-00020B-977B6235",
+      "resultName": "Emberbolt",
+      "profession": "Engineer",
+      "category": "crossbows",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100041-59FF2DDD",
+      "name": "Craft Ironshard",
+      "resultItemId": "ITEM-20260422050330-000214-9F5A7AAD",
+      "resultName": "Ironshard",
+      "profession": "Engineer",
+      "category": "crossbows",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100042-6867D3F2",
+      "name": "Craft Blackpowder Blaster",
+      "resultItemId": "ITEM-20260422050330-00021D-71982BDF",
+      "resultName": "Blackpowder Blaster",
+      "profession": "Engineer",
+      "category": "guns",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100043-3D362592",
+          "name": "Powder",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100044-304C2AF7",
+      "name": "Craft Ironstorm Gun",
+      "resultItemId": "ITEM-20260422050330-000226-FA4DCC7D",
+      "resultName": "Ironstorm Gun",
+      "profession": "Engineer",
+      "category": "guns",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100043-3D362592",
+          "name": "Powder",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100045-5F5EB147",
+      "name": "Craft Bloodcannon",
+      "resultItemId": "ITEM-20260422050330-00022F-267446AD",
+      "resultName": "Bloodcannon",
+      "profession": "Engineer",
+      "category": "guns",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100043-3D362592",
+          "name": "Powder",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100046-0E1B4A2E",
+      "name": "Craft Wraithbarrel",
+      "resultItemId": "ITEM-20260422050330-000238-E241268C",
+      "resultName": "Wraithbarrel",
+      "profession": "Engineer",
+      "category": "guns",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100043-3D362592",
+          "name": "Powder",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100047-D159E404",
+      "name": "Craft Emberrifle",
+      "resultItemId": "ITEM-20260422050330-000241-7ABEC64D",
+      "resultName": "Emberrifle",
+      "profession": "Engineer",
+      "category": "guns",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100043-3D362592",
+          "name": "Powder",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100048-EE9C91F8",
+      "name": "Craft Duskblaster",
+      "resultItemId": "ITEM-20260422050330-00024A-358EFCD4",
+      "resultName": "Duskblaster",
+      "profession": "Engineer",
+      "category": "guns",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100043-3D362592",
+          "name": "Powder",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100049-27AD5524",
+      "name": "Craft Emberwrath Staff",
+      "resultItemId": "ITEM-20260422050330-000253-681E9BC3",
+      "resultName": "Emberwrath Staff",
+      "profession": "Mystic",
+      "category": "fireStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10004A-5D4AAC23",
+          "name": "Fire Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10004B-241601C4",
+      "name": "Craft Sunfire Staff",
+      "resultItemId": "ITEM-20260422050330-00025C-6532A9A4",
+      "resultName": "Sunfire Staff",
+      "profession": "Mystic",
+      "category": "fireStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10004A-5D4AAC23",
+          "name": "Fire Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10004C-CC119C4F",
+      "name": "Craft Inferno Spire",
+      "resultItemId": "ITEM-20260422050330-000265-CA7DE144",
+      "resultName": "Inferno Spire",
+      "profession": "Mystic",
+      "category": "fireStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10004A-5D4AAC23",
+          "name": "Fire Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10004D-425EDEA8",
+      "name": "Craft Ash Grudge",
+      "resultItemId": "ITEM-20260422050330-00026E-54988AD4",
+      "resultName": "Ash Grudge",
+      "profession": "Mystic",
+      "category": "fireStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10004A-5D4AAC23",
+          "name": "Fire Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10004E-5A9AA8E3",
+      "name": "Craft Ember Heart",
+      "resultItemId": "ITEM-20260422050330-000277-5C82C6D1",
+      "resultName": "Ember Heart",
+      "profession": "Mystic",
+      "category": "fireStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10004A-5D4AAC23",
+          "name": "Fire Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10004F-73913F74",
+      "name": "Craft Blazing Wrath",
+      "resultItemId": "ITEM-20260422050330-000280-84BB39DE",
+      "resultName": "Blazing Wrath",
+      "profession": "Mystic",
+      "category": "fireStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10004A-5D4AAC23",
+          "name": "Fire Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100050-CBC8134E",
+      "name": "Craft Glacial Spire",
+      "resultItemId": "ITEM-20260422050330-000289-2B02477B",
+      "resultName": "Glacial Spire",
+      "profession": "Mystic",
+      "category": "frostStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100051-70195B2A",
+          "name": "Frost Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100052-FA2B525B",
+      "name": "Craft Frostbite Staff",
+      "resultItemId": "ITEM-20260422050330-000292-6CF259A5",
+      "resultName": "Frostbite Staff",
+      "profession": "Mystic",
+      "category": "frostStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100051-70195B2A",
+          "name": "Frost Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100053-BB384127",
+      "name": "Craft Winter Grudge",
+      "resultItemId": "ITEM-20260422050330-00029B-95E99088",
+      "resultName": "Winter Grudge",
+      "profession": "Mystic",
+      "category": "frostStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100051-70195B2A",
+          "name": "Frost Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100054-46A25753",
+      "name": "Craft Ice Warden",
+      "resultItemId": "ITEM-20260422050330-0002A4-DB9DE9BB",
+      "resultName": "Ice Warden",
+      "profession": "Mystic",
+      "category": "frostStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100051-70195B2A",
+          "name": "Frost Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100055-8F4F4314",
+      "name": "Craft Blizzard Heart",
+      "resultItemId": "ITEM-20260422050330-0002AD-075FEAA1",
+      "resultName": "Blizzard Heart",
+      "profession": "Mystic",
+      "category": "frostStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100051-70195B2A",
+          "name": "Frost Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100056-0368E992",
+      "name": "Craft Frozen Spite",
+      "resultItemId": "ITEM-20260422050330-0002B6-13C638F2",
+      "resultName": "Frozen Spite",
+      "profession": "Mystic",
+      "category": "frostStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100051-70195B2A",
+          "name": "Frost Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100057-2241D2F1",
+      "name": "Craft Dawnspire",
+      "resultItemId": "ITEM-20260422050330-0002BF-4CE958D7",
+      "resultName": "Dawnspire",
+      "profession": "Mystic",
+      "category": "holyStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100058-5A25B2FF",
+          "name": "Holy Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100059-A038662E",
+      "name": "Craft Redemption Staff",
+      "resultItemId": "ITEM-20260422050330-0002C8-A417A2DF",
+      "resultName": "Redemption Staff",
+      "profession": "Mystic",
+      "category": "holyStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100058-5A25B2FF",
+          "name": "Holy Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10005A-41C88E84",
+      "name": "Craft Sacred Light",
+      "resultItemId": "ITEM-20260422050330-0002D1-F1DDF206",
+      "resultName": "Sacred Light",
+      "profession": "Mystic",
+      "category": "holyStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100058-5A25B2FF",
+          "name": "Holy Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10005B-7C5B84DB",
+      "name": "Craft Holy Wrath",
+      "resultItemId": "ITEM-20260422050330-0002DA-A7CBBB7D",
+      "resultName": "Holy Wrath",
+      "profession": "Mystic",
+      "category": "holyStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100058-5A25B2FF",
+          "name": "Holy Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10005C-2DC68EAC",
+      "name": "Craft Celestial Grace",
+      "resultItemId": "ITEM-20260422050330-0002E3-72F9C8A6",
+      "resultName": "Celestial Grace",
+      "profession": "Mystic",
+      "category": "holyStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100058-5A25B2FF",
+          "name": "Holy Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10005D-1C7C1F11",
+      "name": "Craft Divine Judgment",
+      "resultItemId": "ITEM-20260422050330-0002EC-764697ED",
+      "resultName": "Divine Judgment",
+      "profession": "Mystic",
+      "category": "holyStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100058-5A25B2FF",
+          "name": "Holy Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10005E-3CD60A02",
+      "name": "Craft Stormwrath",
+      "resultItemId": "ITEM-20260422050330-0002F5-B9650924",
+      "resultName": "Stormwrath",
+      "profession": "Mystic",
+      "category": "lightningStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10005F-56F4309D",
+          "name": "Storm Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100060-BB39AA11",
+      "name": "Craft Tempest Spire",
+      "resultItemId": "ITEM-20260422050330-0002FE-87F2CFA2",
+      "resultName": "Tempest Spire",
+      "profession": "Mystic",
+      "category": "lightningStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10005F-56F4309D",
+          "name": "Storm Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100061-2FE169AA",
+      "name": "Craft Shock Grudge",
+      "resultItemId": "ITEM-20260422050330-000307-DA8FD9F8",
+      "resultName": "Shock Grudge",
+      "profession": "Mystic",
+      "category": "lightningStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10005F-56F4309D",
+          "name": "Storm Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100062-544D05F6",
+      "name": "Craft Voltaic Heart",
+      "resultItemId": "ITEM-20260422050330-000310-AE6E6C75",
+      "resultName": "Voltaic Heart",
+      "profession": "Mystic",
+      "category": "lightningStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10005F-56F4309D",
+          "name": "Storm Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100063-781C0C9E",
+      "name": "Craft Thunder Spire",
+      "resultItemId": "ITEM-20260422050330-000319-41786FCC",
+      "resultName": "Thunder Spire",
+      "profession": "Mystic",
+      "category": "lightningStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-10005F-56F4309D",
+          "name": "Storm Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100064-06EE2B17",
+      "name": "Craft Verdant Wrath",
+      "resultItemId": "ITEM-20260422050330-00032E-C192B131",
+      "resultName": "Verdant Wrath",
+      "profession": "Mystic",
+      "category": "natureStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100065-A7FADE65",
+          "name": "Nature Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100066-E7796F57",
+      "name": "Craft Thorn Grudge",
+      "resultItemId": "ITEM-20260422050330-000337-4C80945E",
+      "resultName": "Thorn Grudge",
+      "profession": "Mystic",
+      "category": "natureStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100065-A7FADE65",
+          "name": "Nature Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100067-88853A24",
+      "name": "Craft Wild Oathbreaker",
+      "resultItemId": "ITEM-20260422050330-000340-959E4753",
+      "resultName": "Wild Oathbreaker",
+      "profession": "Mystic",
+      "category": "natureStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100065-A7FADE65",
+          "name": "Nature Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100068-8A5B63A9",
+      "name": "Craft Grove Guardian",
+      "resultItemId": "ITEM-20260422050330-000349-A694ED5A",
+      "resultName": "Grove Guardian",
+      "profession": "Mystic",
+      "category": "natureStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100065-A7FADE65",
+          "name": "Nature Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100069-04719466",
+      "name": "Craft Blossom Fury",
+      "resultItemId": "ITEM-20260422050330-000352-20F6BDBA",
+      "resultName": "Blossom Fury",
+      "profession": "Mystic",
+      "category": "natureStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100065-A7FADE65",
+          "name": "Nature Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10006A-F12ADD5C",
+      "name": "Craft Root Warden",
+      "resultItemId": "ITEM-20260422050330-00035B-FA336028",
+      "resultName": "Root Warden",
+      "profession": "Mystic",
+      "category": "natureStaves",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100065-A7FADE65",
+          "name": "Nature Essence",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10006B-4EDDED9F",
+      "name": "Craft Mining Pick",
+      "resultItemId": "ITEM-20260422050330-000364-B9466951",
+      "resultName": "Mining Pick",
+      "profession": "Engineer",
+      "category": "tools",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10006C-60B8CC4A",
+      "name": "Craft Lumber Axe",
+      "resultItemId": "ITEM-20260422050330-00036D-6003D1A7",
+      "resultName": "Lumber Axe",
+      "profession": "Engineer",
+      "category": "tools",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10006D-4F8619B3",
+      "name": "Craft Skinning Knife",
+      "resultItemId": "ITEM-20260422050330-000376-DD25AB2F",
+      "resultName": "Skinning Knife",
+      "profession": "Engineer",
+      "category": "tools",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10006E-72273740",
+      "name": "Craft Harvesting Sickle",
+      "resultItemId": "ITEM-20260422050330-00037F-AE2A7A9F",
+      "resultName": "Harvesting Sickle",
+      "profession": "Engineer",
+      "category": "tools",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10006F-6ECAAC5E",
+      "name": "Craft Fishing Rod",
+      "resultItemId": "ITEM-20260422050330-000388-D4E05D8B",
+      "resultName": "Fishing Rod",
+      "profession": "Engineer",
+      "category": "tools",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100070-1E2BFCFB",
+      "name": "Craft Engineer's Toolkit",
+      "resultItemId": "ITEM-20260422050330-000391-2F3947FC",
+      "resultName": "Engineer's Toolkit",
+      "profession": "Engineer",
+      "category": "tools",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100002-AF4D1C7B",
+          "name": "Iron Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-10000A-B4B03130",
+          "name": "Wood",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100071-E7F83962",
+      "name": "Craft Bloodfeud Helm",
+      "resultItemId": "ITEM-20260422050330-0003B2-6FF1F6BD",
+      "resultName": "Bloodfeud Helm",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Helm",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100074-FE7765DC",
+      "name": "Craft Bloodfeud Shoulder",
+      "resultItemId": "ITEM-20260422050330-0003BB-2D58A735",
+      "resultName": "Bloodfeud Shoulder",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Shoulder",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100075-1FA9156F",
+      "name": "Craft Bloodfeud Chest",
+      "resultItemId": "ITEM-20260422050330-0003C4-F22A8D4C",
+      "resultName": "Bloodfeud Chest",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Chest",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100076-6D979312",
+      "name": "Craft Bloodfeud Hands",
+      "resultItemId": "ITEM-20260422050330-0003CD-D22B6B03",
+      "resultName": "Bloodfeud Hands",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Hands",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100077-A6535A1A",
+      "name": "Craft Bloodfeud Feet",
+      "resultItemId": "ITEM-20260422050330-0003D6-AE13EAFB",
+      "resultName": "Bloodfeud Feet",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Feet",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100078-38EF4B2A",
+      "name": "Craft Bloodfeud Ring",
+      "resultItemId": "ITEM-20260422050330-0003DF-700AC21D",
+      "resultName": "Bloodfeud Ring",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Ring",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100079-A6E45065",
+      "name": "Craft Bloodfeud Necklace",
+      "resultItemId": "ITEM-20260422050330-0003E8-90A2045C",
+      "resultName": "Bloodfeud Necklace",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Necklace",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10007A-0E525653",
+      "name": "Craft Bloodfeud Relic",
+      "resultItemId": "ITEM-20260422050330-0003F1-34EF340A",
+      "resultName": "Bloodfeud Relic",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Relic",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10007B-3ED59772",
+      "name": "Craft Wraithfang Helm",
+      "resultItemId": "ITEM-20260422050330-0003FA-FC50751E",
+      "resultName": "Wraithfang Helm",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Helm",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10007C-11B8FF79",
+      "name": "Craft Wraithfang Shoulder",
+      "resultItemId": "ITEM-20260422050330-000403-3A4AFF44",
+      "resultName": "Wraithfang Shoulder",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Shoulder",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10007D-1766D9EA",
+      "name": "Craft Wraithfang Chest",
+      "resultItemId": "ITEM-20260422050330-00040C-090F92C6",
+      "resultName": "Wraithfang Chest",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Chest",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10007E-BDBFDFFC",
+      "name": "Craft Wraithfang Hands",
+      "resultItemId": "ITEM-20260422050330-000415-95654FEF",
+      "resultName": "Wraithfang Hands",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Hands",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10007F-C6B3432C",
+      "name": "Craft Wraithfang Feet",
+      "resultItemId": "ITEM-20260422050330-00041E-4D239CC8",
+      "resultName": "Wraithfang Feet",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Feet",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100080-7CE9ED18",
+      "name": "Craft Wraithfang Ring",
+      "resultItemId": "ITEM-20260422050330-000427-15393FC5",
+      "resultName": "Wraithfang Ring",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Ring",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100081-7BC21F99",
+      "name": "Craft Wraithfang Necklace",
+      "resultItemId": "ITEM-20260422050330-000430-83399FBD",
+      "resultName": "Wraithfang Necklace",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Necklace",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100082-CEADAE01",
+      "name": "Craft Wraithfang Relic",
+      "resultItemId": "ITEM-20260422050330-000439-BB36EFED",
+      "resultName": "Wraithfang Relic",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Relic",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100083-49288808",
+      "name": "Craft Oathbreaker Helm",
+      "resultItemId": "ITEM-20260422050330-000442-BC8A58A2",
+      "resultName": "Oathbreaker Helm",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Helm",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100084-494CB01A",
+      "name": "Craft Oathbreaker Shoulder",
+      "resultItemId": "ITEM-20260422050330-00044B-5A4F90B0",
+      "resultName": "Oathbreaker Shoulder",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Shoulder",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100085-AB294710",
+      "name": "Craft Oathbreaker Chest",
+      "resultItemId": "ITEM-20260422050330-000454-DA9838BD",
+      "resultName": "Oathbreaker Chest",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Chest",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100086-450F6DAA",
+      "name": "Craft Oathbreaker Hands",
+      "resultItemId": "ITEM-20260422050330-00045D-B7353671",
+      "resultName": "Oathbreaker Hands",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Hands",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100087-81EBDCC4",
+      "name": "Craft Oathbreaker Feet",
+      "resultItemId": "ITEM-20260422050330-000466-3AF5B12A",
+      "resultName": "Oathbreaker Feet",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Feet",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100088-B6451D0A",
+      "name": "Craft Oathbreaker Ring",
+      "resultItemId": "ITEM-20260422050330-00046F-0C24EB75",
+      "resultName": "Oathbreaker Ring",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Ring",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100089-6BA8C7F7",
+      "name": "Craft Oathbreaker Necklace",
+      "resultItemId": "ITEM-20260422050330-000478-3A8E9A71",
+      "resultName": "Oathbreaker Necklace",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Necklace",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10008A-A12AE343",
+      "name": "Craft Oathbreaker Relic",
+      "resultItemId": "ITEM-20260422050330-000481-4A37BFD1",
+      "resultName": "Oathbreaker Relic",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Relic",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10008B-429A676F",
+      "name": "Craft Kinrend Helm",
+      "resultItemId": "ITEM-20260422050330-00048A-2BC73F75",
+      "resultName": "Kinrend Helm",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Helm",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10008C-703CD32D",
+      "name": "Craft Kinrend Shoulder",
+      "resultItemId": "ITEM-20260422050330-000493-9C59FDC4",
+      "resultName": "Kinrend Shoulder",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Shoulder",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10008D-CD9A828E",
+      "name": "Craft Kinrend Chest",
+      "resultItemId": "ITEM-20260422050330-00049C-BD692111",
+      "resultName": "Kinrend Chest",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Chest",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10008E-383742BE",
+      "name": "Craft Kinrend Hands",
+      "resultItemId": "ITEM-20260422050330-0004A5-EE518970",
+      "resultName": "Kinrend Hands",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Hands",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10008F-F5D07E95",
+      "name": "Craft Kinrend Feet",
+      "resultItemId": "ITEM-20260422050330-0004AE-5F613CE7",
+      "resultName": "Kinrend Feet",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Feet",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100090-1BFE9084",
+      "name": "Craft Kinrend Ring",
+      "resultItemId": "ITEM-20260422050330-0004B7-0E60C805",
+      "resultName": "Kinrend Ring",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Ring",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100091-8AC89A7E",
+      "name": "Craft Kinrend Necklace",
+      "resultItemId": "ITEM-20260422050330-0004C0-20434C9B",
+      "resultName": "Kinrend Necklace",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Necklace",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100092-127B8BC6",
+      "name": "Craft Kinrend Relic",
+      "resultItemId": "ITEM-20260422050330-0004C9-435D2C92",
+      "resultName": "Kinrend Relic",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Relic",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100093-5B57FBB3",
+      "name": "Craft Dusksinger Helm",
+      "resultItemId": "ITEM-20260422050330-0004D2-822FB9A6",
+      "resultName": "Dusksinger Helm",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Helm",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100094-6A8252F2",
+      "name": "Craft Dusksinger Shoulder",
+      "resultItemId": "ITEM-20260422050330-0004DB-420CBE2B",
+      "resultName": "Dusksinger Shoulder",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Shoulder",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100095-6F61B180",
+      "name": "Craft Dusksinger Chest",
+      "resultItemId": "ITEM-20260422050330-0004E4-F6FF9F8A",
+      "resultName": "Dusksinger Chest",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Chest",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100096-9FB4B55C",
+      "name": "Craft Dusksinger Hands",
+      "resultItemId": "ITEM-20260422050330-0004ED-70532122",
+      "resultName": "Dusksinger Hands",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Hands",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100097-E722B7B6",
+      "name": "Craft Dusksinger Feet",
+      "resultItemId": "ITEM-20260422050330-0004F6-0BCF4538",
+      "resultName": "Dusksinger Feet",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Feet",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100098-7F60D5C6",
+      "name": "Craft Dusksinger Ring",
+      "resultItemId": "ITEM-20260422050330-0004FF-D94B8E04",
+      "resultName": "Dusksinger Ring",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Ring",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100099-3D24BA5C",
+      "name": "Craft Dusksinger Necklace",
+      "resultItemId": "ITEM-20260422050330-000508-071496E8",
+      "resultName": "Dusksinger Necklace",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Necklace",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10009A-0C51B50C",
+      "name": "Craft Dusksinger Relic",
+      "resultItemId": "ITEM-20260422050330-000511-2A1A7A11",
+      "resultName": "Dusksinger Relic",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Relic",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10009B-454494A0",
+      "name": "Craft Emberclad Helm",
+      "resultItemId": "ITEM-20260422050330-00051A-53B22A9C",
+      "resultName": "Emberclad Helm",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Helm",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10009C-35D92285",
+      "name": "Craft Emberclad Shoulder",
+      "resultItemId": "ITEM-20260422050330-000523-301B122E",
+      "resultName": "Emberclad Shoulder",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Shoulder",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10009D-31D15382",
+      "name": "Craft Emberclad Chest",
+      "resultItemId": "ITEM-20260422050330-00052C-9C8961B5",
+      "resultName": "Emberclad Chest",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Chest",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10009E-023F3CD1",
+      "name": "Craft Emberclad Hands",
+      "resultItemId": "ITEM-20260422050330-000535-AB893EEE",
+      "resultName": "Emberclad Hands",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Hands",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10009F-C35BC77F",
+      "name": "Craft Emberclad Feet",
+      "resultItemId": "ITEM-20260422050330-00053E-B5F48C34",
+      "resultName": "Emberclad Feet",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Feet",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000A0-7A0F4FE2",
+      "name": "Craft Emberclad Ring",
+      "resultItemId": "ITEM-20260422050330-000547-2FD0FAFC",
+      "resultName": "Emberclad Ring",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Ring",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000A1-85318F1C",
+      "name": "Craft Emberclad Necklace",
+      "resultItemId": "ITEM-20260422050330-000550-01260BEE",
+      "resultName": "Emberclad Necklace",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Necklace",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000A2-9D729688",
+      "name": "Craft Emberclad Relic",
+      "resultItemId": "ITEM-20260422050330-000559-F9DEDA62",
+      "resultName": "Emberclad Relic",
+      "profession": "Mystic",
+      "category": "armor-cloth",
+      "slot": "Relic",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100072-F154A63D",
+          "name": "Linen Cloth",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100073-F6EA2B19",
+          "name": "Thread",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000A3-15D9EB7B",
+      "name": "Craft Bloodfeud Helm",
+      "resultItemId": "ITEM-20260422050330-000562-847E48EF",
+      "resultName": "Bloodfeud Helm",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Helm",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000A6-F3754AFC",
+      "name": "Craft Bloodfeud Shoulder",
+      "resultItemId": "ITEM-20260422050330-00056B-FF8A56CD",
+      "resultName": "Bloodfeud Shoulder",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Shoulder",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000A7-158B1DBF",
+      "name": "Craft Bloodfeud Chest",
+      "resultItemId": "ITEM-20260422050330-000574-CBFD75C2",
+      "resultName": "Bloodfeud Chest",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Chest",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000A8-C1558376",
+      "name": "Craft Bloodfeud Hands",
+      "resultItemId": "ITEM-20260422050330-00057D-47F98957",
+      "resultName": "Bloodfeud Hands",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Hands",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000A9-D2BAD171",
+      "name": "Craft Bloodfeud Feet",
+      "resultItemId": "ITEM-20260422050330-000586-D4009DEA",
+      "resultName": "Bloodfeud Feet",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Feet",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000AA-0F9BAC8F",
+      "name": "Craft Bloodfeud Ring",
+      "resultItemId": "ITEM-20260422050330-00058F-C6A857EE",
+      "resultName": "Bloodfeud Ring",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Ring",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000AB-C92C91FA",
+      "name": "Craft Bloodfeud Necklace",
+      "resultItemId": "ITEM-20260422050330-000598-CC4FD194",
+      "resultName": "Bloodfeud Necklace",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Necklace",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000AC-D7505F8B",
+      "name": "Craft Bloodfeud Relic",
+      "resultItemId": "ITEM-20260422050330-0005A1-A293D3E2",
+      "resultName": "Bloodfeud Relic",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Relic",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000AD-B8BE590F",
+      "name": "Craft Wraithfang Helm",
+      "resultItemId": "ITEM-20260422050330-0005AA-02306C00",
+      "resultName": "Wraithfang Helm",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Helm",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000AE-B08CD7C0",
+      "name": "Craft Wraithfang Shoulder",
+      "resultItemId": "ITEM-20260422050330-0005B3-1E31C48A",
+      "resultName": "Wraithfang Shoulder",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Shoulder",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000AF-16FD4F54",
+      "name": "Craft Wraithfang Chest",
+      "resultItemId": "ITEM-20260422050330-0005BC-29CB3F2C",
+      "resultName": "Wraithfang Chest",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Chest",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000B0-32401398",
+      "name": "Craft Wraithfang Hands",
+      "resultItemId": "ITEM-20260422050330-0005C5-980B6B1D",
+      "resultName": "Wraithfang Hands",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Hands",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000B1-87EA2F5C",
+      "name": "Craft Wraithfang Feet",
+      "resultItemId": "ITEM-20260422050330-0005CE-4B09C08F",
+      "resultName": "Wraithfang Feet",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Feet",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000B2-7431F7F1",
+      "name": "Craft Wraithfang Ring",
+      "resultItemId": "ITEM-20260422050330-0005D7-86C209D4",
+      "resultName": "Wraithfang Ring",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Ring",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000B3-E306ACE0",
+      "name": "Craft Wraithfang Necklace",
+      "resultItemId": "ITEM-20260422050330-0005E0-324FD478",
+      "resultName": "Wraithfang Necklace",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Necklace",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000B4-F7D7D56A",
+      "name": "Craft Wraithfang Relic",
+      "resultItemId": "ITEM-20260422050330-0005E9-848BAE75",
+      "resultName": "Wraithfang Relic",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Relic",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000B5-F04DC910",
+      "name": "Craft Oathbreaker Helm",
+      "resultItemId": "ITEM-20260422050330-0005F2-64E9E6DE",
+      "resultName": "Oathbreaker Helm",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Helm",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000B6-03C11BF6",
+      "name": "Craft Oathbreaker Shoulder",
+      "resultItemId": "ITEM-20260422050330-0005FB-5ED47F81",
+      "resultName": "Oathbreaker Shoulder",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Shoulder",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000B7-77D5EC91",
+      "name": "Craft Oathbreaker Chest",
+      "resultItemId": "ITEM-20260422050330-000604-FE9D7EEC",
+      "resultName": "Oathbreaker Chest",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Chest",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000B8-0E3D58EF",
+      "name": "Craft Oathbreaker Hands",
+      "resultItemId": "ITEM-20260422050330-00060D-6B3B2480",
+      "resultName": "Oathbreaker Hands",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Hands",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000B9-495FD087",
+      "name": "Craft Oathbreaker Feet",
+      "resultItemId": "ITEM-20260422050330-000616-00803373",
+      "resultName": "Oathbreaker Feet",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Feet",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000BA-CC4E7195",
+      "name": "Craft Oathbreaker Ring",
+      "resultItemId": "ITEM-20260422050330-00061F-F926ED05",
+      "resultName": "Oathbreaker Ring",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Ring",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000BB-848050CD",
+      "name": "Craft Oathbreaker Necklace",
+      "resultItemId": "ITEM-20260422050330-000628-C5FCEC3D",
+      "resultName": "Oathbreaker Necklace",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Necklace",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000BC-B7189902",
+      "name": "Craft Oathbreaker Relic",
+      "resultItemId": "ITEM-20260422050330-000631-5CABD320",
+      "resultName": "Oathbreaker Relic",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Relic",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000BD-D1324FB0",
+      "name": "Craft Kinrend Helm",
+      "resultItemId": "ITEM-20260422050330-00063A-F79AEA1E",
+      "resultName": "Kinrend Helm",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Helm",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000BE-055C8496",
+      "name": "Craft Kinrend Shoulder",
+      "resultItemId": "ITEM-20260422050330-000643-27B07852",
+      "resultName": "Kinrend Shoulder",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Shoulder",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000BF-F934FBAF",
+      "name": "Craft Kinrend Chest",
+      "resultItemId": "ITEM-20260422050330-00064C-24C38138",
+      "resultName": "Kinrend Chest",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Chest",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000C0-01CAAF98",
+      "name": "Craft Kinrend Hands",
+      "resultItemId": "ITEM-20260422050330-000655-B8AE1248",
+      "resultName": "Kinrend Hands",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Hands",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000C1-0F13F5CF",
+      "name": "Craft Kinrend Feet",
+      "resultItemId": "ITEM-20260422050330-00065E-B6335000",
+      "resultName": "Kinrend Feet",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Feet",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000C2-28AFE7E8",
+      "name": "Craft Kinrend Ring",
+      "resultItemId": "ITEM-20260422050330-000667-321912E0",
+      "resultName": "Kinrend Ring",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Ring",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000C3-360020F7",
+      "name": "Craft Kinrend Necklace",
+      "resultItemId": "ITEM-20260422050330-000670-95793D66",
+      "resultName": "Kinrend Necklace",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Necklace",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000C4-B93DB435",
+      "name": "Craft Kinrend Relic",
+      "resultItemId": "ITEM-20260422050330-000679-A491C033",
+      "resultName": "Kinrend Relic",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Relic",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000C5-ADA04D9D",
+      "name": "Craft Dusksinger Helm",
+      "resultItemId": "ITEM-20260422050330-000682-B17552B2",
+      "resultName": "Dusksinger Helm",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Helm",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000C6-4EF3203E",
+      "name": "Craft Dusksinger Shoulder",
+      "resultItemId": "ITEM-20260422050330-00068B-4E869CC4",
+      "resultName": "Dusksinger Shoulder",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Shoulder",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000C7-829F8497",
+      "name": "Craft Dusksinger Chest",
+      "resultItemId": "ITEM-20260422050330-000694-36CF818F",
+      "resultName": "Dusksinger Chest",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Chest",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000C8-D0D81A35",
+      "name": "Craft Dusksinger Hands",
+      "resultItemId": "ITEM-20260422050330-00069D-9EB2CCF0",
+      "resultName": "Dusksinger Hands",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Hands",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000C9-75B20A2F",
+      "name": "Craft Dusksinger Feet",
+      "resultItemId": "ITEM-20260422050330-0006A6-5AC6A388",
+      "resultName": "Dusksinger Feet",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Feet",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000CA-8BE1C5C7",
+      "name": "Craft Dusksinger Ring",
+      "resultItemId": "ITEM-20260422050330-0006AF-4985D851",
+      "resultName": "Dusksinger Ring",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Ring",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000CB-AA0EDE38",
+      "name": "Craft Dusksinger Necklace",
+      "resultItemId": "ITEM-20260422050330-0006B8-BABFDEC3",
+      "resultName": "Dusksinger Necklace",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Necklace",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000CC-19997DF7",
+      "name": "Craft Dusksinger Relic",
+      "resultItemId": "ITEM-20260422050330-0006C1-38402415",
+      "resultName": "Dusksinger Relic",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Relic",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000CD-095612AD",
+      "name": "Craft Emberclad Helm",
+      "resultItemId": "ITEM-20260422050330-0006CA-79B21B7E",
+      "resultName": "Emberclad Helm",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Helm",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000CE-DC08B527",
+      "name": "Craft Emberclad Shoulder",
+      "resultItemId": "ITEM-20260422050330-0006D3-AC006711",
+      "resultName": "Emberclad Shoulder",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Shoulder",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000CF-0813C91F",
+      "name": "Craft Emberclad Chest",
+      "resultItemId": "ITEM-20260422050330-0006DC-28222308",
+      "resultName": "Emberclad Chest",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Chest",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000D0-D5808B63",
+      "name": "Craft Emberclad Hands",
+      "resultItemId": "ITEM-20260422050330-0006E5-CFA34788",
+      "resultName": "Emberclad Hands",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Hands",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000D1-7D910EF6",
+      "name": "Craft Emberclad Feet",
+      "resultItemId": "ITEM-20260422050330-0006EE-3B5573D5",
+      "resultName": "Emberclad Feet",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Feet",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000D2-C4493D6A",
+      "name": "Craft Emberclad Ring",
+      "resultItemId": "ITEM-20260422050330-0006F7-6DD8B75E",
+      "resultName": "Emberclad Ring",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Ring",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000D3-114EE1F1",
+      "name": "Craft Emberclad Necklace",
+      "resultItemId": "ITEM-20260422050330-000700-2B8F7AE1",
+      "resultName": "Emberclad Necklace",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Necklace",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000D4-AD172185",
+      "name": "Craft Emberclad Relic",
+      "resultItemId": "ITEM-20260422050330-000709-6ADE03F6",
+      "resultName": "Emberclad Relic",
+      "profession": "Forester",
+      "category": "armor-leather",
+      "slot": "Relic",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+          "name": "Cured Leather",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-1000A5-CED1384E",
+          "name": "Tanning Agent",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000D5-05303E34",
+      "name": "Craft Bloodfeud Helm",
+      "resultItemId": "ITEM-20260422050330-000712-BF3FB4FE",
+      "resultName": "Bloodfeud Helm",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Helm",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000D8-9EB9925C",
+      "name": "Craft Bloodfeud Shoulder",
+      "resultItemId": "ITEM-20260422050330-00071B-C23AA341",
+      "resultName": "Bloodfeud Shoulder",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Shoulder",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000D9-CAB7985D",
+      "name": "Craft Bloodfeud Chest",
+      "resultItemId": "ITEM-20260422050330-000724-CC9291A0",
+      "resultName": "Bloodfeud Chest",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Chest",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000DA-F0A8F144",
+      "name": "Craft Bloodfeud Hands",
+      "resultItemId": "ITEM-20260422050330-00072D-7BDCA73B",
+      "resultName": "Bloodfeud Hands",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Hands",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000DB-1E0D381B",
+      "name": "Craft Bloodfeud Feet",
+      "resultItemId": "ITEM-20260422050330-000736-80A439E6",
+      "resultName": "Bloodfeud Feet",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Feet",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000DC-3A49A9B9",
+      "name": "Craft Bloodfeud Ring",
+      "resultItemId": "ITEM-20260422050330-00073F-95ECC373",
+      "resultName": "Bloodfeud Ring",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Ring",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000DD-9D7E4710",
+      "name": "Craft Bloodfeud Necklace",
+      "resultItemId": "ITEM-20260422050330-000748-12DDBEC4",
+      "resultName": "Bloodfeud Necklace",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Necklace",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000DE-97159F30",
+      "name": "Craft Bloodfeud Relic",
+      "resultItemId": "ITEM-20260422050330-000751-9F56B93A",
+      "resultName": "Bloodfeud Relic",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Relic",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000DF-7C26C349",
+      "name": "Craft Wraithfang Helm",
+      "resultItemId": "ITEM-20260422050330-00075A-257F4581",
+      "resultName": "Wraithfang Helm",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Helm",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000E0-70836C2C",
+      "name": "Craft Wraithfang Shoulder",
+      "resultItemId": "ITEM-20260422050330-000763-4FE18113",
+      "resultName": "Wraithfang Shoulder",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Shoulder",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000E1-81F55C4F",
+      "name": "Craft Wraithfang Chest",
+      "resultItemId": "ITEM-20260422050330-00076C-0C7F5810",
+      "resultName": "Wraithfang Chest",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Chest",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000E2-79C661ED",
+      "name": "Craft Wraithfang Hands",
+      "resultItemId": "ITEM-20260422050330-000775-046470E3",
+      "resultName": "Wraithfang Hands",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Hands",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000E3-54BAC829",
+      "name": "Craft Wraithfang Feet",
+      "resultItemId": "ITEM-20260422050330-00077E-0BFFD6A5",
+      "resultName": "Wraithfang Feet",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Feet",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000E4-73E291D7",
+      "name": "Craft Wraithfang Ring",
+      "resultItemId": "ITEM-20260422050330-000787-CB75DD20",
+      "resultName": "Wraithfang Ring",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Ring",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000E5-6EDC4D4F",
+      "name": "Craft Wraithfang Necklace",
+      "resultItemId": "ITEM-20260422050330-000790-FD6138FF",
+      "resultName": "Wraithfang Necklace",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Necklace",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000E6-1F9B5055",
+      "name": "Craft Wraithfang Relic",
+      "resultItemId": "ITEM-20260422050330-000799-399AFA15",
+      "resultName": "Wraithfang Relic",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Relic",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000E7-84860540",
+      "name": "Craft Oathbreaker Helm",
+      "resultItemId": "ITEM-20260422050330-0007A2-70CB743D",
+      "resultName": "Oathbreaker Helm",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Helm",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000E8-217EC172",
+      "name": "Craft Oathbreaker Shoulder",
+      "resultItemId": "ITEM-20260422050330-0007AB-2E676E3B",
+      "resultName": "Oathbreaker Shoulder",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Shoulder",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000E9-29D715AA",
+      "name": "Craft Oathbreaker Chest",
+      "resultItemId": "ITEM-20260422050330-0007B4-15B5809D",
+      "resultName": "Oathbreaker Chest",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Chest",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000EA-B8A98EF9",
+      "name": "Craft Oathbreaker Hands",
+      "resultItemId": "ITEM-20260422050330-0007BD-C0596343",
+      "resultName": "Oathbreaker Hands",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Hands",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000EB-E00AAF1A",
+      "name": "Craft Oathbreaker Feet",
+      "resultItemId": "ITEM-20260422050330-0007C6-92A96C58",
+      "resultName": "Oathbreaker Feet",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Feet",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000EC-C964EB8E",
+      "name": "Craft Oathbreaker Ring",
+      "resultItemId": "ITEM-20260422050330-0007CF-EA05720F",
+      "resultName": "Oathbreaker Ring",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Ring",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000ED-C2215D8D",
+      "name": "Craft Oathbreaker Necklace",
+      "resultItemId": "ITEM-20260422050330-0007D8-B836CB8E",
+      "resultName": "Oathbreaker Necklace",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Necklace",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000EE-DB416B88",
+      "name": "Craft Oathbreaker Relic",
+      "resultItemId": "ITEM-20260422050330-0007E1-9FC23274",
+      "resultName": "Oathbreaker Relic",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Relic",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000EF-EA4EBCBD",
+      "name": "Craft Kinrend Helm",
+      "resultItemId": "ITEM-20260422050330-0007EA-0BB2F052",
+      "resultName": "Kinrend Helm",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Helm",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000F0-53AFB7CA",
+      "name": "Craft Kinrend Shoulder",
+      "resultItemId": "ITEM-20260422050330-0007F3-95D192E6",
+      "resultName": "Kinrend Shoulder",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Shoulder",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000F1-9FC99B09",
+      "name": "Craft Kinrend Chest",
+      "resultItemId": "ITEM-20260422050330-0007FC-B7219F9D",
+      "resultName": "Kinrend Chest",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Chest",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000F2-6A5C78A3",
+      "name": "Craft Kinrend Hands",
+      "resultItemId": "ITEM-20260422050330-000805-F9E1AF78",
+      "resultName": "Kinrend Hands",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Hands",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000F3-89D3A914",
+      "name": "Craft Kinrend Feet",
+      "resultItemId": "ITEM-20260422050330-00080E-3E6719A5",
+      "resultName": "Kinrend Feet",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Feet",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000F4-A71564F7",
+      "name": "Craft Kinrend Ring",
+      "resultItemId": "ITEM-20260422050330-000817-897D7574",
+      "resultName": "Kinrend Ring",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Ring",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000F5-B463E369",
+      "name": "Craft Kinrend Necklace",
+      "resultItemId": "ITEM-20260422050330-000820-46076B36",
+      "resultName": "Kinrend Necklace",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Necklace",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000F6-2367D36C",
+      "name": "Craft Kinrend Relic",
+      "resultItemId": "ITEM-20260422050330-000829-71C08750",
+      "resultName": "Kinrend Relic",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Relic",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000F7-CB9D64E3",
+      "name": "Craft Dusksinger Helm",
+      "resultItemId": "ITEM-20260422050330-000832-27CBA9DE",
+      "resultName": "Dusksinger Helm",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Helm",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000F8-DDE44E72",
+      "name": "Craft Dusksinger Shoulder",
+      "resultItemId": "ITEM-20260422050330-00083B-EFB9826C",
+      "resultName": "Dusksinger Shoulder",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Shoulder",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000F9-18868BDF",
+      "name": "Craft Dusksinger Chest",
+      "resultItemId": "ITEM-20260422050330-000844-B11D5C8E",
+      "resultName": "Dusksinger Chest",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Chest",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000FA-0341B00A",
+      "name": "Craft Dusksinger Hands",
+      "resultItemId": "ITEM-20260422050330-00084D-5E71981F",
+      "resultName": "Dusksinger Hands",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Hands",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000FB-6F21CCE0",
+      "name": "Craft Dusksinger Feet",
+      "resultItemId": "ITEM-20260422050330-000856-A2092586",
+      "resultName": "Dusksinger Feet",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Feet",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000FC-738CBCF5",
+      "name": "Craft Dusksinger Ring",
+      "resultItemId": "ITEM-20260422050330-00085F-D52BEFBC",
+      "resultName": "Dusksinger Ring",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Ring",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000FD-15855ED0",
+      "name": "Craft Dusksinger Necklace",
+      "resultItemId": "ITEM-20260422050330-000868-0CAE44A4",
+      "resultName": "Dusksinger Necklace",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Necklace",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000FE-3FC140F8",
+      "name": "Craft Dusksinger Relic",
+      "resultItemId": "ITEM-20260422050330-000871-349E6933",
+      "resultName": "Dusksinger Relic",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Relic",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-1000FF-7B6AF222",
+      "name": "Craft Emberclad Helm",
+      "resultItemId": "ITEM-20260422050330-00087A-05C28446",
+      "resultName": "Emberclad Helm",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Helm",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100100-B34A3B16",
+      "name": "Craft Emberclad Shoulder",
+      "resultItemId": "ITEM-20260422050330-000883-C270FF99",
+      "resultName": "Emberclad Shoulder",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Shoulder",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100101-925361F0",
+      "name": "Craft Emberclad Chest",
+      "resultItemId": "ITEM-20260422050330-00088C-A5905EC5",
+      "resultName": "Emberclad Chest",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Chest",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100102-5E94CF20",
+      "name": "Craft Emberclad Hands",
+      "resultItemId": "ITEM-20260422050330-000895-82B0E9FF",
+      "resultName": "Emberclad Hands",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Hands",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100103-527A44A4",
+      "name": "Craft Emberclad Feet",
+      "resultItemId": "ITEM-20260422050330-00089E-D42F8B50",
+      "resultName": "Emberclad Feet",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Feet",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100104-890FA555",
+      "name": "Craft Emberclad Ring",
+      "resultItemId": "ITEM-20260422050330-0008A7-0E390C3E",
+      "resultName": "Emberclad Ring",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Ring",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100105-576E5650",
+      "name": "Craft Emberclad Necklace",
+      "resultItemId": "ITEM-20260422050330-0008B0-F2C2289B",
+      "resultName": "Emberclad Necklace",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Necklace",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100106-9E6571A8",
+      "name": "Craft Emberclad Relic",
+      "resultItemId": "ITEM-20260422050330-0008B9-4552FAEB",
+      "resultName": "Emberclad Relic",
+      "profession": "Miner",
+      "category": "armor-metal",
+      "slot": "Relic",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-1000D6-E1EB7566",
+          "name": "Steel Ingot",
+          "quantity": 4
+        },
+        {
+          "uuid": "MATL-20260508030000-1000D7-50E17913",
+          "name": "Coal",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-100107-76AAA302",
+      "name": "Craft Bloodfeud Gem",
+      "resultItemId": "ITEM-20260422050330-0008C2-41A4C1AE",
+      "resultName": "Bloodfeud Gem",
+      "profession": "Mystic",
+      "category": "armor-gem",
+      "slot": "Offhand",
+      "setName": "Bloodfeud",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100108-012269BD",
+          "name": "Gem Shard",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100109-475D46F3",
+          "name": "Mithril Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-10010A-29EB8A44",
+          "name": "Arcane Dust",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10010B-66859102",
+      "name": "Craft Wraithfang Gem",
+      "resultItemId": "ITEM-20260422050330-0008CB-6624039E",
+      "resultName": "Wraithfang Gem",
+      "profession": "Mystic",
+      "category": "armor-gem",
+      "slot": "Offhand",
+      "setName": "Wraithfang",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100108-012269BD",
+          "name": "Gem Shard",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100109-475D46F3",
+          "name": "Mithril Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-10010A-29EB8A44",
+          "name": "Arcane Dust",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10010C-0377275F",
+      "name": "Craft Oathbreaker Gem",
+      "resultItemId": "ITEM-20260422050330-0008D4-56C80EFC",
+      "resultName": "Oathbreaker Gem",
+      "profession": "Mystic",
+      "category": "armor-gem",
+      "slot": "Offhand",
+      "setName": "Oathbreaker",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100108-012269BD",
+          "name": "Gem Shard",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100109-475D46F3",
+          "name": "Mithril Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-10010A-29EB8A44",
+          "name": "Arcane Dust",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10010D-4C74B457",
+      "name": "Craft Kinrend Gem",
+      "resultItemId": "ITEM-20260422050330-0008DD-997272AF",
+      "resultName": "Kinrend Gem",
+      "profession": "Mystic",
+      "category": "armor-gem",
+      "slot": "Offhand",
+      "setName": "Kinrend",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100108-012269BD",
+          "name": "Gem Shard",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100109-475D46F3",
+          "name": "Mithril Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-10010A-29EB8A44",
+          "name": "Arcane Dust",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10010E-43AD63E6",
+      "name": "Craft Dusksinger Gem",
+      "resultItemId": "ITEM-20260422050330-0008E6-3F7E6CF8",
+      "resultName": "Dusksinger Gem",
+      "profession": "Mystic",
+      "category": "armor-gem",
+      "slot": "Offhand",
+      "setName": "Dusksinger",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100108-012269BD",
+          "name": "Gem Shard",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100109-475D46F3",
+          "name": "Mithril Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-10010A-29EB8A44",
+          "name": "Arcane Dust",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "uuid": "RECP-20260508030000-10010F-12C718F4",
+      "name": "Craft Emberclad Gem",
+      "resultItemId": "ITEM-20260422050330-0008EF-F9439677",
+      "resultName": "Emberclad Gem",
+      "profession": "Mystic",
+      "category": "armor-gem",
+      "slot": "Offhand",
+      "setName": "Emberclad",
+      "materials": [
+        {
+          "uuid": "MATL-20260508030000-100108-012269BD",
+          "name": "Gem Shard",
+          "quantity": 3
+        },
+        {
+          "uuid": "MATL-20260508030000-100109-475D46F3",
+          "name": "Mithril Ingot",
+          "quantity": 2
+        },
+        {
+          "uuid": "MATL-20260508030000-10010A-29EB8A44",
+          "name": "Arcane Dust",
           "quantity": 1
         }
       ]

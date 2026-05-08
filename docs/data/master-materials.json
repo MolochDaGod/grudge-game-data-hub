@@ -1,8 +1,8 @@
 {
   "version": "3.0.0",
   "generated": "2026-04-22T10:03:30.499Z",
-  "total": 63,
-  "totalMaterials": 63,
+  "total": 80,
+  "totalMaterials": 80,
   "materials": [
     {
       "uuid": "MATL-20260422050330-0008F8-0BD65A29",
@@ -696,6 +696,108 @@
       "emoji": "👑",
       "gatheredBy": "Miner",
       "iconUrl": "https://assets.grudge-studio.com/icons/materials/divine-gem.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-100003-F4D011A4",
+      "name": "Leather",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/leather.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-10000A-B4B03130",
+      "name": "Wood",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/wood.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-100029-D18FA43E",
+      "name": "Stone",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/stone.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-100036-2F97C08D",
+      "name": "String",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/string.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-100043-3D362592",
+      "name": "Powder",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/powder.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-10004A-5D4AAC23",
+      "name": "Fire Essence",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/fire_essence.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-100051-70195B2A",
+      "name": "Frost Essence",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/frost_essence.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-100058-5A25B2FF",
+      "name": "Holy Essence",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/holy_essence.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-10005F-56F4309D",
+      "name": "Storm Essence",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/storm_essence.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-100065-A7FADE65",
+      "name": "Nature Essence",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/nature_essence.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-100072-F154A63D",
+      "name": "Linen Cloth",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/linen_cloth.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-100073-F6EA2B19",
+      "name": "Thread",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/thread.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-1000A4-3790A6A5",
+      "name": "Cured Leather",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/cured_leather.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-1000A5-CED1384E",
+      "name": "Tanning Agent",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/tanning_agent.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-1000D7-50E17913",
+      "name": "Coal",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/coal.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-100108-012269BD",
+      "name": "Gem Shard",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/gem_shard.png"
+    },
+    {
+      "uuid": "MATL-20260508030000-10010A-29EB8A44",
+      "name": "Arcane Dust",
+      "type": "material",
+      "iconUrl": "https://assets.grudge-studio.com/icons/materials/arcane_dust.png"
     }
   ]
 }
