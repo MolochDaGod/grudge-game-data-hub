@@ -164,10 +164,107 @@
         <div class="fantasy-panel animate-rune-pulse" style="padding:16px;border-left:4px solid #f0d890"><h3 style="color:#f0d890;margin:0">T8 Legendary</h3><p class="desc">Apex of the crafting track. <span style="color:var(--gold-light);font-size:0.78em">was "Legendary Artifact"</span></p></div>
       </div>
     </div>
+
+    <!-- ELEMENTAL RESISTANCES (from WCS combatCalculations.ts) -->
+    <div class="section">
+      <h2>Elemental System</h2>
+      <p style="color:var(--muted);font-size:0.9em;margin-bottom:12px">
+        7 element types. Each weapon ability carries an element; magical damage is mitigated by the target's resistance to that element.
+        Resistance caps at 75%, but can go negative (-50%) for vulnerability. Source: <code>combatCalculations.ts</code>.
+      </p>
+      <div class="attr-grid">
+        <div class="fantasy-panel" style="padding:14px;border-left:4px solid #ff6b35"><h3 style="color:#ff6b35;margin:0">🔥 Fire</h3><p class="desc">Burn stacks, AoE damage. Fire Staves primary element.</p></div>
+        <div class="fantasy-panel" style="padding:14px;border-left:4px solid #4fc3f7"><h3 style="color:#4fc3f7;margin:0">❄️ Ice</h3><p class="desc">Chill, slow, deep freeze. Frost Staves primary element.</p></div>
+        <div class="fantasy-panel" style="padding:14px;border-left:4px solid #ab47bc"><h3 style="color:#ab47bc;margin:0">⚡ Lightning</h3><p class="desc">Chain damage, stun, burst. Lightning Staves primary element.</p></div>
+        <div class="fantasy-panel" style="padding:14px;border-left:4px solid #7e57c2"><h3 style="color:#7e57c2;margin:0">🌀 Arcane</h3><p class="desc">Raw magic damage. Artifact-arcane sub-type.</p></div>
+        <div class="fantasy-panel" style="padding:14px;border-left:4px solid #ffd54f"><h3 style="color:#ffd54f;margin:0">✨ Holy</h3><p class="desc">Heals, cleanses, divine shields. Holy Staves primary element.</p></div>
+        <div class="fantasy-panel" style="padding:14px;border-left:4px solid #66bb6a"><h3 style="color:#66bb6a;margin:0">🌿 Nature</h3><p class="desc">HoT, reflect, entangle. Nature Staves primary element.</p></div>
+        <div class="fantasy-panel" style="padding:14px;border-left:4px solid #a8a8a8"><h3 style="color:#a8a8a8;margin:0">⚔ Physical</h3><p class="desc">Default for melee weapons. Mitigated by physical defense.</p></div>
+      </div>
+      <div class="formula-box stone-panel" style="margin-top:16px">
+        <strong>Resistance Formula:</strong><br>
+        Magical Damage = Base Magic × (1 - ElementResist / 100)<br>
+        Physical Damage = Base Phys × (1 - PhysResist / 100)<br>
+        Final = (PhysDmg + MagDmg) / 2 after individual resist application<br><br>
+        Cap: 75% &middot; Floor: -50% (vulnerability)
+      </div>
+    </div>
+
+    <!-- TIER STAT BONUSES (from WCS weaponArsenal.ts TIER_STAT_BONUSES) -->
+    <div class="section">
+      <h2>Tier Stat Bonuses (Weapons)</h2>
+      <p style="color:var(--muted);font-size:0.9em;margin-bottom:12px">
+        Every weapon tier provides stacking stat bonuses on top of the damage multiplier.
+        Passives unlock at T5+. Source: <code>weaponArsenal.ts</code>.
+      </p>
+      <table class="formula-table">
+        <tr><th>Tier</th><th>Damage Mult</th><th>HP</th><th>Mana</th><th>Defense</th><th>Crit%</th><th>AtkSpd%</th><th>Attribute</th><th>Passives</th></tr>
+        <tr><td style="color:#555">T0</td><td>0.7×</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td style="color:#8b7355">T1</td><td>1.0×</td><td>+5</td><td>+3</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td style="color:#a8a8a8">T2</td><td>1.1×</td><td>+10</td><td>+5</td><td>+4</td><td>+2%</td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td style="color:#4a9eff">T3</td><td>1.2×</td><td>+15</td><td>+8</td><td>+6</td><td>+3%</td><td>+3%</td><td>—</td><td>—</td></tr>
+        <tr><td style="color:#9d4dff">T4</td><td>1.35×</td><td>+20</td><td>+12</td><td>+8</td><td>+4%</td><td>+5%</td><td>+1 Primary</td><td>—</td></tr>
+        <tr><td style="color:#ff4d4d">T5</td><td>1.5×</td><td>+30</td><td>+18</td><td>+12</td><td>+6%</td><td>+7%</td><td>+2 Primary</td><td>1</td></tr>
+        <tr><td style="color:#ffaa00">T6</td><td>1.7×</td><td>+45</td><td>+25</td><td>+18</td><td>+8%</td><td>+10%</td><td>+3 Primary</td><td>2</td></tr>
+        <tr><td style="color:#d4a84b">T7</td><td>1.9×</td><td>+65</td><td>+35</td><td>+25</td><td>+10%</td><td>+12%</td><td>+4 Dual</td><td>2</td></tr>
+        <tr><td style="color:#f0d890">T8</td><td>2.2×</td><td>+100</td><td>+50</td><td>+35</td><td>+12%</td><td>+15%</td><td>+5 Dual</td><td>3</td></tr>
+      </table>
+      <div class="formula-box parchment-panel" style="margin-top:12px">
+        <strong>Ability Multipliers by Tier:</strong> T0=0.8× · T1=1.0× · T2=1.0× · T3=1.05× · T4=1.1× · T5=1.2× · T6=1.35× · T7=1.5× · T8=1.7×
+      </div>
+    </div>
+
+    <!-- WEAPON ABILITIES & PROCS (from WCS weaponArsenal.ts) -->
+    <div class="section">
+      <h2>Weapon Abilities &amp; Procs</h2>
+      <p style="color:var(--muted);font-size:0.9em;margin-bottom:12px">
+        Each weapon grants abilities: <strong>Basic Attack</strong>, <strong>Signature</strong>, 3 <strong>Attacks</strong>, 3 <strong>Spells</strong>, and <strong>Passives</strong>.
+        Abilities carry element affinity, damage multipliers, mana costs, cooldowns, and triggered effects.
+        Source: <code>weaponArsenal.ts</code>, <code>combatCalculations.ts</code>.
+      </p>
+      <div class="attr-grid">
+        <div class="fantasy-panel" style="padding:14px;border-left:4px solid var(--gold)">
+          <h3 style="margin:0;color:var(--gold)">Buffs</h3>
+          <p class="desc">Temporary stat bonuses with duration. Stacks from abilities, potions, or passives. Each buff has <code>statBonus[]</code> with stat key + value.</p>
+        </div>
+        <div class="fantasy-panel" style="padding:14px;border-left:4px solid #ef4444">
+          <h3 style="margin:0;color:#ef4444">Debuffs</h3>
+          <p class="desc">Negative stat effects on targets. Include bleeds, slows, armor breaks. Each debuff has <code>statPenalty[]</code> with stat key + value.</p>
+        </div>
+        <div class="fantasy-panel" style="padding:14px;border-left:4px solid #4a9eff">
+          <h3 style="margin:0;color:#4a9eff">Combo State</h3>
+          <p class="desc">Tracks <code>comboCounter</code>, <code>lastAbilityUsed</code>, <code>canCombo</code>. Combos trigger when matching the weapon's combo chain order. Worge has a unique <code>counterTarget</code> mechanic.</p>
+        </div>
+        <div class="fantasy-panel" style="padding:14px;border-left:4px solid #bb95ff">
+          <h3 style="margin:0;color:#bb95ff">Passives</h3>
+          <p class="desc">Unlock at T5+. Up to 3 per weapon. Provide persistent stat bonuses, on-hit effects, or conditional triggers (on block, on crit, on kill).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BASE CHARACTER STATS (from WCS gameConstants.ts) -->
+    <div class="section">
+      <h2>Base Character Stats &amp; Progression</h2>
+      <p style="color:var(--muted);font-size:0.9em;margin-bottom:12px">
+        Starting values before any attributes or gear. Source: <code>gameConstants.ts</code>.
+      </p>
+      <table class="formula-table">
+        <tr><th>Stat</th><th>Base Value</th><th>Per Level</th><th>Notes</th></tr>
+        <tr><td>HP</td><td style="color:var(--gold)">100</td><td>+10</td><td>Primary survival resource</td></tr>
+        <tr><td>Mana</td><td style="color:var(--gold)">50</td><td>+5</td><td>Ability fuel</td></tr>
+        <tr><td>Stamina</td><td style="color:var(--gold)">100</td><td>+5</td><td>Sprint + dodge + special actions</td></tr>
+        <tr><td>Damage</td><td style="color:var(--gold)">10</td><td>—</td><td>Scales from attributes + equipment</td></tr>
+        <tr><td>Defense</td><td style="color:var(--gold)">10</td><td>—</td><td>Physical mitigation via √defense</td></tr>
+        <tr><td>Speed</td><td style="color:var(--gold)">10</td><td>—</td><td>Movement speed base</td></tr>
+        <tr><td>Attribute Points</td><td style="color:var(--gold)">20</td><td>+1</td><td>Distributed freely across 8 attributes</td></tr>
+        <tr><td>Starting Gold</td><td style="color:var(--gold)">1,000</td><td>—</td><td>Economy starting balance</td></tr>
+        <tr><td>Max Level</td><td style="color:var(--gold)">100</td><td>—</td><td>Character level cap</td></tr>
+      </table>
+    </div>
   </div>
 
   <script>
-    const CDN = 'https://assets.grudge-studio.com';
+    const CDN = 'https://grudgewarlords.com';
     const PERCENT_STATS = new Set(['block','blockEffect','evasion','accuracy','criticalChance','criticalDamage',
       'attackSpeed','movementSpeed','resistance','cdrResist','defenseBreakResist','armorPenetration',
       'blockPenetration','defenseBreak','drainHealth','drainMana','cooldownReduction','abilityCost','spellAccuracy',

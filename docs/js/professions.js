@@ -168,7 +168,7 @@
         <div class="prof-card" style="border-left-color:${c};" onclick="window.openGather('${p.name}')">
           <div class="prof-card-bg" style="background:${gradient(c)};"></div>
           <div class="prof-card-content">
-            <h3 style="color:${c};"><span class="icon-big">${p.icon || "⛏"}</span> ${p.name}</h3>
+            <h3 style="color:${c};">${p.iconUrl ? `<img src="${p.iconUrl}" alt="${p.name}" style="width:28px;height:28px;border-radius:4px;vertical-align:middle;">` : `<span class="icon-big">${p.icon || "⛏"}</span>`} ${p.name}</h3>
             <div>
               <span class="role-badge">Gathering</span>
               ${p.feedsInto ? p.feedsInto.map((f) => `<span class="attr-tag" style="color:${c};border:1px solid ${c};background:${c}18;">→ ${f}</span>`).join("") : ""}
@@ -224,9 +224,9 @@
         const nodes = p.skillTree || [];
         return `
         <div class="prof-card" style="border-left-color:${c};" onclick="window.openCraft('${p.name}')">
-          <div class="prof-card-bg" style="background:${gradient(c)};"></div>
+          <div class="prof-card-bg" style="${p.backgroundUrl ? `background:url('${p.backgroundUrl}') center/cover;` : `background:${gradient(c)};`}"></div>
           <div class="prof-card-content">
-            <h3 style="color:${c};"><span class="icon-big">${p.icon || "🔨"}</span> ${p.name}</h3>
+            <h3 style="color:${c};">${p.iconUrl ? `<img src="${p.iconUrl}" alt="${p.name}" style="width:28px;height:28px;border-radius:4px;vertical-align:middle;">` : `<span class="icon-big">${p.icon || "🔨"}</span>`} ${p.name}</h3>
             <div>
               <span class="role-badge">Crafting</span>
               <span class="attr-tag" style="color:${c};border:1px solid ${c};background:${c}18;">${p.recipeCount || 0} recipes</span>

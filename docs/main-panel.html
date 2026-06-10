@@ -156,10 +156,9 @@
 <div class="eq-tooltip" id="eqTooltip"></div>
 
 <script>
-  const CDN = 'https://assets.grudge-studio.com';
+  const CDN = 'https://grudgewarlords.com';
   const API_SOURCES = [
-    'https://objectstore.grudge-studio.com/api/v1',
-    'https://assets.grudge-studio.com/api/v1',
+    'https://grudgewarlords.com/api/v1',
     '/data',  // local build-time prefetch fallback
   ];
   const TABS = ['Equipment','Attributes','Skills','Crafting','Quests'];
@@ -724,7 +723,7 @@
         <div class="eq-sum-item"><div class="eq-sum-val">${stats.block}%</div><div class="eq-sum-lbl">Block</div></div>
         <div class="eq-sum-item"><div class="eq-sum-val">${stats.speed.toFixed(1)}</div><div class="eq-sum-lbl">Speed</div></div>
       </div>
-      <div style="text-align:center;margin-top:10px;font-size:10px;color:var(--dim);">Click equipped slot to unequip &middot; Click inventory item to equip &middot; <a href="https://assets.grudge-studio.com/ItemBrowser.html" target="_blank" rel="noopener" style="font-size:10px;">Item Browser &#8599;</a></div>
+      <div style="text-align:center;margin-top:10px;font-size:10px;color:var(--dim);">Click equipped slot to unequip &middot; Click inventory item to equip &middot; <a href="https://grudgewarlords.com/ItemBrowser.html" target="_blank" rel="noopener" style="font-size:10px;">Item Browser &#8599;</a></div>
     `;
   }
 
@@ -996,7 +995,7 @@
     const totalWeapons = allItems.filter(i => i.type === 'weapon').length;
     html += `<div style="margin-top:16px;padding:10px;background:rgba(0,0,0,0.2);border-radius:6px;font-size:10px;color:var(--dim);text-align:center;">`;
     html += `${totalWeapons} weapons · ${allSkillTrees.length} class trees · ${allWeaponSkills.length} weapon types · ${allArtifacts.length} artifacts`;
-    html += `<br>Source: <a href="https://objectstore.grudge-studio.com/api/v1/" style="font-size:10px;">objectstore.grudge-studio.com</a></div>`;
+    html += `<br>Source: <a href="https://grudgewarlords.com/api/v1/" style="font-size:10px;">grudgewarlords.com</a></div>`;
     return html;
   }
 

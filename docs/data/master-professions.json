@@ -382,6 +382,9 @@
       "name": "Miner",
       "role": "Weaponsmith & Armorsmith",
       "icon": "⛏️",
+      "iconUrl": "/icons/professions/icons/miner_profession_game_icon.png",
+      "backgroundUrl": "/icons/professions/dark_underground_mine_with_glowing_crystals.png",
+      "skillTreeBg": "/icons/professions/backgrounds/miner_skill_tree_background_illustrated_style.png",
       "color": "amber",
       "specializations": [
         "Weapons",
@@ -820,6 +823,9 @@
       "name": "Forester",
       "role": "Ranger & Leatherworker",
       "icon": "🌲",
+      "iconUrl": "/icons/professions/icons/forester_profession_game_icon.png",
+      "backgroundUrl": "/icons/professions/ancient_mystical_forest_with_glowing_particles.png",
+      "skillTreeBg": "/icons/professions/backgrounds/forester_skill_tree_background_illustrated_style.png",
       "color": "green",
       "specializations": [
         "Logging",
@@ -1231,6 +1237,9 @@
       "name": "Mystic",
       "role": "Arcane Crafter & Enchanter",
       "icon": "🔮",
+      "iconUrl": "/icons/professions/icons/mystic_profession_game_icon.png",
+      "backgroundUrl": "/icons/professions/cosmic_arcane_void_magic_background.png",
+      "skillTreeBg": "/icons/professions/backgrounds/mystic_flames_chemistry_background.png",
       "color": "purple",
       "specializations": [
         "Enchanter",
@@ -1762,6 +1771,9 @@
       "name": "Chef",
       "role": "Culinary Master & Alchemist",
       "icon": "🍲",
+      "iconUrl": "/icons/professions/icons/chef_profession_game_icon.png",
+      "backgroundUrl": "/icons/professions/rustic_fantasy_kitchen_hearth.png",
+      "skillTreeBg": "/icons/professions/backgrounds/chef_tricolor_cauldron.png",
       "color": "orange",
       "specializations": [
         "Butchery",
@@ -2164,6 +2176,9 @@
       "name": "Engineer",
       "role": "Mechanist & Siege Master",
       "icon": "🔧",
+      "iconUrl": "/icons/professions/icons/engineer_profession_game_icon.png",
+      "backgroundUrl": "/icons/professions/steampunk_blueprint_background_with_gears.png",
+      "skillTreeBg": "/icons/professions/backgrounds/engineer_skill_tree_background_illustrated_style.png",
       "color": "orange",
       "specializations": [
         "Weaponry",
