@@ -1,504 +1,951 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <title>Grudge Warlords — Complete Guide</title>
-  <link rel="stylesheet" href="css/grudge-theme.css">
-  <style>
-    .container{max-width:1400px;margin:0 auto;padding:20px}
-    .back-link{display:inline-block;color:var(--gold);font-size:.9em;margin-bottom:20px;text-decoration:none}
-    .back-link:hover{text-decoration:underline}
-    .hero{text-align:center;padding:48px 0 32px;border-bottom:3px solid transparent;border-image:linear-gradient(90deg,transparent,var(--gold),transparent) 1;margin-bottom:36px}
-    .hero h1{font-family:var(--font-display);font-size:2.8em}
-    .hero p{color:var(--muted);margin:12px auto 0;max-width:860px;line-height:1.6}
-    .counts{display:flex;gap:28px;justify-content:center;margin-top:22px;flex-wrap:wrap}
-    .counts .c{text-align:center}.counts .c .n{color:var(--gold);font-size:1.6em;font-weight:bold;font-family:var(--font-mono)}
-    .counts .c .l{color:var(--muted);font-size:.78em}
-    /* tabs */
-    .tabs{display:flex;gap:6px;margin-bottom:28px;flex-wrap:wrap;justify-content:center}
-    .tabs button{background:var(--card);border:1px solid var(--gold-dim);color:var(--muted);padding:10px 20px;border-radius:4px;cursor:pointer;font-family:var(--font-mono);font-size:.85em;transition:all .2s}
-    .tabs button.active{background:var(--gold-dim);color:var(--gold);border-color:var(--gold)}
-    .tabs button:hover{color:var(--gold);border-color:var(--gold)}
-    .section{display:none}.section.active{display:block}
-    .sec-heading{font-family:var(--font-heading);color:var(--gold-light);font-size:1.15em;margin:0 0 16px;letter-spacing:.06em;text-transform:uppercase;padding-bottom:6px;border-bottom:1px solid var(--gold-dim)}
-    /* cards */
-    .g{display:grid;gap:16px}
-    .g2{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
-    .g3{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
-    .g4{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
-    .g5{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
-    .card{background:var(--card);border:1px solid var(--gold-dim);border-radius:6px;padding:18px;transition:all .2s;position:relative;overflow:hidden}
-    .card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.4)}
-    .card h3{font-family:var(--font-heading);font-size:1.05em;display:flex;align-items:center;gap:8px;margin-bottom:6px}
-    .card .sub{color:var(--muted);font-size:.8em;line-height:1.5;margin-bottom:8px}
-    .card .tags{display:flex;flex-wrap:wrap;gap:4px}
-    .tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:.7em;font-family:var(--font-mono);background:rgba(255,255,255,.04);color:var(--muted)}
-    .tag.gold{background:var(--gold-dim);color:var(--gold)}
-    .icon-sm{width:28px;height:28px;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 0 3px rgba(212,175,55,.3))}
-    .icon-md{width:42px;height:42px;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 0 4px rgba(212,175,55,.3))}
-    /* tier bar */
-    .tier-bar{display:flex;gap:4px;margin:16px 0;flex-wrap:wrap}
-    .tier-bar .ts{flex:1;min-width:110px;padding:10px 12px;background:rgba(255,255,255,.02);border-radius:4px;border-top:3px solid var(--gold-dim);text-align:center}
-    .tier-bar .ts .tn{font-family:var(--font-heading);font-size:.85em;font-weight:600}
-    .tier-bar .ts .tl{font-family:var(--font-mono);font-size:.68em;color:var(--muted);margin-top:2px}
-    /* weapon type grid */
-    .wt-card{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--gold-dim);border-radius:6px;padding:12px 14px;transition:all .2s}
-    .wt-card:hover{border-color:var(--gold)}
-    .wt-card .wt-name{font-family:var(--font-heading);font-size:.92em}
-    .wt-card .wt-sub{font-size:.72em;color:var(--muted);font-family:var(--font-mono)}
-    /* class badges */
-    .class-badge{display:inline-block;padding:2px 10px;border-radius:3px;font-size:.72em;font-family:var(--font-mono);font-weight:bold;margin:2px}
-    .cb-warrior{background:rgba(255,77,77,.15);color:#ff4d4d;border:1px solid rgba(255,77,77,.3)}
-    .cb-mage{background:rgba(157,77,255,.15);color:#9d4dff;border:1px solid rgba(157,77,255,.3)}
-    .cb-ranger{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.3)}
-    .cb-worge{background:rgba(93,216,98,.15);color:#5dd862;border:1px solid rgba(93,216,98,.3)}
-    /* recipe category */
-    .rc{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--card);border:1px solid var(--gold-dim);border-left:4px solid var(--gold);border-radius:4px;margin-bottom:8px}
-    .rc .rc-name{font-family:var(--font-heading);font-size:.95em;min-width:180px}
-    .rc .rc-prof{font-family:var(--font-mono);font-size:.75em;color:var(--muted)}
-    .rc .rc-count{font-family:var(--font-mono);font-size:.85em;color:var(--gold);margin-left:auto;white-space:nowrap}
-    /* infusion */
-    .inf-card{display:flex;align-items:flex-start;gap:10px;background:var(--card);border:1px solid var(--gold-dim);border-radius:6px;padding:14px}
-    .inf-card .inf-icon{font-size:1.6em;flex-shrink:0;width:36px;text-align:center}
-    .inf-card .inf-name{font-family:var(--font-heading);font-size:.92em}
-    .inf-card .inf-tier{font-family:var(--font-mono);font-size:.68em;margin-left:6px}
-    .inf-card .inf-desc{font-size:.78em;color:var(--muted);margin-top:4px}
-    .inf-card .inf-effect{font-size:.75em;color:var(--gold);margin-top:3px;font-family:var(--font-mono)}
-    /* skill tree summary */
-    .st-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
-    .st-branch{background:rgba(255,255,255,.03);border:1px solid var(--gold-dim);border-radius:4px;padding:8px 12px;flex:1;min-width:140px}
-    .st-branch .sb-name{font-family:var(--font-heading);font-size:.82em;color:var(--gold-light);margin-bottom:4px}
-    .st-branch .sb-desc{font-size:.7em;color:var(--muted)}
-    .note{background:rgba(212,175,55,.08);border:1px solid var(--gold-dim);border-radius:4px;padding:14px 18px;margin:16px 0;font-size:.88em;color:var(--muted);line-height:1.6}
-    .note strong{color:var(--gold)}
-    .footer{text-align:center;padding:30px 0;border-top:1px solid var(--gold-dim);color:var(--dim);font-size:.82em;margin-top:40px}
-  </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Grudge Warlords • Guide & Codex</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#0a0705;--panel:#1a120c;--panel2:#221710;--panel3:#2e1f14;
+  --border:#c9950a;--border2:#7a5c1e;--border-dim:#3a2a1a;
+  --text:#f5e2c1;--muted:#9b7d52;--dim:#6b5535;
+  --gold:#d4a400;--gold-strong:#f0c978;--gold-glow:rgba(212,164,0,.25);
+  --green:#6ec96e;--red:#d45050;--blue:#5a9ad8;--purple:#a87ddb;
+  --orange:#d89040;--cyan:#50b8c0;--ember:#b64f2d;
+  --shadow:0 6px 24px rgba(0,0,0,.6);
+  --font-display:'Cinzel',serif;
+  --font-body:'Crimson Text',Georgia,serif;
+  --font-mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:var(--font-body);color:var(--text);min-height:100vh;
+  background:
+    radial-gradient(ellipse 900px 400px at 10% 0%,rgba(212,164,0,.08),transparent),
+    radial-gradient(ellipse 700px 500px at 90% 100%,rgba(140,40,20,.08),transparent),
+    linear-gradient(170deg,#120c06 0%,#0a0705 40%,#080604 100%);
+}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-thumb{background:#433426;border-radius:9px}
+::-webkit-scrollbar-track{background:transparent}
+a{color:var(--gold);text-decoration:none}
+a:hover{color:var(--gold-strong)}
+button{font:inherit;cursor:pointer}
+
+.app{display:flex;flex-direction:column;min-height:100vh}
+.top-bar{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:14px 22px;
+  background:linear-gradient(90deg,#1a100a,#221710,#1a100a);
+  border-bottom:2px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.5);flex-shrink:0;position:sticky;top:0;z-index:10;
+}
+.brand{display:flex;align-items:center;gap:14px}
+.brand-mark{
+  width:48px;height:48px;border-radius:12px;flex-shrink:0;
+  background:radial-gradient(circle at 30% 30%,rgba(240,201,120,.35),transparent 35%),
+             linear-gradient(145deg,#4d3416,#1d150f);
+  border:1px solid rgba(214,172,87,.4);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-size:20px;color:var(--gold-strong);
+}
+.brand-text h1{font-family:var(--font-display);font-size:18px;color:var(--gold);letter-spacing:2px;text-transform:uppercase}
+.brand-text p{font-size:12px;color:var(--muted);margin-top:2px}
+.top-actions{display:flex;gap:8px;flex-wrap:wrap}
+.top-chip{
+  padding:6px 12px;border-radius:99px;border:1px solid var(--border-dim);
+  background:rgba(255,255,255,.03);font-size:11px;color:var(--muted);
+  font-family:var(--font-display);letter-spacing:.8px;text-transform:uppercase;
+}
+.top-chip.live{color:var(--green);border-color:rgba(110,201,110,.3);background:rgba(110,201,110,.06)}
+
+.main{display:grid;grid-template-columns:240px minmax(0,1fr);gap:18px;padding:18px;flex:1;min-height:0}
+.side-nav{
+  background:linear-gradient(180deg,rgba(33,25,20,.95),rgba(21,17,14,.98));
+  border:1px solid rgba(214,172,87,.16);border-radius:16px;padding:14px;
+  box-shadow:var(--shadow);height:fit-content;position:sticky;top:94px;
+}
+.nav-head{font-family:var(--font-display);font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:1.4px;padding:4px 8px 8px;border-bottom:1px solid var(--border-dim);margin-bottom:8px}
+.nav-btn{
+  display:flex;align-items:center;gap:10px;width:100%;text-align:left;
+  padding:9px 10px;margin-bottom:3px;border:0;border-radius:8px;
+  background:transparent;color:var(--muted);font-family:var(--font-display);
+  font-size:12px;letter-spacing:.8px;text-transform:uppercase;
+  transition:.15s;
+}
+.nav-btn:hover{background:rgba(212,164,0,.07);color:var(--text)}
+.nav-btn.active{
+  background:linear-gradient(90deg,rgba(212,164,0,.18),rgba(212,164,0,.04));
+  color:var(--gold-strong);border-left:3px solid var(--gold);padding-left:8px;
+}
+.nav-btn .ico{font-size:15px;width:20px;text-align:center}
+
+.content{
+  background:linear-gradient(180deg,rgba(28,22,18,.95),rgba(17,14,12,.98));
+  border:1px solid rgba(214,172,87,.16);border-radius:16px;
+  box-shadow:var(--shadow);padding:22px;overflow:hidden;
+}
+
+.hero{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;margin-bottom:22px}
+.hero-card{
+  padding:22px;border-radius:14px;position:relative;overflow:hidden;
+  background:radial-gradient(circle at 90% -20%,rgba(212,164,0,.12),transparent 55%),
+             linear-gradient(135deg,#241c16,#14100b);
+  border:1px solid rgba(214,172,87,.2);
+}
+.hero-card h2{font-family:var(--font-display);font-size:26px;color:var(--gold-strong);line-height:1.2;margin-bottom:10px}
+.hero-card p{color:var(--muted);line-height:1.55;font-size:15px;max-width:60ch}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.hero-tag{padding:5px 10px;border-radius:99px;font-size:11px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:.8px;border:1px solid var(--border-dim);background:rgba(255,255,255,.03);color:var(--text)}
+.hero-side{
+  padding:18px;border-radius:14px;
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
+  border:1px solid rgba(214,172,87,.14);
+}
+.hero-side h3{font-family:var(--font-display);font-size:13px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+.hero-side ul{display:grid;gap:8px}
+.hero-side li{font-size:13px;color:var(--muted);padding-left:16px;position:relative;line-height:1.4;list-style:none}
+.hero-side li::before{content:'◆';position:absolute;left:0;top:0;color:var(--gold);font-size:10px}
+.hero-side li strong{color:var(--text);font-weight:700}
+
+.section-title{
+  display:flex;align-items:center;gap:10px;margin:22px 0 12px;
+  font-family:var(--font-display);font-size:15px;color:var(--gold);
+  text-transform:uppercase;letter-spacing:1.5px;
+}
+.section-title::before{content:'';width:4px;height:18px;background:var(--gold);border-radius:3px}
+.section-sub{color:var(--muted);font-size:14px;line-height:1.55;margin-bottom:16px;max-width:80ch}
+
+.grid{display:grid;gap:12px}
+.grid.cols-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.grid.cols-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.grid.cols-4{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+
+.card{
+  background:linear-gradient(135deg,rgba(34,23,16,.9),rgba(26,15,8,.9));
+  border:1px solid var(--border-dim);border-radius:12px;padding:14px;
+  transition:.15s;
+}
+.card:hover{border-color:var(--border2);transform:translateY(-1px)}
+.card .icon{
+  width:44px;height:44px;border-radius:10px;margin-bottom:10px;
+  background:radial-gradient(circle,rgba(212,164,0,.15),transparent),linear-gradient(145deg,#45301d,#231912);
+  border:1px solid rgba(214,172,87,.25);
+  display:flex;align-items:center;justify-content:center;font-size:22px;
+  overflow:hidden;
+}
+.card .icon img{width:100%;height:100%;object-fit:contain}
+.card h3{font-family:var(--font-display);font-size:15px;color:var(--gold-strong);margin-bottom:4px}
+.card .label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.card p{font-size:13px;color:var(--muted);line-height:1.5}
+.card .tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tag{
+  font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;
+  padding:3px 8px;border-radius:99px;border:1px solid;
+}
+
+.attr-card{
+  padding:16px;border-radius:14px;
+  background:linear-gradient(135deg,rgba(30,21,16,.95),rgba(22,14,8,.95));
+  border:1px solid var(--border-dim);display:flex;gap:14px;align-items:flex-start;
+}
+.attr-card .ico-large{
+  width:56px;height:56px;border-radius:12px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:26px;
+  background:radial-gradient(circle,rgba(212,164,0,.15),transparent),linear-gradient(145deg,#3a2717,#1a0f08);
+  border:1px solid var(--border2);
+}
+.attr-card h3{font-family:var(--font-display);font-size:17px;color:var(--gold-strong)}
+.attr-card .primary{font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+.attr-card .desc{font-size:13px;color:var(--muted);line-height:1.5;margin-top:8px}
+.attr-card .formula{
+  display:inline-block;margin-top:8px;padding:4px 8px;
+  background:rgba(0,0,0,.35);border:1px solid var(--border-dim);border-radius:6px;
+  font-family:var(--font-mono);font-size:11px;color:var(--cyan);
+}
+.gains-title{font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-top:12px;font-weight:700}
+.gains-list{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;margin-top:6px}
+.gains-list li{list-style:none;font-size:11px;color:var(--text);font-family:var(--font-mono)}
+.gains-list li span{color:var(--muted)}
+
+.stat-table{
+  width:100%;border-collapse:collapse;font-size:13px;
+  background:linear-gradient(180deg,rgba(30,21,16,.9),rgba(20,14,8,.9));
+  border:1px solid var(--border-dim);border-radius:10px;overflow:hidden;
+}
+.stat-table th{
+  background:rgba(212,164,0,.08);color:var(--gold);
+  text-align:left;padding:10px 14px;font-family:var(--font-display);
+  font-size:11px;text-transform:uppercase;letter-spacing:1px;
+  border-bottom:1px solid var(--border-dim);
+}
+.stat-table td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--text)}
+.stat-table td.key{color:var(--gold-strong);font-weight:600}
+.stat-table td.mono{font-family:var(--font-mono);font-size:12px;color:var(--cyan)}
+.stat-table tr:hover td{background:rgba(212,164,0,.04)}
+.stat-table tr:last-child td{border-bottom:none}
+
+.tier-ladder{display:grid;gap:10px;margin-top:12px}
+.tier-row{
+  padding:14px;border-radius:12px;border:2px solid;
+  background:linear-gradient(90deg,rgba(255,255,255,.03),transparent);
+  display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;
+}
+.tier-row .tier-badge{
+  padding:5px 12px;border-radius:8px;font-family:var(--font-display);
+  font-size:12px;text-transform:uppercase;letter-spacing:1.2px;font-weight:700;
+  border:1px solid currentColor;
+}
+.tier-row .tier-desc{color:var(--text);font-size:13px;line-height:1.5}
+.tier-row .tier-desc small{color:var(--muted);display:block;margin-top:3px;font-size:11px;text-transform:uppercase;letter-spacing:1px}
+.tier-row .tier-rank{font-family:var(--font-mono);font-size:14px;color:var(--gold-strong);font-weight:700}
+.tier-row.legendary{border-color:#89f7fe;box-shadow:0 0 20px rgba(137,247,254,.1)}
+.tier-row.legendary .tier-badge{color:#89f7fe;background:rgba(137,247,254,.1)}
+.tier-row.warlord{border-color:#f97316;box-shadow:0 0 20px rgba(249,115,22,.1)}
+.tier-row.warlord .tier-badge{color:#f97316;background:rgba(249,115,22,.1)}
+.tier-row.epic{border-color:#a855f7;box-shadow:0 0 20px rgba(168,85,247,.1)}
+.tier-row.epic .tier-badge{color:#a855f7;background:rgba(168,85,247,.1)}
+.tier-row.hero{border-color:#3b82f6;box-shadow:0 0 20px rgba(59,130,246,.1)}
+.tier-row.hero .tier-badge{color:#3b82f6;background:rgba(59,130,246,.1)}
+.tier-row.normal{border-color:#9ca3af}
+.tier-row.normal .tier-badge{color:#9ca3af;background:rgba(156,163,175,.1)}
+
+.weapon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.weapon-chip{
+  padding:12px;border-radius:10px;text-align:center;
+  background:linear-gradient(135deg,rgba(34,23,16,.85),rgba(26,15,8,.85));
+  border:1px solid var(--border-dim);cursor:pointer;transition:.15s;
+}
+.weapon-chip:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.5)}
+.weapon-chip .w-ico{
+  width:64px;height:64px;margin:0 auto 8px;border-radius:10px;
+  background:radial-gradient(circle,rgba(212,164,0,.12),transparent),linear-gradient(145deg,#3a2717,#1a0f08);
+  border:1px solid var(--border-dim);
+  display:flex;align-items:center;justify-content:center;font-size:28px;
+  overflow:hidden;
+}
+.weapon-chip .w-ico img{width:100%;height:100%;object-fit:contain;padding:6px}
+.weapon-chip h4{font-family:var(--font-display);font-size:12px;color:var(--gold-strong);margin-bottom:2px}
+.weapon-chip .w-count{font-size:10px;color:var(--muted);font-family:var(--font-mono)}
+
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-top:10px}
+.skill-box{
+  padding:12px;border-radius:10px;display:flex;gap:10px;
+  background:linear-gradient(135deg,rgba(30,21,16,.9),rgba(22,14,8,.9));
+  border:1px solid var(--border-dim);
+}
+.skill-box.unique{border-color:rgba(212,164,0,.4);box-shadow:0 0 12px rgba(212,164,0,.08)}
+.skill-box .s-ico{
+  width:40px;height:40px;border-radius:8px;flex-shrink:0;
+  background:radial-gradient(circle,rgba(212,164,0,.12),transparent);
+  border:1px solid var(--border-dim);
+  display:flex;align-items:center;justify-content:center;font-size:20px;
+}
+.skill-box h5{font-family:var(--font-display);font-size:13px;color:var(--text);line-height:1.2}
+.skill-box h5.unique-name{color:var(--gold-strong)}
+.skill-box .s-meta{font-size:10px;color:var(--muted);font-family:var(--font-mono);margin:3px 0 4px}
+.skill-box .s-desc{font-size:11px;color:var(--muted);line-height:1.4}
+
+.pipeline{display:grid;gap:10px;margin-top:12px}
+.pipeline-step{
+  padding:14px 16px;border-radius:10px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:flex-start;
+  background:linear-gradient(90deg,rgba(30,21,16,.9),rgba(22,14,8,.9));
+  border:1px solid var(--border-dim);border-left:3px solid var(--gold);
+}
+.pipeline-num{
+  width:32px;height:32px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle,rgba(212,164,0,.2),transparent);
+  border:1px solid var(--gold);color:var(--gold);
+  font-family:var(--font-display);font-weight:700;font-size:14px;flex-shrink:0;
+}
+.pipeline-step h4{font-family:var(--font-display);font-size:14px;color:var(--gold-strong);margin-bottom:4px}
+.pipeline-step p{font-size:13px;color:var(--muted);line-height:1.5}
+
+.bullet-list{display:grid;gap:6px;margin-top:8px}
+.bullet-list li{list-style:none;font-size:13px;color:var(--muted);padding-left:18px;position:relative;line-height:1.55}
+.bullet-list li::before{content:'▶';position:absolute;left:0;top:2px;color:var(--gold);font-size:9px}
+.bullet-list li strong{color:var(--text)}
+
+.callout{
+  padding:14px 16px;border-radius:10px;margin-top:10px;
+  background:linear-gradient(90deg,rgba(212,164,0,.08),rgba(212,164,0,.02));
+  border:1px solid rgba(212,164,0,.25);border-left:3px solid var(--gold);
+  font-size:13px;color:var(--text);line-height:1.55;
+}
+.callout strong{color:var(--gold-strong)}
+
+@media(max-width:900px){
+  .main{grid-template-columns:1fr}
+  .side-nav{position:static;display:flex;flex-wrap:wrap;gap:6px;padding:10px}
+  .nav-head{width:100%;border-bottom:none;margin-bottom:4px}
+  .nav-btn{width:auto;flex:1 1 120px}
+  .nav-btn.active{border-left:0;border-bottom:3px solid var(--gold);padding-left:10px}
+  .hero{grid-template-columns:1fr}
+  .gains-list{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .top-bar{padding:10px 12px}
+  .brand-text h1{font-size:14px}
+  .main{padding:12px}
+  .content{padding:16px}
+}
+</style>
 </head>
 <body>
-<div class="container">
-  <a class="back-link" href="index.html">&larr; Back to Hub</a>
-  <header class="hero">
-    <h1 class="gold-text">Grudge Warlords Guide</h1>
-    <p>The definitive reference for professions, weapons, recipes, tiers, classes, and enchanting.
-      All data sourced from the <strong>Warlord Crafting Suite (WCS)</strong> CSV exports — the single source of truth.</p>
-    <div class="counts">
-      <div class="c"><div class="n">5</div><div class="l">Crafting Professions</div></div>
-      <div class="c"><div class="n">6</div><div class="l">Gathering Types</div></div>
-      <div class="c"><div class="n">17</div><div class="l">Weapon Types</div></div>
-      <div class="c"><div class="n">6</div><div class="l">Per Weapon Type</div></div>
-      <div class="c"><div class="n">8</div><div class="l">Tier Levels</div></div>
-      <div class="c"><div class="n">4</div><div class="l">Classes</div></div>
-      <div class="c"><div class="n">250+</div><div class="l">Skill Tree Nodes</div></div>
-      <div class="c"><div class="n">20</div><div class="l">Infusion Types</div></div>
+<div class="app">
+  <header class="top-bar">
+    <div class="brand">
+      <div class="brand-mark">⚔</div>
+      <div class="brand-text">
+        <h1>Grudge Warlords</h1>
+        <p>Official Guide &amp; Codex</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <span class="top-chip live">● Live Data</span>
+      <a class="top-chip" href="https://molochdagod.github.io/ObjectStore/" target="_blank">ObjectStore API</a>
+      <a class="top-chip" href="mainpanel.html">Main Panel →</a>
     </div>
   </header>
 
-  <div class="tabs">
-    <button class="active" data-tab="tiers">🏆 Tiers</button>
-    <button data-tab="professions">⛏ Professions</button>
-    <button data-tab="weapons">⚔ Weapons</button>
-    <button data-tab="classes">🛡 Classes</button>
-    <button data-tab="recipes">📜 Recipes</button>
-    <button data-tab="infusions">✨ Infusions</button>
-    <button data-tab="skilltrees">🌳 Skill Trees</button>
+  <div class="main">
+    <aside class="side-nav">
+      <div class="nav-head">Learn</div>
+      <button class="nav-btn active" data-section="welcome"><span class="ico">🏰</span>Welcome</button>
+      <button class="nav-btn" data-section="races"><span class="ico">🧬</span>Races</button>
+      <button class="nav-btn" data-section="classes"><span class="ico">⚔</span>Classes</button>
+      <button class="nav-btn" data-section="attributes"><span class="ico">💪</span>Attributes</button>
+      <button class="nav-btn" data-section="derived"><span class="ico">📊</span>Derived Stats</button>
+      <button class="nav-btn" data-section="combat"><span class="ico">🎯</span>Combat Flow</button>
+      <button class="nav-btn" data-section="weapons"><span class="ico">🗡</span>Weapons</button>
+      <button class="nav-btn" data-section="skills"><span class="ico">✨</span>Weapon Skills</button>
+      <button class="nav-btn" data-section="armor"><span class="ico">🛡</span>Armor &amp; Slots</button>
+      <button class="nav-btn" data-section="professions"><span class="ico">⛏</span>Professions</button>
+      <button class="nav-btn" data-section="tiers"><span class="ico">👑</span>Build Tiers</button>
+      <button class="nav-btn" data-section="world"><span class="ico">🗺</span>World &amp; Factions</button>
+      <button class="nav-btn" data-section="glossary"><span class="ico">📖</span>Glossary</button>
+    </aside>
+
+    <main class="content" id="content"><div style="text-align:center;padding:40px;color:var(--muted)">Loading guide…</div></main>
   </div>
-
-  <!-- ═══════════════════ TIERS ═══════════════════ -->
-  <div class="section active" id="tab-tiers">
-    <p class="sec-heading">Tier System (T1–T8)</p>
-    <p style="color:var(--muted);font-size:.88em;margin-bottom:16px;">
-      Every craftable item exists in 8 tiers. Higher tiers require higher-tier materials, profession levels, and crafting stations.
-      Stats scale per tier using base + perTier × (tier − 1). The D5 rename moved "Legendary" from T5 to T8.
-    </p>
-    <div class="tier-bar">
-      <div class="ts" style="border-top-color:#8b7355"><div class="tn" style="color:#8b7355">T1 Common</div><div class="tl">Bronze · Lv 1–5</div></div>
-      <div class="ts" style="border-top-color:#a8a8a8"><div class="tn" style="color:#a8a8a8">T2 Uncommon</div><div class="tl">Silver · Lv 10–15</div></div>
-      <div class="ts" style="border-top-color:#4a9eff"><div class="tn" style="color:#4a9eff">T3 Rare</div><div class="tl">Blue · Lv 20–25</div></div>
-      <div class="ts" style="border-top-color:#9d4dff"><div class="tn" style="color:#9d4dff">T4 Epic</div><div class="tl">Purple · Lv 35–40</div></div>
-      <div class="ts" style="border-top-color:#ff4d4d"><div class="tn" style="color:#ff4d4d">T5 Heroic</div><div class="tl">Red · Lv 50–55</div></div>
-      <div class="ts" style="border-top-color:#ffaa00"><div class="tn" style="color:#ffaa00">T6 Mythic</div><div class="tl">Orange · Lv 65–70</div></div>
-      <div class="ts" style="border-top-color:#d4a84b"><div class="tn" style="color:#d4a84b">T7 Ancient</div><div class="tl">Gold · Lv 80–85</div></div>
-      <div class="ts" style="border-top-color:#f0d890"><div class="tn" style="color:#f0d890">T8 Legendary</div><div class="tl">Shimmer · Lv 95</div></div>
-    </div>
-    <div class="note">
-      <strong>Crafting Stations:</strong> T1–T5 use standard stations (Anvil, Sawmill, Loom, etc.).
-      T6–T7 require <strong>Master</strong> stations. T8 requires <strong>Divine</strong> stations and <strong>Divine Essence</strong>.
-      T7–T8 recipes are <strong>drop-only</strong> (recipe scrolls from bosses).
-    </div>
-
-    <p class="sec-heading" style="margin-top:28px">Material Tiers (WCS Canonical)</p>
-    <div class="g g3">
-      <div class="card" style="border-left:4px solid var(--miner)">
-        <h3 style="color:var(--miner)"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Hammer_01.png" class="icon-sm"> Ore → Ingot</h3>
-        <div class="sub">Copper → Iron → Steel → Mithril → Adamantine → Orichalcum → Starmetal → Divine</div>
-        <div class="tags"><span class="tag">Miner</span><span class="tag">Forge / Master Forge / Divine Forge</span></div>
-      </div>
-      <div class="card" style="border-left:4px solid var(--forester)">
-        <h3 style="color:var(--forester)"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Axe_01.png" class="icon-sm"> Log → Plank</h3>
-        <div class="sub">Pine → Oak → Maple → Ash → Ironwood → Ebony → Wyrmwood → Worldtree</div>
-        <div class="tags"><span class="tag">Forester</span><span class="tag">Sawmill / Master Sawmill / Divine Sawmill</span></div>
-      </div>
-      <div class="card" style="border-left:4px solid var(--forester)">
-        <h3 style="color:var(--forester)"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Dagger_01.png" class="icon-sm"> Hide → Leather</h3>
-        <div class="sub">Rawhide → Thick → Rugged → Hardened → Wyrm → Infernal → Titan → Divine</div>
-        <div class="tags"><span class="tag">Forester</span><span class="tag">Tanning Rack / Master / Divine</span></div>
-      </div>
-      <div class="card" style="border-left:4px solid var(--mystic)">
-        <h3 style="color:var(--mystic)"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Staff_01.png" class="icon-sm"> Thread → Cloth</h3>
-        <div class="sub">Linen → Wool → Cotton → Silk → Moonweave → Starweave → Voidweave → Divine</div>
-        <div class="tags"><span class="tag">Mystic</span><span class="tag">Loom / Master Loom / Divine Loom</span></div>
-      </div>
-      <div class="card" style="border-left:4px solid var(--mystic)">
-        <h3 style="color:var(--mystic)"><img src="https://assets.grudge-studio.com/icons/pack/misc/Effect.png" class="icon-sm"> Essence</h3>
-        <div class="sub">Minor → Lesser → Greater → Superior → Refined → Perfect → Ancient → Divine</div>
-        <div class="tags"><span class="tag">Mystic</span><span class="tag">Gatherable</span></div>
-      </div>
-      <div class="card" style="border-left:4px solid var(--miner)">
-        <h3 style="color:var(--miner)"><img src="https://assets.grudge-studio.com/icons/pack/misc/Electro.png" class="icon-sm"> Gems</h3>
-        <div class="sub">Rough → Flawed → Standard → Fine → Pristine → Flawless → Radiant → Divine</div>
-        <div class="tags"><span class="tag">Miner</span><span class="tag">Gatherable</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══════════════════ PROFESSIONS ═══════════════════ -->
-  <div class="section" id="tab-professions">
-    <p class="sec-heading">5 Crafting Professions</p>
-    <p style="color:var(--muted);font-size:.85em;margin-bottom:16px">
-      Each profession has <strong>4 sub-tabs</strong> in WCS: Gathering Skill Tree (50 nodes) · Crafting Recipes · Crafting Stations · Infusions/Enchants
-    </p>
-    <div class="g g2" style="margin-bottom:32px">
-      <!-- Miner -->
-      <div class="card" style="border-left:4px solid var(--miner)">
-        <h3 style="color:var(--miner)"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Hammer_01.png" class="icon-sm"> Miner</h3>
-        <div style="font-size:.75em;color:var(--muted);margin-bottom:8px">Weaponsmith &amp; Plate Armorsmith · 50 gathering nodes</div>
-        <div class="sub"><strong style="color:var(--text)">Gathering:</strong> Mining (ore, gems, crystals, treasure)</div>
-        <div class="sub"><strong style="color:var(--text)">Crafts:</strong> Smelting (8 ingot tiers) · Swords · Axes · Daggers · Hammers · Greatswords · Greataxes · Spears · Maces · Shields · Plate Armor (7 slots × 8 tiers)</div>
-        <div class="sub"><strong style="color:var(--text)">Stations:</strong> Forge → Master Forge → Divine Forge · Anvil → Master Anvil → Divine Anvil</div>
-        <div class="tags"><span class="tag gold">Forge Infusion</span><span class="tag gold">Earthen Infusion</span><span class="tag gold">Crystal Infusion</span></div>
-      </div>
-      <!-- Forester -->
-      <div class="card" style="border-left:4px solid var(--forester)">
-        <h3 style="color:var(--forester)"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Bow_01.png" class="icon-sm"> Forester</h3>
-        <div style="font-size:.75em;color:var(--muted);margin-bottom:8px">Woodworker, Leatherworker &amp; Mount Tamer · 50 gathering nodes</div>
-        <div class="sub"><strong style="color:var(--text)">Gathering:</strong> Woodcutting · Skinning · Fishing · Herb Gathering</div>
-        <div class="sub"><strong style="color:var(--text)">Crafts:</strong> Woodworking (8 plank tiers) · Leatherworking (6 leather tiers) · Bows (T1–T8) · Leather Armor (7 slots × 8 tiers) · Ground &amp; Flying Mounts · String · Bowstring</div>
-        <div class="sub"><strong style="color:var(--text)">Stations:</strong> Sawmill · Tanning Rack · Woodworking Bench · Stable → Master Stable</div>
-        <div class="tags"><span class="tag gold">Verdant Infusion</span><span class="tag gold">Beast Infusion</span><span class="tag gold">Primal Infusion</span></div>
-      </div>
-      <!-- Chef -->
-      <div class="card" style="border-left:4px solid var(--chef)">
-        <h3 style="color:var(--chef)"><img src="https://assets.grudge-studio.com/icons/pack/misc/Burns.png" class="icon-sm"> Chef</h3>
-        <div style="font-size:.75em;color:var(--muted);margin-bottom:8px">Cook, Brewer &amp; Alchemist · 50 gathering nodes</div>
-        <div class="sub"><strong style="color:var(--text)">Gathering:</strong> Fishing · Foraging · Herb Gathering · Ingredient Gathering (milk, honey, salt, water)</div>
-        <div class="sub"><strong style="color:var(--text)">Crafts:</strong> Food (9 tiers T0–T8) · Health Potions (8 tiers) · Mana Potions (8 tiers) · Buff Potions (STR/DEF/SPD/Regen) · Drinks (3 tiers)</div>
-        <div class="sub"><strong style="color:var(--text)">Stations:</strong> Campfire → Cooking Pot → Alchemy Station → Divine Kitchen / Divine Alchemy</div>
-        <div class="tags"><span class="tag gold">Vitality Infusion</span><span class="tag gold">Stamina Infusion</span><span class="tag gold">Elixir Infusion</span></div>
-      </div>
-      <!-- Engineer -->
-      <div class="card" style="border-left:4px solid var(--engineer)">
-        <h3 style="color:var(--engineer)"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Crossbow_01.png" class="icon-sm"> Engineer</h3>
-        <div style="font-size:.75em;color:var(--muted);margin-bottom:8px">Mechanic, Gunsmith &amp; Inventor · 50 gathering nodes</div>
-        <div class="sub"><strong style="color:var(--text)">Gathering:</strong> Salvaging · Scavenging · Dismantling · Oil/Gas/Explosive/Battery extraction</div>
-        <div class="sub"><strong style="color:var(--text)">Crafts:</strong> Crossbows (T1–T8) · Guns (T1–T8) · Components (Gunpowder, Gears, Springs, Lenses, Circuits) · Mechanical Mounts · Gadgets</div>
-        <div class="sub"><strong style="color:var(--text)">Stations:</strong> Workshop · Workbench</div>
-        <div class="tags"><span class="tag gold">Mechanical Infusion</span><span class="tag gold">Explosive Infusion</span><span class="tag gold">Automaton Infusion</span></div>
-      </div>
-      <!-- Mystic -->
-      <div class="card" style="border-left:4px solid var(--mystic)">
-        <h3 style="color:var(--mystic)"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Staff_01.png" class="icon-sm"> Mystic</h3>
-        <div style="font-size:.75em;color:var(--muted);margin-bottom:8px">Weaver, Enchanter &amp; Spellcrafter · 50 gathering nodes</div>
-        <div class="sub"><strong style="color:var(--text)">Gathering:</strong> Herbalism · Essence Extraction · Crystal Harvesting · Mushrooms · Lichen · Flowers · Roots</div>
-        <div class="sub"><strong style="color:var(--text)">Crafts:</strong> Weaving (8 cloth tiers) · Staves (Fire/Frost/Holy/Lightning/Nature/Arcane — 6 each × 8 tiers) · Tomes · Wands · Off-hand Relics · Cloth Armor (7 slots × 8 tiers) · Magical Mounts · Enchanting</div>
-        <div class="sub"><strong style="color:var(--text)">Stations:</strong> Loom → Master Loom → Divine Loom · Enchanting Table</div>
-        <div class="tags"><span class="tag gold">Arcane Infusion</span><span class="tag gold">Void Infusion</span><span class="tag gold">Celestial Infusion</span></div>
-      </div>
-    </div>
-
-    <p class="sec-heading">6 Gathering Types</p>
-    <div class="g g3">
-      <div class="card"><h3>⛏ Mining</h3><div class="sub">Ore, Gems, Crystals, Treasure · 8 ore tiers · Feeds → Miner, Engineer, Mystic</div></div>
-      <div class="card"><h3>🪓 Logging</h3><div class="sub">Wood, Planks, Sap, Hemp, Berries, Health/Mana Goo · 8 wood tiers · Feeds → Forester, Engineer</div></div>
-      <div class="card"><h3>🔪 Skinning</h3><div class="sub">Hide, Leather, Bones, Fishing Lures, Gems · 8 hide tiers · Feeds → Forester, Chef, Mystic</div></div>
-      <div class="card"><h3>🎣 Fishing</h3><div class="sub">Fish, Shellfish, Bones, Random Items · 8 fish tiers · Feeds → Chef, Mystic</div></div>
-      <div class="card"><h3>🌿 Herbalism</h3><div class="sub">Hemp, Berries, Rope, Cloth, Herbs, Potions · 8 herb tiers · Feeds → Chef, Mystic, Forester</div></div>
-      <div class="card"><h3>🧲 Scavenging</h3><div class="sub">Cogs, Metals, Mechanical Parts, Rare Components · 8 scrap tiers · Feeds → Engineer, Miner</div></div>
-    </div>
-  </div>
-
-  <!-- ═══════════════════ WEAPONS ═══════════════════ -->
-  <div class="section" id="tab-weapons">
-    <p class="sec-heading">17 Weapon Types — 6 Named Weapons Each × 8 Tiers = 816+ Weapons</p>
-    <p style="color:var(--muted);font-size:.85em;margin-bottom:16px">
-      Each weapon type has 6 unique named weapons at T1. Each scales to T8 with increasing stats.
-      Every weapon has a 4-slot Arsenal: <strong>Primary</strong> (unlocks T1), <strong>Secondary</strong> (T2), <strong>Ability</strong> (T2), <strong>Ultimate</strong> (T3).
-    </p>
-    <div class="g g3" style="margin-bottom:28px">
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Sword_01.png" class="icon-md"><div><div class="wt-name">Sword</div><div class="wt-sub">1h · Miner · Bloodfeud Blade, Wraithfang, Oathbreaker, Kinrend, Dusksinger, Emberclad</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Axe_01.png" class="icon-md"><div><div class="wt-name">Axe</div><div class="wt-sub">1h · Miner · Gorehowl, Skullsplitter, Veinreaver, Ironmaw, Dreadcleaver, Bonehew</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Dagger_01.png" class="icon-md"><div><div class="wt-name">Dagger</div><div class="wt-sub">1h · Miner · Nightfang, Bloodshiv, Wraithclaw, Emberfang, Ironspike, Duskblade</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Hammer_01.png" class="icon-md"><div><div class="wt-name">Hammer (1h)</div><div class="wt-sub">1h · Miner · Grudgehammer, Oathcrusher, Bloodmaul, Ironbreak, Wrathpound, Emberpound</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Hammer_10.png" class="icon-md"><div><div class="wt-name">Mace</div><div class="wt-sub">1h · Miner · Iron Cudgel, Steel Flail, Spiked Morningstar, Bloodbludgeon, Obsidian Crusher, Divine Scepter</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Shield_01.png" class="icon-md"><div><div class="wt-name">Shield</div><div class="wt-sub">Off-hand · Miner · Copper → Iron → Steel → Mithril → Adamantine → Orichalcum → Starmetal → Divine</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Sword_10.png" class="icon-md"><div><div class="wt-name">Greatsword</div><div class="wt-sub">2h · Miner · Doomspire, Bloodspire, Wraithblade, Emberbrand, Ironedge, Duskbringer</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Axe_10.png" class="icon-md"><div><div class="wt-name">Greataxe</div><div class="wt-sub">2h · Miner · Skullsunder, Bloodreaver, Wraithhew, Embermaul, Ironrend, Dusksplitter</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Hammer_01.png" class="icon-md"><div><div class="wt-name">Hammer (2h)</div><div class="wt-sub">2h · Miner · Titanmaul, Doomhammer, Wrathquake, Bloodpound, Ironcrush, Embershatter</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Spear_01.png" class="icon-md"><div><div class="wt-name">Spear</div><div class="wt-sub">2h · Miner · Iron Pike, Steel Lance, Mithril Javelin, Bloodspear, Voidpiercer, Divine Trident</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Bow_01.png" class="icon-md"><div><div class="wt-name">Bow</div><div class="wt-sub">2h · Forester · Wraithbone, Bloodstring, Shadowflight, Emberthorn, Ironvine, Duskreaver</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Crossbow_01.png" class="icon-md"><div><div class="wt-name">Crossbow</div><div class="wt-sub">2h · Engineer · Ironveil Repeater, Skullpiercer, Bloodreaver, Wraithspike, Emberbolt, Ironshard</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Crossbow_10.png" class="icon-md"><div><div class="wt-name">Gun</div><div class="wt-sub">2h · Engineer · Blackpowder Blaster, Ironstorm, Bloodcannon, Wraithbarrel, Emberrifle, Duskblaster</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Staff_01.png" class="icon-md"><div><div class="wt-name">Fire Staff</div><div class="wt-sub">2h · Mystic · Emberwrath, Sunfire, Inferno Spire, Ash Grudge, Ember Heart, Blazing Wrath</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Staff_05.png" class="icon-md"><div><div class="wt-name">Frost Staff</div><div class="wt-sub">2h · Mystic · Glacial Spire, Frostbite, Winter Grudge, Ice Warden, Blizzard Heart, Frozen Spite</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Staff_09.png" class="icon-md"><div><div class="wt-name">Holy Staff</div><div class="wt-sub">2h · Mystic · Dawnspire, Redemption, Sacred Light, Holy Wrath, Celestial Grace, Divine Judgment</div></div></div>
-      <div class="wt-card"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Staff_13.png" class="icon-md"><div><div class="wt-name">Lightning Staff</div><div class="wt-sub">2h · Mystic · Stormwrath, Tempest Spire, Shock Grudge, Voltaic Heart, Thunder Spire + 1</div></div></div>
-    </div>
-    <div class="note">
-      <strong>Also:</strong> Nature Staff (6 · Mystic), Arcane Staff (6 · Mystic), Tome (Mystic off-hand),
-      Wand (Mystic 1h), Off-hand Relic (Mystic/Worge), Scythe (Warrior/Worge).
-      Tools (Mining Pick, Lumber Axe, Skinning Knife, Sickle, Fishing Rod, Toolkit) are weapon-class items usable in combat.
-    </div>
-  </div>
-
-  <!-- ═══════════════════ CLASSES ═══════════════════ -->
-  <div class="section" id="tab-classes">
-    <p class="sec-heading">4 Classes — Weapon Restrictions</p>
-    <div class="g g2" style="margin-bottom:24px">
-      <div class="card" style="border-left:4px solid #ff4d4d">
-        <h3 style="color:#ff4d4d"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Sword_01.png" class="icon-sm"> Warrior</h3>
-        <div class="sub">Melee specialist. Stamina system tied to sprint → invisible target lock, speed boost, charge attacks. Stamina fills through parries, dodges, blocks. Perfect actions grant extra. Can double jump, AoE attacks, group invincibility.</div><div class="sub" style="color:var(--gold);font-size:.78em;margin-top:6px">No weapon restrictions — can equip any weapon type</div>
-      </div>
-      <div class="card" style="border-left:4px solid #9d4dff">
-        <h3 style="color:#9d4dff"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Staff_01.png" class="icon-sm"> Mage</h3>
-        <div class="sub">Ranged caster. Can create special particle teleport blocks (max 10), placeable by AI companions,
-          breakable by other factions, limited health. Specializes in elemental and arcane magic.</div>
-        <div class="tags">
-          <span class="tag">Staff</span><span class="tag">Tome</span><span class="tag">Mace</span>
-          <span class="tag">Wand</span><span class="tag">Off-hand Relic</span>
-        </div>
-      </div>
-      <div class="card" style="border-left:4px solid #4a9eff">
-        <h3 style="color:#4a9eff"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Bow_01.png" class="icon-sm"> Ranger</h3>
-        <div class="sub">Ranged &amp; melee hybrid. RMB + LMB triggers attempted parry → perfect parry = counter.
-          Players get instant dash attack while enemy stunned 0.5s (2s window). NPCs have different stun duration.</div>
-        <div class="tags">
-          <span class="tag">Bow</span><span class="tag">Crossbow</span><span class="tag">Gun</span>
-          <span class="tag">Dagger</span><span class="tag">Greatsword</span><span class="tag">Spear</span>
-        </div>
-      </div>
-      <div class="card" style="border-left:4px solid #5dd862">
-        <h3 style="color:#5dd862"><img src="https://assets.grudge-studio.com/icons/pack/weapons/Staff_17.png" class="icon-sm"> Worge</h3>
-        <div class="sub">Shapeshifter. Three forms: <strong>Bear</strong> (large, powerful), <strong>Raptor</strong> (invisible, rogue-like),
-          <strong>Large Bird</strong> (flyable, mountable by players/AI). Nature/primal magic hybrid.</div>
-        <div class="tags">
-          <span class="tag">Staff</span><span class="tag">Spear</span><span class="tag">Dagger</span>
-          <span class="tag">Bow</span><span class="tag">Hammer</span><span class="tag">Mace</span>
-          <span class="tag">Off-hand Relic</span><span class="tag">Scythe</span>
-        </div>
-      </div>
-    </div>
-
-    <p class="sec-heading">Armor Types by Class</p>
-    <div class="g g3">
-      <div class="card">
-        <h3><img src="https://assets.grudge-studio.com/icons/pack/weapons/Shield_01.png" class="icon-sm"> Plate (Metal)</h3>
-        <div class="sub">Crafted by <strong>Miner</strong>. 7 slots × 8 tiers = 56 pieces. Helm · Chestplate · Greaves · Boots · Gauntlets · Pauldrons · Shield</div>
-        <div class="tags"><span class="tag cb-warrior">Warrior</span></div>
-      </div>
-      <div class="card">
-        <h3><img src="https://assets.grudge-studio.com/icons/pack/weapons/Dagger_01.png" class="icon-sm"> Leather</h3>
-        <div class="sub">Crafted by <strong>Forester</strong>. 7 slots × 8 tiers = 56 pieces. Cap · Vest · Pants · Boots · Gloves · Shoulders · Bracers</div>
-        <div class="tags"><span class="tag cb-ranger">Ranger</span><span class="tag cb-worge">Worge</span></div>
-      </div>
-      <div class="card">
-        <h3><img src="https://assets.grudge-studio.com/icons/pack/weapons/Staff_01.png" class="icon-sm"> Cloth</h3>
-        <div class="sub">Crafted by <strong>Mystic</strong>. 7 slots × 8 tiers = 56 pieces. Hood · Robe · Pants · Slippers · Gloves · Mantle · Sash</div>
-        <div class="tags"><span class="tag cb-mage">Mage</span></div>
-      </div>
-    </div>
-
-    <div class="note" style="margin-top:20px">
-      <strong>Equipment slots (6 armor + 4 accessory):</strong> Head · Chest · Legs · Feet · Hands · Shoulders · Cape (active effect + cooldown) · 2× Relic (trinkets, sometimes with actives) · Ring.
-      <strong>Weapon slots:</strong> Main Hand + Off-hand OR 2h weapon.
-    </div>
-  </div>
-
-  <!-- ═══════════════════ RECIPES ═══════════════════ -->
-  <div class="section" id="tab-recipes">
-    <p class="sec-heading">Recipe Categories (WCS Source of Truth)</p>
-    <p style="color:var(--muted);font-size:.85em;margin-bottom:16px">
-      Every craftable (non-gathered) item needs a recipe. The WCS CSV has 109 explicit recipes.
-      Full coverage requires 600+ when all weapon types × tiers, armor × tiers, and enchants are included.
-    </p>
-    <div class="note" style="margin-top:0;margin-bottom:20px">
-      <strong>T0 starter recipes:</strong> T0 recipes are universal starter crafts. Everyone can make them at the shared starter crafting site that supports the T0→T1 onboarding flow, including the current auto-harvest starter loop and baseline starter outputs for armor, capes, potions, foods, and related basics.
-    </div>
-    <div class="rc"><span style="font-size:1.2em">🔥</span><span class="rc-name">Smelting</span><span class="rc-prof">Miner</span><span class="rc-count">8 tiers · Ore → Ingot</span></div>
-    <div class="rc"><span style="font-size:1.2em">🪵</span><span class="rc-name">Woodworking</span><span class="rc-prof">Forester</span><span class="rc-count">8 tiers · Log → Plank</span></div>
-    <div class="rc"><span style="font-size:1.2em">🧵</span><span class="rc-name">Leatherworking</span><span class="rc-prof">Forester</span><span class="rc-count">6 tiers · Hide → Leather</span></div>
-    <div class="rc"><span style="font-size:1.2em">🧶</span><span class="rc-name">Weaving</span><span class="rc-prof">Mystic</span><span class="rc-count">8 tiers · Thread → Cloth</span></div>
-    <div class="rc"><span style="font-size:1.2em">⚔</span><span class="rc-name">Weapon — Swords</span><span class="rc-prof">Miner</span><span class="rc-count">9 recipes (6 T1 + T2–T8 tier-up)</span></div>
-    <div class="rc"><span style="font-size:1.2em">🪓</span><span class="rc-name">Weapon — Axes</span><span class="rc-prof">Miner</span><span class="rc-count">T1 Gorehowl + tier chain</span></div>
-    <div class="rc"><span style="font-size:1.2em">🏹</span><span class="rc-name">Weapon — Bows</span><span class="rc-prof">Forester</span><span class="rc-count">4+ recipes T1–T4 in CSV</span></div>
-    <div class="rc"><span style="font-size:1.2em">🔫</span><span class="rc-name">Weapon — Crossbows &amp; Guns</span><span class="rc-prof">Engineer</span><span class="rc-count">2 T1 recipes in CSV</span></div>
-    <div class="rc"><span style="font-size:1.2em">🪄</span><span class="rc-name">Weapon — Staves</span><span class="rc-prof">Mystic</span><span class="rc-count">2 T1 recipes (Fire + Frost) in CSV</span></div>
-    <div class="rc"><span style="font-size:1.2em">🛡</span><span class="rc-name">Armor — Plate</span><span class="rc-prof">Miner</span><span class="rc-count">7 recipes (7 slots × T1 start)</span></div>
-    <div class="rc"><span style="font-size:1.2em">🦌</span><span class="rc-name">Armor — Leather</span><span class="rc-prof">Forester</span><span class="rc-count">2 recipes in CSV (Cap, Vest)</span></div>
-    <div class="rc"><span style="font-size:1.2em">🧙</span><span class="rc-name">Armor — Cloth</span><span class="rc-prof">Mystic</span><span class="rc-count">2 recipes in CSV (Hood, Robe)</span></div>
-    <div class="rc"><span style="font-size:1.2em">🍖</span><span class="rc-name">Food</span><span class="rc-prof">Chef</span><span class="rc-count">9 tiers T0–T8 · Scraps → Divine Banquet</span></div>
-    <div class="rc"><span style="font-size:1.2em">❤️</span><span class="rc-name">Health Potions</span><span class="rc-prof">Chef</span><span class="rc-count">8 tiers · Minor → Divine</span></div>
-    <div class="rc"><span style="font-size:1.2em">💙</span><span class="rc-name">Mana Potions</span><span class="rc-prof">Chef</span><span class="rc-count">8 tiers · Minor → Divine</span></div>
-    <div class="rc"><span style="font-size:1.2em">💪</span><span class="rc-name">Buff Potions</span><span class="rc-prof">Chef</span><span class="rc-count">4+ types (STR, DEF, SPD, Regen)</span></div>
-    <div class="rc"><span style="font-size:1.2em">🥤</span><span class="rc-name">Drinks</span><span class="rc-prof">Chef</span><span class="rc-count">3 tiers · Water → Fruit Juice</span></div>
-    <div class="rc"><span style="font-size:1.2em">🐴</span><span class="rc-name">Mounts</span><span class="rc-prof">Forester / Engineer / Mystic</span><span class="rc-count">10 recipes · Donkey → Dragon</span></div>
-    <div class="rc"><span style="font-size:1.2em">⚙</span><span class="rc-name">Components</span><span class="rc-prof">Engineer / Forester</span><span class="rc-count">8 recipes · Gunpowder, Gears, Springs, Lenses, Circuits</span></div>
-    <div class="rc"><span style="font-size:1.2em">✨</span><span class="rc-name">Enchant / Infusion</span><span class="rc-prof">All</span><span class="rc-count">20 infusion types · Apply to equipment</span></div>
-
-    <div class="note" style="margin-top:20px">
-      <strong>Recipe acquisition:</strong> Most recipes unlock via the profession <strong>Skill Tree</strong> (50 nodes per profession).
-      Some are <strong>purchasable</strong> from faction vendors. T7–T8 recipes are <strong>drop-only</strong> from bosses.
-      Each recipe specifies: station, craft time, gold cost, success rate, required level, materials (up to 5).
-    </div>
-  </div>
-
-  <!-- ═══════════════════ INFUSIONS ═══════════════════ -->
-  <div class="section" id="tab-infusions">
-    <p class="sec-heading">Infusion &amp; Enchanting System</p>
-    <p style="color:var(--muted);font-size:.85em;margin-bottom:16px">
-      Infusions enhance equipment. 5 generic tiers drop from enemies, plus 3 profession-specific infusions per crafter (15 total) = 20 infusion types.
-      Apply at an Enchanting Table.
-    </p>
-
-    <p class="sec-heading" style="font-size:1em">Generic Infusions (Enemy Drops)</p>
-    <div class="g g3" style="margin-bottom:24px">
-      <div class="inf-card"><div class="inf-icon">✨</div><div><div class="inf-name">Minor Infusion<span class="inf-tier tier-badge t1">T1</span></div><div class="inf-desc">3% drop from common enemies · Lv 1</div><div class="inf-effect">Enhancing T1–T2 equipment</div></div></div>
-      <div class="inf-card"><div class="inf-icon">💫</div><div><div class="inf-name">Lesser Infusion<span class="inf-tier tier-badge t2">T2</span></div><div class="inf-desc">5% drop from uncommon enemies · Lv 10</div><div class="inf-effect">Enhancing T2–T3 equipment</div></div></div>
-      <div class="inf-card"><div class="inf-icon">⭐</div><div><div class="inf-name">Greater Infusion<span class="inf-tier tier-badge t3">T3</span></div><div class="inf-desc">10% drop from rare enemies · Lv 20</div><div class="inf-effect">Enhancing T3–T4 equipment</div></div></div>
-      <div class="inf-card"><div class="inf-icon">🌟</div><div><div class="inf-name">Superior Infusion<span class="inf-tier tier-badge t4">T4</span></div><div class="inf-desc">25% drop from elite enemies · Lv 35</div><div class="inf-effect">Enhancing T4–T5 equipment</div></div></div>
-      <div class="inf-card"><div class="inf-icon">💎</div><div><div class="inf-name">Perfect Infusion<span class="inf-tier tier-badge t5">T5</span></div><div class="inf-desc">50% drop from bosses · Lv 50</div><div class="inf-effect">Enhancing T5–T8 equipment</div></div></div>
-    </div>
-
-    <p class="sec-heading" style="font-size:1em">Profession-Specific Infusions (Skill Tree Unlocks)</p>
-    <div class="g g3">
-      <div class="inf-card" style="border-left:3px solid var(--miner)"><div class="inf-icon">🔥</div><div><div class="inf-name">Forge Infusion<span class="inf-tier tier-badge t3">T3</span></div><div class="inf-desc">Miner skill tree · Lv 40</div><div class="inf-effect">Weapon/armor durability +10%</div></div></div>
-      <div class="inf-card" style="border-left:3px solid var(--miner)"><div class="inf-icon">🪨</div><div><div class="inf-name">Earthen Infusion<span class="inf-tier tier-badge t4">T4</span></div><div class="inf-desc">Miner skill tree · Lv 55</div><div class="inf-effect">Defense +5% on plate armor</div></div></div>
-      <div class="inf-card" style="border-left:3px solid var(--miner)"><div class="inf-icon">💠</div><div><div class="inf-name">Crystal Infusion<span class="inf-tier tier-badge t5">T5</span></div><div class="inf-desc">Miner skill tree · Lv 70</div><div class="inf-effect">Critical damage +8% on weapons</div></div></div>
-      <div class="inf-card" style="border-left:3px solid var(--forester)"><div class="inf-icon">🌿</div><div><div class="inf-name">Verdant Infusion<span class="inf-tier tier-badge t3">T3</span></div><div class="inf-desc">Forester skill tree · Lv 40</div><div class="inf-effect">Nature damage +10%</div></div></div>
-      <div class="inf-card" style="border-left:3px solid var(--forester)"><div class="inf-icon">🐺</div><div><div class="inf-name">Beast Infusion<span class="inf-tier tier-badge t4">T4</span></div><div class="inf-desc">Forester skill tree · Lv 55</div><div class="inf-effect">Attack speed +5%</div></div></div>
-      <div class="inf-card" style="border-left:3px solid var(--forester)"><div class="inf-icon">🦁</div><div><div class="inf-name">Primal Infusion<span class="inf-tier tier-badge t5">T5</span></div><div class="inf-desc">Forester skill tree · Lv 70</div><div class="inf-effect">Bleed damage +15%</div></div></div>
-      <div class="inf-card" style="border-left:3px solid var(--chef)"><div class="inf-icon">❤️</div><div><div class="inf-name">Vitality Infusion<span class="inf-tier tier-badge t3">T3</span></div><div class="inf-desc">Chef skill tree · Lv 40</div><div class="inf-effect">Max HP +8%</div></div></div>
-      <div class="inf-card" style="border-left:3px solid var(--chef)"><div class="inf-icon">💪</div><div><div class="inf-name">Stamina Infusion<span class="inf-tier tier-badge t4">T4</span></div><div class="inf-desc">Chef skill tree · Lv 55</div><div class="inf-effect">Stamina regeneration +10%</div></div></div>
-      <div class="inf-card" style="border-left:3px solid var(--chef)"><div class="inf-icon">🧪</div><div><div class="inf-name">Elixir Infusion<span class="inf-tier tier-badge t5">T5</span></div><div class="inf-desc">Chef skill tree · Lv 70</div><div class="inf-effect">Potion effectiveness +20%</div></div></div>
-      <div class="inf-card" style="border-left:3px solid var(--mystic)"><div class="inf-icon">🔮</div><div><div class="inf-name">Arcane Infusion<span class="inf-tier tier-badge t3">T3</span></div><div class="inf-desc">Mystic skill tree · Lv 40</div><div class="inf-effect">Spell power +10%</div></div></div>
-      <div class="inf-card" style="border-left:3px solid var(--mystic)"><div class="inf-icon">🌑</div><div><div class="inf-name">Void Infusion<span class="inf-tier tier-badge t4">T4</span></div><div class="inf-desc">Mystic skill tree · Lv 55</div><div class="inf-effect">Shadow damage +12%</div></div></div>
-      <div class="inf-card" style="border-left:3px solid var(--mystic)"><div class="inf-icon">☀️</div><div><div class="inf-name">Celestial Infusion<span class="inf-tier tier-badge t5">T5</span></div><div class="inf-desc">Mystic skill tree · Lv 70</div><div class="inf-effect">Holy damage +15%</div></div></div>
-      <div class="inf-card" style="border-left:3px solid var(--engineer)"><div class="inf-icon">⚙️</div><div><div class="inf-name">Mechanical Infusion<span class="inf-tier tier-badge t3">T3</span></div><div class="inf-desc">Engineer skill tree · Lv 40</div><div class="inf-effect">Ranged damage +10%</div></div></div>
-      <div class="inf-card" style="border-left:3px solid var(--engineer)"><div class="inf-icon">💣</div><div><div class="inf-name">Explosive Infusion<span class="inf-tier tier-badge t4">T4</span></div><div class="inf-desc">Engineer skill tree · Lv 55</div><div class="inf-effect">AoE damage +12%</div></div></div>
-      <div class="inf-card" style="border-left:3px solid var(--engineer)"><div class="inf-icon">🤖</div><div><div class="inf-name">Automaton Infusion<span class="inf-tier tier-badge t5">T5</span></div><div class="inf-desc">Engineer skill tree · Lv 70</div><div class="inf-effect">Turret damage +15%</div></div></div>
-    </div>
-  </div>
-
-  <!-- ═══════════════════ SKILL TREES ═══════════════════ -->
-  <div class="section" id="tab-skilltrees">
-    <p class="sec-heading">Profession Skill Trees — 50 Nodes Each</p>
-    <p style="color:var(--muted);font-size:.85em;margin-bottom:16px">
-      Each crafting profession has a gathering skill tree with 50 nodes organized into branches.
-      Nodes grant: tier unlocks, yield bonuses, speed bonuses, quality bonuses, rare drop chance, and recipe unlocks.
-    </p>
-    <div class="g g2">
-      <!-- Miner tree -->
-      <div class="card" style="border-left:4px solid var(--miner)">
-        <h3 style="color:var(--miner)">⛏ Miner Skill Tree</h3>
-        <div class="sub">50 nodes · Mining, Gem, Crystal, Treasure branches</div>
-        <div class="st-row">
-          <div class="st-branch"><div class="sb-name">Ore Mastery</div><div class="sb-desc">11 nodes · Iron → Orichalcum → Eternal mining unlocks</div></div>
-          <div class="st-branch"><div class="sb-name">Gem Mastery</div><div class="sb-desc">10 nodes · Flawed → Pristine → Radiant → Divine gems</div></div>
-          <div class="st-branch"><div class="sb-name">Crystal Mastery</div><div class="sb-desc">8 nodes · Enchanted → Arcane → Celestial crystals</div></div>
-          <div class="st-branch"><div class="sb-name">Treasure Hunting</div><div class="sb-desc">7 nodes · Buried → Ancient → Divine vaults</div></div>
-          <div class="st-branch"><div class="sb-name">Universal</div><div class="sb-desc">9 nodes · Speed, yield, quality bonuses for all</div></div>
-          <div class="st-branch"><div class="sb-name">Rare Nodes</div><div class="sb-desc">2 nodes · 5% and 1% spawn rate detection</div></div>
-        </div>
-      </div>
-      <!-- Forester tree -->
-      <div class="card" style="border-left:4px solid var(--forester)">
-        <h3 style="color:var(--forester)">🌲 Forester Skill Tree</h3>
-        <div class="sub">50 nodes · Woodcutting, Skinning, Fishing, Herb branches</div>
-        <div class="st-row">
-          <div class="st-branch"><div class="sb-name">Woodcutting</div><div class="sb-desc">11 nodes · Oak → Worldtree logging unlocks</div></div>
-          <div class="st-branch"><div class="sb-name">Skinning</div><div class="sb-desc">10 nodes · Thick → Wyrm → Divine leather</div></div>
-          <div class="st-branch"><div class="sb-name">Fishing</div><div class="sb-desc">10 nodes · Salmon → Leviathan → Kraken</div></div>
-          <div class="st-branch"><div class="sb-name">Herb Gathering</div><div class="sb-desc">8 nodes · Spice → Mystic herbs</div></div>
-          <div class="st-branch"><div class="sb-name">Universal</div><div class="sb-desc">8 nodes · Speed, yield, quality for all</div></div>
-        </div>
-      </div>
-      <!-- Chef tree -->
-      <div class="card" style="border-left:4px solid var(--chef)">
-        <h3 style="color:var(--chef)">🍳 Chef Skill Tree</h3>
-        <div class="sub">50 nodes · Fishing, Foraging, Herb, Ingredient branches</div>
-        <div class="st-row">
-          <div class="st-branch"><div class="sb-name">Fishing</div><div class="sb-desc">11 nodes · Salmon → Kraken fishing</div></div>
-          <div class="st-branch"><div class="sb-name">Foraging</div><div class="sb-desc">10 nodes · Fruit → Grain → Golden Wheat</div></div>
-          <div class="st-branch"><div class="sb-name">Herb Gathering</div><div class="sb-desc">10 nodes · Healing → Primordial herbs</div></div>
-          <div class="st-branch"><div class="sb-name">Ingredients</div><div class="sb-desc">8 nodes · Milk, Honey, Salt, Water</div></div>
-          <div class="st-branch"><div class="sb-name">Universal</div><div class="sb-desc">8 nodes · Speed, yield, quality for all</div></div>
-        </div>
-      </div>
-      <!-- Engineer tree -->
-      <div class="card" style="border-left:4px solid var(--engineer)">
-        <h3 style="color:var(--engineer)">⚙ Engineer Skill Tree</h3>
-        <div class="sub">50 nodes · Salvaging, Scavenging, Dismantling branches</div>
-        <div class="st-row">
-          <div class="st-branch"><div class="sb-name">Salvaging</div><div class="sb-desc">11 nodes · Iron → Eternal scrap</div></div>
-          <div class="st-branch"><div class="sb-name">Scavenging</div><div class="sb-desc">10 nodes · Basic → Quantum parts</div></div>
-          <div class="st-branch"><div class="sb-name">Dismantling</div><div class="sb-desc">10 nodes · Gunpowder → Singularity circuits</div></div>
-          <div class="st-branch"><div class="sb-name">Special</div><div class="sb-desc">8 nodes · Oil, Gas, Explosives, Batteries</div></div>
-          <div class="st-branch"><div class="sb-name">Universal</div><div class="sb-desc">8 nodes · Speed, yield, quality for all</div></div>
-        </div>
-      </div>
-      <!-- Mystic tree -->
-      <div class="card" style="border-left:4px solid var(--mystic)">
-        <h3 style="color:var(--mystic)">🔮 Mystic Skill Tree</h3>
-        <div class="sub">50 nodes · Herbalism, Essence, Crystal, Special branches</div>
-        <div class="st-row">
-          <div class="st-branch"><div class="sb-name">Herbalism</div><div class="sb-desc">11 nodes · Healing → Primordial herbs</div></div>
-          <div class="st-branch"><div class="sb-name">Essence Extraction</div><div class="sb-desc">10 nodes · Lesser → Radiant essence</div></div>
-          <div class="st-branch"><div class="sb-name">Crystal Harvesting</div><div class="sb-desc">10 nodes · Mana → Primordial crystals</div></div>
-          <div class="st-branch"><div class="sb-name">Special</div><div class="sb-desc">8 nodes · Mushrooms, Lichen, Flowers, Roots</div></div>
-          <div class="st-branch"><div class="sb-name">Universal</div><div class="sb-desc">8 nodes · Speed, yield, quality for all</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="note" style="margin-top:20px">
-      <strong>Node types:</strong> <code>stat</code> (passive bonus), <code>recipe</code> (unlocks tier/resource), <code>effect</code> (rare drop chance, detection).
-      <strong>Bonus types:</strong> successChance, rareDropChance, qualityBonus, bonusYield, tierUnlock, speedBonus.
-      Each node has x/y position for visual tree layout, required level, and parent node for prerequisite chains.
-    </div>
-    <div style="text-align:center;margin-top:24px">
-      <a href="profession-trees.html" style="display:inline-block;padding:14px 32px;background:var(--gold-dim);color:var(--gold);border:2px solid var(--gold);border-radius:6px;font-family:var(--font-heading);font-size:1.1em;text-decoration:none;transition:all .2s" onmouseover="this.style.background='var(--gold)';this.style.color='#0a0e1a'" onmouseout="this.style.background='var(--gold-dim)';this.style.color='var(--gold)'">🌳 Open Skill Trees &amp; Arsenal →</a>
-    </div>
-  </div>
-
-  <footer class="footer">
-    Grudge Warlords Guide — Created by Racalvin The Pirate King<br>
-    <a href="https://grudgewarlords.com">grudgewarlords.com</a> ·
-    <a href="https://grudge-studio.com">grudge-studio.com</a> ·
-    <a href="https://assets.grudge-studio.com">ObjectStore</a> ·
-    <a href="index.html">Back to Hub</a>
-  </footer>
 </div>
 
 <script>
-// Tab switching
-document.querySelectorAll('.tabs button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+/* ═══════════════════════════════════════════════════════════
+   GRUDGE WARLORDS — GUIDE ENGINE
+   Data source: https://molochdagod.github.io/ObjectStore/
+   ═══════════════════════════════════════════════════════════ */
+const CDN = 'https://molochdagod.github.io/ObjectStore';
+const ICON = p => CDN + '/' + String(p).replace(/^\//,'');
+
+/* Any broken <img> falls back to its emoji */
+function imgOrEmoji(path, emoji, size){
+  const s = size || 44;
+  const safe = (emoji || '').replace(/'/g,"\\'");
+  return '<img src="'+ICON(path)+'" alt="" onerror="this.outerHTML=\'<span style=&quot;font-size:'+Math.round(s*0.6)+'px&quot;>'+safe+'</span>\'"/>';
+}
+
+/* ─── 8 Attributes (Character Builder data) ─── */
+const ATTRIBUTES = [
+  {id:'Strength',emoji:'💪',color:'#ef4444',tagline:'Physical might and raw power',
+   desc:'Strength raises melee damage, physical defense, max HP, and enables heavy weapons. Primary attribute for Warriors, Barbarians, and Orcs. Diminishing returns past 50 points in the scaling stats.',
+   formula:'Physical Dmg = Base × (1 + STR × 0.05)',
+   gains:[['Health','+5'],['Physical Damage','+1.25'],['Physical Defense','+4'],['Block Chance','+0.2%'],['Lifesteal','+0.075%'],['Stagger on Hit','+0.04%'],['Mana Pool','+1'],['Stamina','+0.8'],['Attack Accuracy','+0.08%'],['Health Regen/s','+0.02'],['Damage Reduction','+0.02%']]},
+  {id:'Intellect',emoji:'🧠',color:'#8b5cf6',tagline:'Mental acuity and spellcasting power',
+   desc:'Powers magical damage, mana pool, and cooldown reduction. Essential for Mage Priests. High INT shortens cast times by 0.2% per point. Countered by enemy Resistance.',
+   formula:'Magic Dmg = Base × (1 + INT × 0.05)',
+   gains:[['Mana Pool','+9'],['Magical Damage','+1.5'],['Magical Defense','+2'],['Mana Regen/s','+0.04'],['Cooldown Reduction','+0.075%'],['Spell Accuracy','+0.15%'],['Health','+3'],['Stamina','+0.4'],['Attack Accuracy','+0.1%'],['Ability Cost','-0.05%']]},
+  {id:'Vitality',emoji:'❤️',color:'#22c55e',tagline:'Physical endurance and life force',
+   desc:'The tank stat. Huge HP, bleed resistance, armor rating, and passive health regen. Weak to %-based damage but brutal against burst. Core to Undead and Dwarven builds.',
+   formula:'Max HP = 100 + (VIT × 12)',
+   gains:[['Health','+25'],['Physical Defense','+1.5'],['Health Regen/s','+0.06'],['Damage Reduction','+0.04%'],['Bleed Resistance','+0.15%'],['Mana Pool','+1.5'],['Stamina','+1'],['Magic Resistance','+0.08%'],['Armor Rating','+0.2']]},
+  {id:'Dexterity',emoji:'🎯',color:'#f59e0b',tagline:'Hand-eye coordination and finesse',
+   desc:'Rules critical strikes, attack speed, and accuracy. Rogues and Rangers scale with DEX. Attack speed grows 0.4% per point; crits bypass 40% of enemy block chance.',
+   formula:'Crit Chance = 5% + (DEX × 1.5%)',
+   gains:[['Damage','+0.9'],['Critical Chance','+0.3%'],['Attack Accuracy','+0.25%'],['Attack Speed','+0.2%'],['Evasion','+0.125%'],['Critical Damage','+0.2%'],['Physical Defense','+1.2'],['Stamina','+0.6'],['Movement Speed','+0.08%'],['Reflex Time','+0.03%'],['Health','+3']]},
+  {id:'Endurance',emoji:'🛡️',color:'#6366f1',tagline:'Stamina reserves and physical resistance',
+   desc:'Fuels abilities, raises armor and block effectiveness, and cuts CC durations. Synergizes with shield builds. Dwarves excel here.',
+   formula:'Defense = 2 + (END × 2)',
+   gains:[['Stamina','+6'],['Physical Defense','+5'],['Block Effectiveness','+0.175%'],['CC Duration','-0.1%'],['Armor Rating','+0.6'],['Armor Break Resist','+0.125%'],['Health','+8'],['Mana Pool','+1'],['Health Regen/s','+0.02'],['Block Chance','+0.12%']]},
+  {id:'Wisdom',emoji:'✨',color:'#06b6d4',tagline:'Mental fortitude and magical resilience',
+   desc:'Premier counter to magic. Massive resistance, spell block, CDR resistance, and healing power. Each point slows enemy cooldown reduction by 0.4%.',
+   formula:'Heal Power = Base × (1 + WIS × 0.04)',
+   gains:[['Mana Pool','+6'],['Magical Defense','+5.5'],['Magic Resistance','+0.25%'],['CDR Resistance','+0.2%'],['Status Effect','-0.075%'],['Spell Block','+0.125%'],['Health','+4'],['Stamina','+0.5'],['Damage Reduction','+0.03%'],['Spell Accuracy','+0.1%']]},
+  {id:'Agility',emoji:'⚡',color:'#10b981',tagline:'Speed, reflexes, and positioning',
+   desc:'Governs movement, evasion, dodge cooldown, and crit evasion. Each point grants 0.3% move speed; dodges have 0.5s of i-frames.',
+   formula:'Evasion = AGI × 1.2%',
+   gains:[['Movement Speed','+0.15%'],['Evasion','+0.225%'],['Dodge Cooldown','-0.15%'],['Reflex Time','+0.04%'],['Crit Evasion','+0.25%'],['Fall Damage','-0.2%'],['Stamina','+1'],['Attack Accuracy','+0.1%'],['Attack Speed','+0.05%'],['Damage','+0.3'],['Health','+3']]},
+  {id:'Tactics',emoji:'📜',color:'#f97316',tagline:'Strategic thinking and ability control',
+   desc:'Applies a global 0.5%-per-point multiplier to every non-resource stat. Also reduces ability costs and combo cooldowns, while providing armor and block penetration. The best single attribute for versatile builds.',
+   formula:'Global Bonus = TAC × 0.5%',
+   gains:[['Stamina','+3'],['Ability Cost','-0.075%'],['Armor Penetration','+0.2%'],['Block Penetration','+0.175%'],['Defense Break','+0.1%'],['Combo Cooldown','-0.125%'],['Damage','+0.4'],['Physical Defense','+1'],['Mana Pool','+1.5'],['Cooldown Reduction','+0.05%'],['Health','+3']]}
+];
+
+const DERIVED_STATS = [
+  {k:'Health',d:'Total hit points — you die at 0.',src:'Strength, Vitality, Tactics'},
+  {k:'Mana',d:'Energy pool for spells and focus abilities.',src:'Intellect, Wisdom'},
+  {k:'Stamina',d:'Fuel for dashes, blocks, and physical abilities.',src:'Endurance, Tactics, Agility'},
+  {k:'Damage',d:'Base weapon damage before crits/mods.',src:'Strength, Intellect, Dexterity, Tactics'},
+  {k:'Defense',d:'Flat reduction to physical damage.',src:'Strength, Endurance, Vitality'},
+  {k:'Block %',d:'Chance to fully block an attack.',src:'Strength, Endurance'},
+  {k:'Block Effect %',d:'Percent of damage mitigated when a block triggers.',src:'Endurance'},
+  {k:'Evasion %',d:'Chance to dodge incoming attacks.',src:'Dexterity, Agility'},
+  {k:'Accuracy %',d:'Hit chance against evading targets.',src:'Strength, Dexterity, Wisdom'},
+  {k:'Critical Chance %',d:'Chance for attacks to critically strike.',src:'Dexterity'},
+  {k:'Critical Damage %',d:'Multiplier bonus on critical hits.',src:'Dexterity'},
+  {k:'Attack Speed %',d:'How fast you perform attack animations.',src:'Dexterity, Agility'},
+  {k:'Movement Speed %',d:'Overall travel and strafe speed.',src:'Agility, Dexterity'},
+  {k:'Resistance %',d:'Reduces incoming magical damage.',src:'Vitality, Wisdom'},
+  {k:'CDR Resist %',d:'Slows enemy cooldown reduction effects on you.',src:'Wisdom'},
+  {k:'Defense Break Resist %',d:'Resists armor-break debuffs.',src:'Endurance'},
+  {k:'Armor Penetration %',d:'Bypasses a portion of enemy defense.',src:'Tactics'},
+  {k:'Block Penetration %',d:'Attacks ignore part of enemy block chance.',src:'Tactics'},
+  {k:'Defense Break %',d:'Power of your armor-break debuffs.',src:'Tactics'},
+  {k:'Drain Health %',d:'Heals you for a percentage of damage dealt (lifesteal).',src:'Strength'},
+  {k:'Mana Regen /s',d:'Mana restored per second outside cooldown windows.',src:'Intellect'},
+  {k:'Health Regen /s',d:'Health restored per second out of combat.',src:'Strength, Vitality, Endurance'},
+  {k:'Cooldown Reduction %',d:'Reduces all ability cooldowns.',src:'Intellect, Tactics'},
+  {k:'Ability Cost %',d:'Reduces mana/stamina ability costs.',src:'Intellect, Tactics'},
+  {k:'Spell Accuracy %',d:'Hit chance against spell-evading targets.',src:'Intellect, Wisdom'},
+  {k:'Stagger %',d:'Chance to interrupt casts/attacks.',src:'Strength'},
+  {k:'CC Resistance %',d:'Reduces duration of stuns, roots, and fears.',src:'Endurance'},
+  {k:'Armor',d:'Flat physical defense number.',src:'Vitality, Endurance'},
+  {k:'Damage Reduction %',d:'Reduces all incoming damage (stacks with defense).',src:'Strength, Vitality, Wisdom'},
+  {k:'Bleed Resist %',d:'Resistance to bleed DoT damage.',src:'Vitality'},
+  {k:'Status Effect %',d:'Reduces duration of negative status effects.',src:'Wisdom'},
+  {k:'Spellblock %',d:'Chance to fully negate an incoming spell.',src:'Wisdom'},
+  {k:'Dodge %',d:'Reduces the cooldown of your dodge ability.',src:'Agility'},
+  {k:'Reflex Time %',d:'Bonus input window for parries and combos.',src:'Dexterity, Agility'},
+  {k:'Critical Evasion %',d:'Chance to avoid being critically hit.',src:'Agility'},
+  {k:'Fall Damage %',d:'Reduces damage taken from falling.',src:'Agility'},
+  {k:'Combo Cooldown Red %',d:'Reduces cooldown of combo finishers.',src:'Tactics'}
+];
+
+const RACES = [
+  {id:'human',name:'Human',emoji:'🧑',faction:'Crusade',trait:'Adaptable',color:'#94a3b8',
+   desc:'Versatile and adaptable — masters of none, capable of all. Start with +1 bonus across every attribute.',
+   lore:'The most numerous of the Grudge War survivors. Where other races rely on innate gifts, Humans forge destiny through will and cunning.',
+   passive:'+1 to all 8 attributes'},
+  {id:'orc',name:'Orc',emoji:'👹',faction:'Legion',trait:'Bloodrage',color:'#65a30d',
+   desc:'Savage brutes bred for war — crushing strength and iron will. Natural Warriors and Barbarians.',
+   lore:'Born in the blood pits of the Shattered Wastes. Their bones are dense as stone, their muscles forged by a lifetime of brutality.',
+   passive:'+4 Strength, +2 Vitality, +2 Endurance'},
+  {id:'elf',name:'Elf',emoji:'🧝',faction:'Fabled',trait:'Arcane Affinity',color:'#22d3ee',
+   desc:'Ancient and graceful — wielders of arcane arts and deadly precision. Superb Mage Priests and Rangers.',
+   lore:'The Elves walked this world before the first grudge was spoken. Their mastery of magic and movement is unrivaled.',
+   passive:'+3 Intellect, +2 Dexterity, +2 Agility, +1 Wisdom'},
+  {id:'undead',name:'Undead',emoji:'💀',faction:'Legion',trait:'Undying Will',color:'#a78bfa',
+   desc:'Death-touched revenants fueled by dark energy. Tanky, resistant, and patient.',
+   lore:'Neither alive nor truly dead. Sustained by the grudges that bind them to this world.',
+   passive:'+3 Vitality, +2 Endurance, +2 Wisdom, +1 Strength'},
+  {id:'barbarian',name:'Barbarian',emoji:'🪓',faction:'Crusade',trait:'Berserker Rage',color:'#f43f5e',
+   desc:'Untamed fury given form — raw power and relentless aggression. Natural greatsword and greataxe wielders.',
+   lore:'From the frozen steppes and scorched badlands. Their wild abandon terrifies even hardened soldiers.',
+   passive:'+3 Strength, +2 Agility, +1 Vitality, +1 Endurance, +1 Tactics'},
+  {id:'dwarf',name:'Dwarf',emoji:'⛏️',faction:'Fabled',trait:'Stoneborn',color:'#f59e0b',
+   desc:'Stout mountain folk — unyielding defense and masterful craftsmanship. Premier tanks and crafters.',
+   lore:'Forged their kingdoms in stone and iron deep beneath the mountains. Generations of mining and warfare have made them nearly unbreakable.',
+   passive:'+3 Endurance, +2 Vitality, +1 Strength, +1 Dexterity, +1 Wisdom'}
+];
+
+const CLASSES = [
+  {id:'warrior',name:'Warrior',emoji:'⚔️',color:'#ef4444',
+   tagline:'Frontline fighter — raw power and defense',
+   desc:'Fearless tanks who wade into melee. Use shields, swords, greatswords, axes, and hammers. Wear plate or mail. Generate threat and anchor the frontline.',
+   weapons:['Shields','Swords','Greatswords','1H Axes','Greataxes','1H Hammers','2H Hammers'],
+   armor:['Plate','Mail'],
+   signature:{name:'Invincible',desc:'Become invulnerable for 2 turns, absorbing all damage.',cd:'8s',cost:'35 stamina'},
+   coreAbilities:['Slash — resource-restoring basic strike','Power Strike — 2x damage','War Cry — +30% damage buff 3 turns','Shield Bash — 1-turn stun','Cleave — AoE bleed','Demon Blade — transform for +40% dmg and +15 def']},
+  {id:'mage',name:'Mage Priest',emoji:'🔮',color:'#8b5cf6',
+   tagline:'Arcane destruction and divine healing',
+   desc:'Masters of six staff schools: fire, frost, holy, lightning, arcane, and nature. Wear cloth only. Tremendously powerful offensively but fragile — stay behind the frontline.',
+   weapons:['Fire Staves','Frost Staves','Holy Staves','Lightning Staves','Arcane Staves','Nature Staves'],
+   armor:['Cloth'],
+   signature:{name:'Mana Shield',desc:'Convert mana into a protective barrier (+25 def, 3 turns).',cd:'5s',cost:'50 mana'},
+   coreAbilities:['Arcane Bolt — resource-restoring basic cast','Fireball — 2.5x damage + burn','Divine Heal — restore 30% HP','Ice Storm — AoE freeze reducing damage']},
+  {id:'ranger',name:'Ranger',emoji:'🏹',color:'#22c55e',
+   tagline:'Deadly marksman — precise long-range',
+   desc:'Silent, patient, lethal. Rangers can use bows, crossbows, guns, daggers, greatswords, and spears, and wear leather or mail. Parry with RMB+LMB for counter windows.',
+   weapons:['Bows','Crossbows','Guns','Daggers','Greatswords','Spears'],
+   armor:['Leather','Mail'],
+   signature:{name:'Shadowflight Volley',desc:'Rain of shadow arrows from above over an area.',cd:'50s',cost:'55 mana'},
+   coreAbilities:['Quick Shot — swift basic arrow','Aimed Shot — +50% damage single target','Multi Shot — 3 arrows in spread','Piercing Arrow — line-clear','Rain of Arrows — AoE barrage']},
+  {id:'worge',name:'Worge',emoji:'🐺',color:'#d97706',
+   tagline:'Shapeshifter — storm, root, and beast',
+   desc:'Walk between worlds. Human form uses staves, spears, daggers, bows, and 1H hammers to summon totems and beast companions. Signature turns you into Bear, Raptor, or Large Bird form.',
+   weapons:['Fire Staves','Nature Staves','Spears','Daggers','Bows','1H Hammers'],
+   armor:['Leather'],
+   signature:{name:'Worge Transform',desc:'Transform into a beast form (+25% dmg, +10 def).',cd:'0s',cost:'20 stamina'},
+   coreAbilities:['Mace Strike — storm-charged basic','Lightning Lash — 1.8x + burn','Nature\'s Grasp — HoT (+8%, 3 turns)','Dagger Toss — poison DoT','Summon Totems — heal / fire / fear','Call Companions — Leaf Sprite, War Imp, Twig Guardian']}
+];
+
+/* Weapon categories aligned with ObjectStore weapons.json */
+const WEAPON_CATS = [
+  {id:'swords',name:'Swords',emoji:'⚔️',iconBase:'Sword',offset:0,count:40,desc:'Balanced 1H blades — the versatile standard.',classes:['Warrior']},
+  {id:'greatswords',name:'Greatswords',emoji:'⚔️',iconBase:'Sword',offset:30,count:10,desc:'Massive 2H blades — damage + fear / execute effects.',classes:['Warrior','Ranger']},
+  {id:'axes1h',name:'1H Axes',emoji:'🪓',iconBase:'Axe',offset:0,count:20,desc:'Bleed and armor penetration specialists.',classes:['Warrior']},
+  {id:'greataxes',name:'Greataxes',emoji:'🪓',iconBase:'Axe',offset:20,count:10,desc:'Heavy cleaves and crushing stuns.',classes:['Warrior']},
+  {id:'daggers',name:'Daggers',emoji:'🗡️',iconBase:'Dagger',offset:0,count:30,desc:'Fast, precise, poison and bleed — dominated by crit.',classes:['Ranger','Worge']},
+  {id:'hammers1h',name:'1H Hammers',emoji:'🔨',iconBase:'Hammer',offset:0,count:20,desc:'Stuns and armor-pen on demand.',classes:['Warrior','Worge']},
+  {id:'hammers2h',name:'2H Hammers',emoji:'🔨',iconBase:'Hammer',offset:20,count:10,desc:'Apocalyptic stuns and AoE knockbacks.',classes:['Warrior']},
+  {id:'spears',name:'Spears',emoji:'🔱',iconBase:'Spear',offset:0,count:30,desc:'Reach and charge — piercing linear strikes.',classes:['Ranger','Worge']},
+  {id:'bows',name:'Bows',emoji:'🏹',iconBase:'Bow',offset:0,count:30,desc:'Ranged precision and multishot mastery.',classes:['Ranger','Worge']},
+  {id:'crossbows',name:'Crossbows',emoji:'🎯',iconBase:'Crossbow',offset:0,count:20,desc:'High damage, slower fire. Ideal mid-range.',classes:['Ranger']},
+  {id:'guns',name:'Guns',emoji:'🔫',iconBase:'Crossbow',offset:15,count:10,desc:'Burst fire, sniper shots, explosive rounds.',classes:['Ranger']},
+  {id:'fireStaves',name:'Fire Staves',emoji:'🔥',iconBase:'Staff',offset:0,count:20,desc:'Burn DoTs, nova explosions, sustained AoE.',classes:['Mage','Worge']},
+  {id:'frostStaves',name:'Frost Staves',emoji:'❄️',iconBase:'Staff',offset:20,count:15,desc:'Slows, freezes, and glacial area denial.',classes:['Mage']},
+  {id:'holyStaves',name:'Holy Staves',emoji:'✨',iconBase:'Staff',offset:35,count:15,desc:'Healing, purification, and divine damage.',classes:['Mage']},
+  {id:'lightningStaves',name:'Lightning Staves',emoji:'⚡',iconBase:'Staff',offset:50,count:15,desc:'Chain shocks and stagger-heavy storm magic.',classes:['Mage','Worge']},
+  {id:'arcaneStaves',name:'Arcane Staves',emoji:'🔮',iconBase:'Staff',offset:65,count:15,desc:'Pure mana scaling and hybrid damage.',classes:['Mage']},
+  {id:'natureStaves',name:'Nature Staves',emoji:'🌿',iconBase:'Staff',offset:80,count:15,desc:'HoT healing, roots, totems, and companions.',classes:['Mage','Worge']},
+  {id:'shields',name:'Shields',emoji:'🛡️',iconBase:'Shield',offset:0,count:20,desc:'Block, parry, and shield-bash — tank foundation.',classes:['Warrior']}
+];
+
+/* Weapon skills aligned with skills.json */
+const WEAPON_SKILLS = {
+  sword:{icon:'⚔️',name:'Sword',skills:[
+    {n:'Slash',cd:'0s',m:0,d:'Basic sword slash attack.'},
+    {n:'Thrust',cd:'0s',m:0,d:'Quick thrusting attack, +10% armor pen.'},
+    {n:'Power Strike',cd:'6s',m:15,d:'Powerful overhead strike dealing 150% damage.'},
+    {n:'Rend',cd:'5s',m:12,d:'Tearing strike causing bleed for 4s.'},
+    {n:'Cleave',cd:'7s',m:18,d:'Wide arc hitting multiple enemies.'},
+    {n:'Parry',cd:'8s',m:10,d:'Block incoming attack and counter for 50% damage.'},
+    {n:'Sidestep',cd:'6s',m:8,d:'Quick dodge with i-frames.'},
+    {n:'Riposte',cd:'10s',m:15,d:'Counter next attack for 200% damage.'},
+    {n:"Bloodfeud's Vengeance",cd:'45s',m:50,d:'Deal 300% damage to enemies who damaged you.',unique:'Bloodfeud Blade'},
+    {n:"Wraith's Whisper",cd:'40s',m:45,d:'Become invisible, next attack crits 250%.',unique:'Wraithfang'},
+    {n:"Oathbreaker's Judgment",cd:'50s',m:40,d:'Enemy takes 50% more damage for 8s.',unique:'Oathbreaker'},
+    {n:"Emberclad's Inferno",cd:'45s',m:50,d:'Engulf in flames, dealing AoE fire damage.',unique:'Emberclad'}
+  ]},
+  axe:{icon:'🪓',name:'Axe',skills:[
+    {n:'Chop',cd:'0s',m:0,d:'Basic axe chop attack.'},
+    {n:'Hack',cd:'0s',m:0,d:'Quick hack with armor penetration.'},
+    {n:'Wild Swing',cd:'0s',m:0,d:'Reckless high damage swing.'},
+    {n:'Cleave',cd:'5s',m:12,d:'Cleave through enemies in arc.'},
+    {n:'Double Chop',cd:'4s',m:10,d:'Two rapid chops.'},
+    {n:'Whirlwind',cd:'8s',m:15,d:'Spin dealing damage and knockback.'},
+    {n:'Throw Axe',cd:'10s',m:12,d:'Throw axe for ranged damage + slow.'},
+    {n:"Gorehowl's Fury",cd:'60s',m:40,d:'Blood rage: +50% damage taken and dealt.',unique:'Gorehowl'},
+    {n:"Skullsplitter's Rampage",cd:'90s',m:50,d:'Kill resets cooldowns for 8s.',unique:'Skullsplitter'}
+  ]},
+  bow:{icon:'🏹',name:'Bow',skills:[
+    {n:'Quick Shot',cd:'0s',m:0,d:'Fast basic arrow shot.'},
+    {n:'Aimed Shot',cd:'0s',m:5,d:'Slow accurate shot, +50% damage.'},
+    {n:'Multi Shot',cd:'8s',m:20,d:'Fire 3 arrows in spread.'},
+    {n:'Piercing Arrow',cd:'6s',m:15,d:'Arrow pierces through enemies.'},
+    {n:'Rain of Arrows',cd:'12s',m:30,d:'Barrage of arrows in area.'},
+    {n:'Evasive Roll',cd:'8s',m:10,d:'Dodge roll with i-frames.'},
+    {n:"Shadowflight's Volley",cd:'50s',m:55,d:'Rain of shadow arrows from above.',unique:'Shadowflight'}
+  ]},
+  staff:{icon:'🪄',name:'Staff',skills:[
+    {n:'Bolt',cd:'0s',m:5,d:'Basic magic projectile.'},
+    {n:'Charged Bolt',cd:'3s',m:15,d:'Charged projectile for more damage.'},
+    {n:'Fireball',cd:'8s',m:25,d:'Explosive fire projectile.'},
+    {n:'Ice Spike',cd:'6s',m:20,d:'Frost projectile that slows.'},
+    {n:'Chain Lightning',cd:'10s',m:30,d:'Lightning that jumps between enemies.'},
+    {n:'Barrier',cd:'15s',m:25,d:'Create magic shield.'},
+    {n:'Blink',cd:'10s',m:20,d:'Short range teleport.'},
+    {n:"Emberwrath's Nova",cd:'60s',m:60,d:'Massive fire explosion around caster.',unique:'Emberwrath'},
+    {n:"Glacial Spire's Blizzard",cd:'55s',m:55,d:'Create freezing storm in area.',unique:'Glacial Spire'}
+  ]},
+  gun:{icon:'🔫',name:'Gun',skills:[
+    {n:'Quick Shot',cd:'0s',m:0,d:'Fast shot.'},
+    {n:'Aimed Shot',cd:'0s',m:0,d:'Accurate shot for +20% damage.'},
+    {n:'Sniper Shot',cd:'10s',m:25,d:'Long range precision, 300% damage.'},
+    {n:'Burst Fire',cd:'5s',m:15,d:'3 shot burst.'},
+    {n:'Explosive Round',cd:'8s',m:22,d:'AoE damage explosion.'},
+    {n:'Combat Roll',cd:'8s',m:10,d:'Dodge roll + reload.'},
+    {n:'Smoke Bomb',cd:'15s',m:18,d:'AoE blind enemies.'},
+    {n:"Ironstorm's Minigun",cd:'50s',m:60,d:'Sustained fire for 5 seconds.',unique:'Ironstorm'}
+  ]}
+};
+
+const ARMOR_CLASSES = [
+  {id:'cloth',name:'Cloth',emoji:'👘',classes:['Mage Priest'],desc:'Light robes with high magic affinity. Minimal physical defense but maximum spell power scaling.'},
+  {id:'leather',name:'Leather',emoji:'🥋',classes:['Ranger','Worge'],desc:'Flexible medium armor. Balanced defense with mobility bonuses and evasion.'},
+  {id:'mail',name:'Mail',emoji:'🪖',classes:['Warrior','Ranger'],desc:'Linked-ring heavy armor. Strong defense without sacrificing too much speed.'},
+  {id:'plate',name:'Plate',emoji:'⚒',classes:['Warrior'],desc:'Full forged armor. Unmatched physical defense, slowest mobility.'}
+];
+
+const EQUIP_SLOTS = [
+  {n:'Helmet',e:'👒'},{n:'Chest',e:'🥋'},{n:'Legs',e:'👖'},{n:'Boots',e:'🥾'},
+  {n:'Gloves',e:'🧤'},{n:'Belt',e:'〰'},{n:'Cape',e:'🧣'},
+  {n:'Ring',e:'💍'},{n:'Amulet',e:'📿'},
+  {n:'Main Hand',e:'⚔'},{n:'Off-Hand',e:'🛡'}
+];
+
+const PROFESSIONS = [
+  {id:'herbalism',name:'Herbalism',emoji:'🌿',type:'Harvest',desc:'Harvest plants for potions, cooking, and nature staff reagents.'},
+  {id:'mining',name:'Mining',emoji:'⛏',type:'Harvest',desc:'Extract ore and gems for smithing and rune-carving.'},
+  {id:'skinning',name:'Skinning',emoji:'🪶',type:'Harvest',desc:'Gather hides and scales for leather armor and bow crafting.'},
+  {id:'fishing',name:'Fishing',emoji:'🎣',type:'Harvest',desc:'Catch fish for cooking and alchemy reagents.'},
+  {id:'logging',name:'Logging',emoji:'🪓',type:'Harvest',desc:'Fell trees for bow shafts, staves, and structures.'},
+  {id:'smithing',name:'Smithing',emoji:'🔨',type:'Craft',desc:'Forge plate/mail armor and metal weapons.'},
+  {id:'tailoring',name:'Tailoring',emoji:'🧵',type:'Craft',desc:'Stitch cloth armor and capes.'},
+  {id:'leatherworking',name:'Leatherworking',emoji:'🥋',type:'Craft',desc:'Craft leather armor and bow grips.'},
+  {id:'alchemy',name:'Alchemy',emoji:'⚗️',type:'Craft',desc:'Brew potions, elixirs, and on-use consumables.'},
+  {id:'cooking',name:'Cooking',emoji:'🍖',type:'Craft',desc:'Prepare foods granting timed buffs.'},
+  {id:'enchanting',name:'Enchanting',emoji:'✨',type:'Craft',desc:'Apply permanent bonuses to equipment.'}
+];
+
+const TIERS = [
+  {id:'legendary',name:'Legendary',rank:'Rank 1-10',className:'legendary',desc:'Mythical power achieved through perfect synergy.',sub:'Primordial God-King, Eternal Void Walker, Celestial Archon…'},
+  {id:'warlord',name:'Warlord',rank:'Rank 11-50',className:'warlord',desc:'A dominant force on the battlefield.',sub:'Solar Walker Warlord, Chaos Lord Warlord, Blood Slayer Warlord…'},
+  {id:'epic',name:'Epic',rank:'Rank 51-100',className:'epic',desc:'A hero of renown and great skill.',sub:'Epic Iron Guard, Epic Storm Blade, Epic Spirit Shield…'},
+  {id:'hero',name:'Hero',rank:'Rank 101-200',className:'hero',desc:'A capable adventurer with potential.',sub:'Holy God, Frost Lord, Void Walker, Earth Titan…'},
+  {id:'normal',name:'Normal',rank:'Rank 201-300',className:'normal',desc:'A standard combatant — the baseline.',sub:'Novice Walker, Novice Weaver, Novice Lord…'}
+];
+
+/* ─── SECTION RENDERERS ─── */
+const SECTIONS = {
+  welcome: () => `
+    <section class="hero">
+      <div class="hero-card">
+        <h2>Welcome to Grudge Warlords</h2>
+        <p>Grudge Warlords is a faction-driven action RPG where you pick a race, a class, and carve your destiny across the Shattered Wastes. Every fight shapes your warband; every grudge you settle becomes part of the story.</p>
+        <p style="margin-top:10px">This codex is your single source of truth. Everything here is wired to the live <strong>ObjectStore API</strong> — 816 weapons, 47 weapon skills, 8 attributes, and 37 derived stats — so you can plan builds, understand combat math, and learn the world.</p>
+        <div class="hero-tags">
+          <span class="hero-tag">6 Races</span>
+          <span class="hero-tag">4 Classes</span>
+          <span class="hero-tag">8 Attributes</span>
+          <span class="hero-tag">37 Derived Stats</span>
+          <span class="hero-tag">18 Weapon Types</span>
+          <span class="hero-tag">5 Tiers · Rank 1-300</span>
+        </div>
+      </div>
+      <div class="hero-side">
+        <h3>How to read this guide</h3>
+        <ul>
+          <li><strong>Start with Races &amp; Classes</strong> to pick a foundation.</li>
+          <li><strong>Read Attributes</strong> to understand how points shape stats.</li>
+          <li><strong>Check Derived Stats</strong> for the full combat math.</li>
+          <li><strong>Combat Flow</strong> shows how a turn actually resolves.</li>
+          <li><strong>Weapons &amp; Skills</strong> show which types each class may wield.</li>
+          <li><strong>Build Tiers</strong> ranks your final loadout from Normal to Legendary.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="section-title">Core Gameplay Loop</div>
+    <div class="section-sub">Every day is a fresh cycle of 11 events across 4 pillars. Crews of 3-5 share objectives, and those who survive the day can claim territory with a Pirate Claim flag.</div>
+    <div class="pipeline">
+      <div class="pipeline-step"><div class="pipeline-num">1</div><div><h4>Harvest</h4><p>Herbalism, Mining, Fishing, Skinning, and Logging. Gather raw resources and level profession trees toward higher-tier nodes.</p></div></div>
+      <div class="pipeline-step"><div class="pipeline-num">2</div><div><h4>Fight</h4><p>World bosses, faction skirmishes, dungeons, and PvP duels. Faction level gates which missions you can take.</p></div></div>
+      <div class="pipeline-step"><div class="pipeline-num">3</div><div><h4>Sail &amp; Explore</h4><p>Travel between the 33 map locations across 5 regions. Uncover lore, unlock waygates, and watch cinematic cutscenes.</p></div></div>
+      <div class="pipeline-step"><div class="pipeline-num">4</div><div><h4>Compete</h4><p>Arena brackets, crew tournaments, and weekly rally goals. Survivors may plant a Pirate Claim to secure a home base.</p></div></div>
+    </div>
+
+    <div class="callout" style="margin-top:18px"><strong>Pro tip:</strong> Crews rotate daily at 11 PM CST. Full permadeath applies — a dead crew ends that day's run, so coordinate smart retreats.</div>
+  `,
+
+  races: () => `
+    <div class="section-title">Playable Races</div>
+    <div class="section-sub">Six races, three factions. Your race determines starting attribute bonuses, a racial passive, and faction alignment. Humans are versatile; every other race is specialized.</div>
+    <div class="grid cols-2">
+      ${RACES.map(r=>`
+        <div class="card" style="border-color:${r.color}33">
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <div class="icon" style="border-color:${r.color}55;font-size:26px">${r.emoji}</div>
+            <div style="flex:1;min-width:0">
+              <h3 style="color:${r.color}">${r.name}</h3>
+              <div class="label">${r.faction} · ${r.trait}</div>
+              <p style="margin-top:4px">${r.desc}</p>
+            </div>
+          </div>
+          <p style="font-style:italic;font-size:12px;color:var(--dim);margin-top:10px;line-height:1.5">${r.lore}</p>
+          <div class="callout" style="margin-top:10px;padding:8px 12px;font-size:12px"><strong>Passive:</strong> ${r.passive}</div>
+        </div>
+      `).join('')}
+    </div>
+  `,
+
+  classes: () => `
+    <div class="section-title">Classes</div>
+    <div class="section-sub">Four classes, each with a unique signature ability, dedicated weapon schools, and armor tier. Every class has a resource-restoring basic so you never run out of fuel.</div>
+    <div class="grid cols-2">
+      ${CLASSES.map(c=>`
+        <div class="card" style="border-color:${c.color}44">
+          <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:10px">
+            <div class="icon" style="width:54px;height:54px;font-size:28px;border-color:${c.color}66">${c.emoji}</div>
+            <div style="flex:1;min-width:0">
+              <h3 style="color:${c.color};font-size:18px">${c.name}</h3>
+              <div class="label">${c.tagline}</div>
+            </div>
+          </div>
+          <p style="margin-bottom:12px">${c.desc}</p>
+          <div style="font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;font-family:var(--font-display)">Weapons</div>
+          <div class="tag-row">${c.weapons.map(w=>`<span class="tag" style="color:${c.color};border-color:${c.color}44">${w}</span>`).join('')}</div>
+          <div style="font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin:10px 0 6px;font-family:var(--font-display)">Armor</div>
+          <div class="tag-row">${c.armor.map(a=>`<span class="tag" style="color:${c.color};border-color:${c.color}44">${a}</span>`).join('')}</div>
+          <div style="font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin:10px 0 6px;font-family:var(--font-display)">Signature Ability</div>
+          <div class="skill-box unique">
+            <div class="s-ico" style="color:${c.color}">★</div>
+            <div style="flex:1;min-width:0">
+              <h5 class="unique-name">${c.signature.name}</h5>
+              <div class="s-meta">CD ${c.signature.cd} · ${c.signature.cost}</div>
+              <div class="s-desc">${c.signature.desc}</div>
+            </div>
+          </div>
+          <div style="font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin:10px 0 6px;font-family:var(--font-display)">Core Abilities</div>
+          <ul class="bullet-list">${c.coreAbilities.map(a=>`<li>${a}</li>`).join('')}</ul>
+        </div>
+      `).join('')}
+    </div>
+  `,
+
+  attributes: () => `
+    <div class="section-title">The Eight Attributes</div>
+    <div class="section-sub">Every character distributes 160 attribute points across eight core stats. Each attribute feeds multiple derived stats with linear per-point gains. Tactics is special: it applies a 0.5%-per-point multiplier to every other non-resource stat.</div>
+    <div class="grid cols-2">
+      ${ATTRIBUTES.map(a=>`
+        <div class="attr-card" style="border-color:${a.color}44">
+          <div class="ico-large" style="border-color:${a.color}66;color:${a.color}">${a.emoji}</div>
+          <div style="flex:1;min-width:0">
+            <h3 style="color:${a.color}">${a.id}</h3>
+            <div class="primary">${a.tagline}</div>
+            <div class="desc">${a.desc}</div>
+            <div class="formula">${a.formula}</div>
+            <div class="gains-title">Per-Point Gains</div>
+            <ul class="gains-list">${a.gains.map(g=>`<li><span>${g[0]}:</span> ${g[1]}</li>`).join('')}</ul>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+    <div class="callout" style="margin-top:16px"><strong>Point Cap:</strong> 160 points total at max progression. Soft caps kick in past 50 in any single attribute — expect roughly 60% efficiency past that point for the scaled stat. Tactics never soft-caps; it multiplies.</div>
+  `,
+
+  derived: () => `
+    <div class="section-title">37 Derived Stats</div>
+    <div class="section-sub">Every stat a target can be hit by or protect against. These are fully calculated from your 8 attribute values plus gear, buffs, and the Tactics multiplier.</div>
+    <table class="stat-table">
+      <thead><tr><th style="width:28%">Stat</th><th style="width:42%">What it does</th><th>Fed by</th></tr></thead>
+      <tbody>${DERIVED_STATS.map(s=>`<tr><td class="key">${s.k}</td><td>${s.d}</td><td class="mono">${s.src}</td></tr>`).join('')}</tbody>
+    </table>
+    <div class="callout" style="margin-top:14px">
+      <strong>Combat Power formula:</strong> CP = floor(EHP × 0.4 + DPS × 2.5 + Utility × 5)<br>
+      Where <span style="font-family:var(--font-mono);color:var(--cyan)">EHP = HP × (1+DEF/100) × (1+RES/100)</span>,
+      <span style="font-family:var(--font-mono);color:var(--cyan)">DPS = (DMG+10) × (1+Crit×CritDmg) × (1+AS)</span>, and
+      <span style="font-family:var(--font-mono);color:var(--cyan)">Utility = CDR×2 + ManaRegen×10 + MS×2</span>.
+    </div>
+  `,
+
+  combat: () => `
+    <div class="section-title">Combat Flow</div>
+    <div class="section-sub">An 8-step pipeline runs on every attack. Understanding it lets you counter-pick stats and design builds that exploit specific steps.</div>
+    <div class="pipeline">
+      <div class="pipeline-step"><div class="pipeline-num">1</div><div><h4>Accuracy Check</h4><p>Attacker's Accuracy vs defender's Evasion. Missed attacks skip to step 8.</p></div></div>
+      <div class="pipeline-step"><div class="pipeline-num">2</div><div><h4>Block / Dodge / Parry</h4><p>Defender rolls Block %, Dodge (Agility CD), or Parry window (RMB+LMB for Rangers). Successful block reduces damage by Block Effect %.</p></div></div>
+      <div class="pipeline-step"><div class="pipeline-num">3</div><div><h4>Critical Roll</h4><p>Crit Chance vs defender's Critical Evasion. Crits bypass 40% of block chance and apply Crit Damage %.</p></div></div>
+      <div class="pipeline-step"><div class="pipeline-num">4</div><div><h4>Armor &amp; Resistance</h4><p>Physical damage is reduced by Defense (subtracted), Armor (flat), and Damage Reduction %. Magical damage uses Resistance %.</p></div></div>
+      <div class="pipeline-step"><div class="pipeline-num">5</div><div><h4>Penetration</h4><p>Armor Penetration % and Block Penetration % bypass portions of defense. Defense Break debuffs apply here.</p></div></div>
+      <div class="pipeline-step"><div class="pipeline-num">6</div><div><h4>Damage Application</h4><p>Final damage is subtracted from HP. If HP hits 0, the target dies. In PvP, permadeath applies to the crew's daily cycle.</p></div></div>
+      <div class="pipeline-step"><div class="pipeline-num">7</div><div><h4>Status / DoT</h4><p>Bleed, burn, poison, stun, fear, and root effects roll against resistances. Duration is reduced by CC Resistance and Status Effect %.</p></div></div>
+      <div class="pipeline-step"><div class="pipeline-num">8</div><div><h4>Lifesteal &amp; Resource</h4><p>Drain Health % restores HP to the attacker. Mana/Stamina regen ticks. Cooldowns advance by (1 + CDR).</p></div></div>
+    </div>
+
+    <div class="section-title" style="margin-top:24px">Mode Toggle &amp; Controls</div>
+    <ul class="bullet-list">
+      <li><strong>Tab</strong> switches between <strong>Combat Mode</strong> (direction follows mouse) and <strong>Harvest Mode</strong> (direction follows movement).</li>
+      <li><strong>W</strong> always moves forward relative to the camera (Fortnite-style over-shoulder).</li>
+      <li><strong>Hold LMB</strong> rotates the camera; <strong>A/D</strong> turn the character; <strong>Q/E</strong> strafe.</li>
+      <li><strong>Z</strong> triggers the dynamic chat-bubble combat hype system — stacking flame buffs above health.</li>
+      <li><strong>Hotbar:</strong> slots 1-4 skills, slot 5 empty, slots 6-8 consumables (food / potions / on-use relics).</li>
+    </ul>
+  `,
+
+  weapons: () => `
+    <div class="section-title">Weapon Types</div>
+    <div class="section-sub">18 weapon schools, 816 unique weapons across 8 tiers. Each class may only wield a subset — pick a class based on the weapons you want to play.</div>
+    <div class="weapon-grid">
+      ${WEAPON_CATS.map(w=>{
+        const iconPath = 'icons/weapons/'+w.iconBase+'_'+String(w.offset+1).padStart(2,'0')+'.png';
+        return `<div class="weapon-chip">
+          <div class="w-ico">${imgOrEmoji(iconPath,w.emoji,64)}</div>
+          <h4>${w.name}</h4>
+          <div class="w-count">${w.count} items</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:6px;line-height:1.4">${w.desc}</div>
+          <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:3px;justify-content:center">
+            ${w.classes.map(c=>`<span class="tag" style="font-size:9px;color:var(--gold-strong);border-color:rgba(212,164,0,.3)">${c}</span>`).join('')}
+          </div>
+        </div>`;
+      }).join('')}
+    </div>
+    <div class="callout" style="margin-top:16px"><strong>Tier system:</strong> T1-T8. Higher tiers have stronger base stats and unique on-hit effects tied to their name (e.g. <em>Bloodfeud Blade</em>'s Vengeance: 300% damage to enemies who damaged you). Unique weapons unlock unique abilities.</div>
+  `,
+
+  skills: () => {
+    const cats = Object.keys(WEAPON_SKILLS);
+    return `
+      <div class="section-title">Weapon Skills</div>
+      <div class="section-sub">47 weapon-specific abilities across 5 skill schools. Common skills unlock with the weapon type; unique skills (gold-bordered) only unlock when you equip a specific named weapon.</div>
+      ${cats.map(k=>{
+        const s = WEAPON_SKILLS[k];
+        return `
+          <div class="section-title" style="font-size:13px;margin-top:20px">${s.icon} ${s.name}</div>
+          <div class="skill-grid">
+            ${s.skills.map(sk=>`
+              <div class="skill-box ${sk.unique?'unique':''}">
+                <div class="s-ico">${sk.unique?'★':s.icon}</div>
+                <div style="flex:1;min-width:0">
+                  <h5 class="${sk.unique?'unique-name':''}">${sk.n}</h5>
+                  <div class="s-meta">CD ${sk.cd}${sk.m?' · '+sk.m+' mana':''}${sk.unique?' · Unique · '+sk.unique:''}</div>
+                  <div class="s-desc">${sk.d}</div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }).join('')}
+    `;
+  },
+
+  armor: () => `
+    <div class="section-title">Armor Classes</div>
+    <div class="section-sub">Four armor tiers. Your class dictates what you can wear. Cloth maximizes magic; plate maximizes physical defense; mail and leather sit between, balancing speed and durability.</div>
+    <div class="grid cols-2">
+      ${ARMOR_CLASSES.map(a=>`
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:8px">
+            <div class="icon">${a.emoji}</div>
+            <div style="flex:1;min-width:0">
+              <h3>${a.name}</h3>
+              <div class="label">${a.classes.join(' · ')}</div>
+            </div>
+          </div>
+          <p>${a.desc}</p>
+        </div>
+      `).join('')}
+    </div>
+
+    <div class="section-title" style="margin-top:22px">Equipment Slots</div>
+    <div class="section-sub">Every character has 11 equipment slots. Matching armor set pieces unlock set bonuses. Capes have active on-use effects with shared cooldowns — no cape swapping to chain actives.</div>
+    <div class="grid cols-4">
+      ${EQUIP_SLOTS.map(s=>`
+        <div class="card" style="text-align:center">
+          <div class="icon" style="margin:0 auto 10px">${s.e}</div>
+          <h3 style="font-size:13px">${s.n}</h3>
+        </div>
+      `).join('')}
+    </div>
+  `,
+
+  professions: () => `
+    <div class="section-title">The 11 Professions</div>
+    <div class="section-sub">Five harvesting, six crafting. Each has its own advancement tree with milestone unlocks for higher-tier nodes and recipes. Pick two — you can't master everything.</div>
+    <div class="grid cols-3">
+      ${PROFESSIONS.map(p=>`
+        <div class="card">
+          <div class="icon">${p.emoji}</div>
+          <h3>${p.name}</h3>
+          <div class="label">${p.type}</div>
+          <p>${p.desc}</p>
+        </div>
+      `).join('')}
+    </div>
+    <div class="callout" style="margin-top:14px"><strong>Harvesting loop:</strong> Herbalism, Mining, Fishing, Skinning, and Logging each have 8 milestones gating access to tier 1 → tier 8 nodes. Feed your crafter.</div>
+  `,
+
+  tiers: () => `
+    <div class="section-title">Build Tiers</div>
+    <div class="section-sub">Once all 160 attribute points are spent, your build is ranked from 300 (Normal) down to 1 (Legendary). Rank is computed from Combat Power plus a synergy bonus — tank, mage, rogue, or support archetypes score a +20% synergy kicker when their primary three attributes dominate the spread.</div>
+    <div class="tier-ladder">
+      ${TIERS.map(t=>`
+        <div class="tier-row ${t.className}">
+          <span class="tier-badge">${t.name}</span>
+          <div class="tier-desc">${t.desc}<small>${t.sub}</small></div>
+          <span class="tier-rank">${t.rank}</span>
+        </div>
+      `).join('')}
+    </div>
+
+    <div class="section-title" style="margin-top:24px">Build Rating (S+ → F)</div>
+    <div class="section-sub">Each completed build also gets a letter grade based on Combat Power.</div>
+    <table class="stat-table">
+      <thead><tr><th>Rating</th><th>Combat Power</th><th>What it means</th></tr></thead>
+      <tbody>
+        <tr><td class="key" style="color:#fbbf24">S+</td><td class="mono">&gt; 5,400</td><td>Elite efficiency, endgame-ready.</td></tr>
+        <tr><td class="key" style="color:#fbbf24">S</td><td class="mono">4,800 — 5,400</td><td>Very strong build — clears most content.</td></tr>
+        <tr><td class="key" style="color:#a855f7">A</td><td class="mono">4,200 — 4,800</td><td>Specialized and effective.</td></tr>
+        <tr><td class="key">B</td><td class="mono">3,600 — 4,200</td><td>Solid — consider specializing further.</td></tr>
+        <tr><td class="key">C</td><td class="mono">3,000 — 3,600</td><td>Average; has weaknesses to exploit.</td></tr>
+        <tr><td class="key">D</td><td class="mono">2,400 — 3,000</td><td>Under-scaled; focus your synergy stats.</td></tr>
+        <tr><td class="key" style="color:var(--red)">F</td><td class="mono">&lt; 2,400</td><td>Rebuild. Stats are spread too thin.</td></tr>
+      </tbody>
+    </table>
+  `,
+
+  world: () => `
+    <div class="section-title">World &amp; Factions</div>
+    <div class="section-sub">The Shattered Wastes are divided into 5 regions and 28 zones with 112 quests and 33 map locations. Three factions vie for control; your race's bonuses alone don't lock you in, but they dictate friendly reputation on day one.</div>
+    <div class="grid cols-3">
+      <div class="card"><div class="icon" style="color:#94a3b8">⚜</div><h3 style="color:#94a3b8">Crusade</h3><p>Humans and Barbarians. Mobile strike force with ranged superiority and cavalry. Favors grand champions and formal honor duels.</p></div>
+      <div class="card"><div class="icon" style="color:#65a30d">☠</div><h3 style="color:#65a30d">Legion</h3><p>Orcs and Undead. Overwhelming physical might and unkillable frontlines. No retreat, no surrender, no mercy.</p></div>
+      <div class="card"><div class="icon" style="color:#22d3ee">🌟</div><h3 style="color:#22d3ee">Fabled</h3><p>Elves and Dwarves. Ancient magic, deep craftsmanship, and precise tactical play. The long game.</p></div>
+    </div>
+
+    <div class="section-title" style="margin-top:22px">Regions</div>
+    <ul class="bullet-list">
+      <li><strong>Ashen Frontier:</strong> Dust storms, siege lines, and the Blackwall Camp respawn. Tier 1-2 content.</li>
+      <li><strong>Forgespire Depths:</strong> Dwarven underholds and ironclad sentinels. Tier 3-4 content.</li>
+      <li><strong>Crimson Caverns:</strong> Blood crystals and Undead necropolis events. Tier 4-5 content.</li>
+      <li><strong>Fabled Wildwood:</strong> Elven groves, druidic totems, and Worge shrines. Tier 5-6 content.</li>
+      <li><strong>Voidmarch:</strong> The edge of the map. World bosses (Ashen Marshal) and relic-tier drops. Tier 7-8 content.</li>
+    </ul>
+  `,
+
+  glossary: () => {
+    const terms = [
+      ['AoE','Area of Effect — abilities that hit multiple targets in a zone.'],
+      ['Armor','Flat physical damage subtracted before %-based defense.'],
+      ['CDR','Cooldown Reduction. Caps at ~40% effective.'],
+      ['CP','Combat Power — composite score used to tier your build.'],
+      ['Crew','A 3-5 player group sharing daily objectives and permadeath.'],
+      ['Crit','Critical strike — multiplies damage by (1 + Crit Damage %).'],
+      ['DoT','Damage over Time — bleed, burn, poison effects.'],
+      ['EHP','Effective HP = HP × (1 + DEF/100) × (1 + RES/100).'],
+      ['Grudge','A named enemy you have a personal kill contract against.'],
+      ['Hotbar','Keys 1-4 skills, 5 empty, 6-8 consumables.'],
+      ['HoT','Heal over Time — Nature\'s Grasp, Heal Totem.'],
+      ['I-frames','Invincibility frames during dodge rolls (0.5s).'],
+      ['Permadeath','Death ends your crew\'s current daily cycle.'],
+      ['Pirate Claim','A flag planted by a surviving crew to claim territory.'],
+      ['Signature','A class\'s unique ultimate ability.'],
+      ['Synergy','Archetype bonus when your top 3 attributes align (tank/mage/rogue/support).'],
+      ['Tactics','The global %-multiplier attribute — 0.5% per point.'],
+      ['Tier','Item power band, T1 (starter) through T8 (relic).'],
+      ['Totem','Worge summon that activates on the caster\'s turn.'],
+      ['Worge Form','Bear, Raptor, or Large Bird — Worge beast transformations.']
+    ];
+    return `
+      <div class="section-title">Glossary</div>
+      <div class="section-sub">Common terms and shorthand used across the game and this guide.</div>
+      <table class="stat-table">
+        <thead><tr><th style="width:22%">Term</th><th>Meaning</th></tr></thead>
+        <tbody>${terms.map(t=>`<tr><td class="key">${t[0]}</td><td>${t[1]}</td></tr>`).join('')}</tbody>
+      </table>
+    `;
+  }
+};
+
+/* Wire up nav */
+let activeSection = 'welcome';
+function renderSection(id){
+  const r = SECTIONS[id] || SECTIONS.welcome;
+  document.getElementById('content').innerHTML = r();
+}
+document.querySelectorAll('.nav-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
-    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    activeSection = btn.dataset.section;
+    renderSection(activeSection);
+    document.getElementById('content').scrollIntoView({behavior:'smooth',block:'start'});
   });
 });
+renderSection(activeSection);
 </script>
 </body>
 </html>
