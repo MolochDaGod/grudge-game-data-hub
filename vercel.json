@@ -2,7 +2,7 @@
   "alias": ["grudge-game-data-hub.vercel.app"],
   "outputDirectory": "public",
   "redirects": [
-    { "source": "/(.*)", "destination": "https://info.grudge-studio.com/$1", "permanent": true }
+    { "source": "/(.*)", "destination": "https://info.grudge-studio.com/docs", "permanent": true }
   ],
   "headers": [
     {
