@@ -1,16 +1,14 @@
 {
-  "alias": ["info.grudge-studio.com", "grudge-game-data-hub.vercel.app"],
-  "buildCommand": "node scripts/prefetch-objectstore.mjs",
-  "outputDirectory": "docs",
-  "rewrites": [
-    { "source": "/data/:path*", "destination": "/data/:path*" }
+  "alias": ["grudge-game-data-hub.vercel.app"],
+  "outputDirectory": "public",
+  "redirects": [
+    { "source": "/(.*)", "destination": "https://info.grudge-studio.com/$1", "permanent": true }
   ],
   "headers": [
     {
-      "source": "/data/(.*)",
+      "source": "/(.*)",
       "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        { "key": "Cache-Control", "value": "public, max-age=300" }
       ]
     }
   ]
