@@ -1,4 +1,5 @@
 {
+  "alias": ["info.grudge-studio.com", "grudge-game-data-hub.vercel.app"],
   "buildCommand": "node scripts/prefetch-objectstore.mjs",
   "outputDirectory": "docs",
   "rewrites": [
